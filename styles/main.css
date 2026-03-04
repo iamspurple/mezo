@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "Alumni Sans";
+  src: url("/assets/fonts/AlumniSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alumni Sans";
+  src: url("/assets/fonts/AlumniSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alumni Sans";
+  src: url("/assets/fonts/AlumniSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alumni Sans";
+  src: url("/assets/fonts/AlumniSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("/assets/fonts/NotoSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("/assets/fonts/NotoSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-primary: "Alumni Sans";
+  --font-secondary: "Noto Sans";
+  --color-lavender: #e3d9f2;
+  --color-lightgrey: #d8dbde;
+  --color-bright: #f7fbfc;
+  --radius-sm: 8px;
+  --transition: all 0.4s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Alumni Sans";
+  width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  text-transform: inherit;
+}
+
+.container {
+  padding-inline: 45px;
+}
+
+.bw {
+  color: black;
+  background-color: white;
+  transition: var(--transition);
+}
+
+.bw svg {
+  transition: var(--transition);
+}
+
+.bw:hover,
+.bw:active {
+  color: white;
+  background-color: black;
+}
+
+.bw:hover svg,
+.bw:active svg {
+  filter: invert();
+}
+
+.bw-accent {
+  color: white;
+  background-color: black;
+}
+
+.bw-accent:hover,
+.bw-accent:active {
+  color: black;
+  background-color: var(--color-lavender);
+}
+
+.bw-accent:hover .bw-accent-svg,
+.bw-accent:active .bw-accent-svg {
+  filter: invert();
+}
+
+.bw-accent-svg {
+  transition: var(--transition);
+}
+
+.btn {
+  max-height: 56px;
+  padding: 16px 16px 16px 24px;
+  border-radius: var(--radius-sm);
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Общие классы для повторяющихся стилей */
+.item-content {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-secondary);
+  text-transform: none;
+}
+
+.item-name {
+  color: black;
+  background-color: white;
+  width: fit-content;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 2px;
+  font-size: 20px;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.item-name svg {
+  transition: var(--transition);
+}
+
+/* Общий класс для SVG с размерами 16px/16px и hover 24px/24px */
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  transition: var(--transition);
+}
+
+a:hover .svg-icon,
+button:hover .svg-icon,
+li:hover:not(.active) .svg-icon {
+  width: 24px;
+  height: 24px;
+  filter: invert();
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.item-content:hover .item-image img {
+  transform: scale(1);
+}
+
+.item-content:hover .item-name {
+  filter: invert();
+}
+
+.item-content:hover .item-name svg {
+  width: 24px;
+  height: 24px;
+}
+
+.slider-btn {
+  border: 0;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.backward svg {
+  transform: scaleX(-1);
+}
+
+.menu-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  width: fit-content;
+}
+
+.menu-link svg {
+  width: 0;
+  height: 16px;
+  transition: var(--transition);
+}
+
+.menu-link:hover svg {
+  width: 16px;
+}
+
+.more-link {
+  align-self: flex-end;
+  transition: var(--transition);
+}
+
+/* Общий класс для заголовков с font-weight: 700, font-size: 80px, line-height: 72% */
+.title-large {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 72%;
+}
+
+/* Общий класс для текста с font-size: 32px, font-weight: 400, line-height: 90% */
+.text-medium {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 90%;
+}
+
+@media screen and (max-width: 1700px) {
+  .container {
+    padding-inline: 20px;
+  }
+
+  .title-large {
+    font-size: 65px;
+  }
+
+  .text-medium {
+    font-size: 28px;
+  }
+
+  .item-name {
+    font-size: 17px;
+  }
+
+  .menu-link {
+    font-size: 17px;
+  }
+
+  .svg-icon {
+    width: 14px;
+    height: 14px;
+    transition: var(--transition);
+  }
+
+  a:hover .svg-icon,
+  button:hover .svg-icon,
+  li:hover:not(.active) .svg-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert();
+  }
+}
