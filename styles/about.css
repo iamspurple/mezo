@@ -1,0 +1,153 @@
+.page-title {
+  padding-block: 100px;
+}
+
+.text-small-secondary {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: none;
+}
+
+.main-message {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-block: 30px 120px;
+}
+
+.main-message-title {
+  max-width: 760px;
+}
+
+.main-message-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 80%;
+  text-transform: uppercase;
+}
+
+.directions {
+  background-color: var(--color-bright);
+  padding-block: 120px 160px;
+}
+
+.advantages {
+  background-color: var(--color-lavender);
+  padding-block: 120px 160px;
+}
+
+.directions-wrapper,
+.advantages-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.directions-content,
+.advantages-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.directions-wrapper .text-small-secondary,
+.advantages-wrapper .text-small-secondary {
+  max-width: 600px;
+}
+
+.directions-wrapper > *,
+.advantages-wrapper > * {
+  max-width: 760px;
+}
+
+.directions-list,
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 80%;
+  text-transform: uppercase;
+}
+
+.directions-item,
+.advantages-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.directions-item span,
+.advantages-item span {
+  padding: 8px 16px 8px 8px;
+  width: fit-content;
+  cursor: default;
+}
+
+.photo {
+  width: 100%;
+  height: 100svh;
+  max-height: 920px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 1280px) {
+  .main-message-content {
+    font-size: 28px;
+  }
+
+  .photo {
+    max-height: 720px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-title {
+    padding-block: 35px 50px;
+  }
+
+  .main-message {
+    padding-bottom: 60px;
+  }
+
+  .main-message-content {
+    font-size: 24px;
+  }
+
+  .directions,
+  .advantages {
+    padding-block: 60px;
+  }
+
+  .text-small-secondary {
+    font-size: 14px;
+  }
+
+  .photo {
+    max-height: 640px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-message {
+    grid-template-columns: 1fr;
+  }
+
+  .directions-wrapper,
+  .advantages-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

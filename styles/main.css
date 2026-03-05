@@ -51,6 +51,7 @@
   --font-secondary: "Noto Sans";
   --color-lavender: #e3d9f2;
   --color-lightgrey: #d8dbde;
+  --color-vodka: #c2bee2;
   --color-bright: #f7fbfc;
   --radius-sm: 8px;
   --transition: all 0.4s ease;
@@ -76,6 +77,11 @@ select,
 textarea {
   font-family: inherit;
   text-transform: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }
 
 .container {
@@ -106,12 +112,13 @@ textarea {
 .bw-accent {
   color: white;
   background-color: black;
+  transition: var(--transition);
 }
 
 .bw-accent:hover,
 .bw-accent:active {
   color: black;
-  background-color: var(--color-lavender);
+  background-color: var(--color-vodka);
 }
 
 .bw-accent:hover .bw-accent-svg,
@@ -121,6 +128,18 @@ textarea {
 
 .bw-accent-svg {
   transition: var(--transition);
+}
+
+.vodka-accent {
+  color: var(--color-lavender);
+  background-color: black;
+  transition: var(--transition);
+}
+
+.vodka-accent:hover,
+.vodka-accent:active {
+  background-color: var(--color-vodka);
+  color: black;
 }
 
 .btn {
@@ -169,7 +188,9 @@ textarea {
 }
 
 a:hover .svg-icon,
+a:active .svg-icon,
 button:hover .svg-icon,
+button:active .svg-icon,
 li:hover:not(.active) .svg-icon {
   width: 24px;
   height: 24px;
@@ -237,6 +258,14 @@ li:hover:not(.active) .svg-icon {
   font-size: 80px;
   font-weight: 700;
   line-height: 72%;
+  text-transform: uppercase;
+}
+
+.title-medium {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 80%;
+  text-transform: uppercase;
 }
 
 /* Общий класс для текста с font-size: 32px, font-weight: 400, line-height: 90% */
@@ -253,6 +282,10 @@ li:hover:not(.active) .svg-icon {
 
   .title-large {
     font-size: 65px;
+  }
+
+  .title-medium {
+    font-size: 42px;
   }
 
   .text-medium {
@@ -279,5 +312,70 @@ li:hover:not(.active) .svg-icon {
     width: 20px;
     height: 20px;
     filter: invert();
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    padding-inline: 15px;
+  }
+
+  .title-large {
+    font-size: 50px;
+  }
+
+  .title-medium {
+    font-size: 38px;
+  }
+
+  .text-medium {
+    font-size: 24px;
+  }
+
+  .text-medium.btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .item-name {
+    font-size: 15px;
+  }
+
+  .menu-link {
+    font-size: 15px;
+  }
+
+  .btn {
+    max-height: 56px;
+    padding: 12px 12px 12px 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title-large {
+    font-size: 44px;
+  }
+
+  .title-medium {
+    font-size: 36px;
+  }
+
+  .btn {
+    gap: 12px;
+    padding: 10px 10px 10px 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-inline: 10px;
+  }
+
+  .title-large {
+    font-size: 40px;
+  }
+
+  .title-medium {
+    font-size: 32px;
   }
 }

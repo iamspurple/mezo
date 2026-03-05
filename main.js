@@ -618,6 +618,7 @@ const toggleBodyScroll = () => {
 const initMenu = () => {
   const headerNav = document.querySelector(".header-nav");
   const headerNavItems = document.querySelectorAll(".header-nav-item");
+  const burgerBtn = document.querySelector(".header-burger-btn");
 
   if (!headerNav || !headerNavItems.length) {
     console.error("Элементы меню не найдены");
@@ -626,6 +627,28 @@ const initMenu = () => {
 
   // Проверяем начальное состояние
   toggleBodyScroll();
+
+  // Кнопка-бургер (только на < 1024px): открывает/закрывает меню
+  if (burgerBtn) {
+    burgerBtn.addEventListener("click", () => {
+      const isOpen = headerNav.classList.contains("menu");
+      const isMobile = window.innerWidth < 768;
+
+      if (isOpen) {
+        headerNav.classList.remove("menu", "tablet", "mobile");
+        headerNavItems.forEach((navItem) => navItem.classList.remove("active"));
+      } else {
+        const modeClass = isMobile ? "mobile" : "tablet";
+        headerNav.classList.add("menu", modeClass);
+        // Активируем первый пункт по умолчанию, если ни один не активен
+        if (!isMobile && !headerNav.querySelector(".header-nav-item.active")) {
+          headerNavItems[0]?.classList.add("active");
+        }
+      }
+
+      toggleBodyScroll();
+    });
+  }
 
   // Предотвращаем закрытие меню при клике на содержимое
   const headerNavItemContents = document.querySelectorAll(
@@ -650,26 +673,44 @@ const initMenu = () => {
 
   headerNavItems.forEach((item) => {
     item.addEventListener("click", (e) => {
+      const isTablet = headerNav.classList.contains("tablet");
       const hasMenuClass = headerNav.classList.contains("menu");
       const isActive = item.classList.contains("active");
 
+      // В tablet-режиме: клик на активный пункт ничего не делает,
+      // меню закрывается только бургер-кнопкой
+      if (isTablet) {
+        if (!isActive) {
+          headerNavItems.forEach((navItem) => navItem.classList.remove("active"));
+          item.classList.add("active");
+        }
+        return;
+      }
+
+      // В mobile-режиме: клик на неактивный пункт — показывает его контент;
+      // клик на активный пункт — скрывает контент, возвращает к списку
+      if (headerNav.classList.contains("mobile")) {
+        if (isActive) {
+          item.classList.remove("active");
+        } else {
+          headerNavItems.forEach((navItem) => navItem.classList.remove("active"));
+          item.classList.add("active");
+        }
+        return;
+      }
+
+      // Desktop-режим: стандартная логика
       if (!hasMenuClass) {
-        // Если меню закрыто, открываем его и активируем элемент
         headerNav.classList.add("menu");
         item.classList.add("active");
       } else if (hasMenuClass && isActive) {
-        // Если меню открыто и кликнули на активный элемент, закрываем меню
         headerNav.classList.remove("menu");
         item.classList.remove("active");
       } else if (hasMenuClass && !isActive) {
-        // Если меню открыто и кликнули на неактивный элемент, переключаем активный
-        headerNavItems.forEach((navItem) => {
-          navItem.classList.remove("active");
-        });
+        headerNavItems.forEach((navItem) => navItem.classList.remove("active"));
         item.classList.add("active");
       }
 
-      // Обновляем состояние скролла после изменения меню
       toggleBodyScroll();
     });
   });
