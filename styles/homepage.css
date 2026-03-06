@@ -317,7 +317,6 @@
   width: 0;
   height: 240px;
   position: absolute;
-  z-index: 2;
   bottom: 15px;
   right: 15px;
   border-radius: var(--radius-sm);

@@ -2,14 +2,6 @@
   padding-block: 100px;
 }
 
-.text-small-secondary {
-  font-family: var(--font-secondary);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 120%;
-  text-transform: none;
-}
-
 .main-message {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -104,6 +96,13 @@
   object-position: center;
 }
 
+@media screen and (max-width: 1700px) {
+  .directions .title-large,
+  .advantages .title-large {
+    font-size: 64px;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .main-message-content {
     font-size: 28px;
@@ -130,10 +129,6 @@
   .directions,
   .advantages {
     padding-block: 60px;
-  }
-
-  .text-small-secondary {
-    font-size: 14px;
   }
 
   .photo {

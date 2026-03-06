@@ -278,6 +278,14 @@ li:hover:not(.active) .svg-icon {
   line-height: 90%;
 }
 
+.text-small-secondary {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: none;
+}
+
 @media screen and (max-width: 1700px) {
   .container {
     padding-inline: 20px;
@@ -380,5 +388,9 @@ li:hover:not(.active) .svg-icon {
 
   .title-medium {
     font-size: 32px;
+  }
+
+  .text-small-secondary {
+    font-size: 14px;
   }
 }

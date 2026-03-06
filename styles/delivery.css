@@ -1,0 +1,125 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+  padding-block: 45px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 80%;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  margin-bottom: 25px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.companies {
+  background-color: var(--color-bright);
+  padding-block: 120px 40px;
+}
+
+.exclusion {
+  background-color: var(--color-lavender);
+  padding-block: 40px 120px;
+}
+
+.companies-wrapper,
+.exclusion-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+}
+
+.companies-content,
+.exclusion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.exclusion-content p {
+  overflow-wrap: break-word; /* Переносит длинные слова */
+  word-break: break-word; /* Для совместимости со старыми браузерами */
+  /* или более агрессивный вариант: */
+}
+
+.companies-wrapper .text-small-secondary,
+.exclusion-wrapper .text-small-secondary {
+  max-width: 600px;
+}
+
+.companies-list,
+.exclusion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 80%;
+  text-transform: uppercase;
+}
+
+.companies-item,
+.exclusion-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.companies-item span,
+.exclusion-item span {
+  padding: 8px 16px 8px 8px;
+  width: fit-content;
+  cursor: default;
+}
+
+@media screen and (max-width: 1700px) {
+  .companies .title-large,
+  .exclusion .title-large {
+    font-size: 64px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    font-size: 24px;
+  }
+
+  .companies {
+    padding-block: 60px 20px;
+  }
+  .exclusion {
+    padding-block: 20px 60px;
+  }
+
+  .exclusion-wrapper {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .companies-wrapper,
+  .exclusion-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    height: 320px;
+  }
+}
