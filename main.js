@@ -13,7 +13,7 @@ class CollectionsSlider {
 
     // Сохраняем оригинальные слайды до клонирования
     this.originalSlides = Array.from(
-      this.track.querySelectorAll(".collections-item:not(.clone)")
+      this.track.querySelectorAll(".collections-item:not(.clone)"),
     );
     this.originalSlidesCount = this.originalSlides.length;
 
@@ -25,7 +25,8 @@ class CollectionsSlider {
     const style = window.getComputedStyle(slide);
 
     const computedWidth = parseFloat(style.width);
-    const computedMargin = parseFloat(style.marginRight) || this.options.slideMargin || 15;
+    const computedMargin =
+      parseFloat(style.marginRight) || this.options.slideMargin || 15;
 
     if (!computedWidth) {
       requestAnimationFrame(() => this.init());
@@ -84,10 +85,14 @@ class CollectionsSlider {
 
   cloneSlides() {
     // Удаляем старые клоны перед клонированием
-    this.track.querySelectorAll(".collections-item.clone").forEach((c) => c.remove());
+    this.track
+      .querySelectorAll(".collections-item.clone")
+      .forEach((c) => c.remove());
 
     // Находим первый оригинальный слайд в DOM актуально
-    const firstOriginal = this.track.querySelector(".collections-item:not(.clone)");
+    const firstOriginal = this.track.querySelector(
+      ".collections-item:not(.clone)",
+    );
 
     // Клонируем в конец — 2 копии, чтобы сброс позиции всегда успевал
     for (let copy = 0; copy < 2; copy++) {
@@ -250,7 +255,7 @@ class HeaderCollectionsSlider {
     this.animationId = null;
 
     this.originalSlides = Array.from(
-      this.track.querySelectorAll(".header-menu-collections-item:not(.clone)")
+      this.track.querySelectorAll(".header-menu-collections-item:not(.clone)"),
     );
     this.originalSlidesCount = this.originalSlides.length;
 
@@ -258,10 +263,13 @@ class HeaderCollectionsSlider {
   }
 
   init() {
-    const slide = this.track.querySelector(".header-menu-collections-item:not(.clone)");
+    const slide = this.track.querySelector(
+      ".header-menu-collections-item:not(.clone)",
+    );
     const style = window.getComputedStyle(slide);
     const computedWidth = parseFloat(style.width);
-    const computedMargin = parseFloat(style.marginRight) || this.options.slideMargin || 10;
+    const computedMargin =
+      parseFloat(style.marginRight) || this.options.slideMargin || 10;
 
     if (!computedWidth) {
       requestAnimationFrame(() => this.init());
@@ -293,7 +301,9 @@ class HeaderCollectionsSlider {
 
   destroy() {
     this.stopAnimation();
-    this.track.querySelectorAll(".header-menu-collections-item.clone").forEach((c) => c.remove());
+    this.track
+      .querySelectorAll(".header-menu-collections-item.clone")
+      .forEach((c) => c.remove());
     this.track.style.width = "";
     this.track.style.transform = "";
   }
@@ -304,15 +314,21 @@ class HeaderCollectionsSlider {
   }
 
   setTrackWidth() {
-    const totalSlides = this.track.querySelectorAll(".header-menu-collections-item").length;
+    const totalSlides = this.track.querySelectorAll(
+      ".header-menu-collections-item",
+    ).length;
     const trackWidth = (this.slideWidth + this.slideMargin) * totalSlides;
     this.track.style.width = `${trackWidth}px`;
   }
 
   cloneSlides() {
-    this.track.querySelectorAll(".header-menu-collections-item.clone").forEach((c) => c.remove());
+    this.track
+      .querySelectorAll(".header-menu-collections-item.clone")
+      .forEach((c) => c.remove());
 
-    const firstOriginal = this.track.querySelector(".header-menu-collections-item:not(.clone)");
+    const firstOriginal = this.track.querySelector(
+      ".header-menu-collections-item:not(.clone)",
+    );
 
     // 2 копии в конец для буфера
     for (let copy = 0; copy < 2; copy++) {
@@ -425,8 +441,12 @@ class HeaderCollectionsSlider {
     if (this._listenersAdded) return;
     this._listenersAdded = true;
 
-    const forwardBtn = document.getElementById("header-menu-collections-slider-forward");
-    const backwardBtn = document.getElementById("header-menu-collections-slider-backward");
+    const forwardBtn = document.getElementById(
+      "header-menu-collections-slider-forward",
+    );
+    const backwardBtn = document.getElementById(
+      "header-menu-collections-slider-backward",
+    );
 
     if (forwardBtn) {
       forwardBtn.addEventListener("click", () => this.accelerate("left"));
@@ -436,7 +456,9 @@ class HeaderCollectionsSlider {
     }
 
     if (this.autoPlay) {
-      const wrapper = this.track.closest(".header-menu-collections-slider-wrapper");
+      const wrapper = this.track.closest(
+        ".header-menu-collections-slider-wrapper",
+      );
       if (wrapper) {
         wrapper.addEventListener("mouseenter", () => this.pause());
         wrapper.addEventListener("mouseleave", () => this.resume());
@@ -482,8 +504,12 @@ class HeaderMenuInfoNewsSlider {
     this.currentSlide = 0;
     this.slidesToShow = options.slidesToShow || 1;
 
-    this.forwardBtn = document.getElementById("header-menu-info-news-slider-forward");
-    this.backwardBtn = document.getElementById("header-menu-info-news-slider-backward");
+    this.forwardBtn = document.getElementById(
+      "header-menu-info-news-slider-forward",
+    );
+    this.backwardBtn = document.getElementById(
+      "header-menu-info-news-slider-backward",
+    );
 
     this.init();
   }
@@ -503,7 +529,8 @@ class HeaderMenuInfoNewsSlider {
     // Читаем отступ: сначала margin-right элемента, потом gap трека
     const marginRight = parseFloat(slideStyle.marginRight) || 0;
     const trackGap = parseFloat(window.getComputedStyle(this.track).gap) || 0;
-    const computedMargin = marginRight || trackGap || this.options.slideMargin || 15;
+    const computedMargin =
+      marginRight || trackGap || this.options.slideMargin || 15;
 
     this.slideWidth = computedWidth;
     this.slideMargin = computedMargin;
@@ -538,7 +565,9 @@ class HeaderMenuInfoNewsSlider {
   updatePosition() {
     const slideUnit = this.getSlideWidth();
     // Максимальный сдвиг — чтобы последний слайд не уходил за край
-    const trackWidth = this.slides.length * this.slideWidth + (this.slides.length - 1) * this.slideMargin;
+    const trackWidth =
+      this.slides.length * this.slideWidth +
+      (this.slides.length - 1) * this.slideMargin;
     const wrapper = this.track.parentElement;
     const wrapperWidth = wrapper ? wrapper.getBoundingClientRect().width : 0;
     const maxOffset = Math.max(0, trackWidth - wrapperWidth);
@@ -550,7 +579,9 @@ class HeaderMenuInfoNewsSlider {
 
   updateButtonsState() {
     const slideUnit = this.getSlideWidth();
-    const trackWidth = this.slides.length * this.slideWidth + (this.slides.length - 1) * this.slideMargin;
+    const trackWidth =
+      this.slides.length * this.slideWidth +
+      (this.slides.length - 1) * this.slideMargin;
     const wrapper = this.track.parentElement;
     const wrapperWidth = wrapper ? wrapper.getBoundingClientRect().width : 0;
     const maxOffset = Math.max(0, trackWidth - wrapperWidth);
@@ -681,7 +712,9 @@ const initMenu = () => {
       // меню закрывается только бургер-кнопкой
       if (isTablet) {
         if (!isActive) {
-          headerNavItems.forEach((navItem) => navItem.classList.remove("active"));
+          headerNavItems.forEach((navItem) =>
+            navItem.classList.remove("active"),
+          );
           item.classList.add("active");
         }
         return;
@@ -693,7 +726,9 @@ const initMenu = () => {
         if (isActive) {
           item.classList.remove("active");
         } else {
-          headerNavItems.forEach((navItem) => navItem.classList.remove("active"));
+          headerNavItems.forEach((navItem) =>
+            navItem.classList.remove("active"),
+          );
           item.classList.add("active");
         }
         return;

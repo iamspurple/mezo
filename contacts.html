@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/components.css" />
-    <link rel="stylesheet" href="/styles/homepage.css" />
+    <link rel="stylesheet" href="/styles/contacts.css" />
   </head>
   <body>
     <header class="header container">
@@ -829,7 +829,7 @@
                 <div class="header-menu-info-wrapper">
                   <ul class="header-menu-info-list">
                     <li class="header-menu-info-item">
-                      <a href="/about.html" class="menu-link">
+                      <a href="" class="menu-link">
                         <svg
                           width="24"
                           height="24"
@@ -909,7 +909,7 @@
                       </a>
                     </li>
                     <li class="header-menu-info-item">
-                      <a href="/contacts.html" class="menu-link">
+                      <a href="" class="menu-link">
                         <svg
                           width="24"
                           height="24"
@@ -1400,35 +1400,10 @@
       </div>
     </header>
     <main>
-      <section class="hero">
-        <h1 class="hero-title">
-          мы производим одноразовую продукцию для отелей
-        </h1>
-      </section>
-      <section class="about container">
-        <div class="wrapper">
-          <div class="about-content">
-            <h2 class="about-title title-large">О нас</h2>
-            <ul class="about-statistic-list">
-              <li class="about-statistic-item">
-                <span class="about-statistic-number bw-accent"> 2014 </span>
-                Открытие производства
-              </li>
-              <li class="about-statistic-item">
-                <span class="about-statistic-number bw-accent"> 3,000+ </span>
-                довольных клиентов
-              </li>
-              <li class="about-statistic-item">
-                <span class="about-statistic-number bw-accent"> 6 </span>
-                дистрибьюторов
-              </li>
-              <li class="about-statistic-item">
-                <span class="about-statistic-number bw-accent"> 500,000+</span>
-                единиц продукции
-              </li>
-            </ul>
-            <a href="/" class="about-more btn text-medium bw">
-              подробнее
+      <nav aria-label="Breadcrumb">
+        <ul class="breadcrumbs container">
+          <li>
+            <a href="">
               <svg
                 width="24"
                 height="24"
@@ -1437,114 +1412,31 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 5L16 12L9 19"
-                  class="bw-svg"
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
                   stroke="black"
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
               </svg>
+              Главная
             </a>
-          </div>
-        </div>
-
-        <div class="wrapper">
-          <div class="categories-content">
-            <ul class="categories-list title-large">
-              <li class="categories-item">
-                <a href="/">
-                  <span class="categories-item-name">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Косметика
-                  </span>
-                  <div class="categories-item-image">
-                    <div class="categories-item-image-active"></div>
-                    <div class="categories-item-image-active-2"></div>
-
-                    <img
-                      src="assets/images/cosmetics.jpg"
-                      alt="category-name"
-                    />
-                  </div>
-                </a>
-              </li>
-              <li class="categories-item">
-                <a href="/">
-                  <span class="categories-item-name">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Тапочки
-                  </span>
-                  <div class="categories-item-image">
-                    <div class="categories-item-image-active"></div>
-                    <div class="categories-item-image-active-2"></div>
-
-                    <img src="assets/images/slippers.png" alt="category-name" />
-                  </div>
-                </a>
-              </li>
-              <li class="categories-item">
-                <a href="/">
-                  <span class="categories-item-name">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Аксессуары
-                  </span>
-                  <div class="categories-item-image">
-                    <div class="categories-item-image-active"></div>
-                    <div class="categories-item-image-active-2"></div>
-
-                    <img src="assets/images/slippers.png" alt="category-name" />
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <a
-              href="/"
-              class="categories-more more-link btn text-medium bw-accent"
-            >
-              Каталог
+          </li>
+          <li aria-current="page">Контакты</li>
+        </ul>
+      </nav>
+      <section class="team container">
+        <div class="team-content">
+          <h2 class="team-title title-large">Команда Mezo</h2>
+          <div class="executive-wrapper">
+            <div class="executive">
+              <div class="executive-image">
+                <img src="/assets/images/executive.jpg" alt="Золотарев Антон" />
+              </div>
+              <span class="executive-name bw-accent">Золотарев Антон</span>
+              <span class="executive-position">Управляющий</span>
+            </div>
+            <a href="mailto:info@mezo.su" class="menu-link">
               <svg
                 width="24"
                 height="24"
@@ -1553,169 +1445,776 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M9 5L16 12L9 19"
-                  class="bw-accent-svg"
-                  stroke="white"
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="black"
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
               </svg>
+              info@mezo.su
             </a>
           </div>
         </div>
-        <div class="wrapper">
-          <div class="description-content">
-            <p class="description-text title-large">
-              MEZO занимается производством одноразовой продукции для заведений
-              HoReCa: отелей, гостиниц, хостелов, баз отдыха и загородных
-              клубов, санаториев.
-              <span class="description-text-accent">
-                Отдельные виды нашей продукции также окажутся полезными в банях
-                и саунах, салонах красоты, spa- и фитнес-центрах.
+        <ul class="team-list">
+          <li class="team-item">
+            <div class="employee">
+              <div class="employee-image">
+                <img src="/assets/images/employee1.jpg" alt="" />
+              </div>
+              <span class="employee-name bw-accent">Питер Паркер</span>
+              <span class="employee-position">Фотограф</span>
+              <div class="employee-contacts">
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89</a
+                >
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89
+                  <p>добавочный <span>100</span></p></a
+                >
+                <a href="mailto:" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  username@mezo.su</a
+                >
+              </div>
+            </div>
+          </li>
+          <li class="team-item">
+            <div class="employee">
+              <div class="employee-image">
+                <img src="/assets/images/employee2.webp" alt="" />
+              </div>
+              <span class="employee-name bw-accent">Кэрол Стурка</span>
+              <span class="employee-position">Писатель</span>
+
+              <div class="employee-contacts">
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89</a
+                >
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89
+                  <p>добавочный <span>100</span></p>
+                </a>
+                <a href="mailto:" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  username@mezo.su</a
+                >
+              </div>
+            </div>
+          </li>
+          <li class="team-item">
+            <div class="employee">
+              <div class="employee-image">
+                <img src="/assets/images/worker2.jpg" alt="" />
+              </div>
+              <span class="employee-name bw-accent">Сол Гудман</span>
+              <span class="employee-position">Юрист, адвокат</span>
+
+              <div class="employee-contacts">
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89</a
+                >
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89
+                  <p>добавочный <span>100</span></p>
+                </a>
+                <a href="mailto:" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  username@mezo.su</a
+                >
+              </div>
+            </div>
+          </li>
+          <li class="team-item">
+            <div class="employee">
+              <div class="employee-image">
+                <img src="/assets/images/worker1.webp" alt="" />
+              </div>
+              <span class="employee-name bw-accent">Майкл Скотт</span>
+              <span class="employee-position">Региональный менеджер</span>
+              <div class="employee-contacts">
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89</a
+                >
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89
+                  <p>добавочный <span>100</span></p>
+                </a>
+                <a href="mailto:" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  username@mezo.su</a
+                >
+              </div>
+            </div>
+          </li>
+          <li class="team-item">
+            <div class="employee">
+              <div class="employee-image">
+                <img src="/assets/images/worker3.avif" alt="" />
+              </div>
+              <span class="employee-name bw-accent">Энтони Сопрано</span>
+              <span class="employee-position"
+                >Консультант по управлению отходами</span
+              >
+              <div class="employee-contacts">
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89</a
+                >
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89
+                  <p>добавочный <span>100</span></p></a
+                >
+                <a href="mailto:" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  username@mezo.su</a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="howtofind container">
+        <h2 class="howtofind-title title-large">Как нас найти</h2>
+        <div class="howtofind-content">
+          <details class="howtofind-accordion" open>
+            <summary>Липецк</summary>
+            <div class="howtofind-accordion-content">
+              <div class="map"><img src="/assets/images/map.png" alt="" /></div>
+              <span class="address">
+                ул. Доватора, 14, Липецк, Липецкая обл., Россия, 398024
               </span>
-              MEZO входит в группу компаний, активно работающую на рынке более
-              15 лет.
-            </p>
-            <a
-              href="/"
-              class="description-more more-link btn text-medium bw-accent"
-            >
-              узнать больше
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9 5L16 12L9 19"
-                  class="bw-accent-svg"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-          </div>
+              <span class="employee-name bw-accent">Главный офис MEZO</span>
+              <div class="employee-contacts">
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89</a
+                >
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89
+                  <p>добавочный <span>100</span></p></a
+                >
+                <a href="mailto:" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  username@mezo.su</a
+                >
+              </div>
+            </div>
+          </details>
+          <details class="howtofind-accordion">
+            <summary>Севастополь</summary>
+            <div class="howtofind-accordion-content">
+              <div class="map"><img src="/assets/images/map.png" alt="" /></div>
+              <span class="address">
+                ул. Доватора, 14, Липецк, Липецкая обл., Россия, 398024
+              </span>
+              <span class="employee-name bw-accent">Главный офис MEZO</span>
+              <div class="employee-contacts">
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89</a
+                >
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89
+                  <p>добавочный <span>100</span></p></a
+                >
+                <a href="mailto:" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  username@mezo.su</a
+                >
+              </div>
+            </div>
+          </details>
+          <details class="howtofind-accordion">
+            <summary>Санкт-Петербург</summary>
+            <div class="howtofind-accordion-content">
+              <div class="map"><img src="/assets/images/map.png" alt="" /></div>
+              <span class="address">
+                ул. Доватора, 14, Липецк, Липецкая обл., Россия, 398024
+              </span>
+              <span class="employee-name bw-accent">Главный офис MEZO</span>
+              <div class="employee-contacts">
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89</a
+                >
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89
+                  <p>добавочный <span>100</span></p></a
+                >
+                <a href="mailto:" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  username@mezo.su</a
+                >
+              </div>
+            </div>
+          </details>
+          <details class="howtofind-accordion">
+            <summary>Минск</summary>
+            <div class="howtofind-accordion-content">
+              <div class="map"><img src="/assets/images/map.png" alt="" /></div>
+              <span class="address">
+                ул. Доватора, 14, Липецк, Липецкая обл., Россия, 398024
+              </span>
+              <span class="employee-name bw-accent">Главный офис MEZO</span>
+              <div class="employee-contacts">
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89</a
+                >
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89
+                  <p>добавочный <span>100</span></p></a
+                >
+                <a href="mailto:" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  username@mezo.su</a
+                >
+              </div>
+            </div>
+          </details>
+          <details class="howtofind-accordion">
+            <summary>Краснодар</summary>
+            <div class="howtofind-accordion-content">
+              <div class="map"><img src="/assets/images/map.png" alt="" /></div>
+              <span class="address">
+                ул. Доватора, 14, Липецк, Липецкая обл., Россия, 398024
+              </span>
+              <span class="employee-name bw-accent">Главный офис MEZO</span>
+              <div class="employee-contacts">
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89</a
+                >
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89
+                  <p>добавочный <span>100</span></p></a
+                >
+                <a href="mailto:" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  username@mezo.su</a
+                >
+              </div>
+            </div>
+          </details>
+          <details class="howtofind-accordion">
+            <summary>Новосибирск</summary>
+            <div class="howtofind-accordion-content">
+              <div class="map"><img src="/assets/images/map.png" alt="" /></div>
+              <span class="address">
+                ул. Доватора, 14, Липецк, Липецкая обл., Россия, 398024
+              </span>
+              <span class="employee-name bw-accent">Главный офис MEZO</span>
+              <div class="employee-contacts">
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89</a
+                >
+                <a href="tel:+" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  +7 012 345 67 89
+                  <p>добавочный <span>100</span></p></a
+                >
+                <a href="mailto:" class="menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  username@mezo.su</a
+                >
+              </div>
+            </div>
+          </details>
         </div>
       </section>
-      <section class="collections container">
-        <h2 class="collections-title title-large">Коллекции</h2>
-        <div>
-          <div class="collections-slider-wrapper">
-            <ul class="collections-list collections-slider">
-              <li class="collections-item">
-                <a href="/" class="collections-item-content item-content">
-                  <div class="collections-item-image item-image">
-                    <img src="/assets/images/collection1.jpg" alt="c1" />
-                  </div>
-                  <span class="collections-item-name item-name">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Rumah Tabacco Vanila
-                  </span>
-                </a>
-              </li>
-              <li class="collections-item">
-                <a href="/" class="collections-item-content item-content">
-                  <div class="collections-item-image item-image">
-                    <img src="/assets/images/collection2.jpg" alt="c1" />
-                  </div>
-                  <span class="collections-item-name item-name">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Rumah Wood Sea Salt
-                  </span>
-                </a>
-              </li>
-              <li class="collections-item">
-                <a href="/" class="collections-item-content item-content">
-                  <div class="collections-item-image item-image">
-                    <img src="/assets/images/collection3.jpg" alt="c1" />
-                  </div>
-                  <span class="collections-item-name item-name">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Bocco
-                  </span>
-                </a>
-              </li>
-              <li class="collections-item">
-                <a href="/" class="collections-item-content item-content">
-                  <div class="collections-item-image item-image">
-                    <img src="/assets/images/collection4.jpg" alt="c1" />
-                  </div>
-                  <span class="collections-item-name item-name">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Lucio Noir
-                  </span>
-                </a>
-              </li>
-            </ul>
+      <footer class="footer container">
+        <div class="footer-wrapper">
+          <div class="footer-copyrights">
+            <p>
+              © "ООО "Мезо" – производство одноразовой продукции для отелей.
+              <br />
+              Все права защищены, 2014–Сегодня
+            </p>
+            <p>
+              <span class="accent">Created by <br /></span>
+              Design Pill Studio
+            </p>
           </div>
-        </div>
-        <div class="collections-slider-controls">
-          <div class="collections-slider-controls-buttons">
-            <button
-              id="collections-slider-backward"
-              class="bw-accent collections-slider-controls-btn slider-btn backward"
-            >
+          <div class="footer-links">
+            <a href="/" class="footer-account bw">
               <svg
                 width="24"
                 height="24"
@@ -1725,499 +2224,150 @@
               >
                 <path
                   d="M21 12L16 7M21 12L16 17M21 12H3"
-                  class="bw-accent-svg"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <button
-              id="collections-slider-forward"
-              class="bw-accent collections-slider-controls-btn slider-btn"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 12L16 7M21 12L16 17M21 12H3"
-                  class="bw-accent-svg"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <a href="/" class="collections-more more-link btn text-medium bw">
-            все коллекции
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 5L16 12L9 19"
-                class="bw-svg"
-                stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
-      </section>
-      <section class="services container">
-        <div class="wrapper">
-          <div class="services-content">
-            <p class="services-text title-large">
-              Мы предлагаем решения, которые помогают сохранять
-              конкурентоспособность и подчёркивать индивидуальность бренда.
-            </p>
-            <ul class="services-list">
-              <li class="services-item">
-                <a href="/" class="services-item-content bw">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  Машинная вышивка
-                  <div class="services-item-image">
-                    <img
-                      class=""
-                      src="/assets/images/87e665dbddc6caeba5ead3d27b54630ea2eaff99.jpg"
-                      alt=""
-                    />
-                  </div>
-                </a>
-              </li>
-              <li class="services-item">
-                <a href="/" class="services-item-content bw">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  Печать логотипов
-                  <div class="services-item-image">
-                    <img
-                      class=""
-                      src="/assets/images/87e665dbddc6caeba5ead3d27b54630ea2eaff99.jpg"
-                      alt=""
-                    />
-                  </div>
-                </a>
-              </li>
-              <li class="services-item">
-                <a href="/" class="services-item-content bw">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  Индивидуальный дизайн
-                  <div class="services-item-image">
-                    <img
-                      class=""
-                      src="/assets/images/87e665dbddc6caeba5ead3d27b54630ea2eaff99.jpg"
-                      alt=""
-                    />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="news container">
-        <div class="wrapper">
-          <div class="news-content">
-            <h2 class="news-title title-large">Новости</h2>
-            <ul class="news-list">
-              <li class="news-item">
-                <a href="/" class="news-item-content item-content">
-                  <time class="news-item-date" datetime="2026-01-10"
-                    >Январь 10</time
-                  >
-                  <div class="news-item-image item-image">
-                    <img
-                      src="/assets/images/razors.jpg"
-                      alt="название новости"
-                    />
-                  </div>
-
-                  <span class="news-item-name item-name">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Аксессуары из натурального дерева
-                  </span>
-                  <span class="news-item-description">
-                    В нашем ассортименте — эксклюзивная мини-линейка деревянных
-                    аксессуаров.
-                  </span>
-                </a>
-              </li>
-              <li class="news-item">
-                <a href="/" class="news-item-content item-content">
-                  <time class="news-item-date" datetime="2026-01-10"
-                    >Январь 10</time
-                  >
-                  <div class="news-item-image item-image">
-                    <img
-                      src="/assets/images/argana.jpg"
-                      alt="название новости"
-                    />
-                  </div>
-
-                  <span class="news-item-name item-name">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Редизайн коллекции Argana
-                  </span>
-                  <span class="news-item-description">
-                    Одна из первых созданных нами коллекций — Argana — теперь
-                    в новом дизайне. 
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <a href="/" class="news-more more-link btn text-medium bw">
-              все новости
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9 5L16 12L9 19"
-                  class="bw-svg"
                   stroke="black"
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
               </svg>
+              Аккаунт
             </a>
+
+            <ul class="footer-links-list">
+              <li>
+                <a href="">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Доставка
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Контакты
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Terms
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Policy
+                </a>
+              </li>
+            </ul>
+            <ul class="footer-links-list">
+              <li>
+                <a href="">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  VK
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Telegram
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-      <section class="partners container">
-        <div class="partners-slider">
-          <ul class="partners-list">
-            <li class="partners-item">Brand 1</li>
-            <li class="partners-item">Brand 2</li>
-            <li class="partners-item">Brand 3</li>
-            <li class="partners-item">Brand 4</li>
-            <li class="partners-item">Brand 5</li>
-          </ul>
-          <ul class="partners-list">
-            <li class="partners-item">Brand 1</li>
-            <li class="partners-item">Brand 2</li>
-            <li class="partners-item">Brand 3</li>
-            <li class="partners-item">Brand 4</li>
-            <li class="partners-item">Brand 5</li>
-          </ul>
-          <ul class="partners-list">
-            <li class="partners-item">Brand 1</li>
-            <li class="partners-item">Brand 2</li>
-            <li class="partners-item">Brand 3</li>
-            <li class="partners-item">Brand 4</li>
-            <li class="partners-item">Brand 5</li>
-          </ul>
-        </div>
-      </section>
-      <section class="feedback">
-        <div class="feedback-form-wrapper">
-          <form action="" class="feedback-form">
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="имя"
-              class="text-medium"
-            />
-            <input
-              type="tel"
-              name=""
-              id=""
-              placeholder="телефон"
-              class="text-medium"
-            />
-            <input
-              type="email"
-              name=""
-              id=""
-              placeholder="email"
-              class="text-medium"
-            />
-            <button
-              type="submit"
-              class="feedback-form-button bw-accent btn text-medium"
-            >
-              стать партнером
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9 5L16 12L9 19"
-                  class="bw-accent-svg"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </form>
-          <span class="feedback-text">
-            memories <br />
-            in your hands</span
-          >
-        </div>
-        <div id="feedback-cursor" class="feedback-cursor"></div>
-      </section>
+      </footer>
     </main>
-    <footer class="footer container">
-      <div class="footer-wrapper">
-        <div class="footer-copyrights">
-          <p>
-            © "ООО "Мезо" – производство одноразовой продукции для отелей.
-            <br />
-            Все права защищены, 2014–Сегодня
-          </p>
-          <p>
-            <span class="accent">Created by <br /></span>
-            Design Pill Studio
-          </p>
-        </div>
-        <div class="footer-links">
-          <a href="/" class="footer-account bw">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M21 12L16 7M21 12L16 17M21 12H3"
-                stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            Аккаунт
-          </a>
-
-          <ul class="footer-links-list">
-            <li>
-              <a href="">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Доставка
-              </a>
-            </li>
-            <li>
-              <a href="/contacts.html">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Контакты
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Terms
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Policy
-              </a>
-            </li>
-          </ul>
-          <ul class="footer-links-list">
-            <li>
-              <a href="">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                VK
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Telegram
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
     <script src="main.js"></script>
+    <script src="contacts.js"></script>
   </body>
 </html>

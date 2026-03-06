@@ -236,6 +236,9 @@ li:hover:not(.active) .svg-icon {
   gap: 8px;
   padding: 8px;
   width: fit-content;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .menu-link svg {

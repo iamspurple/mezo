@@ -1230,4 +1230,13 @@
   .breadcrumbs li {
     padding-inline: 12px;
   }
+
+  .executive {
+    gap: 10px;
+  }
+
+  .executive-name {
+    font-size: 24px;
+    margin-top: -30px;
+  }
 }
