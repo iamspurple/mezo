@@ -1,0 +1,1861 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/components.css" />
+    <link rel="stylesheet" href="/styles/catalog.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <a href="/" class="header-logo">
+        <img src="/assets/images/logo.svg" alt="Mezo" />
+      </a>
+      <div class="header-nav-wrapper">
+        <button id="header-burger-btn" class="header-burger-btn text-medium">
+          <p>Корзина <span class="cart-quantity">10</span></p>
+          <span class="close">Закрыть</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 17H19M5 12H19M5 7H19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <nav class="header-nav">
+          <ul class="header-nav-list text-medium">
+            <li class="header-nav-item">
+              <svg
+                class="header-nav-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="#D8DBDE"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              Продукция
+              <div class="header-nav-item-content">
+                <div class="header-menu-products">
+                  <div class="header-menu-products-wrapper">
+                    <a
+                      href="/"
+                      class="header-menu-products-list-title menu-link bw"
+                    >
+                      <svg
+                        class="svg-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Все товары</a
+                    >
+                    <ul class="header-menu-products-list">
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Шампуни
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Гели
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Лосьоны
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Кондиционеры
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Мыло
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Тапочки
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Пледы
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Аксессуары
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header-menu-products-wrapper">
+                    <a
+                      href="/"
+                      class="header-menu-products-list-title menu-link bw"
+                    >
+                      <svg
+                        class="svg-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Все коллекции</a
+                    >
+                    <ul class="header-menu-products-list">
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Rumah Tabacco Vanila
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Rumah Wood Sea Salt
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Bosсo
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Lucio Noir
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Argana
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Hotel Collection Light
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Lavender
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Lucio
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          No name
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          BIO
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Kraft
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Marrone
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          All for you
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header-menu-products-search-wrapper">
+                    <form class="header-menu-products-search-form" action="">
+                      <input
+                        class="header-menu-products-search"
+                        type="text"
+                        name=""
+                        id=""
+                        placeholder="поиск"
+                      />
+                      <button
+                        type="submit"
+                        class="header-menu-products-search-btn"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </form>
+                    <div class="header-menu-products-search-image">
+                      <img src="/assets/images/collection1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-nav-item">
+              <svg
+                class="header-nav-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="#D8DBDE"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              Коллекции
+              <div class="header-nav-item-content">
+                <div class="header-menu-collections-wrapper">
+                  <div>
+                    <div class="header-menu-collections-slider-wrapper">
+                      <ul
+                        class="header-menu-collections-list header-menu-collections-slider"
+                      >
+                        <li class="header-menu-collections-item">
+                          <a
+                            href="/"
+                            class="header-menu-collections-item-content item-content"
+                          >
+                            <div
+                              class="header-menu-collections-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/collection1.jpg"
+                                alt="c1"
+                              />
+                            </div>
+                            <span
+                              class="header-menu-collections-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Rumah Tabacco Vanila
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-collections-item">
+                          <a
+                            href="/"
+                            class="header-menu-collections-item-content item-content"
+                          >
+                            <div
+                              class="header-menu-collections-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/collection2.jpg"
+                                alt="c1"
+                              />
+                            </div>
+                            <span
+                              class="header-menu-collections-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Rumah Wood Sea Salt
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-collections-item">
+                          <a
+                            href="/"
+                            class="header-menu-collections-item-content item-content"
+                          >
+                            <div
+                              class="header-menu-collections-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/collection3.jpg"
+                                alt="c1"
+                              />
+                            </div>
+                            <span
+                              class="header-menu-collections-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Bocco
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-collections-item">
+                          <a
+                            href="/"
+                            class="header-menu-collections-item-content item-content"
+                          >
+                            <div
+                              class="header-menu-collections-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/collection4.jpg"
+                                alt="c1"
+                              />
+                            </div>
+                            <span
+                              class="header-menu-collections-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Lucio Noir
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="header-menu-collections-slider-controls">
+                    <div
+                      class="header-menu-collections-slider-controls-buttons"
+                    >
+                      <button
+                        id="header-menu-collections-slider-backward"
+                        class="bw-accent header-menu-collections-slider-controls-btn slider-btn backward"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            class="bw-accent-svg"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        id="header-menu-collections-slider-forward"
+                        class="bw-accent header-menu-collections-slider-controls-btn slider-btn"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            class="bw-accent-svg"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <a
+                      href="/"
+                      class="header-menu-collections-more btn text-medium bw"
+                    >
+                      все коллекции
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9 5L16 12L9 19"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-nav-item">
+              <svg
+                class="header-nav-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="#D8DBDE"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              Информация
+              <div class="header-nav-item-content">
+                <div class="header-menu-info-wrapper">
+                  <ul class="header-menu-info-list">
+                    <li class="header-menu-info-item">
+                      <a href="/about.html" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        О компании
+                      </a>
+                    </li>
+                    <li class="header-menu-info-item">
+                      <a href="" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Производство
+                      </a>
+                    </li>
+                    <li class="header-menu-info-item">
+                      <a href="" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Услуги
+                      </a>
+                    </li>
+                    <li class="header-menu-info-item">
+                      <a href="" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Новости
+                      </a>
+                    </li>
+                    <li class="header-menu-info-item">
+                      <a href="/contacts.html" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Контакты
+                      </a>
+                    </li>
+                    <li class="header-menu-info-item">
+                      <a href="" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Доставка
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="header-menu-info-news-container">
+                    <div class="header-menu-info-new-slider-wrapper">
+                      <ul
+                        id="header-menu-info-news-slider"
+                        class="header-menu-info-news-list"
+                      >
+                        <li class="header-menu-info-news-item">
+                          <a
+                            href="/"
+                            class="header-menu-info-news-item-content item-content"
+                          >
+                            <time
+                              class="header-menu-info-news-item-date"
+                              datetime="2026-01-10"
+                              >Январь 10</time
+                            >
+                            <div
+                              class="header-menu-info-news-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/razors.jpg"
+                                alt="название новости"
+                              />
+                            </div>
+
+                            <span
+                              class="header-menu-info-news-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Аксессуары из натурального дерева
+                            </span>
+                            <span
+                              class="header-menu-info-news-item-description"
+                            >
+                              В нашем ассортименте — эксклюзивная мини-линейка
+                              деревянных аксессуаров.
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-info-news-item">
+                          <a
+                            href="/"
+                            class="header-menu-info-news-item-content item-content"
+                          >
+                            <time
+                              class="header-menu-info-news-item-date"
+                              datetime="2026-01-10"
+                              >Январь 10</time
+                            >
+                            <div
+                              class="header-menu-info-news-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/argana.jpg"
+                                alt="название новости"
+                              />
+                            </div>
+
+                            <span
+                              class="header-menu-info-news-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Редизайн коллекции Argana
+                            </span>
+                            <span
+                              class="header-menu-info-news-item-description"
+                            >
+                              Одна из первых созданных нами коллекций — Argana —
+                              теперь в новом дизайне. 
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-info-news-item">
+                          <a
+                            href="/"
+                            class="header-menu-info-news-item-content item-content"
+                          >
+                            <time
+                              class="header-menu-info-news-item-date"
+                              datetime="2026-01-10"
+                              >Январь 10</time
+                            >
+                            <div
+                              class="header-menu-info-news-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/razors.jpg"
+                                alt="название новости"
+                              />
+                            </div>
+
+                            <span
+                              class="header-menu-info-news-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Аксессуары из натурального дерева
+                            </span>
+                            <span
+                              class="header-menu-info-news-item-description"
+                            >
+                              В нашем ассортименте — эксклюзивная мини-линейка
+                              деревянных аксессуаров.
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-info-news-item">
+                          <a
+                            href="/"
+                            class="header-menu-info-news-item-content item-content"
+                          >
+                            <time
+                              class="header-menu-info-news-item-date"
+                              datetime="2026-01-10"
+                              >Январь 10</time
+                            >
+                            <div
+                              class="header-menu-info-news-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/argana.jpg"
+                                alt="название новости"
+                              />
+                            </div>
+
+                            <span
+                              class="header-menu-info-news-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Редизайн коллекции Argana
+                            </span>
+                            <span
+                              class="header-menu-info-news-item-description"
+                            >
+                              Одна из первых созданных нами коллекций — Argana —
+                              теперь в новом дизайне. 
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="header-menu-info-news-controls">
+                      <button
+                        id="header-menu-info-news-slider-backward"
+                        class="header-menu-info-news-slider-btn slider-btn backward"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 5L16 12L9 19"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        id="header-menu-info-news-slider-forward"
+                        class="header-menu-info-news-slider-btn slider-btn"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 5L16 12L9 19"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-nav-item">
+              <a href="">
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#D8DBDE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Избранное
+              </a>
+            </li>
+            <li class="header-nav-item">
+              <button id="cart-btn" class="header-nav-cart-btn">
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#D8DBDE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Корзина
+                <span class="cart-quantity">10</span>
+              </button>
+            </li>
+            <li class="header-nav-item">
+              <svg
+                class="header-nav-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="#D8DBDE"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              Аккаунт
+              <div class="header-nav-item-content">
+                <div class="header-menu-account-wrapper">
+                  <ul class="header-menu-account-mode-list">
+                    <li class="header-menu-account-mode-item sign-in active bw">
+                      <svg
+                        class="svg-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Вход
+                    </li>
+                    <li class="header-menu-account-mode-item sign-up bw">
+                      <svg
+                        class="svg-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Регистрация
+                    </li>
+                  </ul>
+                  <div class="header-menu-account-form-container">
+                    <form
+                      action=""
+                      class="header-menu-account-form sign-in active"
+                    >
+                      <input type="email" name="" id="" placeholder="email" />
+                      <input
+                        type="password"
+                        name=""
+                        id=""
+                        placeholder="пароль"
+                      />
+                      <div class="header-menu-account-form-buttons">
+                        <button
+                          type="submit"
+                          class="header-menu-account-btn bw-accent btn text-medium"
+                        >
+                          Войти
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9 5L16 12L9 19"
+                              class="bw-accent-svg"
+                              stroke="white"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                        <button
+                          type="button"
+                          class="header-menu-account-btn bw btn text-medium backward"
+                        >
+                          Обновить пароль
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9 5L16 12L9 19"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </form>
+                    <form action="" class="header-menu-account-form sign-up">
+                      <input type="text" name="" id="" placeholder="имя" />
+                      <input type="text" name="" id="" placeholder="фамилия" />
+                      <input type="tel" name="" id="" placeholder="телефон" />
+                      <input type="email" name="" id="" placeholder="email" />
+                      <input
+                        type="password"
+                        name=""
+                        id=""
+                        placeholder="пароль"
+                      />
+                      <div class="header-menu-account-form-buttons">
+                        <button
+                          type="submit"
+                          class="header-menu-account-btn bw-accent btn text-medium"
+                        >
+                          Зарегистироваться
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9 5L16 12L9 19"
+                              class="bw-accent-svg"
+                              stroke="white"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <nav aria-label="Breadcrumb">
+        <ul class="breadcrumbs container">
+          <li>
+            <a href="">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Главная
+            </a>
+          </li>
+          <li aria-current="page">Каталог</li>
+        </ul>
+      </nav>
+
+      <section class="catalog-filters container">
+        <div class="catalog-filters-list">
+          <!-- Категория -->
+          <div class="custom-select" data-name="category">
+            <select aria-label="Категория" tabindex="-1" multiple>
+              <option value="shampoo">Шампуни</option>
+              <option value="gel">Гели</option>
+              <option value="lotion">Лосьоны</option>
+              <option value="conditioner">Кондиционеры</option>
+              <option value="soap">Мыло</option>
+              <option value="slippers">Тапочки</option>
+              <option value="blankets">Пледы</option>
+              <option value="accessories">Аксессуары</option>
+            </select>
+            <div
+              class="custom-select-trigger"
+              role="button"
+              tabindex="0"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="custom-select-label">Категория</span>
+              <span class="custom-select-tags"></span>
+              <div class="custom-select-controls">
+                <button
+                  type="button"
+                  class="custom-select-clear"
+                  aria-label="Очистить"
+                  tabindex="-1"
+                >
+                  Очистить
+                </button>
+              </div>
+            </div>
+            <ul
+              class="custom-select-dropdown"
+              role="listbox"
+              aria-label="Категория"
+              aria-multiselectable="true"
+            >
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="shampoo"
+              >
+                Шампуни
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="gel"
+              >
+                Гели
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="lotion"
+              >
+                Лосьоны
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="conditioner"
+              >
+                Кондиционеры
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="soap"
+              >
+                Мыло
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="slippers"
+              >
+                Тапочки
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="blankets"
+              >
+                Пледы
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="accessories"
+              >
+                Аксессуары
+              </li>
+            </ul>
+          </div>
+
+          <!-- Коллекция -->
+          <div class="custom-select" data-name="collection">
+            <select aria-label="Коллекция" tabindex="-1" multiple>
+              <option value="rumah-tabacco">Rumah Tabacco Vanila</option>
+              <option value="rumah-wood">Rumah Wood Sea Salt</option>
+              <option value="bosco">Bosco</option>
+              <option value="lucio-noir">Lucio Noir</option>
+              <option value="argana">Argana</option>
+              <option value="lavender">Lavender</option>
+            </select>
+            <div
+              class="custom-select-trigger"
+              role="button"
+              tabindex="0"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="custom-select-label">Коллекция</span>
+              <span class="custom-select-tags"></span>
+              <div class="custom-select-controls">
+                <button
+                  type="button"
+                  class="custom-select-clear"
+                  aria-label="Очистить"
+                  tabindex="-1"
+                >
+                  Очистить
+                </button>
+              </div>
+            </div>
+            <ul
+              class="custom-select-dropdown"
+              role="listbox"
+              aria-label="Коллекция"
+              aria-multiselectable="true"
+            >
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="rumah-tabacco"
+              >
+                Rumah Tabacco Vanila
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="rumah-wood"
+              >
+                Rumah Wood Sea Salt
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="bosco"
+              >
+                Bosco
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="lucio-noir"
+              >
+                Lucio Noir
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="argana"
+              >
+                Argana
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="lavender"
+              >
+                Lavender
+              </li>
+            </ul>
+          </div>
+
+          <!-- Сортировка -->
+          <div class="custom-select" data-name="sort">
+            <select aria-label="Сортировка" tabindex="-1" multiple>
+              <option value="price-asc">Цена: по возрастанию</option>
+              <option value="price-desc">Цена: по убыванию</option>
+              <option value="new">Новинки</option>
+              <option value="popular">Популярные</option>
+            </select>
+            <div
+              class="custom-select-trigger"
+              role="button"
+              tabindex="0"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="custom-select-label">Сортировка</span>
+              <span class="custom-select-tags"></span>
+              <div class="custom-select-controls">
+                <button
+                  type="button"
+                  class="custom-select-clear"
+                  aria-label="Очистить"
+                  tabindex="-1"
+                >
+                  Очистить
+                </button>
+              </div>
+            </div>
+            <ul
+              class="custom-select-dropdown"
+              role="listbox"
+              aria-label="Сортировка"
+              aria-multiselectable="true"
+            >
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="price-asc"
+              >
+                Цена: по возрастанию
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="price-desc"
+              >
+                Цена: по убыванию
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="new"
+              >
+                Новинки
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="popular"
+              >
+                Популярные
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.querySelectorAll(".custom-select").forEach((select) => {
+        const trigger = select.querySelector(".custom-select-trigger");
+        const dropdown = select.querySelector(".custom-select-dropdown");
+        const tagsEl = select.querySelector(".custom-select-tags");
+        const clearBtn = select.querySelector(".custom-select-clear");
+        const nativeSelect = select.querySelector("select");
+        const options = [...select.querySelectorAll(".custom-select-option")];
+
+        // Хранилище выбранных значений: { value, label }
+        let selected = [];
+
+        // ── Рендер тегов в триггере ──────────────────────────────────────────
+        function renderTags() {
+          tagsEl.innerHTML = "";
+
+          if (selected.length === 0) {
+            select.classList.remove("has-value");
+            return;
+          }
+
+          select.classList.add("has-value");
+
+          const visible = selected.slice(0, 2);
+          const rest = selected.length - 2;
+
+          visible.forEach(({ label }) => {
+            const tag = document.createElement("span");
+            tag.className = "custom-select-tag";
+            tag.textContent = label;
+            tagsEl.appendChild(tag);
+          });
+
+          if (rest > 0) {
+            const more = document.createElement("span");
+            more.className = "custom-select-tag custom-select-tag-more";
+            more.textContent = `+${rest}`;
+            tagsEl.appendChild(more);
+          }
+        }
+
+        // ── Синхронизация нативного select ───────────────────────────────────
+        function syncNative() {
+          [...nativeSelect.options].forEach((opt) => {
+            opt.selected = selected.some((s) => s.value === opt.value);
+          });
+          nativeSelect.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+
+        // ── Обновить состояние опций в dropdown ───────────────────────────────
+        function updateOptions() {
+          options.forEach((opt) => {
+            const isSelected = selected.some(
+              (s) => s.value === opt.dataset.value,
+            );
+            opt.setAttribute("aria-selected", isSelected ? "true" : "false");
+          });
+        }
+
+        // ── Открыть дропдаун ─────────────────────────────────────────────────
+        function openDropdown() {
+          document.querySelectorAll(".custom-select.open").forEach((s) => {
+            if (s !== select) closeDropdown(s);
+          });
+          select.classList.add("open");
+          trigger.setAttribute("aria-expanded", "true");
+          // Фокус на первую выбранную опцию или первую
+          const firstSelected =
+            dropdown.querySelector("[aria-selected='true']") || options[0];
+          if (firstSelected) firstSelected.focus();
+        }
+
+        // ── Закрыть дропдаун ─────────────────────────────────────────────────
+        function closeDropdown(s = select) {
+          s.classList.remove("open");
+          s.querySelector(".custom-select-trigger").setAttribute(
+            "aria-expanded",
+            "false",
+          );
+        }
+
+        // ── Клик на триггер ──────────────────────────────────────────────────
+        trigger.addEventListener("click", (e) => {
+          // Не реагировать на клик по кнопке очистить
+          if (e.target.closest(".custom-select-clear")) return;
+          select.classList.contains("open") ? closeDropdown() : openDropdown();
+        });
+
+        // ── Кнопка "Очистить" ────────────────────────────────────────────────
+        clearBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          selected = [];
+          renderTags();
+          updateOptions();
+          syncNative();
+          closeDropdown();
+          trigger.focus();
+        });
+
+        // ── Клик по опции ────────────────────────────────────────────────────
+        options.forEach((option) => {
+          option.setAttribute("tabindex", "-1");
+
+          option.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const value = option.dataset.value;
+            const label = option.textContent.trim();
+            const idx = selected.findIndex((s) => s.value === value);
+
+            if (idx > -1) {
+              selected.splice(idx, 1);
+            } else {
+              selected.push({ value, label });
+            }
+
+            renderTags();
+            updateOptions();
+            syncNative();
+            // Дропдаун остаётся открытым для мультивыбора
+            option.focus();
+          });
+
+          // ── Клавиатурная навигация ────────────────────────────────────────
+          option.addEventListener("keydown", (e) => {
+            const idx = options.indexOf(option);
+            if (e.key === "ArrowDown") {
+              e.preventDefault();
+              options[Math.min(idx + 1, options.length - 1)].focus();
+            } else if (e.key === "ArrowUp") {
+              e.preventDefault();
+              if (idx === 0) trigger.focus();
+              else options[Math.max(idx - 1, 0)].focus();
+            } else if (e.key === "Escape") {
+              closeDropdown();
+              trigger.focus();
+            } else if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              option.click();
+            }
+          });
+        });
+
+        // ── Клавиши на триггере ───────────────────────────────────────────────
+        trigger.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openDropdown();
+          } else if (e.key === "Escape") {
+            closeDropdown();
+          }
+        });
+      });
+
+      // ── Закрыть при клике вне ─────────────────────────────────────────────
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".custom-select")) {
+          document.querySelectorAll(".custom-select.open").forEach((s) => {
+            s.classList.remove("open");
+            s.querySelector(".custom-select-trigger").setAttribute(
+              "aria-expanded",
+              "false",
+            );
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

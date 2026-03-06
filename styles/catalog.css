@@ -1,0 +1,249 @@
+/* ===== Секция фильтров ===== */
+.catalog-filters {
+  padding-block: 40px;
+}
+
+.catalog-filters-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ===== Кастомный select ===== */
+.custom-select {
+  position: relative;
+  min-width: 370px;
+  max-width: 450px;
+  width: 100%;
+}
+
+/* Нативный select — скрыт визуально, но доступен для скринридеров */
+.custom-select select {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+/* ── Кнопка-триггер ─────────────────────────────────────────────────────── */
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  height: 56px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-lightgrey);
+  border-radius: var(--radius-sm, 4px);
+  background: white;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-size: 24px;
+  line-height: 80%;
+  font-weight: 400;
+  color: black;
+  text-align: left;
+  transition: var(--transition);
+  white-space: nowrap;
+  text-transform: uppercase;
+  user-select: none;
+  outline: none;
+}
+
+.custom-select-trigger:focus-visible {
+  border-color: black;
+}
+
+.custom-select-trigger:hover,
+.custom-select.open .custom-select-trigger {
+  border-color: black;
+}
+
+/* Название (Категория / Коллекция ...) */
+.custom-select-label {
+  flex-shrink: 0;
+}
+
+/* ── Теги ────────────────────────────────────────────────────────────────── */
+.custom-select-tags {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  font-family: var(--font-secondary);
+  text-transform: none;
+}
+
+/* Теги скрыты при открытом дропдауне */
+.custom-select.open .custom-select-tags {
+  display: none;
+}
+
+.custom-select-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 90%;
+  background-color: black;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.custom-select-tag-more {
+  background-color: #444;
+}
+
+.custom-select.open .custom-select-controls {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+/* Кнопка очистить — скрыта когда дропдаун закрыт */
+.custom-select-clear {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  color: #00000066;
+  padding: 0;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-transform: none;
+  text-underline-offset: 2px;
+  transition: opacity 0.15s;
+}
+
+.custom-select-clear:hover {
+  opacity: 0.6;
+}
+
+/* Показать кнопку очистить только при открытом select с выбранными значениями */
+.custom-select.open.has-value .custom-select-clear {
+  display: inline;
+}
+
+/* Стрелка */
+.custom-select-trigger::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-left: auto;
+  background: url("/assets/images/chevron.svg") center/contain no-repeat;
+  transition: transform 0.4s ease;
+}
+
+.custom-select.open .custom-select-trigger::after {
+  transform: rotate(180deg);
+}
+
+/* ── Дропдаун ────────────────────────────────────────────────────────────── */
+.custom-select-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid var(--color-lightgrey);
+  border-radius: var(--radius-sm);
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+  z-index: 100;
+  /* max-height: 280px; */
+  /* overflow-y: auto; */
+  min-width: max-content;
+  /* Скрыт по умолчанию */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s;
+}
+
+.custom-select.open .custom-select-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ── Пункты списка ───────────────────────────────────────────────────────── */
+.custom-select-option {
+  padding: 12px;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-size: 24px;
+  line-height: 80%;
+  font-weight: 400;
+  color: black;
+  background-color: white;
+  transition: background-color 0.15s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.custom-select-option:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+/* Иконка-маркер */
+.custom-select-option::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background: url("/assets/images/plus.svg") center / contain no-repeat;
+  margin-left: auto;
+  transition: background-color 0.15s;
+}
+
+.custom-select-option[aria-selected="true"]::after {
+  background-image: url("/assets/images/minus.svg");
+}
+
+.custom-select-option[aria-selected="false"]:hover,
+.custom-select-option[aria-selected="false"]:focus {
+  background-color: #d8dbde66;
+}
+
+.custom-select-option[aria-selected="true"] {
+  filter: invert();
+}
+
+/* Скроллбар */
+.custom-select-dropdown::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-select-dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
+}
