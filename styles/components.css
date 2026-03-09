@@ -228,6 +228,11 @@
   cursor: pointer;
 }
 
+.header-menu-products-search-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
 .header-menu-products-search::placeholder {
   color: black;
 }

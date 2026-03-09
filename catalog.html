@@ -1428,6 +1428,32 @@
 
       <section class="catalog-filters container">
         <div class="catalog-filters-list">
+          <form class="catalog-search-form" action="">
+            <input
+              class="catalog-search"
+              type="text"
+              name=""
+              id=""
+              placeholder="поиск"
+            />
+            <button type="submit" class="catalog-search-btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
           <!-- Категория -->
           <div class="custom-select" data-name="category">
             <select aria-label="Категория" tabindex="-1" multiple>
@@ -1620,9 +1646,195 @@
             </ul>
           </div>
 
+          <!-- Теги-фильтры -->
+          <fieldset class="catalog-tag-filters">
+            <legend class="visually-hidden">Тип товара</legend>
+            <label class="catalog-tag-filter">
+              <input type="radio" name="tag-filter" value="all" checked />
+              <span>Все</span>
+            </label>
+            <label class="catalog-tag-filter">
+              <input type="radio" name="tag-filter" value="new" />
+              <span>Новинка</span>
+            </label>
+            <label class="catalog-tag-filter">
+              <input type="radio" name="tag-filter" value="hit" />
+              <span>Хит</span>
+            </label>
+            <label class="catalog-tag-filter">
+              <input type="radio" name="tag-filter" value="recommended" />
+              <span>Мы рекомендуем</span>
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="catalog-filters-list visually-hidden">
+          <div class="custom-select" data-name="volume">
+            <select aria-label="Объем/вес" tabindex="-1">
+              <option value="200">200мл</option>
+            </select>
+            <div
+              class="custom-select-trigger"
+              role="button"
+              tabindex="0"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="custom-select-label">Объем/вес</span>
+              <span class="custom-select-tags"></span>
+              <div class="custom-select-controls">
+                <button
+                  type="button"
+                  class="custom-select-clear"
+                  aria-label="Очистить"
+                  tabindex="-1"
+                >
+                  Очистить
+                </button>
+              </div>
+            </div>
+            <ul
+              class="custom-select-dropdown"
+              role="listbox"
+              aria-label="Объем/вес"
+            >
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="200"
+              >
+                200мл
+              </li>
+            </ul>
+          </div>
+          <div class="custom-select" data-name="package">
+            <select aria-label="Упаковка" tabindex="-1">
+              <option value="картон">Картон</option>
+            </select>
+            <div
+              class="custom-select-trigger"
+              role="button"
+              tabindex="0"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="custom-select-label">Упаковка</span>
+              <span class="custom-select-tags"></span>
+              <div class="custom-select-controls">
+                <button
+                  type="button"
+                  class="custom-select-clear"
+                  aria-label="Очистить"
+                  tabindex="-1"
+                >
+                  Очистить
+                </button>
+              </div>
+            </div>
+            <ul
+              class="custom-select-dropdown"
+              role="listbox"
+              aria-label="Упаковка"
+            >
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="картон"
+              >
+                Картон
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="catalog-filters-list visually-hidden">
+          <div class="custom-select" data-name="purpose">
+            <select aria-label="Назначение" tabindex="-1">
+              <option value="значение">значение</option>
+            </select>
+            <div
+              class="custom-select-trigger"
+              role="button"
+              tabindex="0"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="custom-select-label">Назначение</span>
+              <span class="custom-select-tags"></span>
+              <div class="custom-select-controls">
+                <button
+                  type="button"
+                  class="custom-select-clear"
+                  aria-label="Очистить"
+                  tabindex="-1"
+                >
+                  Очистить
+                </button>
+              </div>
+            </div>
+            <ul
+              class="custom-select-dropdown"
+              role="listbox"
+              aria-label="Назначение"
+            >
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="значение"
+              >
+                Значение
+              </li>
+            </ul>
+          </div>
+          <div class="custom-select" data-name="package">
+            <select aria-label="Упаковка" tabindex="-1">
+              <option value="картон">Картон</option>
+            </select>
+            <div
+              class="custom-select-trigger"
+              role="button"
+              tabindex="0"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="custom-select-label">Упаковка</span>
+              <span class="custom-select-tags"></span>
+              <div class="custom-select-controls">
+                <button
+                  type="button"
+                  class="custom-select-clear"
+                  aria-label="Очистить"
+                  tabindex="-1"
+                >
+                  Очистить
+                </button>
+              </div>
+            </div>
+            <ul
+              class="custom-select-dropdown"
+              role="listbox"
+              aria-label="Упаковка"
+            >
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="картон"
+              >
+                Картон
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="catalog-filters-list">
           <!-- Сортировка -->
           <div class="custom-select" data-name="sort">
-            <select aria-label="Сортировка" tabindex="-1" multiple>
+            <select aria-label="Сортировка" tabindex="-1">
+              <option value="relevance" selected>По релевантности</option>
               <option value="price-asc">Цена: по возрастанию</option>
               <option value="price-desc">Цена: по убыванию</option>
               <option value="new">Новинки</option>
@@ -1652,8 +1864,16 @@
               class="custom-select-dropdown"
               role="listbox"
               aria-label="Сортировка"
-              aria-multiselectable="true"
             >
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="true"
+                data-value="relevance"
+                data-default="true"
+              >
+                По релевантности
+              </li>
               <li
                 class="custom-select-option"
                 role="option"
@@ -1690,172 +1910,462 @@
           </div>
         </div>
       </section>
+      <section class="catalog-products container">
+        <ul class="catalog-products-list">
+          <li class="catalog-products-item">
+            <a href="" class="catalog-products-card">
+              <div class="catalog-products-card-image">
+                <img src="/assets/images/product1.jpg" alt="product1" />
+                <div class="catalog-products-card-actions">
+                  <button class="addtolist" title="сохранить в список"></button>
+                  <button
+                    class="favorites"
+                    title="добавить в избранное"
+                  ></button>
+                </div>
+              </div>
+              <div class="catalog-products-card-info">
+                <span class="catalog-products-card-name menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Soap Rumah</span
+                >
+                <span class="catalog-products-card-volume">20 G</span>
+                <span class="catalog-products-card-price">254</span>
+                <span class="catalog-products-card-oldprice">315</span>
+              </div>
+            </a>
+          </li>
+          <li class="catalog-products-item">
+            <a href="" class="catalog-products-card">
+              <div class="catalog-products-card-image">
+                <img src="/assets/images/product2.png" alt="product2" />
+                <div class="catalog-products-card-actions">
+                  <button class="addtolist" title="сохранить в список"></button>
+                  <button
+                    class="favorites"
+                    title="добавить в избранное"
+                  ></button>
+                </div>
+              </div>
+              <div class="catalog-products-card-info">
+                <span class="catalog-products-card-name menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Hair Conditioner Rumah Wood Sea salt</span
+                >
+                <span class="catalog-products-card-volume">40 ml</span>
+                <span class="catalog-products-card-price">254</span>
+              </div>
+            </a>
+          </li>
+          <li class="catalog-products-item">
+            <a href="" class="catalog-products-card">
+              <div class="catalog-products-card-image">
+                <img src="/assets/images/product3.jpg" alt="product2" />
+                <div class="catalog-products-card-actions">
+                  <button class="addtolist" title="сохранить в список"></button>
+                  <button
+                    class="favorites"
+                    title="добавить в избранное"
+                  ></button>
+                </div>
+                <span class="new">Новинка</span>
+              </div>
+              <div class="catalog-products-card-info">
+                <span class="catalog-products-card-name menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Shampoo Rumah Wood Sea salt</span
+                >
+                <span class="catalog-products-card-volume">40 ml</span>
+                <span class="catalog-products-card-price">254</span>
+              </div>
+            </a>
+          </li>
+          <li class="catalog-products-item">
+            <a href="" class="catalog-products-card">
+              <div class="catalog-products-card-image">
+                <img src="/assets/images/product4.jpg" alt="product2" />
+                <div class="catalog-products-card-actions">
+                  <button class="addtolist" title="сохранить в список"></button>
+                  <button
+                    class="favorites"
+                    title="добавить в избранное"
+                  ></button>
+                </div>
+              </div>
+              <div class="catalog-products-card-info">
+                <span class="catalog-products-card-name menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Shower Gel Rumah Wood Sea salt</span
+                >
+                <span class="catalog-products-card-volume">40 ml</span>
+                <span class="catalog-products-card-price">254</span>
+              </div>
+            </a>
+          </li>
+          <li class="catalog-products-item">
+            <a href="" class="catalog-products-card">
+              <div class="catalog-products-card-image">
+                <img src="/assets/images/product5.jpg" alt="product2" />
+                <div class="catalog-products-card-actions">
+                  <button class="addtolist" title="сохранить в список"></button>
+                  <button
+                    class="favorites"
+                    title="добавить в избранное"
+                  ></button>
+                </div>
+              </div>
+              <div class="catalog-products-card-info">
+                <span class="catalog-products-card-name menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Body Lotion Rumah Wood Sea salt</span
+                >
+                <span class="catalog-products-card-volume">40 ml</span>
+                <span class="catalog-products-card-price">254</span>
+              </div>
+            </a>
+          </li>
+          <li class="catalog-products-item">
+            <a href="" class="catalog-products-card">
+              <div class="catalog-products-card-image">
+                <img src="/assets/images/product6.jpg" alt="product2" />
+                <div class="catalog-products-card-actions">
+                  <button class="addtolist" title="сохранить в список"></button>
+                  <button
+                    class="favorites"
+                    title="добавить в избранное"
+                  ></button>
+                </div>
+              </div>
+              <div class="catalog-products-card-info">
+                <span class="catalog-products-card-name menu-link">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Hair Conditioner Rumah Wood Sea salt</span
+                >
+                <span class="catalog-products-card-volume">40 ml</span>
+                <span class="catalog-products-card-price">254</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="catalog-products-pagination">
+          <p class="catalog-products-pagination-total">
+            Всего товаров <span><b>18</b> из 300</span>
+          </p>
+          <div class="catalog-products-paginations-pages">
+            <button disabled class="backward">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <nav aria-label="Пагинация">
+              <ol class="catalog-pagination-list">
+                <li class="catalog-pagination-item">
+                  <a
+                    href="?page=1"
+                    class="catalog-pagination-btn"
+                    aria-current="page"
+                    >1</a
+                  >
+                </li>
+                <li class="catalog-pagination-item">
+                  <a href="?page=2" class="catalog-pagination-btn">2</a>
+                </li>
+                <li
+                  class="catalog-pagination-item catalog-pagination-ellipsis"
+                  aria-hidden="true"
+                >
+                  <span aria-hidden="true">...</span>
+                  <span class="visually-hidden">Страницы с 3 по 16</span>
+                </li>
+                <li class="catalog-pagination-item">
+                  <a href="?page=17" class="catalog-pagination-btn">17</a>
+                </li>
+              </ol>
+            </nav>
+            <button>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
-    <script>
-      document.querySelectorAll(".custom-select").forEach((select) => {
-        const trigger = select.querySelector(".custom-select-trigger");
-        const dropdown = select.querySelector(".custom-select-dropdown");
-        const tagsEl = select.querySelector(".custom-select-tags");
-        const clearBtn = select.querySelector(".custom-select-clear");
-        const nativeSelect = select.querySelector("select");
-        const options = [...select.querySelectorAll(".custom-select-option")];
+    <footer class="footer container">
+      <div class="footer-wrapper">
+        <div class="footer-copyrights">
+          <p>
+            © "ООО "Мезо" – производство одноразовой продукции для отелей.
+            <br />
+            Все права защищены, 2014–Сегодня
+          </p>
+          <p>
+            <span class="accent">Created by <br /></span>
+            Design Pill Studio
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="/" class="footer-account bw">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 12L16 7M21 12L16 17M21 12H3"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Аккаунт
+          </a>
 
-        // Хранилище выбранных значений: { value, label }
-        let selected = [];
-
-        // ── Рендер тегов в триггере ──────────────────────────────────────────
-        function renderTags() {
-          tagsEl.innerHTML = "";
-
-          if (selected.length === 0) {
-            select.classList.remove("has-value");
-            return;
-          }
-
-          select.classList.add("has-value");
-
-          const visible = selected.slice(0, 2);
-          const rest = selected.length - 2;
-
-          visible.forEach(({ label }) => {
-            const tag = document.createElement("span");
-            tag.className = "custom-select-tag";
-            tag.textContent = label;
-            tagsEl.appendChild(tag);
-          });
-
-          if (rest > 0) {
-            const more = document.createElement("span");
-            more.className = "custom-select-tag custom-select-tag-more";
-            more.textContent = `+${rest}`;
-            tagsEl.appendChild(more);
-          }
-        }
-
-        // ── Синхронизация нативного select ───────────────────────────────────
-        function syncNative() {
-          [...nativeSelect.options].forEach((opt) => {
-            opt.selected = selected.some((s) => s.value === opt.value);
-          });
-          nativeSelect.dispatchEvent(new Event("change", { bubbles: true }));
-        }
-
-        // ── Обновить состояние опций в dropdown ───────────────────────────────
-        function updateOptions() {
-          options.forEach((opt) => {
-            const isSelected = selected.some(
-              (s) => s.value === opt.dataset.value,
-            );
-            opt.setAttribute("aria-selected", isSelected ? "true" : "false");
-          });
-        }
-
-        // ── Открыть дропдаун ─────────────────────────────────────────────────
-        function openDropdown() {
-          document.querySelectorAll(".custom-select.open").forEach((s) => {
-            if (s !== select) closeDropdown(s);
-          });
-          select.classList.add("open");
-          trigger.setAttribute("aria-expanded", "true");
-          // Фокус на первую выбранную опцию или первую
-          const firstSelected =
-            dropdown.querySelector("[aria-selected='true']") || options[0];
-          if (firstSelected) firstSelected.focus();
-        }
-
-        // ── Закрыть дропдаун ─────────────────────────────────────────────────
-        function closeDropdown(s = select) {
-          s.classList.remove("open");
-          s.querySelector(".custom-select-trigger").setAttribute(
-            "aria-expanded",
-            "false",
-          );
-        }
-
-        // ── Клик на триггер ──────────────────────────────────────────────────
-        trigger.addEventListener("click", (e) => {
-          // Не реагировать на клик по кнопке очистить
-          if (e.target.closest(".custom-select-clear")) return;
-          select.classList.contains("open") ? closeDropdown() : openDropdown();
-        });
-
-        // ── Кнопка "Очистить" ────────────────────────────────────────────────
-        clearBtn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          selected = [];
-          renderTags();
-          updateOptions();
-          syncNative();
-          closeDropdown();
-          trigger.focus();
-        });
-
-        // ── Клик по опции ────────────────────────────────────────────────────
-        options.forEach((option) => {
-          option.setAttribute("tabindex", "-1");
-
-          option.addEventListener("click", (e) => {
-            e.stopPropagation();
-            const value = option.dataset.value;
-            const label = option.textContent.trim();
-            const idx = selected.findIndex((s) => s.value === value);
-
-            if (idx > -1) {
-              selected.splice(idx, 1);
-            } else {
-              selected.push({ value, label });
-            }
-
-            renderTags();
-            updateOptions();
-            syncNative();
-            // Дропдаун остаётся открытым для мультивыбора
-            option.focus();
-          });
-
-          // ── Клавиатурная навигация ────────────────────────────────────────
-          option.addEventListener("keydown", (e) => {
-            const idx = options.indexOf(option);
-            if (e.key === "ArrowDown") {
-              e.preventDefault();
-              options[Math.min(idx + 1, options.length - 1)].focus();
-            } else if (e.key === "ArrowUp") {
-              e.preventDefault();
-              if (idx === 0) trigger.focus();
-              else options[Math.max(idx - 1, 0)].focus();
-            } else if (e.key === "Escape") {
-              closeDropdown();
-              trigger.focus();
-            } else if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              option.click();
-            }
-          });
-        });
-
-        // ── Клавиши на триггере ───────────────────────────────────────────────
-        trigger.addEventListener("keydown", (e) => {
-          if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            openDropdown();
-          } else if (e.key === "Escape") {
-            closeDropdown();
-          }
-        });
-      });
-
-      // ── Закрыть при клике вне ─────────────────────────────────────────────
-      document.addEventListener("click", (e) => {
-        if (!e.target.closest(".custom-select")) {
-          document.querySelectorAll(".custom-select.open").forEach((s) => {
-            s.classList.remove("open");
-            s.querySelector(".custom-select-trigger").setAttribute(
-              "aria-expanded",
-              "false",
-            );
-          });
-        }
-      });
-    </script>
+          <ul class="footer-links-list">
+            <li>
+              <a href="">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 12L16 7M21 12L16 17M21 12H3"
+                    class="bw-svg"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Доставка
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 12L16 7M21 12L16 17M21 12H3"
+                    class="bw-svg"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Контакты
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 12L16 7M21 12L16 17M21 12H3"
+                    class="bw-svg"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Terms
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 12L16 7M21 12L16 17M21 12H3"
+                    class="bw-svg"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Policy
+              </a>
+            </li>
+          </ul>
+          <ul class="footer-links-list">
+            <li>
+              <a href="">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 12L16 7M21 12L16 17M21 12H3"
+                    class="bw-svg"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                VK
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 12L16 7M21 12L16 17M21 12H3"
+                    class="bw-svg"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Telegram
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="/catalog.js" defer></script>
+    <script src="/main.js"></script>
   </body>
 </html>
