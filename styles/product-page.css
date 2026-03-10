@@ -91,8 +91,13 @@
   text-transform: uppercase;
 }
 
+.product-copy {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .product-copy button {
-  /* width: fit-content; */
   border-radius: 2px;
   background-color: var(--color-bright);
   padding: 8px 16px;
@@ -539,6 +544,26 @@
     grid-template-columns: 1fr;
     justify-items: stretch;
     row-gap: 40px;
+  }
+
+  .product-actions button {
+    padding: 8px 8px 8px 12px;
+  }
+
+  .product-quantity p,
+  .product-copy button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .product-quantity p span,
+  .product-copy button span {
+    font-size: 18px;
+  }
+
+  .product-copy button svg {
+    width: 16px;
+    height: 16px;
   }
 
   .product-title {
