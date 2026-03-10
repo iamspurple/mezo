@@ -56,13 +56,17 @@
 }
 
 .howtofind-accordion-content {
-  padding-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
   overflow: hidden;
-  transition: height 0.35s ease;
+  transition: height 0.35s ease, padding-top 0.35s ease;
+  padding-top: 20px;
+}
+
+.howtofind-accordion-content.is-closed {
+  padding-top: 0;
 }
 
 .howtofind-accordion summary {
