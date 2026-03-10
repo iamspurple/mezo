@@ -181,11 +181,11 @@
   filter: invert();
 }
 
-.header-menu-products-list-title a:active .svg-icon {
+/* .header-menu-products-list-title a:active .svg-icon {
   width: 24px;
   height: 24px;
   filter: invert();
-}
+} */
 
 .header-menu-products-list {
   display: flex;
@@ -1336,5 +1336,9 @@
 @media screen and (max-width: 480px) {
   .employee-image {
     aspect-ratio: 1/1;
+  }
+
+  .breadcrumbs {
+    gap: 20px;
   }
 }

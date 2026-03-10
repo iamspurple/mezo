@@ -98,14 +98,14 @@ button {
   transition: var(--transition);
 }
 
-.bw:hover,
-.bw:active {
+.bw:hover
+/* .bw:active */ {
   color: white;
   background-color: black;
 }
 
-.bw:hover svg,
-.bw:active svg {
+.bw:hover svg
+/* .bw:active svg  */ {
   filter: invert();
 }
 
@@ -115,14 +115,14 @@ button {
   transition: var(--transition);
 }
 
-.bw-accent:hover,
-.bw-accent:active {
+.bw-accent:hover
+/* .bw-accent:active  */ {
   color: black;
   background-color: var(--color-vodka);
 }
 
-.bw-accent:hover .bw-accent-svg,
-.bw-accent:active .bw-accent-svg {
+.bw-accent:hover .bw-accent-svg
+/* .bw-accent:active .bw-accent-svg  */ {
   filter: invert();
 }
 
@@ -136,8 +136,8 @@ button {
   transition: var(--transition);
 }
 
-.vodka-accent:hover,
-.vodka-accent:active {
+.vodka-accent:hover
+/* .vodka-accent:active  */ {
   background-color: var(--color-vodka);
   color: black;
 }
@@ -188,9 +188,9 @@ button {
 }
 
 a:hover .svg-icon,
-a:active .svg-icon,
+/* a:active .svg-icon, */
 button:hover .svg-icon,
-button:active .svg-icon,
+/* button:active .svg-icon, */
 li:hover:not(.active) .svg-icon {
   width: 24px;
   height: 24px;
