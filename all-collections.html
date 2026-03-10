@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/components.css" />
-    <link rel="stylesheet" href="/styles/product-page.css" />
+    <link rel="stylesheet" href="/styles/all-collections.css" />
   </head>
   <body>
     <header class="header container">
@@ -929,7 +929,7 @@
                       </a>
                     </li>
                     <li class="header-menu-info-item">
-                      <a href="" class="menu-link">
+                      <a href="/delivery.html" class="menu-link">
                         <svg
                           width="24"
                           height="24"
@@ -1442,43 +1442,19 @@
               Каталог
             </a>
           </li>
-          <li>
-            <a href="">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 12L16 7M21 12L16 17M21 12H3"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              Rumah Wood Sea Salt
-            </a>
-          </li>
 
-          <li aria-current="page">Лосьон 30 ML</li>
+          <li aria-current="page">Коллекции</li>
         </ul>
       </nav>
-      <section class="product container">
-        <div class="product-data">
-          <div class="product-info">
-            <h1 class="title-medium product-title">
-              <span
-                >Лосьон для тела <br />
-                Rumah Wood Sea salt</span
-              >
-              <span>245</span>
-            </h1>
-            <div class="product-actions">
-              <button class="btn text-medium favorites">
-                Сохранить
+      <section class="all-collections container">
+        <h1 class="title-medium all-collections-title">Коллекции</h1>
+        <ul class="all-collections-list">
+          <li class="all-collections-item">
+            <a href="" class="all-collections-item-content item-content">
+              <div class="all-collections-item-image item-image">
+                <img src="/assets/images/collection1.jpg" alt="" />
+              </div>
+              <span class="all-collections-item-name item-name">
                 <svg
                   width="24"
                   height="24"
@@ -1487,16 +1463,23 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M9 5L16 12L9 19"
+                    d="M21 12L16 7M21 12L16 17M21 12H3"
                     stroke="black"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                  />
+                  ></path>
                 </svg>
-              </button>
-              <button class="btn text-medium">
-                Добавить в заказ
+                Rumah Tabacco Vanila
+              </span>
+            </a>
+          </li>
+          <li class="all-collections-item">
+            <a href="" class="all-collections-item-content item-content">
+              <div class="all-collections-item-image item-image">
+                <img src="/assets/images/collection2.jpg" alt="" />
+              </div>
+              <span class="all-collections-item-name item-name">
                 <svg
                   width="24"
                   height="24"
@@ -1505,100 +1488,23 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M6 12H12M12 12H18M12 12V18M12 12V6"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div class="product-actions visually-hidden">
-              <button class="btn text-medium">
-                Увидеть стоимость
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 5L16 12L9 19"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
-            <p class="text-small-secondary visually-hidden">
-              Войдите в личный кабинет или зарегистрируйте аккаунт, чтобы
-              увидеть стоимость товаров и сделать заказ.
-            </p>
-            <div class="product-quantity">
-              <p>
-                Кратность
-                <span>100</span>
-              </p>
-              <p>
-                В наличии
-                <span>100,000</span>
-              </p>
-              <p>
-                Итоговый объем, М<sup>3</sup>
-                <span>100</span>
-              </p>
-            </div>
-            <div class="product-copy">
-              <button id="articul">
-                Артикул <span>000123456</span>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                    d="M21 12L16 7M21 12L16 17M21 12H3"
                     stroke="black"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                  />
+                  ></path>
                 </svg>
-                <div class="active">
-                  Артикул скопирован
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M4 12.6111L8.92308 17.5L20 6.5"
-                        stroke="#000000"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </g>
-                  </svg>
-                </div>
-              </button>
-              <button id="url">
-                Ссылка на товар
+                Rumah Wood Sea Salt
+              </span>
+            </a>
+          </li>
+          <li class="all-collections-item">
+            <a href="" class="all-collections-item-content item-content">
+              <div class="all-collections-item-image item-image">
+                <img src="/assets/images/collection3.jpg" alt="" />
+              </div>
+              <span class="all-collections-item-name item-name">
                 <svg
                   width="24"
                   height="24"
@@ -1607,276 +1513,43 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                    d="M21 12L16 7M21 12L16 17M21 12H3"
                     stroke="black"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                  />
+                  ></path>
                 </svg>
-                <div class="active">
-                  Ссылка скопирована
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M4 12.6111L8.92308 17.5L20 6.5"
-                        stroke="#000000"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </g>
-                  </svg>
-                </div>
-              </button>
-            </div>
-          </div>
-          <div>
-            <details class="product-accordion" open>
-              <summary>Описание</summary>
-              <div class="product-accordion-content text-small-secondary">
-                Лосьон для тела из премиальной коллекции косметики Rumah Wood
-                Sea salt для гостиниц. Упаковка – темно-коричневый скругленный
-                флакон с откручивающейся крышкой. Аромат: дерево и морская соль,
-                свежий и естественный букет с полупрозрачными пряными нотками.
+                Bocco
+              </span>
+            </a>
+          </li>
+          <li class="all-collections-item">
+            <a href="" class="all-collections-item-content item-content">
+              <div class="all-collections-item-image item-image">
+                <img src="/assets/images/collection4.jpg" alt="" />
               </div>
-            </details>
-            <details class="product-accordion">
-              <summary>Состав</summary>
-              <div class="product-accordion-content text-small-secondary">
-                Лосьон для тела из премиальной коллекции косметики Rumah Wood
-                Sea salt для гостиниц. Упаковка – темно-коричневый скругленный
-                флакон с откручивающейся крышкой. Аромат: дерево и морская соль,
-                свежий и естественный букет с полупрозрачными пряными нотками.
-              </div>
-            </details>
-            <details class="product-accordion">
-              <summary>Детали</summary>
-              <div class="product-accordion-content text-small-secondary">
-                Лосьон для тела из премиальной коллекции косметики Rumah Wood
-                Sea salt для гостиниц. Упаковка – темно-коричневый скругленный
-                флакон с откручивающейся крышкой. Аромат: дерево и морская соль,
-                свежий и естественный букет с полупрозрачными пряными нотками.
-              </div>
-            </details>
-          </div>
-        </div>
-        <div class="product-images">
-          <div class="product-slider-wrapper">
-            <ul class="product-slider-track">
-              <li class="product-slider-slide">
-                <img src="/assets/images/product1.jpg" alt="" />
-              </li>
-              <li class="product-slider-slide">
-                <img src="/assets/images/product2.png" alt="" />
-              </li>
-              <li class="product-slider-slide">
-                <img src="/assets/images/product3.jpg" alt="" />
-              </li>
-              <li class="product-slider-slide">
-                <img src="/assets/images/product4.jpg" alt="" />
-              </li>
-            </ul>
-            <div class="product-slider-dots" aria-hidden="true">
-              <span class="product-slider-dot"></span>
-              <span class="product-slider-dot"></span>
-              <span class="product-slider-dot"></span>
-              <span class="product-slider-dot"></span>
-            </div>
-          </div>
-        </div>
-        <div class="product-similar">
-          <ul class="product-similar-list">
-            <li class="product-similar-item">
-              <a href="" class="product-similar-card">
-                <div class="product-similar-card-image">
-                  <img src="/assets/images/product1.jpg" alt="product1" />
-                  <div class="product-similar-card-actions">
-                    <button
-                      class="addtolist"
-                      title="сохранить в список"
-                    ></button>
-                    <button
-                      class="favorites"
-                      title="добавить в избранное"
-                    ></button>
-                  </div>
-                </div>
-                <div class="product-similar-card-info">
-                  <span class="product-similar-card-name menu-link">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Soap Rumah</span
-                  >
-                  <span class="product-similar-card-volume">20 G</span>
-                  <span class="product-similar-card-price">254</span>
-                  <span class="product-similar-card-oldprice">315</span>
-                </div>
-              </a>
-            </li>
-            <li class="product-similar-item">
-              <a href="" class="product-similar-card">
-                <div class="product-similar-card-image">
-                  <img src="/assets/images/product2.png" alt="product2" />
-                  <div class="product-similar-card-actions">
-                    <button
-                      class="addtolist"
-                      title="сохранить в список"
-                    ></button>
-                    <button
-                      class="favorites"
-                      title="добавить в избранное"
-                    ></button>
-                  </div>
-                </div>
-                <div class="product-similar-card-info">
-                  <span class="product-similar-card-name menu-link">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Hair Conditioner Rumah Wood Sea salt</span
-                  >
-                  <span class="product-similar-card-volume">40 ml</span>
-                  <span class="product-similar-card-price">254</span>
-                </div>
-              </a>
-            </li>
-            <li class="product-similar-item">
-              <a href="" class="product-similar-card">
-                <div class="product-similar-card-image">
-                  <img src="/assets/images/product3.jpg" alt="product2" />
-                  <div class="product-similar-card-actions">
-                    <button
-                      class="addtolist"
-                      title="сохранить в список"
-                    ></button>
-                    <button
-                      class="favorites"
-                      title="добавить в избранное"
-                    ></button>
-                  </div>
-                  <span class="new">Новинка</span>
-                </div>
-                <div class="product-similar-card-info">
-                  <span class="product-similar-card-name menu-link">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Shampoo Rumah Wood Sea salt</span
-                  >
-                  <span class="product-similar-card-volume">40 ml</span>
-                  <span class="product-similar-card-price">254</span>
-                </div>
-              </a>
-            </li>
-            <li class="product-similar-item">
-              <a href="" class="product-similar-card">
-                <div class="product-similar-card-image">
-                  <img src="/assets/images/product4.jpg" alt="product2" />
-                  <div class="product-similar-card-actions">
-                    <button
-                      class="addtolist"
-                      title="сохранить в список"
-                    ></button>
-                    <button
-                      class="favorites"
-                      title="добавить в избранное"
-                    ></button>
-                  </div>
-                </div>
-                <div class="product-similar-card-info">
-                  <span class="product-similar-card-name menu-link">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Shower Gel Rumah Wood Sea salt</span
-                  >
-                  <span class="product-similar-card-volume">40 ml</span>
-                  <span class="product-similar-card-price">254</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <a href="" class="bw btn text-medium product-similar-more"
-            >Подробнее о коллекции
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 5L16 12L9 19"
-                stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
+              <span class="all-collections-item-name item-name">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 12L16 7M21 12L16 17M21 12H3"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                Lucio Noir
+              </span>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
     <footer class="footer container">
@@ -1914,7 +1587,7 @@
 
           <ul class="footer-links-list">
             <li>
-              <a href="">
+              <a href="/delivery.html">
                 <svg
                   width="24"
                   height="24"
@@ -1935,7 +1608,7 @@
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/contacts.html">
                 <svg
                   width="24"
                   height="24"
@@ -2046,6 +1719,5 @@
       </div>
     </footer>
     <script src="main.js"></script>
-    <script src="/product-page.js" defer></script>
   </body>
 </html>
