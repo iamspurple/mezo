@@ -329,8 +329,9 @@
   cursor: pointer;
 }
 
-/* Скрываем нативный radio визуально, сохраняя доступность */
-.catalog-tag-filter input[type="radio"] {
+/* Скрываем нативный input визуально, сохраняя доступность */
+.catalog-tag-filter input[type="radio"],
+.catalog-tag-filter input[type="checkbox"] {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -364,14 +365,16 @@
 }
 
 /* Фокус с клавиатуры */
-.catalog-tag-filter input[type="radio"]:focus-visible + span {
+.catalog-tag-filter input[type="radio"]:focus-visible + span,
+.catalog-tag-filter input[type="checkbox"]:focus-visible + span {
   border-color: black;
   outline: 2px solid black;
   outline-offset: 2px;
 }
 
 /* Активный тег */
-.catalog-tag-filter input[type="radio"]:checked + span {
+.catalog-tag-filter input[type="radio"]:checked + span,
+.catalog-tag-filter input[type="checkbox"]:checked + span {
   background-color: black;
   border-color: black;
   color: white;

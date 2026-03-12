@@ -20,7 +20,7 @@ document.querySelectorAll(".custom-select").forEach((select) => {
   function renderTags() {
     tagsEl.innerHTML = "";
 
-    if (selected.length === 0) {
+    if (selected.length === 0) { 
       select.classList.remove("has-value");
       const allTag = document.createElement("span");
       allTag.className = "custom-select-tag custom-select-tag-all";
@@ -209,4 +209,32 @@ document.addEventListener("click", (e) => {
       );
     });
   }
+});
+
+// ── Логика тегов-фильтров catalog-tag-filters ─────────────────────────
+document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
+  const allInput = fieldset.querySelector('input[data-tag-all]');
+  const otherInputs = [...fieldset.querySelectorAll('input[name="tag-filter"]:not([data-tag-all])')];
+
+  if (!allInput || !otherInputs.length) return;
+
+  allInput.addEventListener("change", () => {
+    if (allInput.checked) {
+      otherInputs.forEach((inp) => (inp.checked = false));
+    } else {
+      const anyOtherChecked = otherInputs.some((i) => i.checked);
+      if (!anyOtherChecked) allInput.checked = true;
+    }
+  });
+
+  otherInputs.forEach((inp) => {
+    inp.addEventListener("change", () => {
+      if (inp.checked) {
+        allInput.checked = false;
+      } else {
+        const anyOtherChecked = otherInputs.some((i) => i.checked);
+        if (!anyOtherChecked) inp.checked = true;
+      }
+    });
+  });
 });
