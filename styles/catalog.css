@@ -480,6 +480,11 @@
   backdrop-filter: blur(5px);
   z-index: 3;
   cursor: pointer;
+  transition: var(--transition);
+}
+
+.catalog-products-card-actions button:hover {
+  opacity: 0.7;
 }
 
 .catalog-products-card-actions .addtolist.active {

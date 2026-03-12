@@ -11,16 +11,23 @@ document.querySelectorAll(".custom-select").forEach((select) => {
 
   // Хранилище выбранных значений: { value, label }
   // Предвыбираем опцию с data-default="true", если она есть
-  const defaultOption = select.querySelector(".custom-select-option[data-default='true']");
+  const defaultOption = select.querySelector(
+    ".custom-select-option[data-default='true']",
+  );
   let selected = defaultOption
-    ? [{ value: defaultOption.dataset.value, label: defaultOption.textContent.trim() }]
+    ? [
+        {
+          value: defaultOption.dataset.value,
+          label: defaultOption.textContent.trim(),
+        },
+      ]
     : [];
 
   // ── Рендер тегов в триггере ──────────────────────────────────────────
   function renderTags() {
     tagsEl.innerHTML = "";
 
-    if (selected.length === 0) { 
+    if (selected.length === 0) {
       select.classList.remove("has-value");
       const allTag = document.createElement("span");
       allTag.className = "custom-select-tag custom-select-tag-all";
@@ -32,7 +39,12 @@ document.querySelectorAll(".custom-select").forEach((select) => {
     select.classList.add("has-value");
 
     // Для одиночного выбора скрываем кнопку "Очистить" если выбрано дефолтное значение
-    if (isSingle && defaultOption && selected.length === 1 && selected[0].value === defaultOption.dataset.value) {
+    if (
+      isSingle &&
+      defaultOption &&
+      selected.length === 1 &&
+      selected[0].value === defaultOption.dataset.value
+    ) {
       select.classList.add("is-default");
     } else {
       select.classList.remove("is-default");
@@ -67,9 +79,7 @@ document.querySelectorAll(".custom-select").forEach((select) => {
   // ── Обновить состояние опций в dropdown ───────────────────────────────
   function updateOptions() {
     options.forEach((opt) => {
-      const isSelected = selected.some(
-        (s) => s.value === opt.dataset.value,
-      );
+      const isSelected = selected.some((s) => s.value === opt.dataset.value);
       opt.setAttribute("aria-selected", isSelected ? "true" : "false");
     });
   }
@@ -118,7 +128,12 @@ document.querySelectorAll(".custom-select").forEach((select) => {
   clearBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     if (isSingle && defaultOption) {
-      selected = [{ value: defaultOption.dataset.value, label: defaultOption.textContent.trim() }];
+      selected = [
+        {
+          value: defaultOption.dataset.value,
+          label: defaultOption.textContent.trim(),
+        },
+      ];
     } else {
       selected = [];
     }
@@ -213,8 +228,12 @@ document.addEventListener("click", (e) => {
 
 // ── Логика тегов-фильтров catalog-tag-filters ─────────────────────────
 document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
-  const allInput = fieldset.querySelector('input[data-tag-all]');
-  const otherInputs = [...fieldset.querySelectorAll('input[name="tag-filter"]:not([data-tag-all])')];
+  const allInput = fieldset.querySelector("input[data-tag-all]");
+  const otherInputs = [
+    ...fieldset.querySelectorAll(
+      'input[name="tag-filter"]:not([data-tag-all])',
+    ),
+  ];
 
   if (!allInput || !otherInputs.length) return;
 
@@ -237,4 +256,12 @@ document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
       }
     });
   });
+});
+
+document.querySelectorAll(".addtolist, .favorites").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+  });
+  console.log(btn);
 });
