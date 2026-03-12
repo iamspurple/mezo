@@ -1405,6 +1405,7 @@
           <li>
             <a href="">
               <svg
+                aria-hidden="true"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -1426,18 +1427,21 @@
         </ul>
       </nav>
 
-      <section class="catalog-filters container">
+      <section class="catalog-filters container" aria-labelledby="catalog-filters-title">
+        <h2 id="catalog-filters-title" class="visually-hidden">Фильтры каталога</h2>
         <div class="catalog-filters-list">
-          <form class="catalog-search-form" action="">
+          <form class="catalog-search-form" action="" method="get" role="search">
+            <label for="catalog-search-input" class="visually-hidden">Поиск по каталогу</label>
             <input
               class="catalog-search"
-              type="text"
-              name=""
-              id=""
+              type="search"
+              name="q"
+              id="catalog-search-input"
               placeholder="поиск"
             />
-            <button type="submit" class="catalog-search-btn">
+            <button type="submit" class="catalog-search-btn" aria-label="Искать">
               <svg
+                aria-hidden="true"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -1910,27 +1914,24 @@
           </div>
         </div>
       </section>
-      <section class="catalog-products container">
+      <section class="catalog-products container" aria-labelledby="catalog-products-title">
+        <h2 id="catalog-products-title" class="visually-hidden">Каталог товаров</h2>
         <div class="catalog-products-wrapper">
           <ul class="catalog-products-list">
             <li class="catalog-products-item">
+              <article>
               <a href="" class="catalog-products-card">
                 <div class="catalog-products-card-image">
-                  <img src="/assets/images/product1.jpg" alt="product1" />
+                  <img src="/assets/images/product1.jpg" alt="Мыло Soap Rumah, 20 G" />
                   <div class="catalog-products-card-actions">
-                    <button
-                      class="addtolist"
-                      title="сохранить в список"
-                    ></button>
-                    <button
-                      class="favorites"
-                      title="добавить в избранное"
-                    ></button>
+                    <button class="addtolist" type="button" aria-label="Добавить в заказ"></button>
+                    <button class="favorites" type="button" aria-label="Сохранить в избранное"></button>
                   </div>
                 </div>
                 <div class="catalog-products-card-info">
                   <span class="catalog-products-card-name menu-link">
                     <svg
+                      aria-hidden="true"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
@@ -1952,25 +1953,22 @@
                   <span class="catalog-products-card-oldprice">315</span>
                 </div>
               </a>
+              </article>
             </li>
             <li class="catalog-products-item">
+              <article>
               <a href="" class="catalog-products-card">
                 <div class="catalog-products-card-image">
-                  <img src="/assets/images/product2.png" alt="product2" />
+                  <img src="/assets/images/product2.png" alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml" />
                   <div class="catalog-products-card-actions">
-                    <button
-                      class="addtolist"
-                      title="сохранить в список"
-                    ></button>
-                    <button
-                      class="favorites"
-                      title="добавить в избранное"
-                    ></button>
+                    <button class="addtolist" type="button" aria-label="Добавить в заказ"></button>
+                    <button class="favorites" type="button" aria-label="Сохранить в избранное"></button>
                   </div>
                 </div>
                 <div class="catalog-products-card-info">
                   <span class="catalog-products-card-name menu-link">
                     <svg
+                      aria-hidden="true"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
@@ -1991,26 +1989,23 @@
                   <span class="catalog-products-card-price">254</span>
                 </div>
               </a>
+              </article>
             </li>
             <li class="catalog-products-item">
+              <article>
               <a href="" class="catalog-products-card">
                 <div class="catalog-products-card-image">
-                  <img src="/assets/images/product3.jpg" alt="product2" />
+                  <img src="/assets/images/product3.jpg" alt="Шампунь Shampoo Rumah Wood Sea Salt, 40 ml" />
                   <div class="catalog-products-card-actions">
-                    <button
-                      class="addtolist"
-                      title="сохранить в список"
-                    ></button>
-                    <button
-                      class="favorites"
-                      title="добавить в избранное"
-                    ></button>
+                    <button class="addtolist" type="button" aria-label="Добавить в заказ"></button>
+                    <button class="favorites" type="button" aria-label="Сохранить в избранное"></button>
                   </div>
                   <span class="new">Новинка</span>
                 </div>
                 <div class="catalog-products-card-info">
                   <span class="catalog-products-card-name menu-link">
                     <svg
+                      aria-hidden="true"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
@@ -2031,25 +2026,22 @@
                   <span class="catalog-products-card-price">254</span>
                 </div>
               </a>
+              </article>
             </li>
             <li class="catalog-products-item">
+              <article>
               <a href="" class="catalog-products-card">
                 <div class="catalog-products-card-image">
-                  <img src="/assets/images/product4.jpg" alt="product2" />
+                  <img src="/assets/images/product4.jpg" alt="Гель для душа Shower Gel Rumah Wood Sea Salt, 40 ml" />
                   <div class="catalog-products-card-actions">
-                    <button
-                      class="addtolist"
-                      title="сохранить в список"
-                    ></button>
-                    <button
-                      class="favorites"
-                      title="добавить в избранное"
-                    ></button>
+                    <button class="addtolist" type="button" aria-label="Добавить в заказ"></button>
+                    <button class="favorites" type="button" aria-label="Сохранить в избранное"></button>
                   </div>
                 </div>
                 <div class="catalog-products-card-info">
                   <span class="catalog-products-card-name menu-link">
                     <svg
+                      aria-hidden="true"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
@@ -2070,25 +2062,22 @@
                   <span class="catalog-products-card-price">254</span>
                 </div>
               </a>
+              </article>
             </li>
             <li class="catalog-products-item">
+              <article>
               <a href="" class="catalog-products-card">
                 <div class="catalog-products-card-image">
-                  <img src="/assets/images/product5.jpg" alt="product2" />
+                  <img src="/assets/images/product5.jpg" alt="Лосьон для тела Body Lotion Rumah Wood Sea Salt, 40 ml" />
                   <div class="catalog-products-card-actions">
-                    <button
-                      class="addtolist"
-                      title="сохранить в список"
-                    ></button>
-                    <button
-                      class="favorites"
-                      title="добавить в избранное"
-                    ></button>
+                    <button class="addtolist" type="button" aria-label="Добавить в заказ"></button>
+                    <button class="favorites" type="button" aria-label="Сохранить в избранное"></button>
                   </div>
                 </div>
                 <div class="catalog-products-card-info">
                   <span class="catalog-products-card-name menu-link">
                     <svg
+                      aria-hidden="true"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
@@ -2109,25 +2098,22 @@
                   <span class="catalog-products-card-price">254</span>
                 </div>
               </a>
+              </article>
             </li>
             <li class="catalog-products-item">
+              <article>
               <a href="" class="catalog-products-card">
                 <div class="catalog-products-card-image">
-                  <img src="/assets/images/product6.jpg" alt="product2" />
+                  <img src="/assets/images/product6.jpg" alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml" />
                   <div class="catalog-products-card-actions">
-                    <button
-                      class="addtolist"
-                      title="сохранить в список"
-                    ></button>
-                    <button
-                      class="favorites"
-                      title="добавить в избранное"
-                    ></button>
+                    <button class="addtolist" type="button" aria-label="Добавить в заказ"></button>
+                    <button class="favorites" type="button" aria-label="Сохранить в избранное"></button>
                   </div>
                 </div>
                 <div class="catalog-products-card-info">
                   <span class="catalog-products-card-name menu-link">
                     <svg
+                      aria-hidden="true"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
@@ -2148,6 +2134,7 @@
                   <span class="catalog-products-card-price">254</span>
                 </div>
               </a>
+              </article>
             </li>
           </ul>
           <div class="catalog-products-pagination">
@@ -2155,8 +2142,9 @@
               Всего товаров <span><b>18</b> из 300</span>
             </p>
             <div class="catalog-products-paginations-pages">
-              <button disabled class="backward">
+              <button disabled class="backward" aria-label="Предыдущая страница">
                 <svg
+                  aria-hidden="true"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -2197,8 +2185,9 @@
                   </li>
                 </ol>
               </nav>
-              <button>
+              <button type="button" aria-label="Следующая страница">
                 <svg
+                  aria-hidden="true"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"

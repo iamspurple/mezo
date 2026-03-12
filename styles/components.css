@@ -58,11 +58,14 @@
   transition: var(--transition);
 }
 
-.header-nav-item .header-nav-cart-btn {
+.header-nav-item .header-nav-cart-btn,
+.header-nav-item .header-nav-trigger {
   background-color: inherit;
   color: inherit;
   font-size: inherit;
   border: none;
+  font-family: inherit;
+  text-transform: inherit;
 
   display: flex;
   align-items: center;
@@ -145,6 +148,9 @@
   transition: var(--transition);
 }
 
+.header-nav-item:hover:not(.content-hovered)
+  .header-nav-trigger
+  .header-nav-icon,
 .header-nav-item:hover:not(.content-hovered) .header-nav-icon {
   width: 18px;
   opacity: 1;
@@ -494,6 +500,20 @@
   gap: 8px;
   width: fit-content;
   padding: 10px;
+}
+
+.header-menu-account-mode-item button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+  text-align: left;
 }
 
 .header-menu-account-mode-item.active {
@@ -1073,6 +1093,7 @@
     color: black;
   }
 
+  .header-nav-wrapper:has(.menu.tablet) .header-burger-btn .burger-label,
   .header-nav-wrapper:has(.menu.tablet) .header-burger-btn p,
   .header-nav-wrapper:has(.menu.tablet) .header-burger-btn svg {
     display: none;
@@ -1153,14 +1174,23 @@
   }
 
   .header-nav.menu.mobile .header-nav-item.active {
+    width: 100%;
+  }
+
+  .header-nav.menu.mobile .header-nav-item.active {
+    color: white;
+    background-color: black;
+  }
+
+  .header-nav.menu.mobile .header-nav-item.active .header-nav-trigger {
+    width: 100%;
     color: white;
     background-color: black;
     flex-direction: row-reverse;
     justify-content: space-between;
-    width: 100%;
   }
 
-  .header-nav.menu.mobile .header-nav-item.active > svg > path {
+  .header-nav.menu.mobile .header-nav-item.active .header-nav-icon path {
     stroke: white;
   }
 
@@ -1193,6 +1223,7 @@
     z-index: 220;
   }
 
+  .header-nav-wrapper:has(.menu.mobile) .header-burger-btn .burger-label,
   .header-nav-wrapper:has(.menu.mobile) .header-burger-btn p,
   .header-nav-wrapper:has(.menu.mobile) .header-burger-btn svg {
     display: none;
@@ -1294,6 +1325,10 @@
   }
 
   .footer-account {
+    width: 48%;
+  }
+
+  .footer-links nav {
     width: 48%;
   }
 

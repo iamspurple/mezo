@@ -1405,6 +1405,7 @@
           <li>
             <a href="">
               <svg
+                aria-hidden="true"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -1430,8 +1431,8 @@
         заведений HoReCa: отелей, гостиниц, хостелов, баз отдыха и загородных
         клубов, санаториев.
       </h1>
-      <section class="main-message container">
-        <h2 class="main-message-title title-medium">
+      <section class="main-message container" aria-labelledby="main-message-title">
+        <h2 id="main-message-title" class="main-message-title title-medium">
           Отдельные виды нашей продукции также окажутся полезными в банях и
           саунах, салонах красоты, spa- и фитнес-центрах.
         </h2>
@@ -1455,14 +1456,14 @@
           </p>
         </div>
       </section>
-      <section class="directions">
+      <section class="directions" aria-labelledby="directions-title">
         <div class="directions-wrapper container">
-          <h2 class="directions-title title-medium">
+          <h2 id="directions-title" class="directions-title title-medium">
             Направление производства - расходная продукция для HoReCa
           </h2>
           <div class="directions-content">
             <p class="text-small-secondary">
-              «Почему именно эта ниша?» - можете спросить Вы Дело в том, что я
+              «Почему именно эта ниша?» - можете спросить Вы. Дело в том, что я
               сам несколько лет работал в индустрии HoReCa. Прошел путь от
               ночного аудитора в сети Hilton до главного менеджера по продажам и
               маркетингу в сети Accor Hotels. Много путешествовал по миру, жил и
@@ -1500,9 +1501,9 @@
           </div>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages" aria-labelledby="advantages-title">
         <div class="advantages-wrapper container">
-          <h2 class="advantages-title title-medium">
+          <h2 id="advantages-title" class="advantages-title title-medium">
             Аксессуары и косметика компании MEZO
           </h2>
           <div class="advantages-content">
@@ -1541,9 +1542,12 @@
         </div>
       </section>
       <section class="photo">
-        <img src="/assets/images/about-page.jpg" alt="продукция mezo" />
+        <figure>
+          <img src="/assets/images/about-page.jpg" alt="продукция mezo" />
+        </figure>
       </section>
-      <section class="partners container">
+      <section class="partners container" aria-labelledby="partners-title">
+        <h2 id="partners-title" class="visually-hidden">Партнёры</h2>
         <div class="partners-slider">
           <ul class="partners-list">
             <li class="partners-item">Brand 1</li>
@@ -1552,14 +1556,14 @@
             <li class="partners-item">Brand 4</li>
             <li class="partners-item">Brand 5</li>
           </ul>
-          <ul class="partners-list">
+          <ul class="partners-list" aria-hidden="true">
             <li class="partners-item">Brand 1</li>
             <li class="partners-item">Brand 2</li>
             <li class="partners-item">Brand 3</li>
             <li class="partners-item">Brand 4</li>
             <li class="partners-item">Brand 5</li>
           </ul>
-          <ul class="partners-list">
+          <ul class="partners-list" aria-hidden="true">
             <li class="partners-item">Brand 1</li>
             <li class="partners-item">Brand 2</li>
             <li class="partners-item">Brand 3</li>

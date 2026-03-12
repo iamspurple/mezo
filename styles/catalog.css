@@ -401,6 +401,10 @@
   /* justify-content: ; */
 }
 
+.catalog-products-item article {
+  display: contents;
+}
+
 .catalog-products-item {
   transition: var(--transition);
   width: calc((100% - 60px) / 6);

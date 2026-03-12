@@ -79,6 +79,10 @@ textarea {
   text-transform: inherit;
 }
 
+article {
+  display: contents;
+}
+
 button {
   background-color: transparent;
   border: none;

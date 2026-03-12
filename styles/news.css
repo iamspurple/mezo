@@ -24,6 +24,10 @@
   height: 100%;
 }
 
+.news-item article {
+  display: contents;
+}
+
 .fresh-news-item-content,
 .news-item-content {
   width: 100%;

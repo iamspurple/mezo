@@ -1425,19 +1425,25 @@
           <li aria-current="page">Контакты</li>
         </ul>
       </nav>
-      <section class="team container">
+      <section class="team container" aria-labelledby="team-title">
         <div class="team-content">
-          <h2 class="team-title title-large">Команда Mezo</h2>
+          <h2 id="team-title" class="team-title title-large">Команда Mezo</h2>
           <div class="executive-wrapper">
-            <div class="executive">
-              <div class="executive-image">
-                <img src="/assets/images/executive.jpg" alt="Золотарев Антон" />
+            <article>
+              <div class="executive">
+                <div class="executive-image">
+                  <img
+                    src="/assets/images/executive.jpg"
+                    alt="Золотарев Антон"
+                  />
+                </div>
+                <span class="executive-name bw-accent">Золотарев Антон</span>
+                <span class="executive-position">Управляющий</span>
               </div>
-              <span class="executive-name bw-accent">Золотарев Антон</span>
-              <span class="executive-position">Управляющий</span>
-            </div>
+            </article>
             <a href="mailto:info@mezo.su" class="menu-link">
               <svg
+                aria-hidden="true"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -1458,343 +1464,369 @@
         </div>
         <ul class="team-list">
           <li class="team-item">
-            <div class="employee">
-              <div class="employee-image">
-                <img src="/assets/images/employee1.jpg" alt="" />
+            <article>
+              <div class="employee">
+                <div class="employee-image">
+                  <img src="/assets/images/employee1.jpg" alt="" />
+                </div>
+                <span class="employee-name bw-accent">Питер Паркер</span>
+                <span class="employee-position">Фотограф</span>
+                <div class="employee-contacts">
+                  <a href="tel:+" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    +7 012 345 67 89</a
+                  >
+                  <a href="tel:+" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    +7 012 345 67 89
+                    <p>добавочный <span>100</span></p></a
+                  >
+                  <a href="mailto:" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    username@mezo.su</a
+                  >
+                </div>
               </div>
-              <span class="employee-name bw-accent">Питер Паркер</span>
-              <span class="employee-position">Фотограф</span>
-              <div class="employee-contacts">
-                <a href="tel:+" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  +7 012 345 67 89</a
-                >
-                <a href="tel:+" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  +7 012 345 67 89
-                  <p>добавочный <span>100</span></p></a
-                >
-                <a href="mailto:" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  username@mezo.su</a
-                >
-              </div>
-            </div>
+            </article>
           </li>
           <li class="team-item">
-            <div class="employee">
-              <div class="employee-image">
-                <img src="/assets/images/employee2.webp" alt="" />
-              </div>
-              <span class="employee-name bw-accent">Кэрол Стурка</span>
-              <span class="employee-position">Писатель</span>
+            <article>
+              <div class="employee">
+                <div class="employee-image">
+                  <img src="/assets/images/employee2.webp" alt="" />
+                </div>
+                <span class="employee-name bw-accent">Кэрол Стурка</span>
+                <span class="employee-position">Писатель</span>
 
-              <div class="employee-contacts">
-                <a href="tel:+" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div class="employee-contacts">
+                  <a href="tel:+" class="menu-link">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    +7 012 345 67 89</a
                   >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  +7 012 345 67 89</a
-                >
-                <a href="tel:+" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <a href="tel:+" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    +7 012 345 67 89
+                    <p>добавочный <span>100</span></p>
+                  </a>
+                  <a href="mailto:" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    username@mezo.su</a
                   >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  +7 012 345 67 89
-                  <p>добавочный <span>100</span></p>
-                </a>
-                <a href="mailto:" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  username@mezo.su</a
-                >
+                </div>
               </div>
-            </div>
+            </article>
           </li>
           <li class="team-item">
-            <div class="employee">
-              <div class="employee-image">
-                <img src="/assets/images/worker2.jpg" alt="" />
-              </div>
-              <span class="employee-name bw-accent">Сол Гудман</span>
-              <span class="employee-position">Юрист, адвокат</span>
+            <article>
+              <div class="employee">
+                <div class="employee-image">
+                  <img src="/assets/images/worker2.jpg" alt="" />
+                </div>
+                <span class="employee-name bw-accent">Сол Гудман</span>
+                <span class="employee-position">Юрист, адвокат</span>
 
-              <div class="employee-contacts">
-                <a href="tel:+" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div class="employee-contacts">
+                  <a href="tel:+" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    +7 012 345 67 89</a
                   >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  +7 012 345 67 89</a
-                >
-                <a href="tel:+" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <a href="tel:+" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    +7 012 345 67 89
+                    <p>добавочный <span>100</span></p>
+                  </a>
+                  <a href="mailto:" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    username@mezo.su</a
                   >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  +7 012 345 67 89
-                  <p>добавочный <span>100</span></p>
-                </a>
-                <a href="mailto:" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  username@mezo.su</a
-                >
+                </div>
               </div>
-            </div>
+            </article>
           </li>
           <li class="team-item">
-            <div class="employee">
-              <div class="employee-image">
-                <img src="/assets/images/worker1.webp" alt="" />
+            <article>
+              <div class="employee">
+                <div class="employee-image">
+                  <img src="/assets/images/worker1.webp" alt="" />
+                </div>
+                <span class="employee-name bw-accent">Майкл Скотт</span>
+                <span class="employee-position">Региональный менеджер</span>
+                <div class="employee-contacts">
+                  <a href="tel:+" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    +7 012 345 67 89</a
+                  >
+                  <a href="tel:+" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    +7 012 345 67 89
+                    <p>добавочный <span>100</span></p>
+                  </a>
+                  <a href="mailto:" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    username@mezo.su</a
+                  >
+                </div>
               </div>
-              <span class="employee-name bw-accent">Майкл Скотт</span>
-              <span class="employee-position">Региональный менеджер</span>
-              <div class="employee-contacts">
-                <a href="tel:+" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  +7 012 345 67 89</a
-                >
-                <a href="tel:+" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  +7 012 345 67 89
-                  <p>добавочный <span>100</span></p>
-                </a>
-                <a href="mailto:" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  username@mezo.su</a
-                >
-              </div>
-            </div>
+            </article>
           </li>
           <li class="team-item">
-            <div class="employee">
-              <div class="employee-image">
-                <img src="/assets/images/worker3.avif" alt="" />
+            <article>
+              <div class="employee">
+                <div class="employee-image">
+                  <img src="/assets/images/worker3.avif" alt="" />
+                </div>
+                <span class="employee-name bw-accent">Энтони Сопрано</span>
+                <span class="employee-position"
+                  >Консультант по управлению отходами</span
+                >
+                <div class="employee-contacts">
+                  <a href="tel:+" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    +7 012 345 67 89</a
+                  >
+                  <a href="tel:+" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    +7 012 345 67 89
+                    <p>добавочный <span>100</span></p></a
+                  >
+                  <a href="mailto:" class="menu-link">
+                    <svg
+                      aria-hidden="true"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 12L16 7M21 12L16 17M21 12H3"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    username@mezo.su</a
+                  >
+                </div>
               </div>
-              <span class="employee-name bw-accent">Энтони Сопрано</span>
-              <span class="employee-position"
-                >Консультант по управлению отходами</span
-              >
-              <div class="employee-contacts">
-                <a href="tel:+" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  +7 012 345 67 89</a
-                >
-                <a href="tel:+" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  +7 012 345 67 89
-                  <p>добавочный <span>100</span></p></a
-                >
-                <a href="mailto:" class="menu-link">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  username@mezo.su</a
-                >
-              </div>
-            </div>
+            </article>
           </li>
         </ul>
       </section>
-      <section class="howtofind container">
-        <h2 class="howtofind-title title-large">Как нас найти</h2>
+      <section class="howtofind container" aria-labelledby="howtofind-title">
+        <h2 id="howtofind-title" class="howtofind-title title-large">
+          Как нас найти
+        </h2>
         <div class="howtofind-content">
           <details class="howtofind-accordion accordion" open>
             <summary>Липецк</summary>
@@ -1807,6 +1839,7 @@
               <div class="employee-contacts">
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1825,6 +1858,7 @@
                 >
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1844,6 +1878,7 @@
                 >
                 <a href="mailto:" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1874,6 +1909,7 @@
               <div class="employee-contacts">
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1892,6 +1928,7 @@
                 >
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1911,6 +1948,7 @@
                 >
                 <a href="mailto:" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1941,6 +1979,7 @@
               <div class="employee-contacts">
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1959,6 +1998,7 @@
                 >
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1978,6 +2018,7 @@
                 >
                 <a href="mailto:" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -2008,6 +2049,7 @@
               <div class="employee-contacts">
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -2026,6 +2068,7 @@
                 >
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -2045,6 +2088,7 @@
                 >
                 <a href="mailto:" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -2075,6 +2119,7 @@
               <div class="employee-contacts">
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -2093,6 +2138,7 @@
                 >
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -2112,6 +2158,7 @@
                 >
                 <a href="mailto:" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -2142,6 +2189,7 @@
               <div class="employee-contacts">
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -2160,6 +2208,7 @@
                 >
                 <a href="tel:+" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -2179,6 +2228,7 @@
                 >
                 <a href="mailto:" class="menu-link">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"

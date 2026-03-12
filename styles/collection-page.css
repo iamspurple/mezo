@@ -99,6 +99,10 @@
   padding-bottom: 60px;
 }
 
+.collection-products-item article {
+  display: contents;
+}
+
 .collection-products-item {
   transition: var(--transition);
   width: calc((100% - 24px) / 3);
@@ -519,5 +523,13 @@
 @media screen and (max-width: 480px) {
   .hero-image {
     aspect-ratio: 0.7;
+  }
+
+  .presentation-images {
+    grid-template-columns: 1fr;
+  }
+
+  .presentation-images > :first-child {
+    grid-column: auto;
   }
 }

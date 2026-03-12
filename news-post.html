@@ -1445,12 +1445,12 @@
           <li aria-current="page">Новость</li>
         </ul>
       </nav>
-      <article class="post container">
+      <article class="post container" aria-labelledby="post-title">
         <div class="post-title-wrapper">
-          <h1 class="post-title title-large">
+          <h1 id="post-title" class="post-title title-large">
             Премиальные аксессуары из натурального дерева
           </h1>
-          <time class="post-date" datetime="2026-01-10"
+          <time id="post-date" class="post-date" datetime="2026-01-10"
             >Январь 10 <br />
             2026</time
           >
@@ -1471,16 +1471,18 @@
           Полностью биоразлагаемые, они идеально подойдут для экологичных
           гостиничных концепций.
         </p>
-        <div class="post-gallery">
+        <section class="post-gallery">
           <div class="post-gallery-image">
             <img src="/assets/images/blog-post2.jpg" alt="" />
           </div>
           <div class="post-gallery-image">
             <img src="/assets/images/blog-post3.jpg" alt="" />
           </div>
-        </div>
-        <div class="post-details">
-          <h2 class="title-medium post-details-title">Состав линейки</h2>
+        </section>
+        <section class="post-details" aria-labelledby="post-details-title">
+          <h2 id="post-details-title" class="title-medium post-details-title">
+            Состав линейки
+          </h2>
           <div class="post-details-content">
             <ul class="post-details-list">
               <li class="post-details-item">
@@ -1504,8 +1506,8 @@
               упаковки в бумажные крафт-пакеты.
             </p>
           </div>
-        </div>
-        <div class="post-gallery">
+        </section>
+        <section class="post-gallery">
           <div class="post-gallery-image">
             <img src="/assets/images/blog-post4.jpg" alt="" />
           </div>
@@ -1515,10 +1517,12 @@
           <div class="post-gallery-image">
             <img src="/assets/images/blog-post6.jpg" alt="" />
           </div>
-        </div>
+        </section>
       </article>
-      <section class="others container">
-        <h2 class="others-title title-medium">Другие новости</h2>
+      <section class="others container" aria-labelledby="others-title">
+        <h2 id="others-title" class="others-title title-medium">
+          Другие новости
+        </h2>
         <div class="others-content">
           <ul class="others-list">
             <li class="others-item">
@@ -1532,6 +1536,7 @@
 
                 <span class="others-item-name item-name">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1565,6 +1570,7 @@
 
                 <span class="others-item-name item-name">
                   <svg
+                    aria-hidden="true"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -1591,6 +1597,7 @@
           <a href="/" class="others-more btn text-medium bw-accent">
             все новости
             <svg
+              aria-hidden="true"
               width="24"
               height="24"
               viewBox="0 0 24 24"
