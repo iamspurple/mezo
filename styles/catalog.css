@@ -23,6 +23,7 @@
   border: 2px solid var(--color-lightgrey);
   border-radius: var(--radius-sm);
   color: black;
+  background-color: white;
   font-family: var(--font-primary);
   text-transform: uppercase;
   height: 56px;
@@ -35,6 +36,11 @@
 .catalog-search::placeholder {
   color: black;
   font-weight: 400;
+}
+
+.catalog-search:focus {
+  outline: none;
+  border-color: black;
 }
 
 .catalog-search:not(:placeholder-shown) {
