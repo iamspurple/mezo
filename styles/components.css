@@ -1389,4 +1389,20 @@
     gap: 20px;
     row-gap: 10px;
   }
+
+  .header-menu-products-wrapper {
+    gap: 0;
+  }
+
+  .header-menu-products-list {
+    text-wrap: wrap;
+  }
+
+  .header-menu-collections-slider-controls {
+    padding-bottom: 20px;
+  }
+
+  .header-menu-account-form-buttons {
+    flex-wrap: wrap;
+  }
 }
