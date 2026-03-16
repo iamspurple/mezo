@@ -467,12 +467,20 @@
 .cart-item-delete {
   color: #00000044;
   font-size: 14px;
+  transition: var(--transition);
+}
+
+.cart-item-multiplicity {
+  opacity: 0;
+}
+
+.cart-item:hover .cart-item-multiplicity {
+  opacity: 1;
 }
 
 .cart-item-delete {
   text-decoration: underline;
   cursor: pointer;
-  transition: var(--transition);
 }
 
 .cart-item-delete:hover {
