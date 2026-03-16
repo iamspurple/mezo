@@ -1632,7 +1632,8 @@
         </div>
       </section>
     </main>
-    <footer class="footer container">
+    <footer class="footer container" aria-labelledby="footer-title">
+      <h2 id="footer-title" class="visually-hidden">Подвал сайта</h2>
       <div class="footer-wrapper">
         <div class="footer-copyrights">
           <p>
@@ -1653,6 +1654,7 @@
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 d="M21 12L16 7M21 12L16 17M21 12H3"
@@ -1665,136 +1667,146 @@
             Аккаунт
           </a>
 
-          <ul class="footer-links-list">
-            <li>
-              <a href="/delivery.html">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Доставка
-              </a>
-            </li>
-            <li>
-              <a href="/contacts.html">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Контакты
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Terms
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Policy
-              </a>
-            </li>
-          </ul>
-          <ul class="footer-links-list">
-            <li>
-              <a href="">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                VK
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    class="bw-svg"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                Telegram
-              </a>
-            </li>
-          </ul>
+          <nav aria-label="Полезные ссылки">
+            <ul class="footer-links-list">
+              <li>
+                <a href="/delivery.html">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Доставка
+                </a>
+              </li>
+              <li>
+                <a href="/contacts.html">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Контакты
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Terms
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Policy
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav aria-label="Социальные сети">
+            <ul class="footer-links-list">
+              <li>
+                <a href="">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  VK
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Telegram
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </footer>
