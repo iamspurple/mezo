@@ -479,6 +479,17 @@
   transition: var(--transition);
 }
 
+.catalog-products-card-actions {
+  opacity: 0;
+  transition: var(--transition);
+}
+
+@media (any-hover: hover) {
+  .catalog-products-card:hover .catalog-products-card-actions {
+    opacity: 1;
+  }
+}
+
 .catalog-products-card-actions button {
   width: 48px;
   height: 48px;
@@ -729,6 +740,10 @@
 
   .catalog-products-list.large .catalog-products-card-name {
     width: 60%;
+  }
+
+  .catalog-products-card-actions {
+    opacity: 1;
   }
 
   .catalog-products-card-actions button {

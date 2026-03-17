@@ -776,11 +776,12 @@ const initMenu = () => {
 // Открытие/закрытие cart-preview
 const initCartPreview = () => {
   const openBtn = document.getElementById("open-cart-preview-btn");
+  const openProductBtn = document.getElementById("open-product-addtocart-btn");
   const closeBtn = document.getElementById("close-cart-preview-btn");
   const overlay = document.getElementById("overlay");
   const modal = document.getElementById("cart-preview-modal");
 
-  if (!openBtn || !closeBtn || !overlay || !modal) return;
+  if (!closeBtn || !overlay || !modal) return;
 
   const openCartPreview = () => {
     overlay.classList.remove("is-hidden");
@@ -796,7 +797,8 @@ const initCartPreview = () => {
     document.body.style.overflow = "";
   };
 
-  openBtn.addEventListener("click", openCartPreview);
+  if (openBtn) openBtn.addEventListener("click", openCartPreview);
+  if (openProductBtn) openProductBtn.addEventListener("click", openCartPreview);
   closeBtn.addEventListener("click", closeCartPreview);
   overlay.addEventListener("click", closeCartPreview);
 };

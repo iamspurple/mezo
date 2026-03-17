@@ -81,4 +81,70 @@ document.addEventListener("DOMContentLoaded", () => {
       handleCopy(urlBtn, window.location.href);
     });
   }
+
+  // Модальное окно favorites-lists
+  const openFavoritesBtn = document.getElementById("open-favorites-lists-btn");
+  const closeFavoritesBtn = document.getElementById(
+    "close-favorites-lists-btn",
+  );
+  const favoritesOverlay = document.getElementById("overlay");
+  const favoritesModal = document.getElementById("favorites-lists-modal");
+  const step1 = document.querySelector(".favorites-lists-content .step1");
+  const step2 = document.querySelector(".favorites-lists-content .step2");
+  const goToStep2Btn = document.getElementById("gotostep2");
+  const goToStep1Btn = document.getElementById("gotostep1");
+  const saveToListBtns = document.querySelectorAll(".savetolist");
+
+  if (
+    openFavoritesBtn &&
+    closeFavoritesBtn &&
+    favoritesOverlay &&
+    favoritesModal
+  ) {
+    const openFavoritesModal = () => {
+      favoritesOverlay.classList.remove("is-hidden");
+      favoritesModal.classList.remove("is-hidden");
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+      step2?.classList.remove("is-visible");
+    };
+
+    const closeFavoritesModal = () => {
+      favoritesOverlay.classList.add("is-hidden");
+      favoritesModal.classList.add("is-hidden");
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      step2?.classList.remove("is-visible");
+    };
+
+    openFavoritesBtn.addEventListener("click", openFavoritesModal);
+    closeFavoritesBtn.addEventListener("click", closeFavoritesModal);
+    favoritesOverlay.addEventListener("click", closeFavoritesModal);
+  }
+
+  if (goToStep2Btn && step2) {
+    goToStep2Btn.addEventListener("click", () => {
+      step2.classList.add("is-visible");
+    });
+  }
+
+  if (goToStep1Btn && step2) {
+    goToStep1Btn.addEventListener("click", () => {
+      step2.classList.remove("is-visible");
+    });
+  }
+
+  saveToListBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+    });
+  });
+});
+
+document.querySelectorAll(".addtolist, .favorites").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    btn.classList.toggle("active");
+  });
 });

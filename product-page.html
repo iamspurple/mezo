@@ -1575,7 +1575,10 @@
               <span>245</span>
             </h1>
             <div class="product-actions">
-              <button class="btn text-medium favorites">
+              <button
+                id="open-favorites-lists-btn"
+                class="btn text-medium favorites"
+              >
                 Сохранить
                 <svg
                   width="24"
@@ -1593,7 +1596,7 @@
                   />
                 </svg>
               </button>
-              <button class="btn text-medium">
+              <button id="open-product-addtocart-btn" class="btn text-medium">
                 Добавить в заказ
                 <svg
                   width="24"
@@ -1808,7 +1811,7 @@
                 <div class="product-similar-card-image">
                   <img src="/assets/images/product1.jpg" alt="product1" />
                   <div class="product-similar-card-actions">
-                    <button class="addtolist" title="добавить в заказ"></button>
+                    <button class="addtocart" title="добавить в заказ"></button>
                     <button
                       class="favorites"
                       title="сохранить в избранное"
@@ -1845,7 +1848,7 @@
                 <div class="product-similar-card-image">
                   <img src="/assets/images/product2.png" alt="product2" />
                   <div class="product-similar-card-actions">
-                    <button class="addtolist" title="добавить в заказ"></button>
+                    <button class="addtocart" title="добавить в заказ"></button>
                     <button
                       class="favorites"
                       title="сохранить в избранное"
@@ -1881,7 +1884,7 @@
                 <div class="product-similar-card-image">
                   <img src="/assets/images/product3.jpg" alt="product2" />
                   <div class="product-similar-card-actions">
-                    <button class="addtolist" title="добавить в заказ"></button>
+                    <button class="addtocart" title="добавить в заказ"></button>
                     <button
                       class="favorites"
                       title="сохранить в избранное"
@@ -1918,7 +1921,7 @@
                 <div class="product-similar-card-image">
                   <img src="/assets/images/product4.jpg" alt="product2" />
                   <div class="product-similar-card-actions">
-                    <button class="addtolist" title="добавить в заказ"></button>
+                    <button class="addtocart" title="добавить в заказ"></button>
                     <button
                       class="favorites"
                       title="сохранить в избранное"
@@ -2149,6 +2152,812 @@
         </div>
       </div>
     </footer>
+    <div id="overlay" class="modal-overlay is-hidden"></div>
+    <div
+      id="favorites-lists-modal"
+      class="modal favorites-lists is-hidden"
+      aria-hidden="true"
+      aria-labelledby="favorites-lists-title"
+      role="dialog"
+    >
+      <div class="favorites-lists-content">
+        <div class="step1">
+          <h2
+            id="favorites-lists-title"
+            class="title-medium favorites-lists-title"
+          >
+            Сохранить в список
+          </h2>
+          <div class="favorites-lists-list">
+            <div class="favorites-list-item">
+              <button class="favorites-list-item-btn savetolist">
+                Избранное
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 12H12M12 12H18M12 12V18M12 12V6"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  class="active"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 12H18"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="favorites-list-item">
+              <button id="gotostep2" class="favorites-list-item-btn new">
+                Новый список
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="favorites-lists-actions">
+            <button
+              id="close-favorites-lists-btn"
+              class="bw text-medium btn backward"
+            >
+              Назад
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="step2">
+          <h2 class="title-medium favorites-lists-title">Новый список</h2>
+          <form class="favorites-lists-form" id="newlist" action="">
+            <input type="text" name="" id="" placeholder="Назовите список" />
+          </form>
+          <div class="favorites-lists-actions">
+            <button id="gotostep1" class="bw text-medium btn backward">
+              Назад
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="bw-accent btn text-medium">
+              Создать и сохранить
+              <svg
+                class="bw-svg-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="cart-preview-modal"
+      class="modal cart-preview is-hidden"
+      aria-hidden="true"
+      aria-labelledby="cart-preview-title"
+      role="dialog"
+    >
+      <div class="cart-preview-content">
+        <h2 id="cart-preview-title" class="visually-hidden">Корзина</h2>
+        <div class="cart-preview-header">
+          <button
+            id="close-cart-preview-btn"
+            class="cart-preview-btn text-medium backward"
+            aria-label="Корзина, 10 товаров"
+            aria-expanded="false"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5L16 12L9 19"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            Корзина
+            <span class="cart-quantity">10</span>
+          </button>
+        </div>
+        <ul class="cart-list">
+          <li class="cart-item">
+            <article>
+              <div class="cart-item-content">
+                <a href="" class="cart-item-image">
+                  <img src="/assets/images/product1.jpg" alt="product1" />
+                </a>
+                <div class="cart-item-info">
+                  <div>
+                    <a href="" class="cart-item-name menu-link">
+                      <svg
+                        aria-hidden="true"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Product Title
+                    </a>
+                    <div class="cart-item-details">
+                      <span class="cart-item-volume">40 ml</span>
+                      <span class="cart-item-price">254</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="cart-item-actions">
+                      <button
+                        id="decrease"
+                        type="button"
+                        aria-label="уменьшить количество"
+                        title="уменьшить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H18"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-quantity">10</span>
+                      <button
+                        id="increase"
+                        type="button"
+                        aria-label="увеличить количество"
+                        title="увеличить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H12M12 12H18M12 12V18M12 12V6"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-multiplicity">Кратность: 100</span>
+                    </div>
+                    <button class="cart-item-delete" type="button" id="delete">
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <p class="cart-item-unavailable">
+                Товар временно недоступен в нужном количестве. Поступление
+                ожидается до 26.01.2026. Добавление в заказ доступно, отгрузка —
+                после поступления на склад.
+              </p>
+            </article>
+          </li>
+          <li class="cart-item">
+            <article>
+              <div class="cart-item-content">
+                <a href="" class="cart-item-image">
+                  <img src="/assets/images/product1.jpg" alt="product1" />
+                </a>
+                <div class="cart-item-info">
+                  <div>
+                    <a href="" class="cart-item-name menu-link">
+                      <svg
+                        aria-hidden="true"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Product Title
+                    </a>
+                    <div class="cart-item-details">
+                      <span class="cart-item-volume">40 ml</span>
+                      <span class="cart-item-price">254</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="cart-item-actions">
+                      <button
+                        id="decrease"
+                        type="button"
+                        aria-label="уменьшить количество"
+                        title="уменьшить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H18"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-quantity">10</span>
+                      <button
+                        id="increase"
+                        type="button"
+                        aria-label="увеличить количество"
+                        title="увеличить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H12M12 12H18M12 12V18M12 12V6"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-multiplicity">Кратность: 100</span>
+                    </div>
+                    <button class="cart-item-delete" type="button" id="delete">
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="cart-item">
+            <article>
+              <div class="cart-item-content">
+                <a href="" class="cart-item-image">
+                  <img src="/assets/images/product1.jpg" alt="product1" />
+                </a>
+                <div class="cart-item-info">
+                  <div>
+                    <a href="" class="cart-item-name menu-link">
+                      <svg
+                        aria-hidden="true"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Product Title
+                    </a>
+                    <div class="cart-item-details">
+                      <span class="cart-item-volume">40 ml</span>
+                      <span class="cart-item-price">254</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="cart-item-actions">
+                      <button
+                        id="decrease"
+                        type="button"
+                        aria-label="уменьшить количество"
+                        title="уменьшить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H18"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-quantity">10</span>
+                      <button
+                        id="increase"
+                        type="button"
+                        aria-label="увеличить количество"
+                        title="увеличить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H12M12 12H18M12 12V18M12 12V6"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-multiplicity">Кратность: 100</span>
+                    </div>
+                    <button class="cart-item-delete" type="button" id="delete">
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="cart-item">
+            <article>
+              <div class="cart-item-content">
+                <a href="" class="cart-item-image">
+                  <img src="/assets/images/product1.jpg" alt="product1" />
+                </a>
+                <div class="cart-item-info">
+                  <div>
+                    <a href="" class="cart-item-name menu-link">
+                      <svg
+                        aria-hidden="true"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Product Title
+                    </a>
+                    <div class="cart-item-details">
+                      <span class="cart-item-volume">40 ml</span>
+                      <span class="cart-item-price">254</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="cart-item-actions">
+                      <button
+                        id="decrease"
+                        type="button"
+                        aria-label="уменьшить количество"
+                        title="уменьшить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H18"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-quantity">10</span>
+                      <button
+                        id="increase"
+                        type="button"
+                        aria-label="увеличить количество"
+                        title="увеличить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H12M12 12H18M12 12V18M12 12V6"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-multiplicity">Кратность: 100</span>
+                    </div>
+                    <button class="cart-item-delete" type="button" id="delete">
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <p class="cart-item-unavailable">
+                Товар временно недоступен в нужном количестве. Поступление
+                ожидается до 26.01.2026. Добавление в заказ доступно, отгрузка —
+                после поступления на склад.
+              </p>
+            </article>
+          </li>
+          <li class="cart-item">
+            <article>
+              <div class="cart-item-content">
+                <a href="" class="cart-item-image">
+                  <img src="/assets/images/product1.jpg" alt="product1" />
+                </a>
+                <div class="cart-item-info">
+                  <div>
+                    <a href="" class="cart-item-name menu-link">
+                      <svg
+                        aria-hidden="true"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Product Title
+                    </a>
+                    <div class="cart-item-details">
+                      <span class="cart-item-volume">40 ml</span>
+                      <span class="cart-item-price">254</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="cart-item-actions">
+                      <button
+                        id="decrease"
+                        type="button"
+                        aria-label="уменьшить количество"
+                        title="уменьшить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H18"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-quantity">10</span>
+                      <button
+                        id="increase"
+                        type="button"
+                        aria-label="увеличить количество"
+                        title="увеличить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H12M12 12H18M12 12V18M12 12V6"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-multiplicity">Кратность: 100</span>
+                    </div>
+                    <button class="cart-item-delete" type="button" id="delete">
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="cart-item">
+            <article>
+              <div class="cart-item-content">
+                <a href="" class="cart-item-image">
+                  <img src="/assets/images/product1.jpg" alt="product1" />
+                </a>
+                <div class="cart-item-info">
+                  <div>
+                    <a href="" class="cart-item-name menu-link">
+                      <svg
+                        aria-hidden="true"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Product Title
+                    </a>
+                    <div class="cart-item-details">
+                      <span class="cart-item-volume">40 ml</span>
+                      <span class="cart-item-price">254</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="cart-item-actions">
+                      <button
+                        id="decrease"
+                        type="button"
+                        aria-label="уменьшить количество"
+                        title="уменьшить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H18"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-quantity">10</span>
+                      <button
+                        id="increase"
+                        type="button"
+                        aria-label="увеличить количество"
+                        title="увеличить количество"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 12H12M12 12H18M12 12V18M12 12V6"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <span class="cart-item-multiplicity">Кратность: 100</span>
+                    </div>
+                    <button class="cart-item-delete" type="button" id="delete">
+                      Удалить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <div class="cart-actions">
+          <div class="cart-actions-row">
+            <a href="" class="text-medium btn bw backward">
+              в каталог
+              <svg
+                aria-hidden="true"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 18L9 12L15 6"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <button type="button" class="bw btn text-medium clear">
+              очистить
+              <svg
+                class="default"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 12H18"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg
+                class="hover"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <a href="/cart.html" class="bw-accent btn text-medium">
+            оформить
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5L16 12L9 19"
+                class="bw-accent-svg"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
     <script src="/js/main.js"></script>
     <script src="/js/accordion.js" defer></script>
     <script src="/js/product-page.js" defer></script>
