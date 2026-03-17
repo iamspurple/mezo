@@ -1,0 +1,3023 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/components.css" />
+    <link rel="stylesheet" href="/styles/favorites.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <a href="/" class="header-logo">
+        <img src="/assets/images/logo.svg" alt="Mezo" />
+      </a>
+      <div class="header-nav-wrapper">
+        <button
+          id="header-burger-btn"
+          class="header-burger-btn text-medium"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span class="burger-label"
+            >Корзина <span class="cart-quantity">10</span></span
+          >
+          <span class="close" aria-hidden="true">Закрыть</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 17H19M5 12H19M5 7H19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <nav class="header-nav">
+          <ul class="header-nav-list text-medium">
+            <li class="header-nav-item">
+              <button
+                type="button"
+                class="header-nav-trigger"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="products-menu"
+              >
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#D8DBDE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Продукция
+              </button>
+              <div
+                id="products-menu"
+                class="header-nav-item-content"
+                role="menu"
+                aria-label="Меню продукции"
+              >
+                <div class="header-menu-products">
+                  <div class="header-menu-products-wrapper">
+                    <a
+                      href="/"
+                      class="header-menu-products-list-title menu-link bw"
+                    >
+                      <svg
+                        class="svg-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Все товары</a
+                    >
+                    <ul class="header-menu-products-list">
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Шампуни
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Гели
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Лосьоны
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Кондиционеры
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Мыло
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Тапочки
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Пледы
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Аксессуары
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header-menu-products-wrapper">
+                    <a
+                      href="/"
+                      class="header-menu-products-list-title menu-link bw"
+                    >
+                      <svg
+                        class="svg-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Все коллекции</a
+                    >
+                    <ul class="header-menu-products-list">
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Rumah Tabacco Vanila
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Rumah Wood Sea Salt
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Bosсo
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Lucio Noir
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Argana
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Hotel Collection Light
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Lavender
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Lucio
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          No name
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          BIO
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Kraft
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Marrone
+                        </a>
+                      </li>
+                      <li class="header-menu-products-item">
+                        <a href="" class="menu-link">
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          All for you
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="header-menu-products-search-wrapper">
+                    <search role="search">
+                      <form
+                        class="header-menu-products-search-form"
+                        action=""
+                        method="get"
+                      >
+                        <input
+                          class="header-menu-products-search"
+                          type="text"
+                          name=""
+                          id=""
+                          placeholder="поиск"
+                        />
+                        <button
+                          type="submit"
+                          class="header-menu-products-search-btn"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </form>
+                    </search>
+                    <div class="header-menu-products-search-image">
+                      <img src="/assets/images/collection1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-nav-item">
+              <button
+                type="button"
+                class="header-nav-trigger"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="collections-menu"
+              >
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#D8DBDE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Коллекции
+              </button>
+              <div
+                id="collections-menu"
+                class="header-nav-item-content"
+                role="menu"
+                aria-label="Меню коллекций"
+              >
+                <div class="header-menu-collections-wrapper">
+                  <div>
+                    <div class="header-menu-collections-slider-wrapper">
+                      <ul
+                        class="header-menu-collections-list header-menu-collections-slider"
+                      >
+                        <li class="header-menu-collections-item">
+                          <a
+                            href="/"
+                            class="header-menu-collections-item-content item-content"
+                          >
+                            <div
+                              class="header-menu-collections-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/collection1.jpg"
+                                alt="c1"
+                              />
+                            </div>
+                            <span
+                              class="header-menu-collections-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Rumah Tabacco Vanila
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-collections-item">
+                          <a
+                            href="/"
+                            class="header-menu-collections-item-content item-content"
+                          >
+                            <div
+                              class="header-menu-collections-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/collection2.jpg"
+                                alt="c1"
+                              />
+                            </div>
+                            <span
+                              class="header-menu-collections-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Rumah Wood Sea Salt
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-collections-item">
+                          <a
+                            href="/"
+                            class="header-menu-collections-item-content item-content"
+                          >
+                            <div
+                              class="header-menu-collections-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/collection3.jpg"
+                                alt="c1"
+                              />
+                            </div>
+                            <span
+                              class="header-menu-collections-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Bocco
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-collections-item">
+                          <a
+                            href="/"
+                            class="header-menu-collections-item-content item-content"
+                          >
+                            <div
+                              class="header-menu-collections-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/collection4.jpg"
+                                alt="c1"
+                              />
+                            </div>
+                            <span
+                              class="header-menu-collections-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Lucio Noir
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="header-menu-collections-slider-controls">
+                    <div
+                      class="header-menu-collections-slider-controls-buttons"
+                    >
+                      <button
+                        id="header-menu-collections-slider-backward"
+                        class="bw-accent header-menu-collections-slider-controls-btn slider-btn backward"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            class="bw-accent-svg"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        id="header-menu-collections-slider-forward"
+                        class="bw-accent header-menu-collections-slider-controls-btn slider-btn"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            class="bw-accent-svg"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <a
+                      href="/"
+                      class="header-menu-collections-more btn text-medium bw"
+                    >
+                      все коллекции
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9 5L16 12L9 19"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-nav-item">
+              <button
+                type="button"
+                class="header-nav-trigger"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="info-menu"
+              >
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#D8DBDE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Информация
+              </button>
+              <div
+                id="info-menu"
+                class="header-nav-item-content"
+                role="menu"
+                aria-label="Информация"
+              >
+                <div class="header-menu-info-wrapper">
+                  <ul class="header-menu-info-list">
+                    <li class="header-menu-info-item">
+                      <a href="/about.html" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        О компании
+                      </a>
+                    </li>
+                    <li class="header-menu-info-item">
+                      <a href="" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Производство
+                      </a>
+                    </li>
+                    <li class="header-menu-info-item">
+                      <a href="" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Услуги
+                      </a>
+                    </li>
+                    <li class="header-menu-info-item">
+                      <a href="" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Новости
+                      </a>
+                    </li>
+                    <li class="header-menu-info-item">
+                      <a href="/contacts.html" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Контакты
+                      </a>
+                    </li>
+                    <li class="header-menu-info-item">
+                      <a href="/delivery.html" class="menu-link">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Доставка
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="header-menu-info-news-container">
+                    <div class="header-menu-info-new-slider-wrapper">
+                      <ul
+                        id="header-menu-info-news-slider"
+                        class="header-menu-info-news-list"
+                      >
+                        <li class="header-menu-info-news-item">
+                          <a
+                            href="/"
+                            class="header-menu-info-news-item-content item-content"
+                          >
+                            <time
+                              class="header-menu-info-news-item-date"
+                              datetime="2026-01-10"
+                              >Январь 10</time
+                            >
+                            <div
+                              class="header-menu-info-news-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/razors.jpg"
+                                alt="название новости"
+                              />
+                            </div>
+
+                            <span
+                              class="header-menu-info-news-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Аксессуары из натурального дерева
+                            </span>
+                            <span
+                              class="header-menu-info-news-item-description"
+                            >
+                              В нашем ассортименте — эксклюзивная мини-линейка
+                              деревянных аксессуаров.
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-info-news-item">
+                          <a
+                            href="/"
+                            class="header-menu-info-news-item-content item-content"
+                          >
+                            <time
+                              class="header-menu-info-news-item-date"
+                              datetime="2026-01-10"
+                              >Январь 10</time
+                            >
+                            <div
+                              class="header-menu-info-news-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/argana.jpg"
+                                alt="название новости"
+                              />
+                            </div>
+
+                            <span
+                              class="header-menu-info-news-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Редизайн коллекции Argana
+                            </span>
+                            <span
+                              class="header-menu-info-news-item-description"
+                            >
+                              Одна из первых созданных нами коллекций — Argana —
+                              теперь в новом дизайне. 
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-info-news-item">
+                          <a
+                            href="/"
+                            class="header-menu-info-news-item-content item-content"
+                          >
+                            <time
+                              class="header-menu-info-news-item-date"
+                              datetime="2026-01-10"
+                              >Январь 10</time
+                            >
+                            <div
+                              class="header-menu-info-news-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/razors.jpg"
+                                alt="название новости"
+                              />
+                            </div>
+
+                            <span
+                              class="header-menu-info-news-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Аксессуары из натурального дерева
+                            </span>
+                            <span
+                              class="header-menu-info-news-item-description"
+                            >
+                              В нашем ассортименте — эксклюзивная мини-линейка
+                              деревянных аксессуаров.
+                            </span>
+                          </a>
+                        </li>
+                        <li class="header-menu-info-news-item">
+                          <a
+                            href="/"
+                            class="header-menu-info-news-item-content item-content"
+                          >
+                            <time
+                              class="header-menu-info-news-item-date"
+                              datetime="2026-01-10"
+                              >Январь 10</time
+                            >
+                            <div
+                              class="header-menu-info-news-item-image item-image"
+                            >
+                              <img
+                                src="/assets/images/argana.jpg"
+                                alt="название новости"
+                              />
+                            </div>
+
+                            <span
+                              class="header-menu-info-news-item-name item-name"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                                  stroke="black"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                              Редизайн коллекции Argana
+                            </span>
+                            <span
+                              class="header-menu-info-news-item-description"
+                            >
+                              Одна из первых созданных нами коллекций — Argana —
+                              теперь в новом дизайне. 
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="header-menu-info-news-controls">
+                      <button
+                        id="header-menu-info-news-slider-backward"
+                        class="header-menu-info-news-slider-btn slider-btn backward"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 5L16 12L9 19"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        id="header-menu-info-news-slider-forward"
+                        class="header-menu-info-news-slider-btn slider-btn"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 5L16 12L9 19"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-nav-item">
+              <a href="/favorites.html" id="favorites-link">
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#D8DBDE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Избранное
+              </a>
+            </li>
+            <li class="header-nav-item">
+              <button
+                id="open-cart-preview-btn"
+                class="header-nav-cart-btn"
+                aria-label="Корзина, 10 товаров"
+                aria-expanded="false"
+              >
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#D8DBDE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Корзина
+                <span class="cart-quantity">10</span>
+              </button>
+            </li>
+            <li class="header-nav-item">
+              <button
+                type="button"
+                class="header-nav-trigger"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="account-menu"
+              >
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#D8DBDE"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Аккаунт
+              </button>
+              <div
+                id="account-menu"
+                class="header-nav-item-content"
+                role="menu"
+                aria-label="Аккаунт"
+              >
+                <div class="header-menu-account-wrapper">
+                  <ul class="header-menu-account-mode-list" role="tablist">
+                    <li
+                      class="header-menu-account-mode-item sign-in active bw"
+                      role="presentation"
+                    >
+                      <button
+                        type="button"
+                        role="tab"
+                        id="tab-signin"
+                        aria-selected="true"
+                        aria-controls="panel-signin"
+                      >
+                        <svg
+                          class="svg-icon"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Вход
+                      </button>
+                    </li>
+                    <li
+                      class="header-menu-account-mode-item sign-up bw"
+                      role="presentation"
+                    >
+                      <button
+                        type="button"
+                        role="tab"
+                        id="tab-signup"
+                        aria-selected="false"
+                        aria-controls="panel-signup"
+                      >
+                        <svg
+                          class="svg-icon"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M21 12L16 7M21 12L16 17M21 12H3"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Регистрация
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="header-menu-account-form-container">
+                    <form
+                      action=""
+                      class="header-menu-account-form sign-in active"
+                      id="panel-signin"
+                      role="tabpanel"
+                      aria-labelledby="tab-signin"
+                    >
+                      <input type="email" name="" id="" placeholder="email" />
+                      <input
+                        type="password"
+                        name=""
+                        id=""
+                        placeholder="пароль"
+                      />
+                      <div class="header-menu-account-form-buttons">
+                        <button
+                          type="submit"
+                          class="header-menu-account-btn bw-accent btn text-medium"
+                        >
+                          Войти
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9 5L16 12L9 19"
+                              class="bw-accent-svg"
+                              stroke="white"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                        <button
+                          type="button"
+                          class="header-menu-account-btn bw btn text-medium backward"
+                        >
+                          Обновить пароль
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9 5L16 12L9 19"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </form>
+                    <form
+                      action=""
+                      class="header-menu-account-form sign-up"
+                      id="panel-signup"
+                      role="tabpanel"
+                      aria-labelledby="tab-signup"
+                    >
+                      <input type="text" name="" id="" placeholder="имя" />
+                      <input type="text" name="" id="" placeholder="фамилия" />
+                      <input type="tel" name="" id="" placeholder="телефон" />
+                      <input type="email" name="" id="" placeholder="email" />
+                      <input
+                        type="password"
+                        name=""
+                        id=""
+                        placeholder="пароль"
+                      />
+                      <div class="header-menu-account-form-buttons">
+                        <button
+                          type="submit"
+                          class="header-menu-account-btn bw-accent btn text-medium"
+                        >
+                          Зарегистироваться
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9 5L16 12L9 19"
+                              class="bw-accent-svg"
+                              stroke="white"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <nav aria-label="Breadcrumb">
+        <ul class="breadcrumbs container">
+          <li>
+            <a href="">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Главная
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Аккаунт
+            </a>
+          </li>
+          <li aria-current="page">Избранное</li>
+        </ul>
+      </nav>
+      <section class="favorites container">
+        <div class="favorites-lists-wrapper">
+          <details class="favorites-accordion accordion" open>
+            <summary class="title-medium">Избранное</summary>
+            <div class="favorites-accordion-content accordion-content">
+              <ul class="favorites-list">
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product1.jpg"
+                          alt="Мыло Soap Rumah, 20 G"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Soap Rumah</span
+                        >
+                        <span class="favorites-card-volume">20 G</span>
+                        <span class="favorites-card-price">254</span>
+                        <span class="favorites-card-oldprice">315</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product2.png"
+                          alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Hair Conditioner Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product3.jpg"
+                          alt="Шампунь Shampoo Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Shampoo Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product4.jpg"
+                          alt="Гель для душа Shower Gel Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Shower Gel Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product5.jpg"
+                          alt="Лосьон для тела Body Lotion Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Body Lotion Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product6.jpg"
+                          alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Hair Conditioner Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product1.jpg"
+                          alt="Мыло Soap Rumah, 20 G"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Soap Rumah</span
+                        >
+                        <span class="favorites-card-volume">20 G</span>
+                        <span class="favorites-card-price">254</span>
+                        <span class="favorites-card-oldprice">315</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product2.png"
+                          alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Hair Conditioner Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product3.jpg"
+                          alt="Шампунь Shampoo Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Shampoo Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product4.jpg"
+                          alt="Гель для душа Shower Gel Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Shower Gel Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product5.jpg"
+                          alt="Лосьон для тела Body Lotion Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Body Lotion Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product6.jpg"
+                          alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Hair Conditioner Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+              </ul>
+
+              <div class="favorites-list-actions">
+                <button class="text-medium bw-accent btn open-cart-preview-btn">
+                  добавить в заказ
+                  <svg
+                    class="bw-accent-svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button class="text-medium bw btn rename">
+                  Переименовать
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button class="text-medium bw btn delete">
+                  Удалить
+
+                  <svg
+                    class="default"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 12H18"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    class="hover"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </details>
+          <details class="favorites-accordion accordion">
+            <summary class="title-medium">Список 2</summary>
+            <div class="favorites-accordion-content accordion-content">
+              <ul class="favorites-list">
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product1.jpg"
+                          alt="Мыло Soap Rumah, 20 G"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Soap Rumah</span
+                        >
+                        <span class="favorites-card-volume">20 G</span>
+                        <span class="favorites-card-price">254</span>
+                        <span class="favorites-card-oldprice">315</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product2.png"
+                          alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Hair Conditioner Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product3.jpg"
+                          alt="Шампунь Shampoo Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Shampoo Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product4.jpg"
+                          alt="Гель для душа Shower Gel Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Shower Gel Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product5.jpg"
+                          alt="Лосьон для тела Body Lotion Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Body Lotion Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product6.jpg"
+                          alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Hair Conditioner Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product1.jpg"
+                          alt="Мыло Soap Rumah, 20 G"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Soap Rumah</span
+                        >
+                        <span class="favorites-card-volume">20 G</span>
+                        <span class="favorites-card-price">254</span>
+                        <span class="favorites-card-oldprice">315</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product2.png"
+                          alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Hair Conditioner Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product3.jpg"
+                          alt="Шампунь Shampoo Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Shampoo Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product4.jpg"
+                          alt="Гель для душа Shower Gel Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Shower Gel Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product5.jpg"
+                          alt="Лосьон для тела Body Lotion Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Body Lotion Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+                <li class="favorites-item">
+                  <article>
+                    <a href="" class="favorites-card">
+                      <div class="favorites-card-image">
+                        <img
+                          src="/assets/images/product6.jpg"
+                          alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
+                        />
+                      </div>
+                      <div class="favorites-card-info">
+                        <span class="favorites-card-name menu-link">
+                          <svg
+                            aria-hidden="true"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21 12L16 7M21 12L16 17M21 12H3"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          Hair Conditioner Rumah Wood Sea salt</span
+                        >
+                        <span class="favorites-card-volume">40 ml</span>
+                        <span class="favorites-card-price">254</span>
+                      </div>
+                    </a>
+                  </article>
+                </li>
+              </ul>
+              <div class="favorites-list-actions">
+                <button class="text-medium bw-accent btn open-cart-preview-btn">
+                  добавить в заказ
+                  <svg
+                    class="bw-accent-svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button class="text-medium bw btn rename">
+                  Переименовать
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button class="text-medium bw btn delete">
+                  Удалить
+
+                  <svg
+                    class="default"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 12H18"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    class="hover"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </details>
+          <details class="favorites-accordion accordion">
+            <summary class="title-medium">Список 3</summary>
+            <div class="favorites-accordion-content accordion-content">
+              <p class="favorites-empty-text">
+                Этот список пока еще пуст, <br />
+                добавьте в него товары, чтобы продолжить работу с ним
+              </p>
+              <div class="favorites-list-actions">
+                <a class="text-medium bw-accent btn">
+                  В каталог
+                  <svg
+                    class="bw-accent-svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <button
+                  class="text-medium bw-accent btn open-cart-preview-btn"
+                  disabled
+                >
+                  добавить в заказ
+                  <svg
+                    class="bw-accent-svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button class="text-medium bw btn rename">
+                  Переименовать
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button class="text-medium bw btn delete" disabled>
+                  Удалить
+
+                  <svg
+                    class="default"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 12H18"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <svg
+                    class="hover"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </details>
+        </div>
+        <button class="create favorites-create-new text-medium bw-accent btn">
+          Создать список
+          <svg
+            class="bw-accent-svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 12H12M12 12H18M12 12V18M12 12V6"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </section>
+    </main>
+    <footer class="footer container" aria-labelledby="footer-title">
+      <h2 id="footer-title" class="visually-hidden">Подвал сайта</h2>
+      <div class="footer-wrapper">
+        <div class="footer-copyrights">
+          <p>
+            © "ООО "Мезо" – производство одноразовой продукции для отелей.
+            <br />
+            Все права защищены, 2014–Сегодня
+          </p>
+          <p>
+            <span class="accent">Created by <br /></span>
+            Design Pill Studio
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="/" class="footer-account bw">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M21 12L16 7M21 12L16 17M21 12H3"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            Аккаунт
+          </a>
+
+          <nav aria-label="Полезные ссылки">
+            <ul class="footer-links-list">
+              <li>
+                <a href="/delivery.html">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Доставка
+                </a>
+              </li>
+              <li>
+                <a href="/contacts.html">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Контакты
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Terms
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Policy
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav aria-label="Социальные сети">
+            <ul class="footer-links-list">
+              <li>
+                <a href="">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  VK
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    aria-hidden="true"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12L16 7M21 12L16 17M21 12H3"
+                      class="bw-svg"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Telegram
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <div id="overlay" class="modal-overlay is-hidden"></div>
+    <div id="favorites-modal" class="modal favorites-menu is-hidden">
+      <div class="favorites-menu-wrapper">
+        <div class="create-list favorites-menu-content">
+          <h2 class="title-medium" data-success-message="Список создан">
+            Создать список
+          </h2>
+          <form action="" class="favorites-menu-form">
+            <input type="text" placeholder="Введите название" />
+          </form>
+          <div class="favorites-menu-actions">
+            <button class="bw text-medium btn backward close-favorites-modal">
+              Назад
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              class="bw-accent btn text-medium close-favorites-modal-delay"
+            >
+              Создать
+              <svg
+                class="bw-svg-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="rename-list favorites-menu-content">
+          <h2
+            class="title-medium"
+            data-success-message="Название списка изменено"
+          >
+            Изменить название списка
+          </h2>
+          <form action="" class="favorites-menu-form">
+            <input type="text" value="Название" />
+          </form>
+          <div class="favorites-menu-actions">
+            <button class="bw text-medium btn backward close-favorites-modal">
+              Назад
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              class="bw-accent btn text-medium close-favorites-modal-delay"
+            >
+              сохранить
+              <svg
+                class="bw-svg-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="delete-list favorites-menu-content">
+          <h2 class="title-medium" data-success-message="Список удален">
+            Удалить список
+          </h2>
+          <form action="" class="favorites-menu-form">
+            <input type="text" placeholder="Название" disabled />
+          </form>
+          <div class="favorites-menu-actions">
+            <button class="bw text-medium btn backward close-favorites-modal">
+              Назад
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              class="bw-accent btn text-medium close-favorites-modal-delay"
+            >
+              удалить
+              <svg
+                class="bw-svg-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="/js/accordion.js"></script>
+    <script src="/js/favorites.js"></script>
+  </body>
+</html>
