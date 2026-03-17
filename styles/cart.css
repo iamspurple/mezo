@@ -596,6 +596,126 @@
   display: block;
 }
 
+.cart-success {
+  height: calc(100vh - 250px);
+  max-height: 710px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-success-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 600px;
+  text-wrap: wrap;
+}
+
+.cart-success-buttons {
+  display: flex;
+  gap: 12px;
+  align-self: flex-end;
+}
+
+.cart-success-buttons > * {
+  width: fit-content;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cart-check-wrapper {
+  width: 100%;
+  height: 100%;
+  max-height: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.cart-check-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.cart-check-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.cart-check-info {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 72%;
+  text-transform: lowercase;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  background-color: var(--color-bright);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+
+.cart-check-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-check-details {
+  display: flex;
+  gap: 20px;
+}
+
+.cart-check-number {
+  background-color: black;
+  color: var(--color-bright);
+  display: inline-block;
+  padding: 8px 16px 8px 8px;
+}
+
+.cart-check-price {
+  align-self: flex-end;
+}
+
+.cart-check-download {
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-check-links {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.cart-check-links > a {
+  cursor: pointer;
+}
+
+.cart-check-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cart-check-buttons.single {
+  width: fit-content;
+  align-self: flex-end;
+}
+
+.cart-check-buttons > * {
+  text-transform: uppercase;
+  width: fit-content;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1700px) {
   .cart-form {
     gap: 30px;
@@ -698,6 +818,14 @@
   .cart-item-info {
     padding-bottom: 24px;
   }
+
+  .cart-check-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-check-buttons {
+    padding-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -733,5 +861,9 @@
 
   .cart-total-item:first-of-type dd {
     font-size: 40px;
+  }
+
+  .cart-check-info {
+    gap: 40px;
   }
 }

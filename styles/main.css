@@ -68,11 +68,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Alumni Sans";
   width: 100%;
+  overflow-x: hidden;
 }
 
 button,

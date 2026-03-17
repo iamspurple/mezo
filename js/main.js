@@ -633,14 +633,16 @@ class HeaderMenuInfoNewsSlider {
   }
 }
 
-// Функция для управления скроллом body
+// Функция для управления скроллом body и html
 const toggleBodyScroll = () => {
   const headerNav = document.querySelector(".header-nav");
   const isMenuOpen = headerNav && headerNav.classList.contains("menu");
 
   if (isMenuOpen) {
+    document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
   } else {
+    document.documentElement.style.overflow = "";
     document.body.style.overflow = "";
   }
 };
@@ -704,6 +706,26 @@ const initMenu = () => {
 
   headerNavItems.forEach((item) => {
     item.addEventListener("click", (e) => {
+      // Исключение: кнопка корзины открывает cart-preview; если меню открыто — закрываем его
+      if (item.querySelector("#open-cart-preview-btn")) {
+        if (headerNav.classList.contains("menu")) {
+          headerNav.classList.remove("menu", "tablet", "mobile");
+          headerNavItems.forEach((navItem) => navItem.classList.remove("active"));
+          toggleBodyScroll();
+        }
+        return;
+      }
+
+      // Исключение: ссылка «Избранное» — закрываем меню при клике
+      if (item.querySelector("#favorites-link")) {
+        if (headerNav.classList.contains("menu")) {
+          headerNav.classList.remove("menu", "tablet", "mobile");
+          headerNavItems.forEach((navItem) => navItem.classList.remove("active"));
+          toggleBodyScroll();
+        }
+        return;
+      }
+
       const isTablet = headerNav.classList.contains("tablet");
       const hasMenuClass = headerNav.classList.contains("menu");
       const isActive = item.classList.contains("active");
@@ -749,6 +771,34 @@ const initMenu = () => {
       toggleBodyScroll();
     });
   });
+};
+
+// Открытие/закрытие cart-preview
+const initCartPreview = () => {
+  const openBtn = document.getElementById("open-cart-preview-btn");
+  const closeBtn = document.getElementById("close-cart-preview-btn");
+  const overlay = document.getElementById("overlay");
+  const modal = document.getElementById("cart-preview-modal");
+
+  if (!openBtn || !closeBtn || !overlay || !modal) return;
+
+  const openCartPreview = () => {
+    overlay.classList.remove("is-hidden");
+    modal.classList.remove("is-hidden");
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeCartPreview = () => {
+    overlay.classList.add("is-hidden");
+    modal.classList.add("is-hidden");
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+  };
+
+  openBtn.addEventListener("click", openCartPreview);
+  closeBtn.addEventListener("click", closeCartPreview);
+  overlay.addEventListener("click", closeCartPreview);
 };
 
 // Функция для обработки клика на header-menu-account-mode-item
@@ -821,5 +871,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   followCursor();
   initMenu();
+  initCartPreview();
   initAccountMode();
 });
