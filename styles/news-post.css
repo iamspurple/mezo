@@ -57,8 +57,10 @@
   transition: var(--transition);
 }
 
-.post-preview:hover img {
-  transform: scale(1);
+@media (hover: hover) {
+  .post-preview:hover img {
+    transform: scale(1);
+  }
 }
 
 .post-gallery {
@@ -85,8 +87,10 @@
   transition: var(--transition);
 }
 
-.post-gallery-image:hover img {
-  transform: scale(1);
+@media (hover: hover) {
+  .post-gallery-image:hover img {
+    transform: scale(1);
+  }
 }
 
 .post-details {

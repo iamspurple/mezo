@@ -21,8 +21,10 @@
   transition: var(--transition);
 }
 
-.hero-image:hover img {
-  transform: scale(1);
+@media (hover: hover) {
+  .hero-image:hover img {
+    transform: scale(1);
+  }
 }
 
 .presentation {
@@ -67,8 +69,10 @@
   transition: var(--transition);
 }
 
-.presentation-images > div:hover img {
-  transform: scale(1);
+@media (hover: hover) {
+  .presentation-images > div:hover img {
+    transform: scale(1);
+  }
 }
 
 .presentation .text-big {
@@ -253,26 +257,28 @@
   color: #00000066;
 }
 
-.collection-products-card:hover .collection-products-card-image img {
-  transform: scale(1);
-}
+@media (hover: hover) {
+  .collection-products-card:hover .collection-products-card-image img {
+    transform: scale(1);
+  }
 
-.collection-products-card:hover .collection-products-card-image .new {
-  opacity: 0;
-}
+  .collection-products-card:hover .collection-products-card-image .new {
+    opacity: 0;
+  }
 
-.collection-products-card:hover .collection-products-card-volume {
-  transform: translateX(100%);
-  opacity: 0;
-  width: 0;
-}
+  .collection-products-card:hover .collection-products-card-volume {
+    transform: translateX(100%);
+    opacity: 0;
+    width: 0;
+  }
 
-.collection-products-card:hover .collection-products-card-name {
-  gap: 8px;
-}
+  .collection-products-card:hover .collection-products-card-name {
+    gap: 8px;
+  }
 
-.collection-products-card:hover .collection-products-card-name svg {
-  width: 16px;
+  .collection-products-card:hover .collection-products-card-name svg {
+    width: 16px;
+  }
 }
 
 .collection-products-more {

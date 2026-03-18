@@ -104,8 +104,10 @@
   transition: var(--transition);
 }
 
-.photo:hover img {
-  transform: scale(1);
+@media (hover: hover) {
+  .photo:hover img {
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 1700px) {

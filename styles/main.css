@@ -108,15 +108,15 @@ button {
   transition: var(--transition);
 }
 
-.bw:hover
-/* .bw:active */ {
-  color: white;
-  background-color: black;
-}
+@media (hover: hover) {
+  .bw:hover {
+    color: white;
+    background-color: black;
+  }
 
-.bw:hover svg
-/* .bw:active svg  */ {
-  filter: invert();
+  .bw:hover svg {
+    filter: invert();
+  }
 }
 
 .bw-accent {
@@ -125,15 +125,15 @@ button {
   transition: var(--transition);
 }
 
-.bw-accent:hover
-/* .bw-accent:active  */ {
-  color: black;
-  background-color: var(--color-vodka);
-}
+@media (hover: hover) {
+  .bw-accent:hover {
+    color: black;
+    background-color: var(--color-vodka);
+  }
 
-.bw-accent:hover .bw-accent-svg
-/* .bw-accent:active .bw-accent-svg  */ {
-  filter: invert();
+  .bw-accent:hover .bw-accent-svg {
+    filter: invert();
+  }
 }
 
 .bw-accent-svg {
@@ -146,10 +146,11 @@ button {
   transition: var(--transition);
 }
 
-.vodka-accent:hover
-/* .vodka-accent:active  */ {
-  background-color: var(--color-vodka);
-  color: black;
+@media (hover: hover) {
+  .vodka-accent:hover {
+    background-color: var(--color-vodka);
+    color: black;
+  }
 }
 
 .btn {
@@ -197,14 +198,14 @@ button {
   transition: var(--transition);
 }
 
-a:hover .svg-icon,
-/* a:active .svg-icon, */
-button:hover .svg-icon,
-/* button:active .svg-icon, */
-li:hover:not(.active) .svg-icon {
-  width: 24px;
-  height: 24px;
-  filter: invert();
+@media (hover: hover) {
+  a:hover .svg-icon,
+  button:hover .svg-icon,
+  li:hover:not(.active) .svg-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert();
+  }
 }
 
 .item-image img {
@@ -214,17 +215,19 @@ li:hover:not(.active) .svg-icon {
   transition: var(--transition);
 }
 
-.item-content:hover .item-image img {
-  transform: scale(1);
-}
+@media (hover: hover) {
+  .item-content:hover .item-image img {
+    transform: scale(1);
+  }
 
-.item-content:hover .item-name {
-  filter: invert();
-}
+  .item-content:hover .item-name {
+    filter: invert();
+  }
 
-.item-content:hover .item-name svg {
-  width: 24px;
-  height: 24px;
+  .item-content:hover .item-name svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .slider-btn {
@@ -257,8 +260,10 @@ li:hover:not(.active) .svg-icon {
   transition: var(--transition);
 }
 
-.menu-link:hover svg {
-  width: 16px;
+@media (hover: hover) {
+  .menu-link:hover svg {
+    width: 16px;
+  }
 }
 
 .more-link {
@@ -339,12 +344,14 @@ li:hover:not(.active) .svg-icon {
     transition: var(--transition);
   }
 
-  a:hover .svg-icon,
-  button:hover .svg-icon,
-  li:hover:not(.active) .svg-icon {
-    width: 20px;
-    height: 20px;
-    filter: invert();
+  @media (hover: hover) {
+    a:hover .svg-icon,
+    button:hover .svg-icon,
+    li:hover:not(.active) .svg-icon {
+      width: 20px;
+      height: 20px;
+      filter: invert();
+    }
   }
 }
 

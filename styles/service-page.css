@@ -33,8 +33,10 @@
   transition: var(--transition);
 }
 
-.service-example:hover .service-example-image img {
-  transform: scale(1);
+@media (hover: hover) {
+  .service-example:hover .service-example-image img {
+    transform: scale(1);
+  }
 }
 
 .service-example-caption {
@@ -187,7 +189,7 @@
   object-fit: cover;
 }
 
-@media (any-hover: hover) {
+@media (hover: hover) {
   .others-item-content:hover .others-item-image {
     width: 240px;
   }

@@ -45,8 +45,10 @@
   transition: var(--transition);
 }
 
-.product-actions button:hover {
-  filter: invert();
+@media (hover: hover) {
+  .product-actions button:hover {
+    filter: invert();
+  }
 }
 
 .product-actions .favorites {
@@ -114,8 +116,10 @@
   transition: var(--transition);
 }
 
-.product-copy button:hover {
-  border-color: var(--color-lightgrey);
+@media (hover: hover) {
+  .product-copy button:hover {
+    border-color: var(--color-lightgrey);
+  }
 }
 
 .product-copy button span {
@@ -382,7 +386,7 @@
   transition: var(--transition);
 }
 
-@media (any-hover: hover) {
+@media (hover: hover) {
   .product-similar-card:hover .product-similar-card-actions {
     opacity: 1;
   }
@@ -452,26 +456,28 @@
   color: #00000066;
 }
 
-.product-similar-card:hover .product-similar-card-image img {
-  transform: scale(1);
-}
+@media (hover: hover) {
+  .product-similar-card:hover .product-similar-card-image img {
+    transform: scale(1);
+  }
 
-.product-similar-card:hover .product-similar-card-image .new {
-  opacity: 0;
-}
+  .product-similar-card:hover .product-similar-card-image .new {
+    opacity: 0;
+  }
 
-.product-similar-card:hover .product-similar-card-volume {
-  transform: translateX(100%);
-  opacity: 0;
-  width: 0;
-}
+  .product-similar-card:hover .product-similar-card-volume {
+    transform: translateX(100%);
+    opacity: 0;
+    width: 0;
+  }
 
-.product-similar-card:hover .product-similar-card-name {
-  gap: 8px;
-}
+  .product-similar-card:hover .product-similar-card-name {
+    gap: 8px;
+  }
 
-.product-similar-card:hover .product-similar-card-name svg {
-  width: 16px;
+  .product-similar-card:hover .product-similar-card-name svg {
+    width: 16px;
+  }
 }
 
 .product-similar-more {
@@ -543,16 +549,20 @@
   cursor: pointer;
 }
 
-.favorites-list-item-btn:hover {
-  background-color: #d8dbde66;
+@media (hover: hover) {
+  .favorites-list-item-btn:hover {
+    background-color: #d8dbde66;
+  }
 }
 
 .favorites-list-item-btn.active {
   background-color: var(--color-lavender);
 }
 
-.favorites-list-item-btn.active:hover {
-  opacity: 0.7;
+@media (hover: hover) {
+  .favorites-list-item-btn.active:hover {
+    opacity: 0.7;
+  }
 }
 
 .favorites-list-item-btn .active {
@@ -570,13 +580,15 @@
   border: 2px solid var(--color-lightgrey);
 }
 
-.favorites-list-item-btn.new:hover {
-  background-color: black;
-  color: white;
-}
+@media (hover: hover) {
+  .favorites-list-item-btn.new:hover {
+    background-color: black;
+    color: white;
+  }
 
-.favorites-list-item-btn.new:hover svg path {
-  stroke: white;
+  .favorites-list-item-btn.new:hover svg path {
+    stroke: white;
+  }
 }
 
 .favorites-lists-actions {
@@ -612,10 +624,16 @@
   font-weight: 400;
 }
 
-.favorites-lists-form input:focus,
-.favorites-lists-form input:hover {
+.favorites-lists-form input:focus {
   outline: none;
   border-color: black;
+}
+
+@media (hover: hover) {
+  .favorites-lists-form input:hover {
+    outline: none;
+    border-color: black;
+  }
 }
 
 .favorites-lists-form input:not(:placeholder-shown) {

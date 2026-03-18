@@ -95,10 +95,12 @@
   transition: var(--transition);
 }
 
-.categories-item:hover {
-  color: white;
-  background-color: black;
-  width: 110%;
+@media (hover: hover) {
+  .categories-item:hover {
+    color: white;
+    background-color: black;
+    width: 110%;
+  }
 }
 
 .categories-item-name {
@@ -117,13 +119,15 @@
   transition: var(--transition);
 }
 
-.categories-item:hover svg {
-  width: 80px;
-  opacity: 1;
-}
+@media (hover: hover) {
+  .categories-item:hover svg {
+    width: 80px;
+    opacity: 1;
+  }
 
-.categories-item:hover svg path {
-  stroke: white;
+  .categories-item:hover svg path {
+    stroke: white;
+  }
 }
 
 .categories-item-image {
@@ -140,9 +144,11 @@
   box-shadow: 3.04px 6.07px 36.42px 12.14px #0000000a;
 }
 
-.categories-item:hover .categories-item-image {
-  width: 600px;
-  opacity: 1;
+@media (hover: hover) {
+  .categories-item:hover .categories-item-image {
+    width: 600px;
+    opacity: 1;
+  }
 }
 
 .categories-item-image img {
@@ -193,8 +199,10 @@
   color: var(--color-lightgrey);
 }
 
-.description-text-accent:hover {
-  color: var(--color-lavender);
+@media (hover: hover) {
+  .description-text-accent:hover {
+    color: var(--color-lavender);
+  }
 }
 
 .collections {
@@ -330,7 +338,7 @@
   object-fit: cover;
 }
 
-@media (any-hover: hover) {
+@media (hover: hover) {
   .services-item-content:hover .services-item-image {
     width: 240px;
   }
@@ -488,8 +496,11 @@
   .categories-item-image {
     height: 520px;
   }
-  .categories-item:hover .categories-item-image {
-    width: 520px;
+
+  @media (hover: hover) {
+    .categories-item:hover .categories-item-image {
+      width: 520px;
+    }
   }
 
   .collections-item {
@@ -540,8 +551,10 @@
     height: 450px;
   }
 
-  .categories-item:hover .categories-item-image {
-    width: 450px;
+  @media (hover: hover) {
+    .categories-item:hover .categories-item-image {
+      width: 450px;
+    }
   }
 
   .collections-item {

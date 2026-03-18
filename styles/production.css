@@ -98,8 +98,10 @@
   transition: var(--transition);
 }
 
-.production-example:hover .production-example-image img {
-  transform: scale(1);
+@media (hover: hover) {
+  .production-example:hover .production-example-image img {
+    transform: scale(1);
+  }
 }
 
 .production-example-caption {
