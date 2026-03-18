@@ -141,10 +141,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.querySelectorAll(".addtolist, .favorites").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-    btn.classList.toggle("active");
-  });
-});

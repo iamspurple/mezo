@@ -279,6 +279,13 @@ button {
   text-transform: uppercase;
 }
 
+.title-large-to-medium {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 72%;
+  text-transform: uppercase;
+}
+
 .title-medium {
   font-weight: 700;
   font-size: 48px;
@@ -319,6 +326,10 @@ button {
   }
 
   .title-large {
+    font-size: 65px;
+  }
+
+  .title-large-to-medium {
     font-size: 65px;
   }
 
@@ -364,6 +375,10 @@ button {
     font-size: 50px;
   }
 
+  .title-large-to-medium {
+    font-size: 50px;
+  }
+
   .title-medium {
     font-size: 38px;
   }
@@ -396,6 +411,10 @@ button {
     font-size: 44px;
   }
 
+  .title-large-to-medium {
+    font-size: 44px;
+  }
+
   .title-medium {
     font-size: 36px;
   }
@@ -413,6 +432,10 @@ button {
 
   .title-large {
     font-size: 40px;
+  }
+
+  .title-large-to-medium {
+    font-size: 32px;
   }
 
   .title-medium {

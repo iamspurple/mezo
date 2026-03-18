@@ -258,10 +258,3 @@ document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
   });
 });
 
-document.querySelectorAll(".addtolist, .favorites").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-    btn.classList.toggle("active");
-  });
-});

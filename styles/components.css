@@ -149,7 +149,9 @@
 }
 
 @media (hover: hover) {
-  .header-nav-item:hover:not(.content-hovered) .header-nav-trigger .header-nav-icon,
+  .header-nav-item:hover:not(.content-hovered)
+    .header-nav-trigger
+    .header-nav-icon,
   .header-nav-item:hover:not(.content-hovered) .header-nav-icon {
     width: 18px;
     opacity: 1;
@@ -311,7 +313,9 @@
 }
 
 @media (hover: hover) {
-  .header-menu-collections-item-content:hover .header-menu-collections-item-name svg {
+  .header-menu-collections-item-content:hover
+    .header-menu-collections-item-name
+    svg {
     width: 22px;
     height: 22px;
   }
@@ -1685,6 +1689,7 @@
 
   .footer-copyrights {
     font-size: 16px;
+    gap: 40px;
   }
 
   .footer-links {
