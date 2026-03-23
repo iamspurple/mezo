@@ -829,8 +829,6 @@
   object-position: top;
   transform: scale(1.05);
   transition: var(--transition);
-  z-index: -1;
-  position: relative;
 }
 
 @media (hover: hover) {
@@ -849,6 +847,8 @@
   width: fit-content;
   transition: var(--transition);
   margin-top: -38px;
+  z-index: 2;
+  position: relative;
 }
 
 .employee-position {

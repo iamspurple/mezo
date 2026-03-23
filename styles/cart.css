@@ -55,7 +55,7 @@
   padding: 8px 16px;
   font-size: 24px;
   line-height: 80%;
-  font-weight: 700;
+  font-weight: 400;
   transition: var(--transition);
 }
 
@@ -76,16 +76,9 @@
   }
 }
 
-.cart-form input:not(:placeholder-shown) {
-  border-color: black;
-}
-
 .cart-form input:disabled {
   background-color: var(--color-bright);
   cursor: not-allowed;
-}
-
-.cart-form input:disabled::placeholder {
   color: #00000066;
 }
 
@@ -102,7 +95,7 @@
   text-transform: uppercase;
   font-size: 24px;
   line-height: 80%;
-  font-weight: 700;
+  font-weight: 400;
   transition: var(--transition);
 }
 
@@ -173,6 +166,35 @@
 
 .custom-select:not([data-name="sort"]).has-value .custom-select-trigger {
   border-color: black;
+}
+
+.custom-select:has(select:disabled) .custom-select-trigger {
+  background-color: var(--color-bright);
+  color: #00000066;
+  cursor: not-allowed;
+}
+
+.custom-select:has(select:disabled) .custom-select-tag {
+  background-color: #00000066;
+  color: white;
+}
+
+.custom-select:has(select:disabled) .custom-select-trigger::after {
+  opacity: 0.35;
+}
+
+@media (hover: hover) {
+  .custom-select:has(select:disabled) .custom-select-trigger:hover {
+    border-color: var(--color-lightgrey);
+  }
+}
+
+.custom-select:has(select:disabled) .custom-select-trigger:focus-visible {
+  border-color: var(--color-lightgrey);
+}
+
+.custom-select.open:has(select:disabled) .custom-select-trigger {
+  border-color: var(--color-lightgrey);
 }
 
 /* Название (Категория / Коллекция ...) */
@@ -709,7 +731,16 @@
   padding: 8px 16px 8px 8px;
 }
 
+.cart-check-date {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .cart-check-price {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   align-self: flex-end;
 }
 

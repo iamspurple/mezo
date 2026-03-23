@@ -147,6 +147,35 @@
   border-color: black;
 }
 
+.custom-select:has(select:disabled) .custom-select-trigger {
+  background-color: var(--color-bright);
+  color: #00000066;
+  cursor: not-allowed;
+}
+
+.custom-select:has(select:disabled) .custom-select-tag {
+  background-color: #00000066;
+  color: white;
+}
+
+.custom-select:has(select:disabled) .custom-select-trigger::after {
+  opacity: 0.35;
+}
+
+@media (hover: hover) {
+  .custom-select:has(select:disabled) .custom-select-trigger:hover {
+    border-color: var(--color-lightgrey);
+  }
+}
+
+.custom-select:has(select:disabled) .custom-select-trigger:focus-visible {
+  border-color: var(--color-lightgrey);
+}
+
+.custom-select.open:has(select:disabled) .custom-select-trigger {
+  border-color: var(--color-lightgrey);
+}
+
 /* Название (Категория / Коллекция ...) */
 .custom-select-label {
   flex-shrink: 0;

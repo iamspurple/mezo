@@ -9,6 +9,19 @@ document.querySelectorAll(".custom-select").forEach((select) => {
   const options = [...select.querySelectorAll(".custom-select-option")];
   const isSingle = select.dataset.name === "sort";
 
+  function isNativeDisabled() {
+    return Boolean(nativeSelect?.disabled);
+  }
+
+  function syncTriggerDisabled() {
+    const disabled = isNativeDisabled();
+    trigger.setAttribute("aria-disabled", disabled ? "true" : "false");
+    if (disabled) {
+      select.classList.remove("open");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+  }
+
   // Хранилище выбранных значений: { value, label }
   // Предвыбираем опцию с data-default="true", если она есть
   const defaultOption = select.querySelector(
@@ -97,6 +110,7 @@ document.querySelectorAll(".custom-select").forEach((select) => {
 
   // ── Открыть дропдаун ─────────────────────────────────────────────────
   function openDropdown() {
+    if (isNativeDisabled()) return;
     document.querySelectorAll(".custom-select.open").forEach((s) => {
       if (s !== select) closeDropdown(s);
     });
@@ -121,12 +135,14 @@ document.querySelectorAll(".custom-select").forEach((select) => {
   trigger.addEventListener("click", (e) => {
     // Не реагировать на клик по кнопке очистить
     if (e.target.closest(".custom-select-clear")) return;
+    if (isNativeDisabled()) return;
     select.classList.contains("open") ? closeDropdown() : openDropdown();
   });
 
   // ── Кнопка "Очистить" ────────────────────────────────────────────────
   clearBtn.addEventListener("click", (e) => {
     e.stopPropagation();
+    if (isNativeDisabled()) return;
     if (isSingle && defaultOption) {
       selected = [
         {
@@ -201,16 +217,20 @@ document.querySelectorAll(".custom-select").forEach((select) => {
 
   // ── Клавиши на триггере ───────────────────────────────────────────────
   trigger.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeDropdown();
+      return;
+    }
+    if (isNativeDisabled()) return;
     if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       openDropdown();
-    } else if (e.key === "Escape") {
-      closeDropdown();
     }
   });
 
   // ── Начальный рендер ─────────────────────────────────────────────────
   renderTags();
+  syncTriggerDisabled();
 });
 
 // ── Закрыть при клике вне ─────────────────────────────────────────────
