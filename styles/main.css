@@ -100,6 +100,7 @@ article {
 button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .container {
@@ -125,6 +126,10 @@ button {
   .bw:hover svg {
     filter: invert();
   }
+
+  .bw:disabled:hover svg {
+    filter: none;
+  }
 }
 
 .bw-accent {
@@ -141,6 +146,10 @@ button {
 
   .bw-accent:hover .bw-accent-svg {
     filter: invert();
+  }
+
+  .bw-accent:disabled:hover .bw-accent-svg {
+    filter: none;
   }
 }
 
@@ -260,6 +269,8 @@ button {
   font-family: var(--font-secondary);
   font-weight: 500;
   font-size: 20px;
+  margin-left: -8px;
+  transition: var(--transition);
 }
 
 .menu-link svg {
@@ -269,6 +280,10 @@ button {
 }
 
 @media (hover: hover) {
+  .menu-link:hover {
+    margin-left: 0;
+  }
+
   .menu-link:hover svg {
     width: 16px;
   }

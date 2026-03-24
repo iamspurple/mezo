@@ -255,7 +255,7 @@ document.addEventListener("click", (e) => {
     const open = btn.classList.contains("active");
     clip?.classList.toggle("is-open", open);
     if (label) {
-      label.textContent = open ? "Скрыть" : "Раскрыть";
+      label.textContent = open ? "Скрыть" : "Показать";
     }
   }
 

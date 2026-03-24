@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     summary.addEventListener("click", (e) => {
       e.preventDefault();
+      e.stopPropagation();
 
       if (details.open) {
         const h = content.scrollHeight;
@@ -31,13 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         });
 
-        content.addEventListener(
-          "transitionend",
-          () => {
-            details.removeAttribute("open");
-          },
-          { once: true }
-        );
+        const onEnd = (ev) => {
+          if (ev.target !== content) return;
+          ev.stopPropagation();
+          details.removeAttribute("open");
+        };
+        content.addEventListener("transitionend", onEnd, { once: true });
       } else {
         details.setAttribute("open", "");
         content.style.height = "0px";
@@ -47,13 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
           content.style.height = content.scrollHeight + "px";
         });
 
-        content.addEventListener(
-          "transitionend",
-          () => {
-            content.style.height = "";
-          },
-          { once: true }
-        );
+        const onEnd = (ev) => {
+          if (ev.target !== content) return;
+          ev.stopPropagation();
+          content.style.height = "";
+        };
+        content.addEventListener("transitionend", onEnd, { once: true });
       }
     });
   });

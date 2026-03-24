@@ -232,6 +232,7 @@
 .favorites-list-actions button:disabled svg path {
   stroke: var(--color-lightgrey);
 }
+
 .favorites-list-actions .delete svg {
   animation: fade-in 1s;
 }
@@ -241,11 +242,11 @@
 }
 
 @media (hover: hover) {
-  .favorites-list-actions .delete:hover .default {
+  .favorites-list-actions .delete:not(:disabled):hover .default {
     display: none;
   }
 
-  .favorites-list-actions .delete:hover .hover {
+  .favorites-list-actions .delete:not(:disabled):hover .hover {
     display: block;
   }
 }
