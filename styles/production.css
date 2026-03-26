@@ -123,10 +123,14 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 80%;
-  padding: 24px 8px 40px 8px;
+  padding-inline: 8px;
   border-top: 2px solid black;
   text-transform: uppercase;
   transition: var(--transition);
+}
+
+.production-accordion[open] {
+  padding-bottom: 40px;
 }
 
 .production-accordion-content {
@@ -144,8 +148,18 @@
 
 .production-accordion summary {
   position: relative;
-  padding-right: 30px;
-  text-wrap: wrap;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.production-accordion[open] summary {
+  padding-bottom: 0;
 }
 
 .production-accordion summary::marker {
@@ -164,10 +178,6 @@
   width: 24px;
   height: 24px;
   background: url("../assets/images/plus.svg") center/contain no-repeat;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(-50%, -50%);
   transition: all 0.25s;
 }
 

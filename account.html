@@ -1608,7 +1608,12 @@
               <div class="account-info-accordion-content accordion-content">
                 <form action="" class="account-info-form">
                   <div class="account-info-form-row">
-                    <input type="text" value="0123456" disabled />
+                    <div class="account-info-form-dealer-wrapper">
+                      <input type="text" value="0123456" disabled />
+                      <span class="account-info-form-dealer-code"
+                        >Код дилера</span
+                      >
+                    </div>
                     <div class="account-info-form-column">
                       <input type="text" value="ИНН" disabled />
                       <input
@@ -2195,7 +2200,7 @@
                   </p>
                 </div>
                 <div class="history-status">
-                  <div class="history-order-status">
+                  <div class="history-order-status active">
                     Статус заказа
                     <p>В обработке</p>
                   </div>
@@ -2203,7 +2208,7 @@
                     Статус оплаты
                     <p>Не оплачен</p>
                   </div>
-                  <button class="btn text-medium bw">
+                  <button class="btn text-medium bw check-btn">
                     Посмотреть счет
                     <svg
                       width="24"
@@ -3105,7 +3110,7 @@
                     Статус оплаты
                     <p>Оплачен</p>
                   </div>
-                  <button class="btn text-medium bw">
+                  <button class="btn text-medium bw check-btn">
                     Посмотреть счет
                     <svg
                       width="24"
