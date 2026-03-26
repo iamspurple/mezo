@@ -1,11 +1,12 @@
 .header {
   display: flex;
-  width: 100%;
+  width: auto;
   align-items: center;
   justify-content: space-between;
   position: fixed;
   top: 30px;
   left: 0;
+  right: var(--scrollbar-compensation, 0px);
   text-transform: uppercase;
   z-index: 100;
 }
@@ -27,7 +28,7 @@
   position: fixed;
   top: 25px;
   left: 40px;
-  width: calc(100% - 80px);
+  width: calc(100% - 80px - var(--scrollbar-compensation, 0px));
   height: calc(100% - 50px);
   max-height: 760px;
   transition: all 0.6s ease;
@@ -887,7 +888,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: var(--scrollbar-compensation, 0px);
+  width: auto;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.45);
   z-index: 200;
@@ -908,7 +910,7 @@
 .modal {
   position: fixed;
   top: 0;
-  right: 0;
+  right: var(--scrollbar-compensation, 0px);
   width: 650px;
   height: 100%;
   background-color: white;
@@ -1189,7 +1191,7 @@
   .header-nav.menu {
     top: 18px;
     left: 18px;
-    width: calc(100% - 36px);
+    width: calc(100% - 36px - var(--scrollbar-compensation, 0px));
     height: calc(100% - 36px);
   }
 
@@ -1291,7 +1293,7 @@
   .header-nav.menu {
     top: 15px;
     left: 15px;
-    width: calc(100% - 30px);
+    width: calc(100% - 30px - var(--scrollbar-compensation, 0px));
     height: calc(100% - 30px);
   }
 
@@ -1426,7 +1428,7 @@
     position: fixed;
     top: 100px;
     left: 15px;
-    width: calc(100% - 30px);
+    width: calc(100% - 30px - var(--scrollbar-compensation, 0px));
     height: calc(100% - 30px);
     max-height: 760px;
     transition: all 0.6s ease;
@@ -1513,7 +1515,7 @@
     top: 70px;
     left: 10px;
 
-    width: calc(100% - 20px);
+    width: calc(100% - 20px - var(--scrollbar-compensation, 0px));
     height: 100%;
     max-height: 100%;
     display: flex;

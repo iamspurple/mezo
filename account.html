@@ -1635,7 +1635,7 @@
                     </div>
                   </div>
                 </form>
-                <button class="text-medium btn bw-accent">
+                <button class="text-medium btn bw-accent edit-info-btn">
                   Изменить
                   <svg
                     class="bw-accent-svg"
@@ -1737,7 +1737,7 @@
                   </div>
                 </form>
                 <div class="account-company-actions">
-                  <button class="btn text-medium bw-accent edit-company">
+                  <button class="btn text-medium bw-accent edit-company-btn">
                     Изменить
                     <svg
                       class="bw-accent-svg"
@@ -1756,7 +1756,7 @@
                       />
                     </svg>
                   </button>
-                  <button class="bw btn text-medium delete-company">
+                  <button class="bw btn text-medium delete-company-btn">
                     Удалить
                     <svg
                       class="default"
@@ -2056,7 +2056,7 @@
             </details>
 
             <button
-              class="btn text-medium bw-accent account-company-btn create-company"
+              class="btn text-medium bw-accent account-company-btn create-company-btn"
             >
               Создать профиль
               <svg
@@ -2993,7 +2993,7 @@
                   </div>
                 </details>
                 <div class="history-order-actions">
-                  <button class="btn text-medium bw cancel-order">
+                  <button class="btn text-medium bw cancel-order-btn">
                     Отменить
                     <svg
                       class="default"
@@ -3895,7 +3895,7 @@
                   </div>
                 </details>
                 <div class="history-order-actions">
-                  <button class="btn text-medium bw cancel-order" disabled>
+                  <button class="btn text-medium bw cancel-order-btn" disabled>
                     Отменить
                     <svg
                       class="default"
@@ -4188,7 +4188,7 @@
             Поделитесь своим опытом или задайте любой вопрос управляющему
           </p>
           <div class="feedback-content">
-            <button class="bw btn text-medium">
+            <button class="bw btn text-medium send-feedback-btn">
               Написать
               <svg
                 width="24"
@@ -4388,6 +4388,491 @@
         </div>
       </div>
     </footer>
+    <div id="overlay" class="modal-overlay is-hidden"></div>
+    <div id="account-modal-company" class="account-modal modal is-hidden">
+      <div class="account-modal-wrapper">
+        <div class="create-company account-modal-content">
+          <h2
+            class="title-medium"
+            data-success-message="Профиль компании создан"
+          >
+            Создание профиля коммпании
+          </h2>
+          <form action="" class="account-modal-company-form">
+            <div class="account-modal-company-form-row">
+              <div class="account-modal-company-form-column">
+                <input type="text" placeholder="Название профиля" />
+                <input type="text" placeholder="ИНН" />
+                <input
+                  type="text"
+                  placeholder="OOO &laquo;Наименование&raquo; "
+                />
+              </div>
+              <div class="account-modal-company-form-column">
+                <div class="custom-select" data-name="delivery">
+                  <select aria-label="Доставка" tabindex="-1">
+                    <option value="address" selected>По адресу</option>
+                    <option value="not-address">Не по адресу</option>
+                  </select>
+                  <div
+                    class="custom-select-trigger"
+                    role="button"
+                    tabindex="0"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <span class="custom-select-label">Доставка</span>
+                    <span class="custom-select-tags"></span>
+                  </div>
+                  <ul
+                    class="custom-select-dropdown"
+                    role="listbox"
+                    aria-label="Доставка"
+                  >
+                    <li
+                      class="custom-select-option"
+                      role="option"
+                      aria-selected="true"
+                      data-value="address"
+                    >
+                      По адресу
+                    </li>
+                    <li
+                      class="custom-select-option"
+                      role="option"
+                      aria-selected="false"
+                      data-value="not-address"
+                    >
+                      Не по адресу
+                    </li>
+                  </ul>
+                </div>
+                <input type="text" placeholder="Город" />
+                <input type="text" placeholder="Улица" />
+                <div class="account-modal-company-form-row small-gap">
+                  <input type="text" placeholder="номер дома" />
+                  <input type="text" placeholder="Помещение" />
+                </div>
+              </div>
+            </div>
+            <div class="account-modal-company-form-row">
+              <span>Контактное лицо</span>
+              <div class="account-company-form-column">
+                <input type="text" placeholder="Имя" />
+                <input type="text" placeholder="Фамилия" />
+                <input type="text" placeholder="Отчество" />
+                <input type="text" placeholder="телефон" />
+                <input type="email" placeholder="email" />
+              </div>
+            </div>
+          </form>
+          <div class="account-modal-actions">
+            <button class="bw text-medium btn backward close-account-modal">
+              Назад
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="bw-accent btn text-medium ok-account-modal">
+              Создать
+              <svg
+                class="bw-accent-svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="edit-company account-modal-content is-visible">
+          <h2 class="title-medium" data-success-message="Изменения сохранены">
+            Редактирование профиля компании
+          </h2>
+          <form action="" class="account-modal-company-form">
+            <div class="account-modal-company-form-row">
+              <div class="account-modal-company-form-column">
+                <input type="text" value="Название профиля" />
+                <input type="text" value="ИНН" />
+                <input type="text" value="OOO &laquo;Наименование&raquo; " />
+              </div>
+              <div class="account-modal-company-form-column">
+                <div class="custom-select" data-name="delivery">
+                  <select aria-label="Доставка" tabindex="-1">
+                    <option value="address" selected>По адресу</option>
+                    <option value="not-address">Не по адресу</option>
+                  </select>
+                  <div
+                    class="custom-select-trigger"
+                    role="button"
+                    tabindex="0"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <span class="custom-select-label">Доставка</span>
+                    <span class="custom-select-tags"></span>
+                  </div>
+                  <ul
+                    class="custom-select-dropdown"
+                    role="listbox"
+                    aria-label="Доставка"
+                  >
+                    <li
+                      class="custom-select-option"
+                      role="option"
+                      aria-selected="true"
+                      data-value="address"
+                    >
+                      По адресу
+                    </li>
+                    <li
+                      class="custom-select-option"
+                      role="option"
+                      aria-selected="false"
+                      data-value="not-address"
+                    >
+                      Не по адресу
+                    </li>
+                  </ul>
+                </div>
+                <input type="text" value="Город" />
+                <input type="text" value="Улица" />
+                <div class="account-modal-company-form-row small-gap">
+                  <input type="text" value="номер дома" />
+                  <input type="text" value="Помещение" />
+                </div>
+              </div>
+            </div>
+            <div class="account-modal-company-form-row">
+              <span>Контактное лицо</span>
+              <div class="account-company-form-column">
+                <input type="text" value="Имя" />
+                <input type="text" value="Фамилия" />
+                <input type="text" value="Отчество" />
+                <input type="text" value="телефон" />
+                <input type="email" value="email" />
+              </div>
+            </div>
+          </form>
+          <div class="account-modal-actions">
+            <button class="bw text-medium btn backward close-account-modal">
+              Назад
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="bw-accent btn text-medium ok-account-modal">
+              Сохранить
+              <svg
+                class="bw-accent-svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="delete-company account-modal-content">
+          <h2 class="title-medium">Удаление профиля компании</h2>
+          <div></div>
+          <div class="account-modal-actions">
+            <button class="bw text-medium btn backward close-account-modal">
+              Назад
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="bw-accent btn text-medium ok-account-modal">
+              Удалить
+              <svg
+                class="bw-accent-svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="account-modal-info" class="account-modal modal is-hidden">
+      <div class="account-modal-wrapper">
+        <div class="edit-info account-modal-content is-visible">
+          <h2 class="title-medium" data-success-message="Изменения сохранены">
+            Редактирование данных аккаунта
+          </h2>
+          <form action="" class="account-modal-info-form">
+            <div class="account-modal-info-form-row">
+              <div class="account-modal-info-form-dealer-wrapper">
+                <input type="text" value="0123456" disabled />
+                <span class="account-modal-info-form-dealer-code"
+                  >Код дилера</span
+                >
+              </div>
+              <div class="account-modal-info-form-column">
+                <input type="text" value="ИНН" disabled />
+                <input
+                  type="text"
+                  value="OOO &laquo;Наименование&raquo; "
+                  disabled
+                />
+                <input type="email" value="email" disabled />
+              </div>
+            </div>
+
+            <div class="account-modal-info-form-row">
+              <span>Представитель</span>
+              <div class="account-modal-info-form-column">
+                <input type="text" value="имя" disabled />
+                <input type="text" value="Фамилия" disabled />
+                <input type="text" value="телефон" disabled />
+                <input type="email" value="email" disabled />
+              </div>
+            </div>
+          </form>
+          <div class="account-modal-actions">
+            <button class="bw text-medium btn backward close-account-modal">
+              Назад
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="bw-accent btn text-medium ok-account-modal">
+              Сохранить
+              <svg
+                class="bw-accent-svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="account-modal-order" class="account-modal modal is-hidden">
+      <div class="account-modal-wrapper">
+        <div class="cancel-order account-modal-content is-visible">
+          <h2 class="title-medium" data-success-message="Заказ отменён">
+            Вы уверены, что хотите отменить заказ?
+          </h2>
+          <div class="account-modal-order-info">
+            <div class="account-modal-order-info-wrapper">
+              <div class="account-modal-order-details">
+                <span class="account-modal-order-number title-large">002</span>
+                <p class="account-modal-order-date">
+                  <span>заказ от</span>
+
+                  <time datetime="10.02.2026" class="title-medium"
+                    >10.02.2026</time
+                  >
+                </p>
+              </div>
+              <p class="account-modal-order-price">
+                <span>сумма заказа</span>
+
+                <span class="title-medium">1,245,000.54</span>
+              </p>
+            </div>
+
+            <button
+              class="btn text-medium bw-accent account-modal-order-btn ok-account-modal"
+            >
+              Отменить заказ
+              <svg
+                class="bw-accent-svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="account-modal-actions">
+            <button class="bw text-medium btn backward close-account-modal">
+              Назад
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="account-modal-feedback" class="account-modal modal is-hidden">
+      <div class="account-modal-wrapper">
+        <div class="send-feedback account-modal-content is-visible">
+          <h2
+            class="title-medium"
+            data-success-message="Ваше сообщение успешно отправлено"
+          >
+            Сообщение управляющему
+          </h2>
+          <form action="" class="account-modal-feedback-form">
+            <div class="account-modal-feedback-form-column">
+              <input type="text" value="ИНН" disabled />
+              <input
+                type="text"
+                value="OOO &laquo;Наименование&raquo; "
+                disabled
+              />
+              <input type="email" value="email" disabled />
+            </div>
+            <div class="account-modal-feedback-form-column">
+              <input type="text" placeholder="Имя" />
+              <textarea name="" id="" placeholder="Сообщение*"></textarea>
+            </div>
+          </form>
+          <div class="account-modal-actions">
+            <button class="bw text-medium btn backward close-account-modal">
+              Назад
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="bw-accent btn text-medium ok-account-modal">
+              Отправить
+              <svg
+                class="bw-accent-svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="/js/main.js"></script>
     <script src="/js/account.js" defer></script>
     <script src="/js/accordion.js"></script>

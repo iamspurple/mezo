@@ -229,7 +229,6 @@ document.querySelectorAll(".custom-select").forEach((select) => {
   syncTriggerDisabled();
 });
 
-// ── Закрыть при клике вне ─────────────────────────────────────────────
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".custom-select")) {
     document.querySelectorAll(".custom-select.open").forEach((s) => {
@@ -242,7 +241,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-(function initHowToUseToggle() {
+const initHowToUseToggle = () => {
   const btn = document.getElementById("howtouse-btn");
   if (!btn) return;
 
@@ -265,4 +264,174 @@ document.addEventListener("click", (e) => {
   });
 
   sync();
-})();
+};
+
+const initAccountModals = () => {
+  const overlay = document.getElementById("overlay");
+  const modalCompany = document.getElementById("account-modal-company");
+  const modalInfo = document.getElementById("account-modal-info");
+  const modalOrder = document.getElementById("account-modal-order");
+  const modalFeedback = document.getElementById("account-modal-feedback");
+
+  if (!overlay || !modalCompany || !modalInfo || !modalOrder || !modalFeedback)
+    return;
+
+  let activeModal = null;
+
+  function lockScroll() {
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+  }
+
+  function unlockScroll() {
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+  }
+
+  function setCloseButtonLabel(btn, text) {
+    const svg = btn.querySelector("svg");
+    btn.childNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) node.remove();
+    });
+    if (svg) btn.insertBefore(document.createTextNode(text), svg);
+    else btn.appendChild(document.createTextNode(text));
+  }
+
+  function getTitleEl(panel) {
+    return panel.querySelector("h2.title-medium");
+  }
+
+  function cacheOriginalTitle(panel) {
+    const h2 = getTitleEl(panel);
+    if (h2 && !h2.dataset.originalTitle) {
+      h2.dataset.originalTitle = h2.textContent.trim();
+    }
+  }
+
+  function resetPanel(panel) {
+    if (!panel) return;
+    panel.classList.remove("is-success");
+    const h2 = getTitleEl(panel);
+    if (h2?.dataset.originalTitle) {
+      h2.textContent = h2.dataset.originalTitle;
+    }
+    panel.querySelectorAll(".close-account-modal").forEach((btn) => {
+      setCloseButtonLabel(btn, "Назад");
+    });
+  }
+
+  function openModal(modalEl) {
+    if (activeModal && activeModal !== modalEl) {
+      activeModal
+        .querySelectorAll(".account-modal-content")
+        .forEach(resetPanel);
+      activeModal.classList.add("is-hidden");
+    }
+    activeModal = modalEl;
+    overlay.classList.remove("is-hidden");
+    modalEl.classList.remove("is-hidden");
+    lockScroll();
+  }
+
+  function closeModal() {
+    if (!activeModal) return;
+    activeModal.querySelectorAll(".account-modal-content").forEach(resetPanel);
+    activeModal.classList.add("is-hidden");
+    overlay.classList.add("is-hidden");
+    activeModal = null;
+    unlockScroll();
+  }
+
+  function openCompanyModal(panelSelector) {
+    modalCompany.querySelectorAll(".account-modal-content").forEach((p) => {
+      resetPanel(p);
+      p.classList.remove("is-visible");
+    });
+    const panel = modalCompany.querySelector(panelSelector);
+    if (panel) {
+      panel.classList.add("is-visible");
+      cacheOriginalTitle(panel);
+    }
+    openModal(modalCompany);
+  }
+
+  document.querySelectorAll(".create-company-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      openCompanyModal(".create-company.account-modal-content");
+    });
+  });
+
+  document.querySelectorAll(".edit-company-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      openCompanyModal(".edit-company.account-modal-content");
+    });
+  });
+
+  document.querySelectorAll(".edit-info-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const panel = modalInfo.querySelector(".edit-info.account-modal-content");
+      if (panel) {
+        resetPanel(panel);
+        cacheOriginalTitle(panel);
+        panel.classList.add("is-visible");
+      }
+      openModal(modalInfo);
+    });
+  });
+
+  document.querySelectorAll(".cancel-order-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.disabled) return;
+      const panel = modalOrder.querySelector(
+        ".cancel-order.account-modal-content",
+      );
+      if (panel) {
+        resetPanel(panel);
+        cacheOriginalTitle(panel);
+      }
+      openModal(modalOrder);
+    });
+  });
+
+  document.querySelectorAll(".send-feedback-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const panel = modalFeedback.querySelector(
+        ".send-feedback.account-modal-content",
+      );
+      if (panel) {
+        resetPanel(panel);
+        cacheOriginalTitle(panel);
+      }
+      openModal(modalFeedback);
+    });
+  });
+
+  document.querySelectorAll(".close-account-modal").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeModal();
+    });
+  });
+
+  document.querySelectorAll(".ok-account-modal").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const panel = btn.closest(".account-modal-content");
+      if (!panel) return;
+      panel.classList.add("is-success");
+      const h2 = getTitleEl(panel);
+      const msg = h2?.dataset.successMessage;
+      if (h2 && msg) h2.textContent = msg;
+      panel.querySelectorAll(".close-account-modal").forEach((btnClose) => {
+        setCloseButtonLabel(btnClose, "закрыть");
+      });
+    });
+  });
+
+  overlay.addEventListener("click", closeModal);
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  initAccountModals();
+  initHowToUseToggle();
+});

@@ -188,15 +188,29 @@
 
 .account-info-form,
 .account-company-form,
-.history-company-form {
+.history-company-form,
+.account-modal-company-form,
+.account-modal-info-form,
+.account-modal-feedback-form {
   display: flex;
   flex-direction: column;
   gap: 38px;
 }
 
+.account-modal-company-form,
+.account-modal-info-form,
+.account-modal-feedback-form {
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+  overflow-y: auto;
+}
+
 .account-info-form-row,
 .account-company-form-row,
-.history-company-form-row {
+.history-company-form-row,
+.account-modal-company-form-row,
+.account-modal-info-form-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 12px;
@@ -207,7 +221,8 @@
   row-gap: 100px;
 }
 
-.account-company-form-row.small-gap {
+.account-company-form-row.small-gap,
+.account-modal-company-form-row.small-gap {
   gap: 9px;
 }
 
@@ -219,7 +234,10 @@
 
 .account-info-form-column,
 .account-company-form-column,
-.history-company-form-column {
+.history-company-form-column,
+.account-modal-company-form-column,
+.account-modal-info-form-column,
+.account-modal-feedback-form-column {
   display: flex;
   flex-direction: column;
   gap: 9px;
@@ -227,7 +245,11 @@
 
 .account-info-form input,
 .account-company-form input,
-.history-company-form input {
+.history-company-form input,
+.account-modal-company-form input,
+.account-modal-info-form input,
+.account-modal-feedback-form input,
+.account-modal-feedback-form textarea {
   width: 100%;
   border: 2px solid var(--color-lightgrey);
   border-radius: var(--radius-sm);
@@ -243,15 +265,29 @@
   transition: var(--transition);
 }
 
+.account-modal-feedback-form textarea {
+  min-height: 120px;
+  height: auto;
+  resize: vertical;
+}
+
 .account-info-form input::placeholder,
 .account-company-form input::placeholder,
-.history-company-form input::placeholder {
+.history-company-form input::placeholder,
+.account-modal-company-form input::placeholder,
+.account-modal-info-form input::placeholder,
+.account-modal-feedback-form input::placeholder,
+.account-modal-feedback-form textarea::placeholder {
   color: black;
   font-weight: 400;
 }
 
 .account-info-form input:focus,
-.account-company-form input:focus {
+.account-company-form input:focus,
+.account-modal-company-form input:focus,
+.account-modal-info-form input:focus,
+.account-modal-feedback-form input:focus,
+.account-modal-feedback-form textarea:focus {
   outline: none;
   border-color: black;
 }
@@ -259,7 +295,11 @@
 @media (hover: hover) {
   .account-info-form input:hover,
   .account-company-form input:hover,
-  .history-company-form input:hover {
+  .history-company-form input:hover,
+  .account-modal-company-form input:hover,
+  .account-modal-info-form input:hover,
+  .account-modal-feedback-form input:hover,
+  .account-modal-feedback-form textarea:hover {
     outline: none;
     border-color: black;
   }
@@ -267,7 +307,11 @@
 
 .account-info-form input:disabled,
 .account-company-form input:disabled,
-.history-company-form input:disabled {
+.history-company-form input:disabled,
+.account-modal-company-form input:disabled,
+.account-modal-info-form input:disabled,
+.account-modal-feedback-form input:disabled,
+.account-modal-feedback-form textarea:disabled {
   background-color: var(--color-bright);
   cursor: not-allowed;
   color: #00000066;
@@ -275,11 +319,14 @@
   opacity: 1;
 }
 
-.account-info-form-dealer-wrapper {
+.account-info-form-dealer-wrapper,
+.account-modal-info-form-dealer-wrapper {
   position: relative;
+  height: fit-content;
 }
 
-.account-info-form-dealer-code {
+.account-info-form-dealer-code,
+.account-modal-info-form-dealer-code {
   font-family: var(--font-secondary);
   font-weight: 400;
   font-size: 16px;
@@ -313,11 +360,11 @@
   gap: 9px;
 }
 
-.account-company-actions .delete-company svg {
+.account-company-actions .delete-company-btn svg {
   animation: fade-in 1s;
 }
 
-.account-company-actions .delete-company .hover {
+.account-company-actions .delete-company-btn .hover {
   display: none;
 }
 
@@ -327,11 +374,11 @@
 }
 
 @media (hover: hover) {
-  .account-company-actions .delete-company:hover .default {
+  .account-company-actions .delete-company-btn:hover .default {
     display: none;
   }
 
-  .account-company-actions .delete-company:hover .hover {
+  .account-company-actions .delete-company-btn:hover .hover {
     display: block;
   }
 }
@@ -987,20 +1034,20 @@
   gap: 9px;
 }
 
-.history-order-actions .cancel-order svg {
+.history-order-actions .cancel-order-btn svg {
   animation: fade-in 1s;
 }
 
-.history-order-actions .cancel-order .hover {
+.history-order-actions .cancel-order-btn .hover {
   display: none;
 }
 
 @media (hover: hover) {
-  .history-order-actions .cancel-order:not(:disabled):hover .default {
+  .history-order-actions .cancel-order-btn:not(:disabled):hover .default {
     display: none;
   }
 
-  .history-order-actions .cancel-order:not(:disabled):hover .hover {
+  .history-order-actions .cancel-order-btn:not(:disabled):hover .hover {
     display: block;
   }
 }
@@ -1255,6 +1302,105 @@
   text-transform: uppercase;
 }
 
+.account-modal-wrapper {
+  padding: 0 30px 30px 30px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.account-modal-content {
+  display: none;
+  gap: 30px;
+  height: 100%;
+}
+
+.account-modal-content.is-visible {
+  display: grid;
+  grid-template-rows: 100px auto 60px;
+}
+
+.account-modal-actions {
+  text-transform: uppercase;
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.account-modal-content.is-success .account-modal-company-form,
+.account-modal-content.is-success .account-modal-info-form,
+.account-modal-content.is-success .account-modal-feedback-form {
+  width: 0;
+}
+
+.account-modal-content.is-success .account-modal-order-info {
+  width: 0;
+}
+
+.account-modal-content.is-success .account-modal-actions .ok-account-modal {
+  display: none;
+}
+
+.account-modal-order-info {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 72%;
+  text-transform: lowercase;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  background-color: var(--color-bright);
+  height: fit-content;
+}
+
+.account-modal-order-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.account-modal-order-details {
+  display: flex;
+  gap: 20px;
+}
+
+.account-modal-order-number {
+  background-color: black;
+  color: var(--color-bright);
+  display: inline-block;
+  padding: 8px 16px 8px 8px;
+}
+
+.account-modal-order-date {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.account-modal-order-price {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: flex-end;
+}
+
+.account-modal-order-download {
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-modal-order-btn {
+  align-self: flex-end;
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 1700px) {
   .history-order-info-item dd {
     font-size: 42px;
@@ -1314,7 +1460,9 @@
   }
 
   .account-info-form-row,
-  .account-company-form-row {
+  .account-company-form-row,
+  .account-modal-company-form-row,
+  .account-modal-info-form-row {
     grid-template-columns: 1fr;
   }
 
@@ -1436,6 +1584,10 @@
     width: 28px;
     height: 28px;
   }
+
+  .account-modal-company-form-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1448,7 +1600,9 @@
   .account-info-accordion,
   .account-company-accordion,
   .history-outer-accordion,
-  .history-inner-accordion {
+  .history-inner-accordion,
+  .account-modal-company-form,
+  .account-modal-info-form {
     font-size: 28px;
   }
 
@@ -1518,6 +1672,18 @@
     top: 10px;
     left: 10px;
     bottom: auto;
+  }
+
+  .account-modal-content.is-visible {
+    grid-template-rows: 60px auto 60px;
+  }
+
+  .account-modal-company-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .account-modal-company-form-row.small-gap {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
