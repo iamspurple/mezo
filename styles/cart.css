@@ -80,6 +80,8 @@
   background-color: var(--color-bright);
   cursor: not-allowed;
   color: #00000066;
+  -webkit-text-fill-color: #00000066;
+  opacity: 1;
 }
 
 .cart-form textarea {
