@@ -2152,6 +2152,8 @@
         </div>
       </div>
     </footer>
+    <div id="header-overlay" class="header-overlay is-hidden"></div>
+
     <div id="overlay" class="modal-overlay is-hidden"></div>
     <div
       id="favorites-lists-modal"
@@ -2251,7 +2253,12 @@
           </div>
         </div>
         <div class="step2">
-          <h2 class="title-medium favorites-lists-title">Новый список</h2>
+          <h2
+            class="title-medium favorites-lists-title"
+            data-success-message="Товар сохранен в новый список"
+          >
+            Новый список
+          </h2>
           <form class="favorites-lists-form" id="newlist" action="">
             <input type="text" name="" id="" placeholder="Назовите список" />
           </form>
@@ -2274,7 +2281,11 @@
                 />
               </svg>
             </button>
-            <button class="bw-accent btn text-medium">
+            <button
+              id="close-favorites-lists-btn-delay"
+              type="button"
+              class="bw-accent btn text-medium"
+            >
               Создать и сохранить
               <svg
                 class="bw-accent-svg"

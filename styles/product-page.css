@@ -658,6 +658,11 @@
   border-color: black;
 }
 
+.step2.is-success .favorites-lists-form,
+.step2.is-success .favorites-lists-actions {
+  display: none;
+}
+
 @media screen and (max-width: 1700px) {
   .product-similar-card-actions button {
     width: 42px;

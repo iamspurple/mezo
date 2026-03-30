@@ -87,6 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeFavoritesBtn = document.getElementById(
     "close-favorites-lists-btn",
   );
+  const closeFavoritesDelayBtn = document.getElementById(
+    "close-favorites-lists-btn-delay",
+  );
+
   const favoritesOverlay = document.getElementById("overlay");
   const favoritesModal = document.getElementById("favorites-lists-modal");
   const step1 = document.querySelector(".favorites-lists-content .step1");
@@ -101,7 +105,15 @@ document.addEventListener("DOMContentLoaded", () => {
     favoritesOverlay &&
     favoritesModal
   ) {
+    const resetStep2FavoritesUi = () => {
+      if (!step2) return;
+      step2.classList.remove("is-success");
+      const h2 = step2.querySelector("h2[data-success-message]");
+      if (h2) h2.textContent = "Новый список";
+    };
+
     const openFavoritesModal = () => {
+      resetStep2FavoritesUi();
       favoritesOverlay.classList.remove("is-hidden");
       favoritesModal.classList.remove("is-hidden");
       document.documentElement.style.overflow = "hidden";
@@ -115,11 +127,33 @@ document.addEventListener("DOMContentLoaded", () => {
       document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
       step2?.classList.remove("is-visible");
+      resetStep2FavoritesUi();
     };
 
     openFavoritesBtn.addEventListener("click", openFavoritesModal);
     closeFavoritesBtn.addEventListener("click", closeFavoritesModal);
     favoritesOverlay.addEventListener("click", closeFavoritesModal);
+
+    if (closeFavoritesDelayBtn && step2) {
+      closeFavoritesDelayBtn.addEventListener("click", () => {
+        const h2 = step2.querySelector("h2[data-success-message]");
+        const originalText = h2?.textContent?.trim() ?? "";
+        const successMessage = h2?.dataset.successMessage;
+
+        if (h2 && successMessage) {
+          h2.textContent = successMessage;
+        }
+        step2.classList.add("is-success");
+
+        setTimeout(() => {
+          if (h2 && originalText) {
+            h2.textContent = originalText;
+          }
+          step2.classList.remove("is-success");
+          closeFavoritesModal();
+        }, 2000);
+      });
+    }
   }
 
   if (goToStep2Btn && step2) {
@@ -130,7 +164,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (goToStep1Btn && step2) {
     goToStep1Btn.addEventListener("click", () => {
-      step2.classList.remove("is-visible");
+      step2.classList.remove("is-visible", "is-success");
+      const h2 = step2.querySelector("h2[data-success-message]");
+      if (h2) h2.textContent = "Новый список";
     });
   }
 
@@ -140,4 +176,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-

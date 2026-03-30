@@ -383,14 +383,17 @@ class HeaderMenuInfoNewsSlider {
 // Функция для управления скроллом body и html
 const toggleBodyScroll = () => {
   const headerNav = document.querySelector(".header-nav");
+  const headerOverlay = document.getElementById("header-overlay");
   const isMenuOpen = headerNav && headerNav.classList.contains("menu");
 
   if (isMenuOpen) {
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
+    if (headerOverlay) headerOverlay.classList.remove("is-hidden");
   } else {
     document.documentElement.style.overflow = "";
     document.body.style.overflow = "";
+    if (headerOverlay) headerOverlay.classList.add("is-hidden");
   }
 };
 
@@ -408,6 +411,12 @@ const initMenu = () => {
   // Проверяем начальное состояние
   toggleBodyScroll();
 
+  const closeHeaderMenu = () => {
+    headerNav.classList.remove("menu", "tablet", "mobile");
+    headerNavItems.forEach((navItem) => navItem.classList.remove("active"));
+    toggleBodyScroll();
+  };
+
   // Кнопка-бургер (только на < 1024px): открывает/закрывает меню
   if (burgerBtn) {
     burgerBtn.addEventListener("click", () => {
@@ -415,8 +424,7 @@ const initMenu = () => {
       const isMobile = window.innerWidth < 768;
 
       if (isOpen) {
-        headerNav.classList.remove("menu", "tablet", "mobile");
-        headerNavItems.forEach((navItem) => navItem.classList.remove("active"));
+        closeHeaderMenu();
       } else {
         const modeClass = isMobile ? "mobile" : "tablet";
         headerNav.classList.add("menu", modeClass);
@@ -424,9 +432,17 @@ const initMenu = () => {
         if (!isMobile && !headerNav.querySelector(".header-nav-item.active")) {
           headerNavItems[0]?.classList.add("active");
         }
+        toggleBodyScroll();
       }
+    });
+  }
 
-      toggleBodyScroll();
+  const headerOverlay = document.getElementById("header-overlay");
+  if (headerOverlay) {
+    headerOverlay.addEventListener("click", () => {
+      if (headerNav.classList.contains("menu")) {
+        closeHeaderMenu();
+      }
     });
   }
 
@@ -456,11 +472,7 @@ const initMenu = () => {
       // Исключение: кнопка корзины открывает cart-preview; если меню открыто — закрываем его
       if (item.querySelector("#open-cart-preview-btn")) {
         if (headerNav.classList.contains("menu")) {
-          headerNav.classList.remove("menu", "tablet", "mobile");
-          headerNavItems.forEach((navItem) =>
-            navItem.classList.remove("active"),
-          );
-          toggleBodyScroll();
+          closeHeaderMenu();
         }
         return;
       }
@@ -468,11 +480,7 @@ const initMenu = () => {
       // Исключение: ссылка «Избранное» — закрываем меню при клике
       if (item.querySelector("#favorites-link")) {
         if (headerNav.classList.contains("menu")) {
-          headerNav.classList.remove("menu", "tablet", "mobile");
-          headerNavItems.forEach((navItem) =>
-            navItem.classList.remove("active"),
-          );
-          toggleBodyScroll();
+          closeHeaderMenu();
         }
         return;
       }
@@ -600,6 +608,45 @@ const initAccountMode = () => {
   });
 };
 
+const initHeaderMenuProductsImageHover = () => {
+  document.querySelectorAll(".header-menu-products").forEach((products) => {
+    const imageHost = products.querySelector(
+      ".header-menu-products-search-image",
+    );
+    if (!imageHost) return;
+
+    const links = products.querySelectorAll("a.menu-link[data-name]");
+
+    const findImage = (name) =>
+      Array.from(imageHost.querySelectorAll("img")).find(
+        (img) => img.getAttribute("data-name") === name,
+      );
+
+    const clearActive = () => {
+      imageHost.querySelectorAll("img").forEach((img) => {
+        img.classList.remove("active");
+      });
+    };
+
+    links.forEach((link) => {
+      link.addEventListener("mouseenter", () => {
+        const name = link.dataset.name;
+        if (!name) return;
+        clearActive();
+        const img = findImage(name);
+        if (img) img.classList.add("active");
+      });
+
+      link.addEventListener("mouseleave", () => {
+        const name = link.dataset.name;
+        if (!name) return;
+        const img = findImage(name);
+        if (img) img.classList.remove("active");
+      });
+    });
+  });
+};
+
 const initModalScrollbarPadding = () => {
   function measureScrollbarWidth() {
     const outer = document.createElement("div");
@@ -669,6 +716,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   initMenu();
+  initHeaderMenuProductsImageHover();
   initCartPreview();
   initAccountMode();
   initModalScrollbarPadding();
