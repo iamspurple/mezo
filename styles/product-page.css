@@ -4,7 +4,6 @@
   gap: 10px;
   row-gap: 60px;
   align-items: start;
-  justify-items: end;
   padding-bottom: 100px;
 }
 
@@ -172,6 +171,10 @@
   transition: var(--transition);
 }
 
+.product-accordion[open] {
+  padding-bottom: 40px;
+}
+
 .product-accordion summary {
   cursor: pointer;
   position: relative;
@@ -213,13 +216,13 @@
   overflow: hidden;
   transition:
     height 0.35s ease,
-    padding-top 0.35s ease;
-  padding-top: 12px;
+    margin-top 0.35s;
+  margin-top: 12px;
   text-transform: none;
 }
 
 .product-accordion-content.is-closed {
-  padding-top: 0;
+  margin-top: 0;
 }
 
 /* Слайдер изображений */

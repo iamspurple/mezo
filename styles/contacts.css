@@ -67,12 +67,12 @@
   overflow: hidden;
   transition:
     height 0.35s ease,
-    padding-top 0.35s ease;
-  padding-top: 20px;
+    margin-top 0.35s;
+  margin-top: 20px;
 }
 
 .howtofind-accordion-content.is-closed {
-  padding-top: 0;
+  margin-top: 0;
 }
 
 .howtofind-accordion summary {

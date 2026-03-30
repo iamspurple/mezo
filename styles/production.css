@@ -3,7 +3,17 @@
 }
 
 .hero-video {
-  background-color: var(--color-lightgrey);
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  max-height: 800px;
+  height: 80vh;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-text {
@@ -138,12 +148,12 @@
   overflow: hidden;
   transition:
     height 0.35s ease,
-    padding-top 0.35s ease;
-  padding-top: 20px;
+    margin-top 0.35s;
+  margin-top: 20px;
 }
 
 .production-accordion-content.is-closed {
-  padding-top: 0;
+  margin-top: 0;
 }
 
 .production-accordion summary {

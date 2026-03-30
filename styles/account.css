@@ -48,8 +48,7 @@
   border-radius: 8px;
 }
 
-.account-howtouse-video img {
-  display: block;
+.account-howtouse-video video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -132,13 +131,13 @@
   overflow: hidden;
   transition:
     height 0.35s ease,
-    padding-top 0.35s ease;
-  padding-top: 30px;
+    margin-top 0.35s;
+  margin-top: 30px;
 }
 
 .account-info-accordion-content.is-closed,
 .account-company-accordion-content.is-closed {
-  padding-top: 0;
+  margin-top: 0;
 }
 
 .account-info-accordion summary,
@@ -681,12 +680,12 @@
   overflow: hidden;
   transition:
     height 0.35s ease,
-    padding-top 0.35s ease;
-  padding-top: 16px;
+    margin-top 0.35s;
+  margin-top: 16px;
 }
 
 .history-inner-accordion-content.is-closed {
-  padding-top: 0;
+  margin-top: 0;
 }
 
 .history-outer-accordion-content {
@@ -697,8 +696,12 @@
   overflow: hidden;
   transition:
     height 0.35s ease,
-    padding-top 0.35s ease;
-  padding-top: 16px;
+    margin-top 0.35s;
+  margin-top: 16px;
+}
+
+.history-outer-accordion-content.is-closed {
+  margin-top: 0;
 }
 
 .history-order-container {
@@ -714,10 +717,6 @@
 
 .history-order-container.active {
   border: 2px solid black;
-}
-
-.history-outer-accordion-content.is-closed {
-  padding-top: 0;
 }
 
 .history-outer-accordion > summary,

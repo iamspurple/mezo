@@ -92,8 +92,12 @@
   overflow: hidden;
   transition:
     height 0.35s ease,
-    padding-top 0.35s ease;
-  padding-top: 20px;
+    margin-top 0.35s;
+  margin-top: 20px;
+}
+
+.service-accordion-content.is-closed {
+  margin-top: 0;
 }
 
 .service-accordion-list {
@@ -106,10 +110,6 @@
 
 .service-accordion-item {
   list-style: disc;
-}
-
-.service-accordion-content.is-closed {
-  padding-top: 0;
 }
 
 .service-accordion summary {

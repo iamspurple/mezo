@@ -653,12 +653,6 @@ const initModalScrollbarPadding = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const slider = new CollectionsSlider(".collections-slider", {
-    slideMargin: 15,
-    autoPlay: true,
-    speed: 50,
-  });
-
   const headerSlider = new HeaderCollectionsSlider(
     ".header-menu-collections-slider",
     {
@@ -674,7 +668,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   );
 
-  followCursor();
   initMenu();
   initCartPreview();
   initAccountMode();
