@@ -63,8 +63,47 @@ document.querySelectorAll(".custom-select").forEach((select) => {
       select.classList.remove("is-default");
     }
 
-    const visible = selected.slice(0, 2);
-    const rest = selected.length - 2;
+    const triggerWidth = trigger.getBoundingClientRect().width;
+    const narrow = triggerWidth < 395;
+
+    // Одиночный выбор (сортировка): при узком триггере — короткие подписи для цены
+    if (isSingle) {
+      const item = selected[0];
+      let displayLabel = item.label;
+      if (narrow) {
+        if (item.value === "price-asc") {
+          displayLabel = `Цена \u2191`;
+        } else if (item.value === "price-desc") {
+          displayLabel = `Цена \u2193`;
+        }
+      }
+      const tag = document.createElement("span");
+      tag.className = "custom-select-tag";
+      tag.textContent = displayLabel;
+      tagsEl.appendChild(tag);
+      return;
+    }
+
+    const firstLen = selected[0].label.length;
+
+    let visible;
+    let rest;
+
+    if (narrow) {
+      if (firstLen > 7) {
+        visible = [];
+        rest = selected.length;
+      } else {
+        visible = selected.slice(0, 1);
+        rest = Math.max(0, selected.length - 1);
+      }
+    } else if (firstLen >= 12) {
+      visible = selected.slice(0, 1);
+      rest = Math.max(0, selected.length - 1);
+    } else {
+      visible = selected.slice(0, 2);
+      rest = Math.max(0, selected.length - 2);
+    }
 
     visible.forEach(({ label }) => {
       const tag = document.createElement("span");
@@ -231,6 +270,15 @@ document.querySelectorAll(".custom-select").forEach((select) => {
   // ── Начальный рендер ─────────────────────────────────────────────────
   renderTags();
   syncTriggerDisabled();
+
+  if (typeof ResizeObserver !== "undefined") {
+    let resizeRaf = 0;
+    const ro = new ResizeObserver(() => {
+      cancelAnimationFrame(resizeRaf);
+      resizeRaf = requestAnimationFrame(() => renderTags());
+    });
+    ro.observe(trigger);
+  }
 });
 
 // ── Закрыть при клике вне ─────────────────────────────────────────────
@@ -277,4 +325,3 @@ document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
     });
   });
 });
-
