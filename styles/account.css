@@ -318,6 +318,16 @@
   opacity: 1;
 }
 
+.account-info-form input:disabled:hover,
+.account-company-form input:disabled:hover,
+.history-company-form input:disabled:hover,
+.account-modal-company-form input:disabled:hover,
+.account-modal-info-form input:disabled:hover,
+.account-modal-feedback-form input:disabled:hover,
+.account-modal-feedback-form textarea:disabled {
+  border-color: var(--color-lightgrey);
+}
+
 .account-info-form-dealer-wrapper,
 .account-modal-info-form-dealer-wrapper {
   position: relative;
@@ -1299,6 +1309,13 @@
 
 .feedback-content {
   text-transform: uppercase;
+}
+
+@media (any-hover: hover) {
+  .send-feedback-btn:hover,
+  .send-feedback-btn:active {
+    border: 2px solid white;
+  }
 }
 
 .account-modal-wrapper {

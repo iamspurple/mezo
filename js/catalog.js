@@ -70,13 +70,13 @@ document.querySelectorAll(".custom-select").forEach((select) => {
     if (isSingle) {
       const item = selected[0];
       let displayLabel = item.label;
-      if (narrow) {
-        if (item.value === "price-asc") {
-          displayLabel = `Цена \u2191`;
-        } else if (item.value === "price-desc") {
-          displayLabel = `Цена \u2193`;
-        }
-      }
+      // if (narrow) {
+      //   if (item.value === "price-asc") {
+      //     displayLabel = `Цена \u2191`;
+      //   } else if (item.value === "price-desc") {
+      //     displayLabel = `Цена \u2193`;
+      //   }
+      // }
       const tag = document.createElement("span");
       tag.className = "custom-select-tag";
       tag.textContent = displayLabel;
@@ -323,5 +323,13 @@ document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
         if (!anyOtherChecked) inp.checked = true;
       }
     });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchClearBtn = document.querySelector(".catalog-search-clear-btn");
+  const searchInput = document.querySelector(".catalog-search");
+  searchClearBtn.addEventListener("click", () => {
+    searchInput.value = "";
   });
 });

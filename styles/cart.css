@@ -84,6 +84,10 @@
   opacity: 1;
 }
 
+.cart-form input:disabled:hover {
+  border-color: var(--color-lightgrey);
+}
+
 .cart-form textarea {
   width: 100%;
   min-height: 80px;
