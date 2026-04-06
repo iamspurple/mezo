@@ -324,7 +324,7 @@
 .account-modal-company-form input:disabled:hover,
 .account-modal-info-form input:disabled:hover,
 .account-modal-feedback-form input:disabled:hover,
-.account-modal-feedback-form textarea:disabled {
+.account-modal-feedback-form textarea:disabled:hover {
   border-color: var(--color-lightgrey);
 }
 
