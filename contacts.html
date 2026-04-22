@@ -2427,6 +2427,68 @@
           </details>
         </div>
       </section>
+      <section class="feedback">
+        <div class="feedback-form-wrapper">
+          <form
+            autocomplete="off"
+            action=""
+            method="post"
+            class="feedback-form"
+          >
+            <label for="feedback-name" class="visually-hidden">Имя</label>
+            <input
+              type="text"
+              name="name"
+              id="feedback-name"
+              placeholder="имя"
+              class="text-medium"
+            />
+            <label for="feedback-phone" class="visually-hidden">Телефон</label>
+            <input
+              type="tel"
+              name="phone"
+              id="feedback-phone"
+              placeholder="телефон"
+              class="text-medium"
+            />
+            <label for="feedback-email" class="visually-hidden">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="feedback-email"
+              placeholder="email"
+              class="text-medium"
+            />
+            <button
+              type="submit"
+              class="feedback-form-button bw-accent btn text-medium"
+            >
+              стать партнером
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 5L16 12L9 19"
+                  class="bw-accent-svg"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+          <span class="feedback-text" aria-hidden="true">
+            memories <br />
+            in your hands</span
+          >
+        </div>
+        <div id="feedback-cursor" class="feedback-cursor"></div>
+      </section>
     </main>
     <footer class="footer container" aria-labelledby="footer-title">
       <h2 id="footer-title" class="visually-hidden">Подвал сайта</h2>
@@ -2477,7 +2539,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2499,7 +2560,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2521,7 +2581,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2543,7 +2602,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2569,7 +2627,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2591,7 +2648,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -3271,5 +3327,6 @@
     </div>
     <script src="/js/main.js"></script>
     <script src="/js/accordion.js" defer></script>
+    <script src="/js/followCursor.js"></script>
   </body>
 </html>
