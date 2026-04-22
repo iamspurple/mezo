@@ -29,7 +29,7 @@
 }
 
 .wrapper {
-  height: 100svh;
+  padding-block: 7vw;
   max-height: 980px;
   width: 100%;
   display: flex;
@@ -73,6 +73,8 @@
   line-height: 80%;
   width: fit-content;
   transition: var(--transition);
+  padding-inline: 8px 16px;
+  border-radius: 2px;
 }
 
 .about-more {
@@ -287,7 +289,7 @@
 }
 
 .collections-item {
-  width: 450px;
+  width: 490px;
   margin-right: 15px;
 }
 
@@ -299,7 +301,7 @@
 
 .collections-item-image {
   width: 100%;
-  height: 560px;
+  height: 600px;
   overflow: hidden;
   border-radius: var(--radius-sm);
 }
@@ -404,7 +406,8 @@
 .news-content {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 60px;
 }
 
 .news-list {
@@ -413,7 +416,6 @@
 }
 
 .news-item {
-  width: 450px;
   height: 100%;
 }
 
@@ -458,6 +460,10 @@
 .news-item-description {
   max-width: 100%;
   text-wrap: wrap;
+}
+
+.news-more {
+  text-transform: uppercase;
 }
 
 .feedback {
@@ -550,16 +556,6 @@
     padding: 30px;
   }
 
-  /* .categories-item-image {
-    height: 520px;
-  } */
-
-  /* @media (hover: hover) {
-    .categories-item:hover .categories-item-image {
-      width: 520px;
-    }
-  } */
-
   .categories-image-item {
     width: 270px;
   }
@@ -573,15 +569,11 @@
   }
 
   .collections-item {
-    width: 320px;
+    width: 380px;
   }
 
   .collections-item-image {
-    height: 400px;
-  }
-
-  .news-item {
-    width: 350px;
+    height: 450px;
   }
 
   .news-item-content {
@@ -616,16 +608,6 @@
     padding: 18px;
   }
 
-  /* .categories-item-image {
-    height: 450px;
-  }
-
-  @media (hover: hover) {
-    .categories-item:hover .categories-item-image {
-      width: 450px;
-    }
-  } */
-
   .categories-image-item {
     width: 230px;
     margin-right: 5px;
@@ -651,10 +633,6 @@
     padding: 12px;
   }
 
-  .news-item {
-    width: 320px;
-  }
-
   .news-item-name {
     margin-bottom: 3px;
   }
@@ -666,10 +644,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .wrapper {
-    max-height: 650px;
-  }
-
   .hero {
     max-height: 650px;
   }
@@ -686,6 +660,7 @@
   .about-content {
     flex-direction: column;
     justify-content: space-between;
+    gap: 30px;
     padding-block: 50px;
     height: 100%;
   }
@@ -804,6 +779,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .wrapper {
+    padding-block: 10vw;
+  }
   .hero-title,
   .about-statistic-number {
     font-size: 64px;

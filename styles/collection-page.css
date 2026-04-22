@@ -11,6 +11,7 @@
   aspect-ratio: 2/1;
   max-height: 915px;
   overflow: hidden;
+  border-radius: 2px;
 }
 
 .hero-image img {
@@ -50,8 +51,9 @@
   gap: 12px;
 }
 
-.presentation-images > :first-child {
+.presentation-images > div:nth-child(-n + 2) {
   grid-column: 1 / -1;
+  aspect-ratio: 2/1;
 }
 
 .presentation-images > div {
@@ -59,6 +61,7 @@
   height: 100%;
   overflow: hidden;
   aspect-ratio: 1/1;
+  border-radius: 2px;
 }
 
 .presentation-images > div > img {
@@ -333,7 +336,7 @@
 }
 
 .collections-item {
-  width: 450px;
+  width: 490px;
   margin-right: 15px;
 }
 
@@ -345,7 +348,7 @@
 
 .collections-item-image {
   width: 100%;
-  height: 560px;
+  height: 600px;
   overflow: hidden;
   border-radius: var(--radius-sm);
 }
@@ -384,14 +387,6 @@
 }
 
 @media screen and (max-width: 1700px) {
-  .presentation-images {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .presentation-images > :first-child {
-    grid-column: auto;
-  }
-
   .presentation .text-big {
     font-size: 58px;
   }
@@ -416,11 +411,11 @@
   }
 
   .collections-item {
-    width: 320px;
+    width: 380px;
   }
 
   .collections-item-image {
-    height: 400px;
+    height: 450px;
   }
 }
 
