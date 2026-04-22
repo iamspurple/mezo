@@ -23,6 +23,7 @@
   width: 100%;
   aspect-ratio: 1.4;
   overflow: hidden;
+  border-radius: 2px;
 }
 
 .service-example-image img {
