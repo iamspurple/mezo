@@ -116,7 +116,6 @@
 
 .howtofind-accordion .map {
   width: 100%;
-  filter: saturate(0);
 }
 
 .howtofind-accordion .map img {
@@ -136,9 +135,90 @@
   margin-top: 0;
 }
 
+.feedback {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 120px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.feedback-form-wrapper {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #ffffff29;
+  backdrop-filter: blur(8px);
+  padding: 40px 30px 20px 30px;
+  border: 2px solid white;
+  border-radius: 40px;
+  text-transform: uppercase;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: transparent;
+  max-width: 400px;
+}
+
+.feedback-form input {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  border-radius: var(--radius-sm);
+  text-transform: none;
+}
+
+.feedback-form input::placeholder {
+  color: black;
+  text-transform: uppercase;
+}
+
+.feedback-form-button {
+  transition: var(--transition);
+  justify-content: flex-start;
+  width: fit-content;
+}
+
+.feedback-text {
+  color: white;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 72%;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.feedback-cursor {
+  background-image: radial-gradient(circle, #a698d5, var(--color-lavender));
+  filter: blur(50px);
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  left: 65%;
+  top: 80%;
+}
+
 @media screen and (max-width: 1280px) {
   .team-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feedback {
+    padding-block: 90px;
+    margin-bottom: 30px;
   }
 }
 
@@ -154,6 +234,18 @@
 }
 
 @media screen and (max-width: 768px) {
+  .feedback-form {
+    max-width: 340px;
+  }
+
+  .feedback-text {
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  .feedback {
+    margin-bottom: 80px;
+  }
 }
 
 @media screen and (max-width: 480px) {

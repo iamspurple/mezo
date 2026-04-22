@@ -1,12 +1,3 @@
-const followCursor = () => {
-  const feedbackCursor = document.getElementById("feedback-cursor");
-
-  document.addEventListener("mousemove", (e) => {
-    feedbackCursor.style.left = e.clientX + "px";
-    feedbackCursor.style.top = e.clientY + "px";
-  });
-};
-
 const initCategoriesListHover = () => {
   const container = document.querySelector(".categories-list-container");
   if (!container) return;
@@ -34,6 +25,5 @@ const initCategoriesListHover = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  followCursor();
   initCategoriesListHover();
 });
