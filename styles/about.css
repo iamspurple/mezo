@@ -1,70 +1,78 @@
 .page-title {
-  padding-block: 100px;
+  padding-block: clamp(66.667px, 5.208vw, 100px);
+  font-size: clamp(70px, 5.4vw, 104px);
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 72%;
 }
 
 .main-message {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding-block: 30px 120px;
+  gap: clamp(13.333px, 1.042vw, 20px);
+  padding-block: clamp(20px, 1.563vw, 30px) clamp(80px, 6.25vw, 120px);
 }
 
 .main-message-title {
-  max-width: 760px;
+  max-width: 83%;
 }
 
 .main-message-content {
-  max-width: 600px;
+  max-width: 65%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 80%;
+  gap: clamp(26.667px, 2.083vw, 40px);
+  font-weight: 500;
+  font-size: clamp(32px, 2.5vw, 48px);
+  line-height: 90%;
   text-transform: uppercase;
 }
 
 .directions {
   background-color: var(--color-bright);
-  padding-block: 120px 160px;
+  padding-block: clamp(80px, 6.25vw, 120px) clamp(106.667px, 8.333vw, 160px);
 }
 
 .advantages {
   background-color: var(--color-lavender);
-  padding-block: 120px 160px;
+  padding-block: clamp(80px, 6.25vw, 120px) clamp(106.667px, 8.333vw, 160px);
 }
 
 .directions-wrapper,
 .advantages-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: clamp(13.333px, 1.042vw, 20px);
+}
+
+.directions-title,
+.advantages-title {
+  font-size: clamp(53px, 4.15vw, 80px);
+  font-weight: 700;
+  line-height: 72%;
+  max-width: 66%;
+  text-transform: uppercase;
 }
 
 .directions-content,
 .advantages-content {
   display: flex;
   flex-direction: column;
-  gap: 60px;
-}
-
-.directions-wrapper .text-small-secondary,
-.advantages-wrapper .text-small-secondary {
-  max-width: 600px;
+  gap: clamp(40px, 3.125vw, 60px);
 }
 
 .directions-wrapper > *,
 .advantages-wrapper > * {
-  max-width: 760px;
+  max-width: 66%;
 }
 
 .directions-list,
 .advantages-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  font-weight: 500;
-  font-size: 32px;
+  gap: clamp(26.667px, 2.083vw, 40px);
+  font-weight: 700;
+  font-size: clamp(32px, 2.5vw, 48px);
   line-height: 80%;
   text-transform: uppercase;
 }
@@ -73,12 +81,13 @@
 .advantages-item {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: clamp(16px, 1.25vw, 24px);
 }
 
 .directions-item span,
 .advantages-item span {
-  padding: 8px 16px 8px 8px;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 16px)
+    clamp(5.333px, 0.417vw, 8px) clamp(5.333px, 0.417vw, 8px);
   width: fit-content;
   cursor: default;
   border-radius: 2px;
@@ -87,7 +96,7 @@
 .photo {
   width: 100%;
   height: 100svh;
-  max-height: 920px;
+  max-height: clamp(613.333px, 47.917vw, 920px);
 }
 
 .photo figure {
@@ -111,42 +120,43 @@
   }
 }
 
-@media screen and (max-width: 1700px) {
-  .directions .title-large,
-  .advantages .title-large {
-    font-size: 64px;
-  }
-}
-
 @media screen and (max-width: 1280px) {
   .main-message-content {
-    font-size: 28px;
+    /* 768px -> 24px, 1280px -> 28px */
+    font-size: clamp(24px, calc(18px + 0.781vw), 28px);
   }
 
   .photo {
-    max-height: 720px;
+    /* 768px -> 640px, 1280px -> 720px */
+    max-height: clamp(640px, calc(520px + 15.625vw), 720px);
   }
 }
 
 @media screen and (max-width: 768px) {
   .page-title {
-    padding-block: 35px 50px;
+    /* 393px -> 35/50, 768px -> 100/100 */
+    padding-block: clamp(35px, calc(-33.12px + 17.333vw), 100px)
+      clamp(50px, calc(-2.4px + 13.333vw), 100px);
   }
 
   .main-message {
-    padding-bottom: 60px;
+    /* 393px -> 60px, 768px -> 120px */
+    padding-bottom: clamp(60px, calc(-2.88px + 16vw), 120px);
   }
 
   .main-message-content {
+    /* 393px -> 24px, 768px -> 24px */
     font-size: 24px;
   }
 
   .directions,
   .advantages {
-    padding-block: 60px;
+    /* 393px -> 60px, 768px -> 120px */
+    padding-block: clamp(60px, calc(-2.88px + 16vw), 120px);
   }
 
   .photo {
+    /* На 768 уже 640px в предыдущем диапазоне */
     max-height: 640px;
   }
 
