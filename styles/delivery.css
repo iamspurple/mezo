@@ -2,16 +2,16 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 40px;
-  padding-block: 45px;
-  font-weight: 400;
-  font-size: 32px;
+  gap: clamp(26.667px, calc(13.334px + 0.625vw), 40px);
+  padding-block: clamp(29.333px, 1.8vw, 45px) clamp(80px, 6.25vw, 120px);
+  font-weight: 500;
+  font-size: clamp(32px, 2.5vw, 48px);
   line-height: 80%;
   text-transform: uppercase;
 }
 
 .hero-subtitle {
-  margin-bottom: 25px;
+  margin-bottom: clamp(16.667px, calc(8.334px + 0.313vw), 25px);
 }
 
 .hero-image {
@@ -21,12 +21,35 @@
   border-radius: 2px;
 }
 
+@keyframes delivery-hero-image-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, clamp(18px, 2.5vw, 28px), 0) scale(1.12)
+      rotate(-1.25deg);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05) rotate(0deg);
+    filter: none;
+  }
+}
+
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.1);
+  animation: delivery-hero-image-reveal 2s cubic-bezier(0.22, 1, 0.36, 1) both;
   transition: var(--transition);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image img {
+    animation: none;
+    opacity: 1;
+    transform: scale(1.05);
+    filter: none;
+  }
 }
 
 @media (any-hover: hover) {
@@ -36,17 +59,19 @@
 }
 
 .hero-text {
-  max-width: 600px;
+  max-width: 33%;
 }
 
 .companies {
   background-color: var(--color-bright);
-  padding-block: 120px 40px;
+  padding-block: clamp(53.3px, 4.16vw, 80px)
+    clamp(80px, calc(40px + 20vw), 120px);
 }
 
 .exclusion {
   background-color: var(--color-lavender);
-  padding-block: 40px 120px;
+  padding-block: clamp(53.3px, 4.16vw, 80px)
+    clamp(80px, calc(40px + 20vw), 120px);
   margin-bottom: 30px;
 }
 
@@ -54,14 +79,41 @@
 .exclusion-wrapper {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 20px;
+  column-gap: clamp(13.333px, calc(6.667px + 0.313vw), 20px);
+  row-gap: clamp(80px, calc(40px + 20vw), 120px);
 }
 
-.companies-content,
+.companies-title,
+.exclusion-title {
+  font-size: clamp(22px, 1.6vw, 32px);
+  font-weight: 500;
+  line-height: 80%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 2vw, 40px);
+  height: fit-content;
+}
+
+.companies-title span,
+.exclusion-title span {
+  padding: clamp(5.333px, calc(2.667px + 0.417vw), 8px)
+    clamp(10.667px, calc(5.334px + 0.521vw), 16px)
+    clamp(5.333px, calc(2.667px + 0.417vw), 8px)
+    clamp(5.333px, calc(2.667px + 0.417vw), 8px);
+  width: fit-content;
+  cursor: default;
+  border-radius: 2px;
+}
+
 .exclusion-content {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: clamp(26px, 2vw, 40px);
+  font-size: clamp(32px, 2.5vw, 48px);
+  font-weight: 500;
+  line-height: 90%;
+  text-transform: uppercase;
 }
 
 .exclusion-content p {
@@ -71,17 +123,17 @@
 }
 
 .companies-wrapper .text-small-secondary,
-.exclusion-wrapper .text-small-secondary {
-  max-width: 600px;
+.exclusion-content p {
+  max-width: 66%;
 }
 
 .companies-list,
 .exclusion-list {
+  grid-column: -1/1;
   display: flex;
-  flex-direction: column;
-  gap: 40px;
+  justify-content: space-around;
   font-weight: 500;
-  font-size: 32px;
+  font-size: clamp(21.333px, calc(10.667px + 0.521vw), 32px);
   line-height: 80%;
   text-transform: uppercase;
 }
@@ -90,34 +142,37 @@
 .exclusion-item {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-}
-
-.companies-item span,
-.exclusion-item span {
-  padding: 8px 16px 8px 8px;
-  width: fit-content;
-  cursor: default;
-  border-radius: 2px;
+  gap: clamp(16px, calc(8px + 0.833vw), 24px);
 }
 
 @media screen and (max-width: 1700px) {
   .companies .title-large,
   .exclusion .title-large {
-    font-size: 64px;
+    font-size: clamp(42.667px, calc(21.334px + 1.042vw), 64px);
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero {
-    font-size: 24px;
+    font-size: clamp(16px, calc(8px + 0.833vw), 24px);
+  }
+
+  .hero-text {
+    max-width: 100%;
   }
 
   .companies {
-    padding-block: 60px 20px;
+    padding-block: clamp(40px, calc(20px + 10vw), 60px)
+      clamp(13.333px, calc(6.667px + 0.313vw), 20px);
   }
+
+  .companies-wrapper .text-small-secondary {
+    max-width: 100%;
+  }
+
   .exclusion {
-    padding-block: 20px 60px;
+    padding-block: clamp(13.333px, calc(6.667px + 0.313vw), 20px)
+      clamp(40px, calc(20px + 10vw), 60px);
   }
 
   .exclusion-wrapper {
@@ -132,6 +187,101 @@
   }
 
   .hero-image {
-    height: 320px;
+    height: clamp(213.333px, calc(106.667px + 10.417vw), 320px);
+  }
+}
+
+/* ---------- Скролл-анимации страницы доставки (js/delivery.js) ---------- */
+@supports selector(:has(*)) {
+  main .scroll-reveal-heading:not(:has(.scroll-reveal-word)) {
+    opacity: 0;
+  }
+}
+.scroll-reveal-heading .scroll-reveal-word {
+  display: inline-block;
+  vertical-align: baseline;
+  opacity: 0;
+  transform: translate3d(0, 0.35em, 0);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: calc(var(--word-index, 0) * 42ms);
+}
+.scroll-reveal-heading.is-visible .scroll-reveal-word {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  @supports selector(:has(*)) {
+    main .scroll-reveal-heading:not(:has(.scroll-reveal-word)) {
+      opacity: 1;
+    }
+  }
+  .scroll-reveal-heading .scroll-reveal-word {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+.js-delivery-scroll-reveal main .companies-list .companies-item {
+  transition:
+    opacity 0.95s ease,
+    transform 1.05s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.js-delivery-scroll-reveal
+  main
+  .companies-list:not(.is-visible)
+  .companies-item {
+  opacity: 0;
+  transform: translate3d(0, clamp(16px, 2.2vw, 26px), 0);
+}
+.js-delivery-scroll-reveal main .companies-list.is-visible .companies-item {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.js-delivery-scroll-reveal
+  main
+  .companies-list.is-visible
+  .companies-item:nth-child(1) {
+  transition-delay: 0ms;
+}
+.js-delivery-scroll-reveal
+  main
+  .companies-list.is-visible
+  .companies-item:nth-child(2) {
+  transition-delay: 165ms;
+}
+.js-delivery-scroll-reveal
+  main
+  .companies-list.is-visible
+  .companies-item:nth-child(3) {
+  transition-delay: 330ms;
+}
+.js-delivery-scroll-reveal
+  main
+  .companies-list.is-visible
+  .companies-item:nth-child(4) {
+  transition-delay: 495ms;
+}
+.js-delivery-scroll-reveal
+  main
+  .companies-list.is-visible
+  .companies-item:nth-child(5) {
+  transition-delay: 660ms;
+}
+
+.js-delivery-scroll-reveal
+  main
+  .companies-list.is-visible
+  .companies-item:nth-child(6) {
+  transition-delay: 825ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-delivery-scroll-reveal main .companies-list .companies-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    transition-delay: 0ms !important;
   }
 }
