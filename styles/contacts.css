@@ -1,26 +1,26 @@
 .team {
-  padding-block: 80px;
+  padding-block: clamp(53.333px, 4.167vw, 80px);
 }
 
 .team-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: clamp(13.333px, 1.042vw, 20px);
 }
 
 .team-content > * {
-  max-width: 600px;
+  max-width: clamp(400px, calc(200px + 20vw), 600px);
 }
 
 .executive-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(13.333px, 1.042vw, 20px);
 }
 
 .executive-wrapper a {
   font-weight: 500;
-  font-size: 20px;
+  font-size: clamp(13.333px, 1.042vw, 20px);
   line-height: 120%;
   text-decoration: underline;
 }
@@ -28,9 +28,9 @@
 .team-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: clamp(20px, calc(10px + 1.563vw), 30px);
   row-gap: 60px;
-  padding-block: 80px 40px;
+  padding-block: clamp(53.333px, 4.167vw, 80px) clamp(26.667px, 2.083vw, 40px);
 }
 
 .team-item {
@@ -41,34 +41,34 @@
 .howtofind {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding-block: 40px 80px;
+  gap: clamp(13.333px, 1.042vw, 20px);
+  padding-block: clamp(26.667px, 2.083vw, 40px) clamp(53.333px, 4.167vw, 80px);
 }
 
 .howtofind-accordion {
-  font-size: 32px;
+  font-size: clamp(21.333px, 1.667vw, 32px);
   font-weight: 400;
   line-height: 80%;
-  padding-inline: 8px;
+  padding-inline: clamp(5.333px, 0.417vw, 8px);
   border-top: 2px solid black;
   text-transform: uppercase;
   transition: var(--transition);
 }
 
 .howtofind-accordion[open] {
-  padding-bottom: 40px;
+  padding-bottom: clamp(26.667px, 2.083vw, 40px);
 }
 
 .howtofind-accordion-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(13.333px, 1.042vw, 20px);
   width: 100%;
   overflow: hidden;
   transition:
     height 0.35s ease,
     margin-top 0.35s;
-  margin-top: 20px;
+  margin-top: clamp(13.333px, 1.042vw, 20px);
 }
 
 .howtofind-accordion-content.is-closed {
@@ -77,8 +77,8 @@
 
 .howtofind-accordion summary {
   position: relative;
-  padding-top: 24px;
-  padding-bottom: 40px;
+  padding-top: clamp(16px, calc(8px + 0.833vw), 24px);
+  padding-bottom: clamp(26.667px, 2.083vw, 40px);
   cursor: pointer;
   transition: var(--transition);
   display: flex;
@@ -104,8 +104,8 @@
 .howtofind-accordion summary::after {
   content: "";
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: clamp(16px, calc(8px + 0.833vw), 24px);
+  height: clamp(16px, calc(8px + 0.833vw), 24px);
   background: url("../assets/images/plus.svg") center/contain no-repeat;
   transition: all 0.25s;
 }
@@ -126,7 +126,7 @@
 .howtofind-accordion .address {
   font-family: var(--font-secondary);
   font-weight: 400;
-  font-size: 16px;
+  font-size: clamp(10.667px, 0.833vw, 16px);
   line-height: 120%;
   text-transform: none;
 }
@@ -140,20 +140,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-block: 120px;
+  padding-block: clamp(80px, 6.25vw, 120px);
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
 }
 
 .feedback-form-wrapper {
-  width: 600px;
+  width: clamp(400px, calc(200px + 20vw), 600px);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: clamp(20px, calc(10px + 1.563vw), 30px);
   background-color: #ffffff29;
   backdrop-filter: blur(8px);
-  padding: 40px 30px 20px 30px;
+  padding: clamp(26.667px, 2.083vw, 40px)
+    clamp(20px, calc(10px + 1.563vw), 30px) clamp(13.333px, 1.042vw, 20px)
+    clamp(20px, calc(10px + 1.563vw), 30px);
   border: 2px solid white;
   border-radius: 40px;
   text-transform: uppercase;
@@ -162,14 +164,14 @@
 .feedback-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: clamp(6.667px, 0.521vw, 10px);
   background-color: transparent;
   max-width: 400px;
 }
 
 .feedback-form input {
   width: 100%;
-  padding: 8px 12px;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 12px);
   background-color: transparent;
   color: black;
   border: 2px solid black;
@@ -190,7 +192,7 @@
 
 .feedback-text {
   color: white;
-  font-size: 48px;
+  font-size: clamp(32px, 2.5vw, 48px);
   font-weight: 500;
   line-height: 72%;
   align-self: flex-end;
@@ -200,8 +202,8 @@
 .feedback-cursor {
   background-image: radial-gradient(circle, #a698d5, var(--color-lavender));
   filter: blur(50px);
-  width: 650px;
-  height: 650px;
+  width: clamp(433.333px, calc(216.667px + 23.438vw), 650px);
+  height: clamp(433.333px, calc(216.667px + 23.438vw), 650px);
   border-radius: 50%;
   position: absolute;
   pointer-events: none;
@@ -217,8 +219,8 @@
   }
 
   .feedback {
-    padding-block: 90px;
-    margin-bottom: 30px;
+    padding-block: clamp(60px, calc(40px + 2.083vw), 90px);
+    margin-bottom: clamp(20px, calc(10px + 1.563vw), 30px);
   }
 }
 
@@ -229,7 +231,7 @@
 
   .howtofind {
     grid-template-columns: 1fr;
-    gap: 80px;
+    gap: clamp(53.333px, calc(26.667px + 2.667vw), 80px);
   }
 }
 
@@ -239,26 +241,132 @@
   }
 
   .feedback-text {
-    font-size: 32px;
+    font-size: clamp(21.333px, 1.667vw, 32px);
     font-weight: 400;
   }
 
   .feedback {
-    margin-bottom: 80px;
+    margin-bottom: clamp(53.333px, calc(26.667px + 2.667vw), 80px);
   }
 }
 
 @media screen and (max-width: 480px) {
   .team {
-    padding-block: 40px;
+    padding-block: clamp(26.667px, 2.083vw, 40px);
   }
   .team-content {
     grid-template-columns: 1fr;
-    gap: 70px;
+    gap: clamp(46.667px, calc(23.334px + 2.344vw), 70px);
   }
 
   .team-list {
     grid-template-columns: 1fr;
-    row-gap: 40px;
+    row-gap: clamp(26.667px, calc(13.334px + 1.333vw), 40px);
+  }
+}
+
+/* ---------- Скролл-анимации страницы контактов (js/contacts.js) ---------- */
+
+/* Пока JS не разбил текст на span, заголовок скрыт — иначе виден «голый» текст, потом скачок */
+@supports selector(:has(*)) {
+  main .scroll-reveal-heading:not(:has(.scroll-reveal-word)) {
+    opacity: 0;
+  }
+}
+
+.scroll-reveal-heading .scroll-reveal-word {
+  display: inline-block;
+  vertical-align: baseline;
+  opacity: 0;
+  transform: translate3d(0, 0.35em, 0);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: calc(var(--word-index, 0) * 42ms);
+}
+
+.scroll-reveal-heading.is-visible .scroll-reveal-word {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @supports selector(:has(*)) {
+    main .scroll-reveal-heading:not(:has(.scroll-reveal-word)) {
+      opacity: 1;
+    }
+  }
+
+  .scroll-reveal-heading .scroll-reveal-word {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.js-contacts-scroll-reveal main .team-list .team-item {
+  transition:
+    opacity 0.95s ease,
+    transform 1.05s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.js-contacts-scroll-reveal main .team-list:not(.is-visible) .team-item {
+  opacity: 0;
+  transform: translate3d(0, clamp(16px, 2.2vw, 26px), 0);
+}
+
+.js-contacts-scroll-reveal main .team-list.is-visible .team-item {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.js-contacts-scroll-reveal
+  main
+  .team-list.is-visible
+  .team-item:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.js-contacts-scroll-reveal
+  main
+  .team-list.is-visible
+  .team-item:nth-child(2) {
+  transition-delay: 165ms;
+}
+
+.js-contacts-scroll-reveal
+  main
+  .team-list.is-visible
+  .team-item:nth-child(3) {
+  transition-delay: 330ms;
+}
+
+.js-contacts-scroll-reveal
+  main
+  .team-list.is-visible
+  .team-item:nth-child(4) {
+  transition-delay: 495ms;
+}
+
+.js-contacts-scroll-reveal
+  main
+  .team-list.is-visible
+  .team-item:nth-child(5) {
+  transition-delay: 660ms;
+}
+
+.js-contacts-scroll-reveal
+  main
+  .team-list.is-visible
+  .team-item:nth-child(6) {
+  transition-delay: 825ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-contacts-scroll-reveal main .team-list .team-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    transition-delay: 0ms !important;
   }
 }
