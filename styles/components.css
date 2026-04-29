@@ -845,24 +845,48 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   cursor: default;
 }
 
+@keyframes executive-image-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, clamp(18px, 2.5vw, 28px), 0) scale(1.12)
+      rotate(-1.25deg);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05) rotate(0deg);
+    filter: none;
+  }
+}
+
 .executive-image {
   width: 100%;
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 2px;
+  animation: executive-image-reveal 1.12s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition-duration: 0.85s;
 }
 
 .executive-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.05);
-  transition: var(--transition);
+  transition: transform var(--transition);
 }
 
 @media (hover: hover) {
   .executive-image:hover img {
     transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .executive-image img {
+    animation: none;
+    opacity: 1;
+    transform: scale(1.05);
+    filter: none;
   }
 }
 
