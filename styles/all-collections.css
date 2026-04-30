@@ -1,17 +1,17 @@
 .all-collections {
-  padding-block: 30px;
+  padding-block: clamp(20px, 1.563vw, 30px);
 }
 
 .all-collections-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  row-gap: 60px;
-  padding-block: 100px;
+  gap: clamp(8px, 0.625vw, 12px);
+  row-gap: clamp(40px, 3.125vw, 60px);
+  padding-block: clamp(66.667px, 5.208vw, 100px);
 }
 
 .all-collections-item-content {
-  gap: 15px;
+  gap: clamp(10px, 0.781vw, 15px);
   width: 100%;
   height: 100%;
 }
@@ -21,20 +21,55 @@
   aspect-ratio: 1.6;
   overflow: hidden;
   border-radius: var(--radius-sm);
+  position: relative;
+  --hover-gif-space: 50%;
 }
 
-.all-collections-item-image img {
-  transform: scale(1.1);
+.all-collections-item-image img.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease;
+}
+
+.all-collections-item-image img:not(.main-image) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--hover-gif-space);
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .all-collections-item-name {
-  padding-inline: 10px;
-  font-size: 20px;
+  padding-inline: clamp(6.667px, 0.521vw, 10px);
+  font-size: clamp(16px, 1.25vw, 24px);
 }
 
 .all-collections-item-name svg {
-  width: 16px;
-  height: 16px;
+  width: clamp(10.667px, 0.833vw, 16px);
+  height: clamp(10.667px, 0.833vw, 16px);
+}
+
+.all-collections-item-description {
+  opacity: 0;
+  max-width: 66%;
+  transition: var(--transition);
+}
+
+@media (hover: hover) {
+  .all-collections-item-content:hover .all-collections-item-description {
+    opacity: 1;
+  }
+
+  .all-collections-item-content:hover
+    .all-collections-item-image
+    img.main-image {
+    transform: translateX(calc(-1 * var(--hover-gif-space)));
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -52,7 +87,8 @@
 @media screen and (max-width: 480px) {
   .all-collections-list {
     grid-template-columns: 1fr;
-    row-gap: 40px;
-    padding-block: 80px;
+    /* 393px -> 40/80, 480px -> 60/100 */
+    row-gap: clamp(40px, calc(-50.34px + 22.989vw), 60px);
+    padding-block: clamp(80px, calc(-10.34px + 22.989vw), 100px);
   }
 }
