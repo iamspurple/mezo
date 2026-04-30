@@ -2,29 +2,29 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  row-gap: 60px;
+  row-gap: clamp(40px, 3.125vw, 60px);
   align-items: start;
-  padding-bottom: 100px;
+  padding-bottom: clamp(66.667px, 5.208vw, 100px);
 }
 
 .product-data {
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: clamp(53.333px, 4.167vw, 80px);
 }
 
 .product-info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding-top: 40px;
+  gap: clamp(8px, 0.625vw, 12px);
+  padding-top: clamp(26.667px, 2.083vw, 40px);
 }
 
 .product-title {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, 1.563vw, 30px);
 }
 
 .product-title > * {
@@ -34,7 +34,8 @@
 .product-actions {
   text-transform: uppercase;
   display: flex;
-  gap: 10px;
+  gap: clamp(6.667px, 0.521vw, 10px);
+  align-items: center;
 }
 
 .product-actions button {
@@ -56,20 +57,29 @@
   border: none;
 }
 
+.product-actions .text-xs {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  font-size: clamp(9.333px, 0.729vw, 14px);
+  line-height: 120%;
+  text-transform: none;
+  max-width: 33%;
+}
+
 .product-quantity {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  padding-top: 20px;
+  padding-top: clamp(13.333px, 1.042vw, 20px);
 }
 
 .product-quantity p {
   border-radius: 2px;
   border: 1px solid var(--color-lightgrey);
-  padding: 8px 16px;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 16px);
   font-family: var(--font-secondary);
   font-weight: 500;
-  font-size: 16px;
+  font-size: clamp(10.667px, 0.833vw, 16px);
   line-height: 90%;
   display: inline-flex;
   align-items: center;
@@ -87,7 +97,7 @@
   padding-left: 10px;
   font-family: var(--font-primary);
   font-weight: 400;
-  font-size: 24px;
+  font-size: clamp(16px, 1.25vw, 24px);
   line-height: 80%;
   text-transform: uppercase;
 }
@@ -101,10 +111,10 @@
 .product-copy button {
   border-radius: 2px;
   background-color: var(--color-bright);
-  padding: 8px 16px;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 16px);
   font-family: var(--font-secondary);
   font-weight: 500;
-  font-size: 16px;
+  font-size: clamp(10.667px, 0.833vw, 16px);
   line-height: 90%;
   display: inline-flex;
   gap: 10px;
@@ -126,7 +136,7 @@
   padding-left: 10px;
   font-family: var(--font-primary);
   font-weight: 400;
-  font-size: 24px;
+  font-size: clamp(16px, 1.25vw, 24px);
   line-height: 80%;
   text-transform: uppercase;
 }
@@ -140,6 +150,11 @@
   left: 0;
   z-index: 2;
   background-color: var(--color-bright);
+}
+
+.product-copy button svg {
+  width: clamp(16px, 1.25vw, 24px);
+  height: clamp(16px, 1.25vw, 24px);
 }
 
 @keyframes fade-in {
@@ -156,13 +171,21 @@
   display: inline-flex;
   gap: 10px;
   align-items: center;
-  padding: 8px 16px;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 16px);
 
   animation: fade-in 0.2s;
 }
 
+.product-description {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  font-size: clamp(13.333px, 1.042vw, 20px);
+  line-height: 140%;
+  max-width: 50%;
+}
+
 .product-accordion {
-  font-size: 32px;
+  font-size: clamp(21.333px, 1.641vw, 32px);
   font-weight: 400;
   line-height: 80%;
   padding-inline: 8px;
@@ -172,15 +195,15 @@
 }
 
 .product-accordion[open] {
-  padding-bottom: 40px;
+  padding-bottom: clamp(26.667px, 2.083vw, 40px);
 }
 
 .product-accordion summary {
   cursor: pointer;
   position: relative;
   list-style: none;
-  padding-top: 24px;
-  padding-bottom: 40px;
+  padding-top: clamp(16px, 1.25vw, 24px);
+  padding-bottom: clamp(26.667px, 2.083vw, 40px);
   cursor: pointer;
   transition: var(--transition);
   display: flex;
@@ -202,8 +225,8 @@
 .product-accordion summary::after {
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: clamp(13.333px, 1.042vw, 20px);
+  height: clamp(13.333px, 1.042vw, 20px);
   background: url("../assets/images/plus.svg") center/contain no-repeat;
   transition: all 0.25s;
 }
@@ -217,8 +240,12 @@
   transition:
     height 0.35s ease,
     margin-top 0.35s;
-  margin-top: 12px;
+  margin-top: clamp(8px, 0.625vw, 12px);
   text-transform: none;
+  font-weight: 400;
+  font-size: clamp(13.333px, 1.042vw, 20px);
+  line-height: 140%;
+  font-family: var(--font-secondary);
 }
 
 .product-accordion-content.is-closed {
@@ -299,7 +326,7 @@
   row-gap: 40px;
   transition: var(--transition);
   flex-wrap: wrap;
-  padding-bottom: 60px;
+  padding-bottom: clamp(40px, 3.125vw, 60px);
   /* justify-content: ; */
 }
 
@@ -345,9 +372,9 @@
   font-family: var(--font-secondary);
   display: inline-flex;
   align-items: center;
-  padding: 8px 12px;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 12px);
   border-radius: 4px;
-  font-size: 16px;
+  font-size: clamp(10.667px, 0.833vw, 16px);
   font-weight: 500;
   line-height: 90%;
   background-color: black;
@@ -359,8 +386,8 @@
 }
 
 .product-similar-card-actions button {
-  width: 48px;
-  height: 48px;
+  width: clamp(32px, 2.564vw, 48px);
+  height: clamp(32px, 2.564vw, 48px);
   background-color: #00000029;
   border-radius: 4px;
   position: relative;
@@ -386,8 +413,8 @@
 
 .product-similar-card-actions button::before {
   content: "";
-  width: 40px;
-  height: 40px;
+  width: clamp(26.667px, 2.083vw, 40px);
+  height: clamp(26.667px, 2.083vw, 40px);
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -447,7 +474,7 @@
   display: inline-block;
   width: fit-content;
   font-weight: 500;
-  font-size: 16px;
+  font-size: clamp(10.667px, 0.833vw, 16px);
   line-height: 180%;
   color: #00000066;
   text-wrap: nowrap;
@@ -458,7 +485,7 @@
 .product-similar-card-price {
   font-family: var(--font-secondary);
   font-weight: 700;
-  font-size: 20px;
+  font-size: clamp(13.333px, 1.042vw, 20px);
   line-height: 120%;
   align-self: flex-end;
   width: 50%;
@@ -467,7 +494,7 @@
 .product-similar-card-oldprice {
   font-family: var(--font-secondary);
   font-weight: 500;
-  font-size: 20px;
+  font-size: clamp(13.333px, 1.042vw, 20px);
   line-height: 120%;
   text-decoration: line-through;
   color: #00000066;
@@ -504,7 +531,8 @@
 }
 
 .favorites-lists-content {
-  padding: 0 30px 30px 30px;
+  padding: 0 clamp(20px, 1.563vw, 30px) clamp(20px, 1.563vw, 30px)
+    clamp(20px, 1.563vw, 30px);
   position: relative;
   overflow: hidden;
   height: 100%;
@@ -513,7 +541,11 @@
 .step1,
 .step2 {
   display: grid;
-  grid-template-rows: 100px auto 60px;
+  grid-template-rows: clamp(66.667px, 5.208vw, 100px) auto clamp(
+      40px,
+      3.125vw,
+      60px
+    );
   gap: 30px;
   height: 100%;
 }
@@ -524,7 +556,8 @@
   right: 0;
   width: 100%;
   height: 100%;
-  padding: 0 30px 30px 30px;
+  padding: 0 clamp(20px, 1.563vw, 30px) clamp(20px, 1.563vw, 30px)
+    clamp(20px, 1.563vw, 30px);
   background-color: white;
   transform: translateX(100%);
   opacity: 0;
@@ -552,14 +585,14 @@
 }
 
 .favorites-list-item-btn {
-  height: 80px;
+  height: clamp(53.333px, 4.167vw, 80px);
   width: 100%;
   font-family: var(--font-primary);
   font-weight: 400;
-  font-size: 24px;
+  font-size: clamp(16px, 1.25vw, 24px);
   line-height: 80%;
   text-transform: uppercase;
-  padding-inline: 16px;
+  padding-inline: clamp(10.667px, 0.833vw, 16px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -629,9 +662,9 @@
   background-color: white;
   font-family: var(--font-primary);
   text-transform: uppercase;
-  height: 56px;
-  padding: 8px 16px;
-  font-size: 24px;
+  height: clamp(37.333px, 2.917vw, 56px);
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 16px);
+  font-size: clamp(16px, 1.25vw, 24px);
   line-height: 80%;
   font-weight: 400;
   transition: var(--transition);
@@ -663,7 +696,7 @@
   display: none;
 }
 
-@media screen and (max-width: 1700px) {
+/* @media screen and (max-width: 1700px) {
   .product-similar-card-actions button {
     width: 42px;
     height: 42px;
@@ -687,34 +720,35 @@
   .step2 {
     padding: 0 20px 20px 20px;
   }
-}
+} */
 @media screen and (max-width: 1280px) {
   .product-similar-card-actions button {
-    width: 38px;
-    height: 38px;
+    width: clamp(25.333px, 1.953vw, 38px);
+    height: clamp(25.333px, 1.953vw, 38px);
   }
 
   .product-similar-card-actions button::before {
-    width: 32px;
-    height: 32px;
+    width: clamp(21.333px, 1.641vw, 32px);
+    height: clamp(21.333px, 1.641vw, 32px);
   }
 
   .product-similar-card-volume {
-    font-size: 14px;
+    font-size: clamp(9.333px, 0.729vw, 14px);
   }
 
   .product-similar-card-price,
   .product-similar-card-oldprice {
-    font-size: 16px;
+    font-size: clamp(10.667px, 0.833vw, 16px);
   }
 
   .favorites-lists-content,
   .step2 {
-    padding: 0 18px 18px 18px;
+    padding: 0 clamp(12px, 0.938vw, 18px) clamp(12px, 0.938vw, 18px)
+      clamp(12px, 0.938vw, 18px);
   }
 
   .favorites-lists-title {
-    font-size: 40px;
+    font-size: clamp(26.667px, 2.083vw, 40px);
   }
 }
 
@@ -751,13 +785,13 @@
   }
 
   .product-similar-card-actions button {
-    width: 32px;
-    height: 32px;
+    width: clamp(21.333px, 1.641vw, 32px);
+    height: clamp(21.333px, 1.641vw, 32px);
   }
 
   .product-similar-card-actions button::before {
-    width: 28px;
-    height: 28px;
+    width: clamp(18.667px, 1.458vw, 28px);
+    height: clamp(18.667px, 1.458vw, 28px);
   }
 }
 
@@ -765,32 +799,33 @@
   .product {
     grid-template-columns: 1fr;
     justify-items: stretch;
-    row-gap: 40px;
+    row-gap: clamp(26.667px, 2.083vw, 40px);
   }
 
   .product-actions button {
-    padding: 8px 8px 8px 12px;
+    padding: clamp(5.333px, 0.417vw, 8px) clamp(5.333px, 0.417vw, 8px)
+      clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 12px);
   }
 
   .product-quantity p,
   .product-copy button {
-    font-size: 14px;
+    font-size: clamp(9.333px, 0.729vw, 14px);
     padding: 5px 10px;
   }
 
   .product-quantity p span,
   .product-copy button span {
-    font-size: 18px;
+    font-size: clamp(12px, 0.938vw, 18px);
   }
 
   .product-copy button svg {
-    width: 16px;
-    height: 16px;
+    width: clamp(10.667px, 0.833vw, 16px);
+    height: clamp(10.667px, 0.833vw, 16px);
   }
 
   .product-title {
     order: -2;
-    padding-top: 40px;
+    padding-top: clamp(26.667px, 2.083vw, 40px);
     margin-bottom: 0;
   }
 

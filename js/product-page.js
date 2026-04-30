@@ -175,4 +175,19 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.classList.toggle("active");
     });
   });
+
+  const productTitle = document.getElementById("product-title");
+  const productActionsAuthorized = document.getElementById(
+    "product-actions-authorized",
+  );
+  const productActionsUnauthorized = document.getElementById(
+    "product-actions-unauthorized",
+  );
+
+  if (productTitle && productActionsAuthorized && productActionsUnauthorized) {
+    productTitle.addEventListener("click", () => {
+      productActionsAuthorized.classList.toggle("visually-hidden");
+      productActionsUnauthorized.classList.toggle("visually-hidden");
+    });
+  }
 });

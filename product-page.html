@@ -1646,14 +1646,14 @@
       <section class="product container">
         <div class="product-data">
           <div class="product-info">
-            <h1 class="title-medium product-title">
+            <h1 id="product-title" class="title-medium product-title">
               <span
                 >Лосьон для тела <br />
                 Rumah Wood Sea salt</span
               >
-              <span>245</span>
+              <span>245 ₽</span>
             </h1>
-            <div class="product-actions">
+            <div id="product-actions-authorized" class="product-actions">
               <button
                 id="open-favorites-lists-btn"
                 class="btn text-medium favorites"
@@ -1694,7 +1694,10 @@
                 </svg>
               </button>
             </div>
-            <div class="product-actions visually-hidden">
+            <div
+              id="product-actions-unauthorized"
+              class="product-actions visually-hidden"
+            >
               <button class="btn text-medium">
                 Увидеть стоимость
                 <svg
@@ -1713,45 +1716,24 @@
                   />
                 </svg>
               </button>
+              <p class="text-xs">
+                Войдите в личный кабинет, чтобы увидеть стоимость товаров и
+                сделать заказ.
+              </p>
             </div>
-            <p class="text-small-secondary visually-hidden">
-              Войдите в личный кабинет или зарегистрируйте аккаунт, чтобы
-              увидеть стоимость товаров и сделать заказ.
-            </p>
+
             <div class="product-quantity">
               <p>
                 Кратность
                 <span>100</span>
               </p>
               <p>
-                В наличии
-                <span>100,000</span>
-              </p>
-              <p>
-                Итоговый объем, М<sup>3</sup>
+                Объем, М<sup>3</sup>
                 <span>100</span>
               </p>
-            </div>
-            <div class="product-copy">
-              <button id="articul">
-                Артикул <span>000123456</span>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <div class="active">
-                  Артикул скопирован
+              <div class="product-copy">
+                <button id="articul">
+                  Артикул <span>000123456</span>
                   <svg
                     width="24"
                     height="24"
@@ -1759,43 +1741,43 @@
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
+                    <path
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="black"
+                      stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M4 12.6111L8.92308 17.5L20 6.5"
-                        stroke="#000000"
-                        stroke-width="2"
+                    />
+                  </svg>
+                  <div class="active">
+                    Артикул скопирован
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                      ></path>
-                    </g>
-                  </svg>
-                </div>
-              </button>
-              <button id="url">
-                Ссылка на товар
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <div class="active">
-                  Ссылка скопирована
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M4 12.6111L8.92308 17.5L20 6.5"
+                          stroke="#000000"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+                <button id="url">
+                  Ссылка на товар
                   <svg
                     width="24"
                     height="24"
@@ -1803,43 +1785,55 @@
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
+                    <path
+                      d="M9 9V6.2002C9 5.08009 9 4.51962 9.21799 4.0918C9.40973 3.71547 9.71547 3.40973 10.0918 3.21799C10.5196 3 11.0801 3 12.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07967 21.0002 6.19978V11.7998C21.0002 12.9199 21.0002 13.48 20.7822 13.9078C20.5905 14.2841 20.2839 14.5905 19.9076 14.7822C19.4802 15 18.921 15 17.8031 15H15M9 9H6.2002C5.08009 9 4.51962 9 4.0918 9.21799C3.71547 9.40973 3.40973 9.71547 3.21799 10.0918C3 10.5196 3 11.0801 3 12.2002V17.8002C3 18.9203 3 19.4801 3.21799 19.9079C3.40973 20.2842 3.71547 20.5905 4.0918 20.7822C4.5192 21 5.07899 21 6.19691 21H11.8036C12.9215 21 13.4805 21 13.9079 20.7822C14.2842 20.5905 14.5905 20.2839 14.7822 19.9076C15 19.4802 15 18.921 15 17.8031V15M9 9H11.8002C12.9203 9 13.4801 9 13.9079 9.21799C14.2842 9.40973 14.5905 9.71547 14.7822 10.0918C15 10.5192 15 11.079 15 12.1969L15 15"
+                      stroke="black"
+                      stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M4 12.6111L8.92308 17.5L20 6.5"
-                        stroke="#000000"
-                        stroke-width="2"
+                    />
+                  </svg>
+                  <div class="active">
+                    Ссылка скопирована
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                      ></path>
-                    </g>
-                  </svg>
-                </div>
-              </button>
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M4 12.6111L8.92308 17.5L20 6.5"
+                          stroke="#000000"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
+
+          <p class="product-description">
+            Лосьон для тела из премиальной коллекции косметики Rumah Wood Sea
+            salt для гостиниц. Упаковка – темно-коричневый скругленный флакон с
+            откручивающейся крышкой. Аромат: дерево и морская соль, свежий и
+            естественный букет с полупрозрачными пряными нотками.
+          </p>
           <div class="accordion-group-single">
-            <details class="product-accordion accordion" open>
-              <summary>Описание</summary>
-              <div
-                class="product-accordion-content accordion-content text-small-secondary"
-              >
-                Лосьон для тела из премиальной коллекции косметики Rumah Wood
-                Sea salt для гостиниц. Упаковка – темно-коричневый скругленный
-                флакон с откручивающейся крышкой. Аромат: дерево и морская соль,
-                свежий и естественный букет с полупрозрачными пряными нотками.
-              </div>
-            </details>
             <details class="product-accordion accordion">
               <summary>Состав</summary>
-              <div
-                class="product-accordion-content accordion-content text-small-secondary"
-              >
+              <div class="product-accordion-content accordion-content">
                 Лосьон для тела из премиальной коллекции косметики Rumah Wood
                 Sea salt для гостиниц. Упаковка – темно-коричневый скругленный
                 флакон с откручивающейся крышкой. Аромат: дерево и морская соль,
@@ -1848,9 +1842,7 @@
             </details>
             <details class="product-accordion accordion">
               <summary>Детали</summary>
-              <div
-                class="product-accordion-content accordion-content text-small-secondary"
-              >
+              <div class="product-accordion-content accordion-content">
                 Лосьон для тела из премиальной коллекции косметики Rumah Wood
                 Sea salt для гостиниц. Упаковка – темно-коричневый скругленный
                 флакон с откручивающейся крышкой. Аромат: дерево и морская соль,
@@ -1917,7 +1909,7 @@
                     Soap Rumah</span
                   >
                   <span class="product-similar-card-volume">20 G</span>
-                  <span class="product-similar-card-price">254</span>
+                  <span class="product-similar-card-price">254 ₽</span>
                   <span class="product-similar-card-oldprice">315</span>
                 </div>
               </a>
@@ -1954,7 +1946,7 @@
                     Hair Conditioner Rumah Wood Sea salt</span
                   >
                   <span class="product-similar-card-volume">40 ml</span>
-                  <span class="product-similar-card-price">254</span>
+                  <span class="product-similar-card-price">254 ₽</span>
                 </div>
               </a>
             </li>
@@ -1991,7 +1983,7 @@
                     Shampoo Rumah Wood Sea salt</span
                   >
                   <span class="product-similar-card-volume">40 ml</span>
-                  <span class="product-similar-card-price">254</span>
+                  <span class="product-similar-card-price">254 ₽</span>
                 </div>
               </a>
             </li>
@@ -2027,7 +2019,7 @@
                     Shower Gel Rumah Wood Sea salt</span
                   >
                   <span class="product-similar-card-volume">40 ml</span>
-                  <span class="product-similar-card-price">254</span>
+                  <span class="product-similar-card-price">254 ₽</span>
                 </div>
               </a>
             </li>
@@ -2452,7 +2444,7 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
@@ -2546,7 +2538,7 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
@@ -2635,7 +2627,7 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
@@ -2724,7 +2716,7 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
@@ -2818,7 +2810,7 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
@@ -2907,7 +2899,7 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
