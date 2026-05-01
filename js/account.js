@@ -271,10 +271,8 @@ const initAccountModals = () => {
   const modalCompany = document.getElementById("account-modal-company");
   const modalInfo = document.getElementById("account-modal-info");
   const modalOrder = document.getElementById("account-modal-order");
-  const modalFeedback = document.getElementById("account-modal-feedback");
 
-  if (!overlay || !modalCompany || !modalInfo || !modalOrder || !modalFeedback)
-    return;
+  if (!overlay || !modalCompany || !modalInfo || !modalOrder) return;
 
   let activeModal = null;
 
@@ -390,19 +388,6 @@ const initAccountModals = () => {
         cacheOriginalTitle(panel);
       }
       openModal(modalOrder);
-    });
-  });
-
-  document.querySelectorAll(".send-feedback-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const panel = modalFeedback.querySelector(
-        ".send-feedback.account-modal-content",
-      );
-      if (panel) {
-        resetPanel(panel);
-        cacheOriginalTitle(panel);
-      }
-      openModal(modalFeedback);
     });
   });
 

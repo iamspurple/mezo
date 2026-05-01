@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: clamp(40px, calc(20px + 2.083vw), 60px);
 }
 
 .greeting {
@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: space-between;
   text-transform: uppercase;
-  margin-top: 40px;
+  margin-top: clamp(26.667px, calc(13.334px + 1.333vw), 40px);
 }
 
 .account-title .accent {
@@ -21,7 +21,7 @@
 .account-howtouse {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 12px;
+  gap: clamp(8px, calc(4px + 0.313vw), 12px);
 }
 
 /* 0fr/1fr: открытие и закрытие за одно и то же время (max-height 0↔огромное число
@@ -72,7 +72,7 @@
 }
 
 .account-howtouse-button.active {
-  margin-top: 12px;
+  margin-top: clamp(8px, calc(4px + 0.313vw), 12px);
   background-color: white;
   border-color: black;
 }
@@ -108,10 +108,10 @@
 
 .account-info-accordion,
 .account-company-accordion {
-  font-size: 32px;
+  font-size: clamp(21.333px, 1.667vw, 32px);
   font-weight: 400;
   line-height: 80%;
-  padding-inline: 8px;
+  padding-inline: clamp(5.333px, 0.417vw, 8px);
   border-top: 2px solid black;
   text-transform: uppercase;
   transition: var(--transition);
@@ -119,20 +119,20 @@
 
 .account-info-accordion[open],
 .account-company-accordion[open] {
-  padding-bottom: 40px;
+  padding-bottom: clamp(26.667px, 2.083vw, 40px);
 }
 
 .account-info-accordion-content,
 .account-company-accordion-content {
   display: flex;
   flex-direction: column;
-  gap: 38px;
+  gap: clamp(25.333px, calc(13.334px + 1.333vw), 38px);
   width: 100%;
   overflow: hidden;
   transition:
     height 0.35s ease,
     margin-top 0.35s;
-  margin-top: 30px;
+  margin-top: clamp(20px, calc(10px + 1.563vw), 30px);
 }
 
 .account-info-accordion-content.is-closed,
@@ -143,8 +143,8 @@
 .account-info-accordion summary,
 .account-company-accordion summary {
   position: relative;
-  padding-top: 24px;
-  padding-bottom: 40px;
+  padding-top: clamp(16px, calc(8px + 0.833vw), 24px);
+  padding-bottom: clamp(26.667px, 2.083vw, 40px);
   cursor: pointer;
   transition: var(--transition);
   display: flex;
@@ -174,8 +174,8 @@
 .account-company-accordion summary::after {
   content: "";
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: clamp(16px, calc(8px + 0.833vw), 24px);
+  height: clamp(16px, calc(8px + 0.833vw), 24px);
   background: url("../assets/images/plus.svg") center/contain no-repeat;
   transition: all 0.25s;
 }
@@ -190,16 +190,16 @@
 .history-company-form,
 .account-modal-company-form,
 .account-modal-info-form,
-.account-modal-feedback-form {
+.account-feedback-form {
   display: flex;
   flex-direction: column;
-  gap: 38px;
+  gap: clamp(25.333px, calc(13.334px + 1.333vw), 38px);
 }
 
 .account-modal-company-form,
 .account-modal-info-form,
-.account-modal-feedback-form {
-  font-size: 32px;
+.account-feedback-form {
+  font-size: clamp(21.333px, 1.667vw, 32px);
   font-weight: 400;
   text-transform: uppercase;
   overflow-y: auto;
@@ -212,23 +212,23 @@
 .account-modal-info-form-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 12px;
+  gap: clamp(8px, calc(4px + 0.313vw), 12px);
 }
 
 .history-company-form-row {
   grid-template-columns: minmax(0, calc(33% - 4px)) minmax(0, calc(33% - 4px));
-  row-gap: 100px;
+  row-gap: clamp(66.667px, calc(33.334px + 3.333vw), 100px);
 }
 
 .account-company-form-row.small-gap,
 .account-modal-company-form-row.small-gap {
-  gap: 9px;
+  gap: clamp(6.667px, calc(3.334px + 0.313vw), 9px);
 }
 
 .history-company-form-row.small-gap {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 9px;
+  gap: clamp(6.667px, calc(3.334px + 0.313vw), 9px);
 }
 
 .account-info-form-column,
@@ -236,10 +236,10 @@
 .history-company-form-column,
 .account-modal-company-form-column,
 .account-modal-info-form-column,
-.account-modal-feedback-form-column {
+.account-feedback-form-column {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: clamp(6.667px, calc(3.334px + 0.313vw), 9px);
 }
 
 .account-info-form input,
@@ -247,8 +247,8 @@
 .history-company-form input,
 .account-modal-company-form input,
 .account-modal-info-form input,
-.account-modal-feedback-form input,
-.account-modal-feedback-form textarea {
+.account-feedback-form input,
+.account-feedback-form textarea {
   width: 100%;
   border: 2px solid var(--color-lightgrey);
   border-radius: var(--radius-sm);
@@ -256,16 +256,22 @@
   background-color: white;
   font-family: var(--font-primary);
   text-transform: uppercase;
-  height: 56px;
-  padding: 8px 16px;
-  font-size: 24px;
+  max-height: clamp(37.333px, 2.917vw, 56px);
+  height: auto;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 16px);
+  font-size: clamp(16px, calc(8px + 0.833vw), 24px);
   line-height: 80%;
   font-weight: 400;
   transition: var(--transition);
 }
 
-.account-modal-feedback-form textarea {
-  min-height: 120px;
+.account-feedback-form input,
+.account-feedback-form textarea {
+  border-color: transparent;
+}
+
+.account-feedback-form textarea {
+  min-height: clamp(80px, calc(40px + 2.083vw), 120px);
   height: auto;
   resize: vertical;
 }
@@ -275,8 +281,8 @@
 .history-company-form input::placeholder,
 .account-modal-company-form input::placeholder,
 .account-modal-info-form input::placeholder,
-.account-modal-feedback-form input::placeholder,
-.account-modal-feedback-form textarea::placeholder {
+.account-feedback-form input::placeholder,
+.account-feedback-form textarea::placeholder {
   color: black;
   font-weight: 400;
 }
@@ -284,11 +290,17 @@
 .account-info-form input:focus,
 .account-company-form input:focus,
 .account-modal-company-form input:focus,
-.account-modal-info-form input:focus,
-.account-modal-feedback-form input:focus,
-.account-modal-feedback-form textarea:focus {
+.account-modal-info-form input:focus
+/* .account-feedback-form input:focus,
+.account-feedback-form textarea:focus */ {
   outline: none;
   border-color: black;
+}
+
+.account-feedback-form input:focus,
+.account-feedback-form textarea:focus {
+  outline: none;
+  border-color: var(--color-vodka);
 }
 
 @media (hover: hover) {
@@ -296,11 +308,17 @@
   .account-company-form input:hover,
   .history-company-form input:hover,
   .account-modal-company-form input:hover,
-  .account-modal-info-form input:hover,
-  .account-modal-feedback-form input:hover,
-  .account-modal-feedback-form textarea:hover {
+  .account-modal-info-form input:hover
+  /* .account-feedback-form input:hover,
+  .account-feedback-form textarea:hover */ {
     outline: none;
     border-color: black;
+  }
+
+  .account-feedback-form input:hover,
+  .account-feedback-form textarea:hover {
+    outline: none;
+    border-color: var(--color-vodka);
   }
 }
 
@@ -309,8 +327,8 @@
 .history-company-form input:disabled,
 .account-modal-company-form input:disabled,
 .account-modal-info-form input:disabled,
-.account-modal-feedback-form input:disabled,
-.account-modal-feedback-form textarea:disabled {
+.account-feedback-form input:disabled,
+.account-feedback-form textarea:disabled {
   background-color: var(--color-bright);
   cursor: not-allowed;
   color: #00000066;
@@ -323,8 +341,8 @@
 .history-company-form input:disabled:hover,
 .account-modal-company-form input:disabled:hover,
 .account-modal-info-form input:disabled:hover,
-.account-modal-feedback-form input:disabled:hover,
-.account-modal-feedback-form textarea:disabled:hover {
+.account-feedback-form input:disabled:hover,
+.account-feedback-form textarea:disabled:hover {
   border-color: var(--color-lightgrey);
 }
 
@@ -338,7 +356,7 @@
 .account-modal-info-form-dealer-code {
   font-family: var(--font-secondary);
   font-weight: 400;
-  font-size: 16px;
+  font-size: clamp(10.667px, 0.833vw, 16px);
   line-height: 120%;
   color: #00000066;
   position: absolute;
@@ -351,13 +369,13 @@
 .history-company-form-comment {
   font-family: var(--font-primary);
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: clamp(16px, calc(8px + 0.833vw), 24px);
   line-height: 80%;
   font-weight: 400;
   cursor: default;
   color: #00000066;
   grid-column: 1 / -1;
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, calc(10px + 1.563vw), 30px);
 }
 
 .account-info-content button {
@@ -366,7 +384,7 @@
 
 .account-company-actions {
   display: flex;
-  gap: 9px;
+  gap: clamp(6.667px, calc(3.334px + 0.313vw), 9px);
 }
 
 .account-company-actions .delete-company-btn svg {
@@ -379,7 +397,7 @@
 
 .account-company-btn {
   text-transform: uppercase;
-  margin-top: 30px;
+  margin-top: clamp(20px, calc(10px + 1.563vw), 30px);
 }
 
 @media (hover: hover) {
@@ -416,16 +434,17 @@
 .custom-select-trigger {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
   width: 100%;
-  height: 56px;
-  padding: 8px 16px;
+  max-height: clamp(37.333px, 2.917vw, 56px);
+  height: auto;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 16px);
   border: 2px solid var(--color-lightgrey);
-  border-radius: var(--radius-sm, 4px);
+  border-radius: var(--radius-sm);
   background: white;
   cursor: pointer;
   font-family: var(--font-primary);
-  font-size: 24px;
+  font-size: clamp(16px, calc(8px + 0.833vw), 24px);
   line-height: 80%;
   font-weight: 400;
   color: black;
@@ -505,9 +524,9 @@
 .custom-select-tag {
   display: inline-flex;
   align-items: center;
-  padding: 8px 16px;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 16px);
   border-radius: var(--radius-sm);
-  font-size: 16px;
+  font-size: clamp(10.667px, 0.833vw, 16px);
   font-weight: 500;
   line-height: 90%;
   background-color: black;
@@ -521,8 +540,8 @@
 .custom-select-trigger::after {
   content: "";
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: clamp(10.667px, 0.833vw, 16px);
+  height: clamp(10.667px, 0.833vw, 16px);
   flex-shrink: 0;
   margin-left: auto;
   background: url("/assets/images/chevron.svg") center/contain no-repeat;
@@ -544,7 +563,7 @@
   border-radius: var(--radius-sm);
   list-style: none;
   margin: 0;
-  padding: 16px;
+  padding: clamp(10.667px, 0.833vw, 16px);
   z-index: 100;
   /* max-height: 280px; */
   /* overflow-y: auto; */
@@ -567,10 +586,10 @@
 
 /* ── Пункты списка ───────────────────────────────────────────────────────── */
 .custom-select-option {
-  padding: 12px;
+  padding: clamp(8px, calc(4px + 0.313vw), 12px);
   cursor: pointer;
   font-family: var(--font-primary);
-  font-size: 24px;
+  font-size: clamp(16px, calc(8px + 0.833vw), 24px);
   line-height: 80%;
   font-weight: 400;
   color: black;
@@ -579,21 +598,21 @@
   outline: none;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: clamp(5.333px, 0.417vw, 8px);
   white-space: nowrap;
   text-transform: uppercase;
 }
 
 .custom-select-option:not(:first-of-type) {
-  margin-top: 10px;
+  margin-top: clamp(6.667px, calc(3.334px + 0.313vw), 10px);
 }
 
 /* Иконка-маркер */
 .custom-select-option::after {
   content: "";
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: clamp(10.667px, 0.833vw, 16px);
+  height: clamp(10.667px, 0.833vw, 16px);
   flex-shrink: 0;
   background: url("/assets/images/plus.svg") center / contain no-repeat;
   margin-left: auto;
@@ -634,7 +653,7 @@
 
 .manager {
   background-color: var(--color-bright);
-  padding-block: 60px;
+  padding-block: clamp(40px, calc(20px + 2.083vw), 60px);
 }
 
 .manager-wrapper {
@@ -650,23 +669,23 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  padding-block: 60px;
+  gap: clamp(53.333px, calc(26.667px + 2.667vw), 80px);
+  padding-block: clamp(40px, calc(20px + 2.083vw), 60px);
 }
 
 .history-content {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: clamp(53.333px, calc(26.667px + 2.667vw), 80px);
 }
 
 .history-outer-accordion,
 .history-inner-accordion {
-  font-size: 32px;
+  font-size: clamp(21.333px, 1.667vw, 32px);
   font-weight: 400;
   line-height: 80%;
-  padding-inline: 8px;
+  padding-inline: clamp(5.333px, 0.417vw, 8px);
   border-top: 2px solid black;
   text-transform: uppercase;
   transition: var(--transition);
@@ -679,19 +698,19 @@
 
 .history-outer-accordion[open],
 .history-inner-accordion[open] {
-  padding-bottom: 40px;
+  padding-bottom: clamp(26.667px, 2.083vw, 40px);
 }
 
 .history-inner-accordion-content {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: clamp(26.667px, calc(13.334px + 1.333vw), 40px);
   overflow: hidden;
   transition:
     height 0.35s ease,
     margin-top 0.35s;
-  margin-top: 16px;
+  margin-top: clamp(10.667px, calc(5.334px + 0.521vw), 16px);
 }
 
 .history-inner-accordion-content.is-closed {
@@ -702,12 +721,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: clamp(26.667px, calc(13.334px + 1.333vw), 40px);
   overflow: hidden;
   transition:
     height 0.35s ease,
     margin-top 0.35s;
-  margin-top: 16px;
+  margin-top: clamp(10.667px, calc(5.334px + 0.521vw), 16px);
 }
 
 .history-outer-accordion-content.is-closed {
@@ -718,11 +737,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 24px 16px;
+  gap: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
+  padding: clamp(16px, calc(8px + 0.833vw), 24px) clamp(10.667px, 0.833vw, 16px);
   border: 2px solid var(--color-lightgrey);
   border-radius: 16px;
-  margin-top: 30px;
+  margin-top: clamp(20px, calc(10px + 1.563vw), 30px);
 }
 
 .history-order-container.active {
@@ -732,8 +751,8 @@
 .history-outer-accordion > summary,
 .history-inner-accordion > summary {
   position: relative;
-  padding-top: 24px;
-  padding-bottom: 40px;
+  padding-top: clamp(16px, calc(8px + 0.833vw), 24px);
+  padding-bottom: clamp(26.667px, 2.083vw, 40px);
   cursor: pointer;
   transition: var(--transition);
   display: flex;
@@ -763,8 +782,8 @@
 .history-inner-accordion > summary::after {
   content: "";
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: clamp(16px, calc(8px + 0.833vw), 24px);
+  height: clamp(16px, calc(8px + 0.833vw), 24px);
   background: url("../assets/images/plus.svg") center/contain no-repeat;
   /* position: absolute;
   top: 50%;
@@ -780,7 +799,8 @@
 
 .history-order {
   width: 100%;
-  padding: 16px 16px 24px 16px;
+  padding: clamp(10.667px, 0.833vw, 16px) clamp(10.667px, 0.833vw, 16px)
+    clamp(16px, calc(8px + 0.833vw), 24px) clamp(10.667px, 0.833vw, 16px);
   background-color: var(--color-bright);
   display: flex;
   justify-content: space-between;
@@ -788,31 +808,32 @@
 
 .history-order-details {
   display: flex;
-  gap: 20px;
+  gap: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
 }
 
 .history-order-number {
   background-color: black;
   color: var(--color-bright);
   display: inline-block;
-  padding: 8px 16px 8px 8px;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 16px)
+    clamp(5.333px, 0.417vw, 8px) clamp(5.333px, 0.417vw, 8px);
   height: fit-content;
   width: fit-content;
 }
 
 .history-order-date {
   font-weight: 500;
-  font-size: 24px;
+  font-size: clamp(16px, calc(8px + 0.833vw), 24px);
   line-height: 72%;
   text-transform: lowercase;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: clamp(10.667px, 0.833vw, 16px);
 }
 
 .history-order-info {
   display: flex;
-  gap: 40px;
+  gap: clamp(26.667px, calc(13.334px + 1.333vw), 40px);
   justify-content: space-between;
 }
 
@@ -824,9 +845,9 @@
 .history-order-info-item {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: clamp(10.667px, 0.833vw, 16px);
   font-weight: 500;
-  font-size: 24px;
+  font-size: clamp(16px, calc(8px + 0.833vw), 24px);
   line-height: 72%;
   text-transform: lowercase;
   text-wrap: nowrap;
@@ -834,14 +855,14 @@
 
 .history-order-info-item dd {
   font-weight: 400;
-  font-size: 48px;
+  font-size: clamp(32px, calc(16px + 1.667vw), 48px);
   line-height: 80%;
   text-transform: uppercase;
 }
 
 .history-order-info-item dt sup {
   align-self: flex-start;
-  font-size: 10px;
+  font-size: clamp(6.667px, calc(3.334px + 0.313vw), 10px);
   display: inline-block;
   margin-top: -5px;
 }
@@ -849,9 +870,9 @@
 .history-order-price {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: clamp(10.667px, 0.833vw, 16px);
   font-weight: 500;
-  font-size: 24px;
+  font-size: clamp(16px, calc(8px + 0.833vw), 24px);
   line-height: 72%;
   text-transform: lowercase;
 }
@@ -862,7 +883,7 @@
 
 .history-status {
   display: flex;
-  gap: 9px;
+  gap: clamp(6.667px, calc(3.334px + 0.313vw), 9px);
 }
 
 .history-status .check-btn {
@@ -873,17 +894,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
   width: 25%;
   max-width: 450px;
   min-width: 250px;
-  height: 56px;
-  padding: 8px 12px;
+  max-height: clamp(37.333px, 2.917vw, 56px);
+  height: auto;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 12px);
   border: 2px solid var(--color-lightgrey);
-  border-radius: var(--radius-sm, 4px);
+  border-radius: var(--radius-sm);
   background: white;
   font-family: var(--font-primary);
-  font-size: 24px;
+  font-size: clamp(16px, calc(8px + 0.833vw), 24px);
   line-height: 80%;
   font-weight: 400;
   color: black;
@@ -897,9 +919,9 @@
 .history-order-status p {
   display: inline-flex;
   align-items: center;
-  padding: 8px 16px;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 16px);
   border-radius: var(--radius-sm);
-  font-size: 16px;
+  font-size: clamp(10.667px, 0.833vw, 16px);
   font-weight: 500;
   line-height: 90%;
   background-color: black;
@@ -920,11 +942,11 @@
 }
 
 .history-products-list {
-  margin-top: 50px;
+  margin-top: clamp(33.333px, calc(16.667px + 1.667vw), 50px);
   width: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-  gap: 12px;
+  gap: clamp(8px, calc(4px + 0.313vw), 12px);
 }
 
 .history-products-item {
@@ -971,7 +993,7 @@
 }
 
 .history-products-item-image {
-  width: 145px;
+  width: clamp(96.667px, calc(48.334px + 2.667vw), 145px);
   aspect-ratio: 1/1;
   overflow: hidden;
   flex-shrink: 0;
@@ -988,11 +1010,11 @@
 .history-products-item-info {
   display: flex;
   flex-direction: column;
-  padding: 12px;
-  gap: 20px;
+  padding: clamp(8px, calc(4px + 0.313vw), 12px);
+  gap: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
   width: 100%;
   font-family: var(--font-secondary);
-  font-size: 20px;
+  font-size: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
   line-height: 120%;
 }
 
@@ -1023,14 +1045,14 @@
 .history-products-item-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: clamp(6.667px, calc(3.334px + 0.313vw), 10px);
   text-transform: none;
   font-weight: 500;
   padding-left: 8px;
 }
 
 .history-products-item-quantity {
-  font-size: 20px;
+  font-size: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
 }
 
 .history-products-item-multiplicity {
@@ -1040,7 +1062,7 @@
 .history-order-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: clamp(6.667px, calc(3.334px + 0.313vw), 9px);
 }
 
 .history-order-actions .cancel-order-btn svg {
@@ -1072,20 +1094,20 @@
 }
 
 .offer {
-  padding-block: 100px;
+  padding-block: clamp(66.667px, calc(33.334px + 3.333vw), 100px);
   background-color: var(--color-bright);
 }
 
 .offer-wrapper {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 12px;
+  gap: clamp(8px, calc(4px + 0.313vw), 12px);
 }
 
 .offer-products-list {
   display: flex;
-  gap: 12px;
-  row-gap: 40px;
+  gap: clamp(8px, calc(4px + 0.313vw), 12px);
+  row-gap: clamp(26.667px, calc(13.334px + 1.333vw), 40px);
   transition: var(--transition);
   flex-wrap: wrap;
 }
@@ -1096,7 +1118,7 @@
 
 .offer-products-item {
   transition: var(--transition);
-  width: calc((100% - 24px) / 3);
+  width: calc((100% - clamp(16px, calc(8px + 0.833vw), 24px)) / 3);
 }
 
 .offer-products-card {
@@ -1104,7 +1126,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: clamp(6.667px, calc(3.334px + 0.313vw), 10px);
   cursor: default;
 }
 
@@ -1127,26 +1149,26 @@
 
 .offer-products-card-actions {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: clamp(6.667px, calc(3.334px + 0.313vw), 10px);
+  left: clamp(6.667px, calc(3.334px + 0.313vw), 10px);
   display: flex;
-  gap: 4px;
+  gap: clamp(2.667px, calc(1.334px + 0.156vw), 4px);
 }
 
 .offer-products-card-image .new {
   font-family: var(--font-secondary);
   display: inline-flex;
   align-items: center;
-  padding: 8px 12px;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 12px);
   border-radius: 4px;
-  font-size: 16px;
+  font-size: clamp(10.667px, 0.833vw, 16px);
   font-weight: 500;
   line-height: 90%;
   background-color: black;
   color: white;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: clamp(6.667px, calc(3.334px + 0.313vw), 10px);
+  right: clamp(6.667px, calc(3.334px + 0.313vw), 10px);
   transition: var(--transition);
 }
 
@@ -1162,8 +1184,8 @@
 }
 
 .offer-products-card-actions button {
-  width: 48px;
-  height: 48px;
+  width: clamp(32px, calc(16px + 1.667vw), 48px);
+  height: clamp(32px, calc(16px + 1.667vw), 48px);
   background-color: #00000029;
   border-radius: 4px;
   position: relative;
@@ -1189,8 +1211,8 @@
 
 .offer-products-card-actions button::before {
   content: "";
-  width: 40px;
-  height: 40px;
+  width: clamp(26.667px, calc(13.334px + 1.333vw), 40px);
+  height: clamp(26.667px, calc(13.334px + 1.333vw), 40px);
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -1215,9 +1237,9 @@
   padding-right: 5px;
   align-items: flex-start;
   width: 100%;
-  min-height: 100px;
+  min-height: clamp(66.667px, calc(33.334px + 3.333vw), 100px);
   justify-content: space-between;
-  gap: 7px;
+  gap: clamp(4.667px, calc(2.334px + 0.26vw), 7px);
   flex-wrap: wrap;
 }
 
@@ -1239,7 +1261,7 @@
   display: inline-block;
   width: fit-content;
   font-weight: 500;
-  font-size: 16px;
+  font-size: clamp(10.667px, 0.833vw, 16px);
   line-height: 180%;
   color: #00000066;
   text-wrap: nowrap;
@@ -1250,7 +1272,7 @@
 .offer-products-card-price {
   font-family: var(--font-secondary);
   font-weight: 700;
-  font-size: 20px;
+  font-size: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
   line-height: 120%;
   align-self: flex-end;
   width: 50%;
@@ -1259,7 +1281,7 @@
 .offer-products-card-oldprice {
   font-family: var(--font-secondary);
   font-weight: 500;
-  font-size: 20px;
+  font-size: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
   line-height: 120%;
   text-decoration: line-through;
   color: #00000066;
@@ -1292,14 +1314,14 @@
 
 .feedback {
   background-color: black;
-  padding-block: 100px;
-  margin-bottom: 45px;
+  padding-block: clamp(66.667px, calc(33.334px + 3.333vw), 100px);
+  margin-bottom: clamp(30px, calc(15px + 1.563vw), 45px);
 }
 
 .feedback-wrapper {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 12px;
+  gap: clamp(8px, calc(4px + 0.313vw), 12px);
 }
 
 .feedback-text {
@@ -1311,15 +1333,25 @@
   text-transform: uppercase;
 }
 
+.account-feedback-form {
+  max-width: 66%;
+}
+
+.account-feedback-btn {
+  width: fit-content;
+}
+
 @media (any-hover: hover) {
-  .send-feedback-btn:hover,
-  .send-feedback-btn:active {
+  .account-feedback-btn:hover,
+  .account-feedback-btn:active {
     border: 2px solid white;
   }
 }
 
 .account-modal-wrapper {
-  padding: 0 30px 30px 30px;
+  padding: 0 clamp(20px, calc(10px + 1.563vw), 30px)
+    clamp(20px, calc(10px + 1.563vw), 30px)
+    clamp(20px, calc(10px + 1.563vw), 30px);
   position: relative;
   overflow: hidden;
   height: 100%;
@@ -1327,26 +1359,28 @@
 
 .account-modal-content {
   display: none;
-  gap: 30px;
+  gap: clamp(20px, calc(10px + 1.563vw), 30px);
   height: 100%;
 }
 
 .account-modal-content.is-visible {
   display: grid;
-  grid-template-rows: 100px auto 60px;
+  grid-template-rows:
+    clamp(66.667px, calc(33.334px + 3.333vw), 100px)
+    auto clamp(40px, calc(20px + 2.083vw), 60px);
 }
 
 .account-modal-actions {
   text-transform: uppercase;
   display: flex;
-  gap: 12px;
+  gap: clamp(8px, calc(4px + 0.313vw), 12px);
   width: 100%;
   justify-content: flex-end;
 }
 
 .account-modal-content.is-success .account-modal-company-form,
 .account-modal-content.is-success .account-modal-info-form,
-.account-modal-content.is-success .account-modal-feedback-form {
+.account-modal-content.is-success .account-feedback-form {
   width: 0;
 }
 
@@ -1361,14 +1395,14 @@
 .account-modal-order-info {
   font-family: var(--font-primary);
   font-weight: 500;
-  font-size: 24px;
+  font-size: clamp(16px, calc(8px + 0.833vw), 24px);
   line-height: 72%;
   text-transform: lowercase;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: clamp(53.333px, calc(26.667px + 2.667vw), 80px);
   border-radius: var(--radius-sm);
-  padding: 16px;
+  padding: clamp(10.667px, 0.833vw, 16px);
   background-color: var(--color-bright);
   height: fit-content;
 }
@@ -1376,31 +1410,32 @@
 .account-modal-order-info-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
 }
 
 .account-modal-order-details {
   display: flex;
-  gap: 20px;
+  gap: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
 }
 
 .account-modal-order-number {
   background-color: black;
   color: var(--color-bright);
   display: inline-block;
-  padding: 8px 16px 8px 8px;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 16px)
+    clamp(5.333px, 0.417vw, 8px) clamp(5.333px, 0.417vw, 8px);
 }
 
 .account-modal-order-date {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: clamp(10.667px, 0.833vw, 16px);
 }
 
 .account-modal-order-price {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: clamp(10.667px, 0.833vw, 16px);
   align-self: flex-end;
 }
 
@@ -1417,56 +1452,9 @@
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 1700px) {
-  .history-order-info-item dd {
-    font-size: 42px;
-  }
-
-  .history-products-item-image {
-    width: 135px;
-  }
-
-  .history-products-item-info {
-    font-size: 17px;
-  }
-
-  .history-products-item-quantity,
-  .history-products-item-multiplicity {
-    font-size: 17px;
-  }
-
-  .offer-products-card-actions button {
-    width: 42px;
-    height: 42px;
-  }
-
-  .offer-products-card-actions button::before {
-    width: 36px;
-    height: 36px;
-  }
-
-  .offer-products-card-volume {
-    font-size: 15px;
-  }
-
-  .offer-products-card-price,
-  .offer-products-card-oldprice {
-    font-size: 18px;
-  }
-}
-
 @media screen and (max-width: 1440px) {
   .history-order-container.active .history-order-info {
     width: auto;
-  }
-
-  .history-products-item-image {
-    width: 125px;
-  }
-
-  .history-products-item-quantity,
-  .history-products-item-multiplicity {
-    font-size: 15px;
   }
 }
 
@@ -1487,18 +1475,18 @@
   }
 
   .history-order-info {
-    gap: 30px;
+    gap: clamp(20px, calc(10px + 1.563vw), 30px);
   }
 
   .history-order-info-item dd {
-    font-size: 38px;
+    font-size: clamp(25.333px, calc(12.667px + 1.333vw), 38px);
   }
 
   .history-order-date,
   .history-order-info-item,
   .history-order-price {
-    gap: 8px;
-    font-size: 20px;
+    gap: clamp(5.333px, calc(2.667px + 0.26vw), 8px);
+    font-size: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
   }
 
   .history-order-status {
@@ -1506,42 +1494,42 @@
   }
 
   .history-products-item-image {
-    width: 115px;
+    width: clamp(76.667px, calc(38.334px + 2.667vw), 115px);
   }
 
   .history-products-item-info {
-    font-size: 15px;
+    font-size: clamp(10.667px, 0.833vw, 15px);
   }
 
   .history-products-item-quantity,
   .history-products-item-multiplicity {
-    font-size: 12px;
+    font-size: clamp(8px, calc(4px + 0.313vw), 12px);
   }
 
   .offer-products-card-actions button {
-    width: 38px;
-    height: 38px;
+    width: clamp(25.333px, calc(12.667px + 1.333vw), 38px);
+    height: clamp(25.333px, calc(12.667px + 1.333vw), 38px);
   }
 
   .offer-products-card-actions button::before {
-    width: 32px;
-    height: 32px;
+    width: clamp(21.333px, calc(10.667px + 1.042vw), 32px);
+    height: clamp(21.333px, calc(10.667px + 1.042vw), 32px);
   }
 
   .offer-products-card-volume {
-    font-size: 14px;
+    font-size: clamp(9.333px, calc(4.667px + 0.417vw), 14px);
   }
 
   .offer-products-card-price,
   .offer-products-card-oldprice {
-    font-size: 16px;
+    font-size: clamp(10.667px, calc(5.334px + 0.521vw), 16px);
   }
 }
 
 @media screen and (max-width: 1024px) {
   .history-order {
     flex-direction: column;
-    gap: 30px;
+    gap: clamp(20px, calc(10px + 1.563vw), 30px);
   }
 
   .history-order-info {
@@ -1553,7 +1541,7 @@
   }
 
   .history-products-item-image {
-    width: 95px;
+    width: clamp(63.333px, calc(31.667px + 1.667vw), 95px);
   }
 
   .history-products-list {
@@ -1592,13 +1580,13 @@
   }
 
   .offer-products-card-actions button {
-    width: 32px;
-    height: 32px;
+    width: clamp(21.333px, calc(10.667px + 1.042vw), 32px);
+    height: clamp(21.333px, calc(10.667px + 1.042vw), 32px);
   }
 
   .offer-products-card-actions button::before {
-    width: 28px;
-    height: 28px;
+    width: clamp(18.667px, calc(9.334px + 0.938vw), 28px);
+    height: clamp(18.667px, calc(9.334px + 0.938vw), 28px);
   }
 
   .account-modal-company-form-row {
@@ -1610,7 +1598,7 @@
   .account-info-form,
   .account-company-form,
   .history-company-form {
-    gap: 45px;
+    gap: clamp(30px, calc(15px + 1.563vw), 45px);
   }
 
   .account-info-accordion,
@@ -1619,7 +1607,7 @@
   .history-inner-accordion,
   .account-modal-company-form,
   .account-modal-info-form {
-    font-size: 28px;
+    font-size: clamp(18.667px, calc(9.334px + 0.938vw), 28px);
   }
 
   .account-howtouse,
@@ -1629,7 +1617,7 @@
   .offer-wrapper,
   .feedback-wrapper {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: clamp(26.667px, calc(13.334px + 1.333vw), 40px);
   }
 
   .manager-content {
@@ -1640,7 +1628,7 @@
   .history-order-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: clamp(8px, calc(4px + 0.313vw), 12px);
     justify-items: start;
   }
 
@@ -1648,17 +1636,17 @@
     grid-template-columns: 1fr;
   }
   .history-products-item-image {
-    width: 85px;
+    width: clamp(56.667px, calc(28.334px + 1.667vw), 85px);
   }
 
   .history-products-item-info {
-    gap: 10px;
+    gap: clamp(6.667px, calc(3.334px + 0.313vw), 10px);
   }
 
   .history-status {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 12px;
+    row-gap: clamp(8px, calc(4px + 0.313vw), 12px);
   }
 
   .history-order-price {
@@ -1672,12 +1660,12 @@
   }
 
   .history-company-form-comment {
-    margin-top: 48px;
+    margin-top: clamp(32px, calc(16px + 1.667vw), 48px);
   }
 
   .manager,
   .feedback {
-    padding-block: 80px;
+    padding-block: clamp(53.333px, calc(26.667px + 2.667vw), 80px);
   }
 
   .offer-products-card-image .new {
@@ -1733,32 +1721,16 @@
   }
 
   .history-products-item-name {
-    font-size: 14px;
+    font-size: clamp(9.333px, calc(4.667px + 0.417vw), 14px);
   }
 
   .history-products-item-volume,
   .history-products-item-price {
-    font-size: 12px;
+    font-size: clamp(8px, calc(4px + 0.313vw), 12px);
   }
 
   .history-products-item-actions {
     width: 100%;
     justify-content: space-between;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .account-info-form input,
-  .account-company-form input,
-  .history-company-form input,
-  .custom-select-trigger {
-    height: auto;
-    padding: 5px 10px;
-    min-width: auto;
-    font-size: 20px;
-  }
-
-  .custom-select-tag {
-    font-size: 12px;
   }
 }
