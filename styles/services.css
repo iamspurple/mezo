@@ -1,80 +1,144 @@
 .services {
-  width: 100%;
-  height: 100svh;
-  max-height: 980px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   text-transform: uppercase;
+  padding-block: clamp(80px, 6.25vw, 120px);
+  gap: clamp(53.333px, 4.167vw, 80px);
+}
+
+.services-title {
+  text-transform: uppercase;
+  font-size: clamp(122px, 9.58vw, 184px);
+  font-weight: 700;
+  line-height: 72%;
 }
 
 .services-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(26px, 2vw, 40px);
 }
 
-.services-text {
-  width: 48%;
-
-  font-family: var(--font-primary);
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 80%;
-
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.services .accordion-group-single {
+  padding-block: clamp(43.3px, 3.38vw, 65px);
 }
 
-.services-text p {
-  max-width: 600px;
-}
-
-.services-list {
-  display: flex;
-  flex-direction: column;
-  width: 48%;
-}
-
-.services-item {
+.services-accordion {
   border-top: 2px solid black;
-  width: 100%;
-}
-
-.services-item-content {
-  display: inline-block;
-  padding: 24px 0 48px 12px;
-  font-size: 40px;
-  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(32px, 2.5vw, 48px);
+  font-weight: 500;
   line-height: 80%;
   width: 100%;
-  height: 100%;
   transition: var(--transition);
-  position: relative;
+  padding-inline: 8px;
 }
 
-.services-item-image {
-  width: 0;
-  height: 240px;
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  border-radius: var(--radius-sm);
+.services-accordion[open] {
+  padding-bottom: clamp(26px, 2vw, 40px);
+  color: white;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.services-accordion summary {
+  padding-block: clamp(26px, 2vw, 40px) clamp(53px, 4vw, 80px);
+  transition: var(--transition);
+  cursor: pointer;
+  display: flex;
+  gap: clamp(16px, 1.25vw, 24px);
+}
+
+.services-accordion summary svg {
+  width: clamp(26px, 2vw, 40px);
+  height: clamp(26px, 2vw, 40px);
+}
+
+.services-accordion[open] summary {
+  padding-bottom: clamp(26px, 2vw, 40px);
+}
+
+.services-accordion[open] summary svg path {
+  stroke: white;
+}
+
+.services-accordion-content {
+  width: 65%;
   overflow: hidden;
-  transition: var(--transition);
+  transition:
+    height 0.35s ease,
+    margin-top 0.35s;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(42.667px, 3.333vw, 64px);
+  padding-left: clamp(42.667px, 3.333vw, 64px);
+  align-items: flex-start;
 }
 
-.services-item-image img {
+.services-accordion-content.is-closed {
+  margin-top: 0;
+}
+
+.services-accordion-content a:hover {
+  border: 2px solid white;
+}
+
+.services-images-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.08;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.services-images-container {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.services-images-container.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.services-images-item {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 2px;
+  transform-origin: center center;
+}
+
+.services-images-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-@media (hover: hover) {
-  .services-item-content:hover .services-item-image {
-    width: 240px;
-  }
+.services-images-item:nth-child(1) {
+  top: 0;
+  right: 18%;
+  z-index: 3;
+  width: 45%;
+  aspect-ratio: 1;
+}
+.services-images-item:nth-child(2) {
+  top: 25%;
+  left: 0;
+  z-index: 1;
+  width: 45%;
+  aspect-ratio: 1;
+}
+.services-images-item:nth-child(3) {
+  bottom: 0;
+  right: 7%;
+  z-index: 2;
+  width: 67%;
+  aspect-ratio: 1.6;
 }
 
 @media screen and (max-width: 1280px) {

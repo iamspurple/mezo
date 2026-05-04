@@ -60,7 +60,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -78,10 +78,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title text-medium bw btn"
                     >
+                      Все товары
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -89,15 +89,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все товары</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a href="" class="menu-link">
@@ -264,10 +263,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title bw btn text-medium"
                     >
+                      Все коллекции
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -275,15 +274,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все коллекции</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a
@@ -685,7 +683,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -938,7 +936,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1318,7 +1316,7 @@
               </div>
             </li>
             <li class="header-nav-item">
-              <a href="/favorites.html">
+              <a id="favorites-link" href="/favorites.html">
                 <svg
                   class="header-nav-icon"
                   width="24"
@@ -1329,7 +1327,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1356,7 +1354,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1385,7 +1383,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1603,27 +1601,17 @@
         </ul>
       </nav>
       <section class="services container" aria-labelledby="services-title">
-        <h1 id="services-title" class="visually-hidden">Услуги</h1>
+        <h1 id="services-title" class="services-title visually-hidden">
+          Услуги
+        </h1>
         <div class="services-content">
-          <div class="services-text">
-            <p>
-              Реалии современного рынка, которому свойственны перенасыщенность и
-              максимальная клиентоориентированность, диктуют свои условия, где
-              поддержание имиджа и брендинг выходят на первый план в
-              маркетинговой стратегии любой организации, в том числе гостиниц,
-              отелей, баз отдыха.
-            </p>
-            <p class="text-small-secondary">
-              Мы поддерживаем данный тренд, поэтому позаботились о наличии у нас
-              услуг, которые позволят вам оставаться конкурентоспособными,
-              подчеркнут индивидуальность.
-            </p>
-          </div>
-          <ul class="services-list">
-            <li class="services-item">
-              <a href="/" class="services-item-content bw">
+          <div class="accordion-group-single">
+            <details
+              class="services-accordion accordion"
+              data-name="machine-embroidery"
+            >
+              <summary>
                 <svg
-                  aria-hidden="true"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1639,19 +1627,42 @@
                   />
                 </svg>
                 Машинная вышивка
-                <div class="services-item-image">
-                  <img
-                    class=""
-                    src="/assets/images/87e665dbddc6caeba5ead3d27b54630ea2eaff99.jpg"
-                    alt=""
-                  />
-                </div>
-              </a>
-            </li>
-            <li class="services-item">
-              <a href="/" class="services-item-content bw">
+              </summary>
+              <div class="accordion-content services-accordion-content">
+                <p class="text-small-secondary">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                  alias amet sint illo veritatis debitis deleniti saepe quia
+                  odit soluta eaque ipsa commodi numquam voluptate sequi
+                  adipisci, velit nisi repellat?
+                </p>
+
+                <a href="/service-page.html" class="bw btn text-medium"
+                  >подробнее
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </details>
+
+            <details
+              class="services-accordion accordion"
+              data-name="logo-printing"
+            >
+              <summary>
                 <svg
-                  aria-hidden="true"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1667,19 +1678,42 @@
                   />
                 </svg>
                 Печать логотипов
-                <div class="services-item-image">
-                  <img
-                    class=""
-                    src="/assets/images/87e665dbddc6caeba5ead3d27b54630ea2eaff99.jpg"
-                    alt=""
-                  />
-                </div>
-              </a>
-            </li>
-            <li class="services-item">
-              <a href="/" class="services-item-content bw">
+              </summary>
+              <div class="accordion-content services-accordion-content">
+                <p class="text-small-secondary">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                  alias amet sint illo veritatis debitis deleniti saepe quia
+                  odit soluta eaque ipsa commodi numquam voluptate sequi
+                  adipisci, velit nisi repellat?
+                </p>
+
+                <a href="/service-page.html" class="bw btn text-medium"
+                  >подробнее
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </details>
+
+            <details
+              class="services-accordion accordion"
+              data-name="individual-design"
+            >
+              <summary>
                 <svg
-                  aria-hidden="true"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -1695,16 +1729,112 @@
                   />
                 </svg>
                 Индивидуальный дизайн
-                <div class="services-item-image">
-                  <img
-                    class=""
-                    src="/assets/images/87e665dbddc6caeba5ead3d27b54630ea2eaff99.jpg"
-                    alt=""
-                  />
-                </div>
-              </a>
-            </li>
-          </ul>
+              </summary>
+              <div class="accordion-content services-accordion-content">
+                <p class="text-small-secondary">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                  alias amet sint illo veritatis debitis deleniti saepe quia
+                  odit soluta eaque ipsa commodi numquam voluptate sequi
+                  adipisci, velit nisi repellat?
+                </p>
+
+                <a href="/service-page.html" class="bw btn text-medium"
+                  >подробнее
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 5L16 12L9 19"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </details>
+          </div>
+          <div class="services-images-wrapper">
+            <div class="services-images-container active" data-name="default">
+              <div class="services-images-item">
+                <img
+                  src="/assets/images/services1.jpg"
+                  alt="Машинная вышивка"
+                />
+              </div>
+              <div class="services-images-item">
+                <img
+                  src="/assets/images/services2.jpg"
+                  alt="Печать логотипов"
+                />
+              </div>
+              <div class="services-images-item">
+                <img
+                  src="/assets/images/services3.jpg"
+                  alt="Индивидуальный дизайн"
+                />
+              </div>
+            </div>
+            <div
+              class="services-images-container"
+              data-name="machine-embroidery"
+            >
+              <div class="services-images-item">
+                <img src="/assets/images/product1.jpg" alt="Машинная вышивка" />
+              </div>
+              <div class="services-images-item">
+                <img src="/assets/images/product2.png" alt="Печать логотипов" />
+              </div>
+              <div class="services-images-item">
+                <img
+                  src="/assets/images/product3.jpg"
+                  alt="Индивидуальный дизайн"
+                />
+              </div>
+            </div>
+            <div class="services-images-container" data-name="logo-printing">
+              <div class="services-images-item">
+                <img src="/assets/images/rumah1.jpg" alt="Машинная вышивка" />
+              </div>
+              <div class="services-images-item">
+                <img src="/assets/images/rumah2.jpg" alt="Печать логотипов" />
+              </div>
+              <div class="services-images-item">
+                <img
+                  src="/assets/images/rumah3.jpg"
+                  alt="Индивидуальный дизайн"
+                />
+              </div>
+            </div>
+            <div
+              class="services-images-container"
+              data-name="individual-design"
+            >
+              <div class="services-images-item">
+                <img
+                  src="/assets/images/blog-post1.jpg"
+                  alt="Машинная вышивка"
+                />
+              </div>
+              <div class="services-images-item">
+                <img
+                  src="/assets/images/blog-post2.jpg"
+                  alt="Печать логотипов"
+                />
+              </div>
+              <div class="services-images-item">
+                <img
+                  src="/assets/images/blog-post3.jpg"
+                  alt="Индивидуальный дизайн"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -1879,6 +2009,7 @@
           </nav>
         </div>
       </div>
+      <img class="footer-logo" src="/assets/images/logo.svg" alt="Mezo" />
     </footer>
     <div id="header-overlay" class="header-overlay is-hidden"></div>
     <div id="overlay" class="modal-overlay is-hidden"></div>
@@ -2544,5 +2675,7 @@
       </div>
     </div>
     <script src="/js/main.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/accordion.js"></script>
   </body>
 </html>
