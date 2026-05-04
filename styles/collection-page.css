@@ -55,6 +55,10 @@
   opacity: 1;
   transform: scale(1.1) rotate(0deg);
   filter: blur(0);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (hover: hover) {
