@@ -197,7 +197,7 @@
     opacity: 0;
   }
 }
-.scroll-reveal-heading .scroll-reveal-word {
+.js-delivery-scroll-reveal .scroll-reveal-heading .scroll-reveal-word {
   display: inline-block;
   vertical-align: baseline;
   opacity: 0;
@@ -207,7 +207,9 @@
     transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-delay: calc(var(--word-index, 0) * 42ms);
 }
-.scroll-reveal-heading.is-visible .scroll-reveal-word {
+.js-delivery-scroll-reveal
+  .scroll-reveal-heading.is-visible
+  .scroll-reveal-word {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -217,7 +219,7 @@
       opacity: 1;
     }
   }
-  .scroll-reveal-heading .scroll-reveal-word {
+  .js-delivery-scroll-reveal .scroll-reveal-heading .scroll-reveal-word {
     opacity: 1;
     transform: none;
     transition: none;
