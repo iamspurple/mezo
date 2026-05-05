@@ -22,10 +22,11 @@
 }
 
 .hero-title {
-  font-size: clamp(100px, 7.813vw, 160px);
+  font-size: clamp(120px, 9.375vw, 184px);
   line-height: 80%;
   font-weight: 700;
   text-align: center;
+  padding-inline: 10%;
 }
 
 .about-content {
