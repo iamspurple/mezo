@@ -60,7 +60,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -78,10 +78,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title text-medium bw btn"
                     >
+                      Все товары
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -89,15 +89,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все товары</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a href="" class="menu-link">
@@ -264,10 +263,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title bw btn text-medium"
                     >
+                      Все коллекции
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -275,15 +274,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все коллекции</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a
@@ -685,7 +683,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -938,7 +936,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1318,7 +1316,7 @@
               </div>
             </li>
             <li class="header-nav-item">
-              <a href="/favorites.html">
+              <a id="favorites-link" href="/favorites.html">
                 <svg
                   class="header-nav-icon"
                   width="24"
@@ -1329,7 +1327,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1356,7 +1354,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1385,7 +1383,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1624,7 +1622,10 @@
       </nav>
       <article class="post container" aria-labelledby="post-title">
         <div class="post-title-wrapper">
-          <h1 id="post-title" class="post-title title-large">
+          <h1
+            id="post-title"
+            class="post-title title-large scroll-reveal-heading"
+          >
             Премиальные аксессуары из натурального дерева
           </h1>
           <time id="post-date" class="post-date" datetime="2026-01-10"
@@ -1632,59 +1633,63 @@
             2026</time
           >
         </div>
-        <p>
+        <p class="post-description">
           В нашем ассортименте — эксклюзивная мини-линейка деревянных
           аксессуаров.
         </p>
         <div class="post-preview">
           <img src="/assets/images/blog-post1.jpg" alt="" />
         </div>
-        <p>
-          Эти изделия не только эффектно выглядят, но и приятно ощущаются
-          в руках благодаря гладкой, натуральной текстуре. Выполнены из
-          тщательно обработанного бамбука.
-        </p>
+        <p>Выполнены из тщательно обработанного бамбука.</p>
         <p class="text-small-secondary">
           Полностью биоразлагаемые, они идеально подойдут для экологичных
           гостиничных концепций.
         </p>
-        <section class="post-gallery">
-          <div class="post-gallery-image">
-            <img src="/assets/images/blog-post2.jpg" alt="" />
-          </div>
-          <div class="post-gallery-image">
-            <img src="/assets/images/blog-post3.jpg" alt="" />
-          </div>
-        </section>
+        <div class="post-preview">
+          <img src="/assets/images/blog-post1.jpg" alt="" />
+        </div>
+        <p class="post-text-big title-large scroll-reveal-heading">
+          Эти изделия не только эффектно выглядят, но и приятно ощущаются
+          в руках благодаря гладкой, натуральной текстуре.
+        </p>
         <section class="post-details" aria-labelledby="post-details-title">
-          <h2 id="post-details-title" class="title-medium post-details-title">
+          <h2
+            id="post-details-title"
+            class="post-details-title scroll-reveal-heading"
+          >
             Состав линейки
           </h2>
           <div class="post-details-content">
             <ul class="post-details-list">
-              <li class="post-details-item">
+              <li class="post-details-item title-medium">
+                <span class="bw-accent title-large">1</span>
                 Зубная щётка с мягкими щетинками
               </li>
-              <li class="post-details-item">
+              <li class="post-details-item title-medium">
+                <span class="bw-accent title-large">2</span>
+
                 Бритвенный станок с двойным лезвием, увлажняющей полоской
                 и съёмной защитной крышкой
               </li>
-              <li class="post-details-item">
+              <li class="post-details-item title-medium">
+                <span class="bw-accent title-large">3</span>
+
                 Гребень-расчёска с зубьями средней частоты
               </li>
             </ul>
 
             <p class="text-small-secondary">
-              Аксессуары входят в категорию премиум.
-              <br />
-              <br />
-              В базовой комплектации они поставляются в индивидуальных коробках
-              из крафт-картона. В ближайшее время будет доступен вариант
-              упаковки в бумажные крафт-пакеты.
+              Аксессуары входят в категорию премиум. В базовой комплектации они
+              поставляются в индивидуальных коробках из крафт-картона.
+              В ближайшее время будет доступен вариант упаковки в бумажные
+              крафт-пакеты.
             </p>
           </div>
         </section>
         <section class="post-gallery">
+          <div class="post-gallery-image">
+            <img src="/assets/images/blog-post2.jpg" alt="" />
+          </div>
           <div class="post-gallery-image">
             <img src="/assets/images/blog-post4.jpg" alt="" />
           </div>
@@ -1697,7 +1702,10 @@
         </section>
       </article>
       <section class="others container" aria-labelledby="others-title">
-        <h2 id="others-title" class="others-title title-large-to-medium">
+        <h2
+          id="others-title"
+          class="others-title title-large-to-medium scroll-reveal-heading"
+        >
           Другие новости
         </h2>
         <div class="others-content">
@@ -1965,6 +1973,7 @@
           </nav>
         </div>
       </div>
+      <img class="footer-logo" src="/assets/images/logo.svg" alt="Mezo" />
     </footer>
     <div id="header-overlay" class="header-overlay is-hidden"></div>
     <div id="overlay" class="modal-overlay is-hidden"></div>
@@ -2040,7 +2049,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2063,7 +2071,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2086,7 +2093,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2134,7 +2141,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2157,7 +2163,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2180,7 +2185,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2223,7 +2228,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2246,7 +2250,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2269,7 +2272,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2312,7 +2315,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2335,7 +2337,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2358,7 +2359,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2406,7 +2407,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2429,7 +2429,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2452,7 +2451,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2495,7 +2494,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2518,7 +2516,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2541,7 +2538,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2630,5 +2627,6 @@
       </div>
     </div>
     <script src="/js/main.js"></script>
+    <script src="/js/news.js"></script>
   </body>
 </html>
