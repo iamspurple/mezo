@@ -114,7 +114,7 @@
 
 .fresh-news-item-image {
   width: 100%;
-  aspect-ratio: 1.63;
+  aspect-ratio: 1.38;
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
