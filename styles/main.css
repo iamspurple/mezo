@@ -278,19 +278,19 @@ button {
   width: fit-content;
   font-family: var(--font-secondary);
   font-weight: 500;
-  font-size: clamp(13.333px, 1.042vw, 20px);
+  font-size: clamp(14px, 1.042vw, 20px);
   transition: var(--transition);
 }
 
 .menu-link svg {
   width: 0;
-  height: clamp(10.667px, 0.833vw, 16px);
+  height: clamp(14px, 0.833vw, 16px);
   transition: var(--transition);
 }
 
 @media (hover: hover) {
   .menu-link:hover svg {
-    width: clamp(10.667px, 0.833vw, 16px);
+    width: clamp(14px, 0.833vw, 16px);
   }
 }
 
