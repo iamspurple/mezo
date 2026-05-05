@@ -139,9 +139,6 @@ document.querySelectorAll(".custom-select").forEach((select) => {
   // ── Обновить классы списка продуктов ──────────────────────────────────
   function updateProductsListClasses() {
     if (!productsList) return;
-    if (select.dataset.name === "category") {
-      productsList.classList.toggle("medium", selected.length > 0);
-    }
     if (select.dataset.name === "collection") {
       productsList.classList.toggle("large", selected.length > 0);
     }
@@ -304,6 +301,44 @@ document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
   ];
 
   if (!allInput || !otherInputs.length) return;
+  const volumeSelect = document.querySelectorAll(
+    '.custom-select[data-name="volume"]',
+  );
+  const packageSelect = document.querySelectorAll(
+    '.custom-select[data-name="package"]',
+  );
+  const purposeSelect = document.querySelectorAll(
+    '.custom-select[data-name="purpose"]',
+  );
+
+  const updateCategoryDependentFiltersVisibility = () => {
+    const checkedValues = new Set(
+      otherInputs.filter((inp) => inp.checked).map((inp) => inp.value),
+    );
+    const showVolume =
+      checkedValues.has("shampoo") ||
+      checkedValues.has("conditioner") ||
+      checkedValues.has("gel") ||
+      checkedValues.has("lotion");
+    const showPackage = checkedValues.has("soap");
+    const showPurpose = checkedValues.has("accessories");
+
+    volumeSelect.forEach((select) => {
+      select.classList.toggle("hidden", !showVolume);
+    });
+    packageSelect.forEach((select) => {
+      select.classList.toggle("hidden", !showPackage);
+    });
+    purposeSelect.forEach((select) => {
+      select.classList.toggle("hidden", !showPurpose);
+    });
+  };
+
+  const updateTagFiltersProductsListClass = () => {
+    if (!productsList) return;
+    const hasCheckedOtherTag = otherInputs.some((inp) => inp.checked);
+    productsList.classList.toggle("medium", hasCheckedOtherTag);
+  };
 
   allInput.addEventListener("change", () => {
     if (allInput.checked) {
@@ -312,6 +347,8 @@ document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
       const anyOtherChecked = otherInputs.some((i) => i.checked);
       if (!anyOtherChecked) allInput.checked = true;
     }
+    updateTagFiltersProductsListClass();
+    updateCategoryDependentFiltersVisibility();
   });
 
   otherInputs.forEach((inp) => {
@@ -322,8 +359,13 @@ document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
         const anyOtherChecked = otherInputs.some((i) => i.checked);
         if (!anyOtherChecked) inp.checked = true;
       }
+      updateTagFiltersProductsListClass();
+      updateCategoryDependentFiltersVisibility();
     });
   });
+
+  updateTagFiltersProductsListClass();
+  updateCategoryDependentFiltersVisibility();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
