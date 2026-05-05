@@ -80,7 +80,7 @@
 .js-scroll-reveal .scroll-reveal-statistics.is-visible .about-statistic-item {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-  filter: blur(0);
+  filter: none;
 }
 
 /* По очереди: следующий пункт после завершения анимации предыдущего (~0.5s) */
@@ -279,13 +279,12 @@
 
 .collections-item-name {
   padding-inline: 10px;
-  font-size: clamp(16px, 1.25vw, 24px);
 }
 
-.collections-item-name svg {
+/* .collections-item-name svg {
   width: clamp(10.667px, 0.833vw, 16px);
   height: clamp(10.667px, 0.833vw, 16px);
-}
+} */
 
 .collections-slider-controls {
   display: flex;
@@ -380,12 +379,28 @@
   height: clamp(26px, 2vw, 40px);
 }
 
+.services-accordion summary svg path {
+  transition: var(--transition);
+}
+
 .services-accordion[open] summary {
   padding-bottom: clamp(26px, 2vw, 40px);
 }
 
 .services-accordion[open] summary svg path {
   stroke: white;
+}
+
+@media (hover: hover) {
+  .services-accordion:hover {
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+  }
+
+  .services-accordion:hover summary svg path {
+    stroke: white;
+  }
 }
 
 .services-accordion-content {
@@ -507,7 +522,7 @@
   overflow: hidden;
 }
 
-.news-item-image img {
+:not(.js-scroll-reveal) .news-item-image img {
   transform: scale(1.1);
 }
 
@@ -530,7 +545,7 @@
 .js-scroll-reveal main .news .news-item-image.is-visible img {
   opacity: 1;
   transform: scale(1.1) rotate(0deg);
-  filter: blur(0);
+  filter: none;
 }
 
 /* Выше специфичность, чем у .is-visible — восстанавливаем zoom из main.css для .item-content */
@@ -559,12 +574,6 @@
 
 .news-item-name {
   padding: 10px;
-  margin-bottom: 7px;
-}
-
-.news-item-name svg {
-  width: 16px;
-  height: 16px;
 }
 
 .news-item-description {
@@ -953,7 +962,7 @@
 }
 
 /* Заголовки: появление по словам при скролле (js/homepage.js) */
-.scroll-reveal-heading .scroll-reveal-word {
+.js-scroll-reveal .scroll-reveal-heading .scroll-reveal-word {
   display: inline-block;
   opacity: 0;
   transform: translate3d(0, 0.35em, 0);
@@ -963,13 +972,13 @@
   transition-delay: calc(var(--word-index, 0) * 42ms);
 }
 
-.scroll-reveal-heading.is-visible .scroll-reveal-word {
+.js-scroll-reveal .scroll-reveal-heading.is-visible .scroll-reveal-word {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .scroll-reveal-heading .scroll-reveal-word {
+  .js-scroll-reveal .scroll-reveal-heading .scroll-reveal-word {
     opacity: 1;
     transform: none;
     transition: none;

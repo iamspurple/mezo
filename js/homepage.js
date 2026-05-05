@@ -1,27 +1,18 @@
-const initCategoriesListHover = () => {
-  const container = document.querySelector(".categories-list-container");
-  if (!container) return;
-
-  const items = container.querySelectorAll(".categories-item");
-  const imageItems = container.querySelectorAll(".categories-image-item");
-
-  const clearImageStates = () => {
-    imageItems.forEach((el) => el.classList.remove("active", "inactive"));
-  };
-
-  items.forEach((item) => {
-    const name = item.dataset.name;
-    if (!name) return;
-
-    item.addEventListener("mouseenter", () => {
-      imageItems.forEach((img) => {
-        img.classList.remove("active", "inactive");
-        img.classList.add(img.dataset.name === name ? "active" : "inactive");
+const createRevealObserver = (
+  { minRatio = 0.1, rootMargin = "0px 0px -7% 0px" },
+  onVisible,
+) => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting || entry.intersectionRatio < minRatio) return;
+        onVisible(entry.target);
+        observer.unobserve(entry.target);
       });
-    });
-
-    item.addEventListener("mouseleave", clearImageStates);
-  });
+    },
+    { threshold: [0, 0.1, 0.2, 0.35, 0.5, 0.75, 1], rootMargin },
+  );
+  return observer;
 };
 
 const initScrollRevealHeadings = () => {
@@ -31,10 +22,12 @@ const initScrollRevealHeadings = () => {
   if (!headings.length) return;
 
   headings.forEach((heading) => {
-    const text = heading.textContent.replace(/\s+/g, " ").trim();
-    const words = text.split(" ").filter(Boolean);
+    const words = heading.textContent
+      .replace(/\s+/g, " ")
+      .trim()
+      .split(" ")
+      .filter(Boolean);
     if (!words.length) return;
-
     heading.textContent = "";
     words.forEach((word, index) => {
       const span = document.createElement("span");
@@ -42,41 +35,16 @@ const initScrollRevealHeadings = () => {
       span.style.setProperty("--word-index", String(index));
       span.textContent = word;
       heading.appendChild(span);
-      if (index < words.length - 1) {
+      if (index < words.length - 1)
         heading.appendChild(document.createTextNode(" "));
-      }
     });
   });
 
-  const headingObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (
-          !entry.isIntersecting ||
-          entry.intersectionRatio < 0.12
-        ) {
-          return;
-        }
-        entry.target.classList.add("is-visible");
-        headingObserver.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: [0, 0.1, 0.2, 0.35, 0.5, 0.75, 1],
-      rootMargin: "0px 0px -7% 0px",
-    },
+  const observer = createRevealObserver(
+    { minRatio: 0.12, rootMargin: "0px 0px -7% 0px" },
+    (el) => el.classList.add("is-visible"),
   );
-
-  headings.forEach((heading) => headingObserver.observe(heading));
-
-  requestAnimationFrame(() => {
-    headingObserver.takeRecords().forEach((entry) => {
-      if (entry.isIntersecting && entry.intersectionRatio >= 0.12) {
-        entry.target.classList.add("is-visible");
-        headingObserver.unobserve(entry.target);
-      }
-    });
-  });
+  headings.forEach((el) => observer.observe(el));
 };
 
 const initNewsImagesReveal = () => {
@@ -88,34 +56,13 @@ const initNewsImagesReveal = () => {
     return;
   }
 
-  const newsImgObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting || entry.intersectionRatio < 0.12) {
-          return;
-        }
-        entry.target.classList.add("is-visible");
-        newsImgObserver.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: [0, 0.1, 0.2, 0.35, 0.5, 0.75, 1],
-      rootMargin: "0px 0px -6% 0px",
-    },
+  const observer = createRevealObserver(
+    { minRatio: 0.12, rootMargin: "0px 0px -6% 0px" },
+    (el) => el.classList.add("is-visible"),
   );
-
   wrappers.forEach((el, index) => {
     el.style.setProperty("--news-item-index", String(index));
-    newsImgObserver.observe(el);
-  });
-
-  requestAnimationFrame(() => {
-    newsImgObserver.takeRecords().forEach((entry) => {
-      if (entry.isIntersecting && entry.intersectionRatio >= 0.12) {
-        entry.target.classList.add("is-visible");
-        newsImgObserver.unobserve(entry.target);
-      }
-    });
+    observer.observe(el);
   });
 };
 
@@ -130,37 +77,15 @@ const initAboutStatisticsReveal = () => {
     return;
   }
 
-  const statsObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting || entry.intersectionRatio < 0.1) {
-          return;
-        }
-        entry.target.classList.add("is-visible");
-        statsObserver.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: [0, 0.1, 0.2, 0.35, 0.5, 0.75, 1],
-      rootMargin: "0px 0px -8% 0px",
-    },
+  const observer = createRevealObserver(
+    { minRatio: 0.1, rootMargin: "0px 0px -8% 0px" },
+    (el) => el.classList.add("is-visible"),
   );
-
-  statsObserver.observe(list);
-
-  requestAnimationFrame(() => {
-    statsObserver.takeRecords().forEach((entry) => {
-      if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
-        entry.target.classList.add("is-visible");
-        statsObserver.unobserve(entry.target);
-      }
-    });
-  });
+  observer.observe(list);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.classList.add("js-scroll-reveal");
-  initCategoriesListHover();
   initScrollRevealHeadings();
   initNewsImagesReveal();
   initAboutStatisticsReveal();
