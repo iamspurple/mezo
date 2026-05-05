@@ -218,6 +218,21 @@
   stroke: white;
 }
 
+.other-services-accordion summary svg path {
+  transition: var(--transition);
+}
+@media (hover: hover) {
+  .other-services-accordion:hover {
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+  }
+
+  .other-services-accordion:hover summary svg path {
+    stroke: white;
+  }
+}
+
 .other-services-accordion-content {
   width: 65%;
   overflow: hidden;
@@ -433,7 +448,7 @@
   object-position: center;
   opacity: 1;
   transform: scale(1.05) rotate(0deg);
-  filter: blur(0);
+  filter: none;
 }
 
 .js-scroll-reveal .scroll-reveal-text p {
@@ -452,7 +467,7 @@
 .js-scroll-reveal .scroll-reveal-text p.is-visible {
   opacity: 1;
   transform: translateY(0);
-  filter: blur(0);
+  filter: none;
 }
 
 @media (hover: hover) {
