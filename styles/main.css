@@ -211,8 +211,10 @@ button {
 }
 
 .item-name svg {
-  margin-top: clamp(9px, 0.27em, 16px);
+  transform: translateY(30%);
   transition: var(--transition);
+  width: clamp(16px, 1.5vw, 24px);
+  height: clamp(16px, 1.5vw, 24px);
 }
 
 /* Общий класс для SVG с размерами 16px/16px и hover 24px/24px */
