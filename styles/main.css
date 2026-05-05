@@ -208,6 +208,7 @@ button {
   font-weight: 500;
   line-height: 90%;
   text-transform: uppercase;
+  transition: var(--transition);
 }
 
 .item-name svg {
