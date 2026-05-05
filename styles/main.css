@@ -206,7 +206,7 @@ button {
   font-size: clamp(32px, 2.5vw, 48px);
   font-family: var(--font-primary);
   font-weight: 500;
-  line-height: 120%;
+  line-height: 90%;
   text-transform: uppercase;
 }
 
