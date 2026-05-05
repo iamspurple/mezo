@@ -38,7 +38,6 @@
 .js-production-scroll-reveal .production-block1-content > p,
 .js-production-scroll-reveal .production-block1-item,
 .js-production-scroll-reveal .production-block2-content p,
-.js-production-scroll-reveal .production-example-caption,
 .js-production-scroll-reveal .production-example-image {
   opacity: 0;
   transform: translateY(26px);
@@ -52,7 +51,6 @@
 .js-production-scroll-reveal .production-block1-content > p.is-visible,
 .js-production-scroll-reveal .production-block1-item.is-visible,
 .js-production-scroll-reveal .production-block2-content p.is-visible,
-.js-production-scroll-reveal .production-example-caption.is-visible,
 .js-production-scroll-reveal .production-example-image.is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -154,7 +152,7 @@
   display: grid;
   gap: 12px;
   grid-template-columns: 1fr 1fr;
-  padding-block: 80px 120px;
+  padding-block: clamp(40px, 3.1vw, 80px) clamp(80px, 6.25vw, 120px);
 }
 
 .production-example {

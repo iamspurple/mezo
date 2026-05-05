@@ -9,9 +9,7 @@ const isReducedMotion = () =>
 const initProductionHeadingReveal = () => {
   if (isReducedMotion()) return;
 
-  const headings = document.querySelectorAll(
-    "main .production-title, main .hero-text, main .production-block1-title, main .production-block2-title",
-  );
+  const headings = document.querySelectorAll("main .scroll-reveal-heading");
   if (!headings.length) return;
 
   headings.forEach((heading) => {
@@ -131,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     document
       .querySelectorAll(
-        "main .production-title:not(.is-visible), main .production-block1-title:not(.is-visible), main .production-block2-title:not(.is-visible), main .hero-text:not(.is-visible), main .production-block1-content > p:not(.is-visible), main .production-block1-item:not(.is-visible), main .production-block2-content p:not(.is-visible), main .production-example-caption:not(.is-visible), main .production-example-image:not(.is-visible)",
+        "main .scroll-reveal-heading:not(.is-visible), main .production-block1-content > p:not(.is-visible), main .production-block1-item:not(.is-visible), main .production-block2-content p:not(.is-visible), main .production-example-image:not(.is-visible)",
       )
       .forEach((el) => {
         const rect = el.getBoundingClientRect();
