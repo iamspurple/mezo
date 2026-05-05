@@ -175,13 +175,20 @@ const initServicesImagesForSection = (cfg) => {
     if (!name || name === "default") return;
 
     if (isHoverDevice()) {
-      // Desktop: hover на <details>
+      // Desktop: hover открывает <details> через публичный API accordion.js
+      // и переключает картинки. При уходе — закрывает и возвращает default.
       accordion.addEventListener("mouseenter", () => {
         setActiveContainer(name);
+        accordion.dispatchEvent(
+          new CustomEvent("accordion:open", { bubbles: false }),
+        );
       });
 
       accordion.addEventListener("mouseleave", () => {
         setActiveContainer("default");
+        accordion.dispatchEvent(
+          new CustomEvent("accordion:close", { bubbles: false }),
+        );
       });
     } else {
       // Mobile: click на <summary> (до открытия <details>)
