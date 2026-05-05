@@ -256,8 +256,7 @@
   background-color: white;
   font-family: var(--font-primary);
   text-transform: uppercase;
-  max-height: clamp(37.333px, 2.917vw, 56px);
-  height: auto;
+  height: clamp(37.333px, 2.917vw, 56px);
   padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 16px);
   font-size: clamp(16px, calc(8px + 0.833vw), 24px);
   line-height: 80%;
@@ -436,8 +435,7 @@
   align-items: center;
   gap: clamp(13.333px, calc(6.667px + 0.625vw), 20px);
   width: 100%;
-  max-height: clamp(37.333px, 2.917vw, 56px);
-  height: auto;
+  height: clamp(37.333px, 2.917vw, 56px);
   padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 16px);
   border: 2px solid var(--color-lightgrey);
   border-radius: var(--radius-sm);
