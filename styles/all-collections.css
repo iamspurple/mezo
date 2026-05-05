@@ -53,7 +53,7 @@
 .all-collections-item.is-visible {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
-  filter: blur(0);
+  filter: none;
 }
 
 .all-collections-item-image {
@@ -70,13 +70,12 @@
 
 .all-collections-item-name {
   padding-inline: clamp(6.667px, 0.521vw, 10px);
-  font-size: clamp(16px, 1.25vw, 24px);
 }
 
-.all-collections-item-name svg {
+/* .all-collections-item-name svg {
   width: clamp(10.667px, 0.833vw, 16px);
   height: clamp(10.667px, 0.833vw, 16px);
-}
+} */
 
 .all-collections-item-description {
   opacity: 0;
