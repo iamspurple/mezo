@@ -15,6 +15,8 @@ const SERVICE_IMAGE_SECTIONS = [
   },
 ];
 
+const isHoverDevice = () => window.matchMedia("(hover: hover)").matches;
+
 const initServicesImagesForSection = (cfg) => {
   const servicesSection = document.querySelector(cfg.section);
   if (!servicesSection) return;
@@ -31,16 +33,12 @@ const initServicesImagesForSection = (cfg) => {
   const ITEM_DELAY_MS = 220;
   const REVEAL_DURATION_S = 0.95;
   const HIDE_DURATION_S = 0.88;
-  const INTERSECTION_THRESHOLDS = Array.from(
-    { length: 21 },
-    (_, index) => index * 0.05,
-  );
+  const INTERSECTION_THRESHOLDS = [0, 0.1, 0.2, 0.35, 0.5, 0.75, 1];
 
   let containerZIndexCounter = 1;
 
   const setItemsHiddenInstantly = (container) => {
-    const items = container.querySelectorAll(cfg.items);
-    items.forEach((item) => {
+    container.querySelectorAll(cfg.items).forEach((item) => {
       item.style.transition = "none";
       item.style.transitionDelay = "0ms";
       item.style.opacity = "0";
@@ -91,8 +89,8 @@ const initServicesImagesForSection = (cfg) => {
 
   const setActiveContainer = (name) => {
     const target =
-      imageContainers.find((container) => container.dataset.name === name) ||
-      imageContainers.find((container) => container.dataset.name === "default");
+      imageContainers.find((c) => c.dataset.name === name) ||
+      imageContainers.find((c) => c.dataset.name === "default");
 
     if (!target) return;
 
@@ -111,53 +109,45 @@ const initServicesImagesForSection = (cfg) => {
     });
   };
 
-  const hasOpenedAccordions = () =>
-    accordionItems.some((accordion) => accordion.hasAttribute("open"));
-
+  // Инициализация: скрыть все, активировать начальный контейнер
   const initialContainer =
-    imageContainers.find((container) =>
-      container.classList.contains("active"),
-    ) ||
-    imageContainers.find((container) => container.dataset.name === "default") ||
+    imageContainers.find((c) => c.classList.contains("active")) ||
+    imageContainers.find((c) => c.dataset.name === "default") ||
     imageContainers[0];
 
-  if (initialContainer) {
-    imageContainers.forEach((container) => {
-      container.classList.toggle("active", container === initialContainer);
-      container.style.zIndex = "1";
-      const items = container.querySelectorAll(cfg.items);
-      items.forEach((item) => {
-        item.style.opacity = "0";
-        item.style.transform = "scale(0)";
-      });
+  imageContainers.forEach((container) => {
+    container.classList.toggle("active", container === initialContainer);
+    container.style.zIndex = "1";
+    container.querySelectorAll(cfg.items).forEach((item) => {
+      item.style.opacity = "0";
+      item.style.transform = "scale(0)";
     });
+  });
+
+  if (initialContainer) {
     containerZIndexCounter = 2;
     initialContainer.style.zIndex = String(containerZIndexCounter);
   }
 
+  // Visibility observer: показывать/скрывать при скролле
   const servicesImagesWrapper =
     servicesSection.querySelector(cfg.imagesWrapper) || servicesSection;
-
-  const runViewportRevealForActiveContainer = () => {
-    const activeContainer = servicesSection.querySelector(
-      `${cfg.containers}.active`,
-    );
-    if (!activeContainer) return;
-    setItemsHiddenInstantly(activeContainer);
-    void activeContainer.offsetHeight;
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => revealItemsSequentially(activeContainer));
-    });
-  };
 
   let viewportImagesShown = false;
 
   const applyVisibilityFromRatio = (ratio) => {
     const shouldShow = ratio >= VISIBILITY_THRESHOLD;
-
     if (shouldShow && !viewportImagesShown) {
       viewportImagesShown = true;
-      runViewportRevealForActiveContainer();
+      const activeContainer = servicesSection.querySelector(
+        `${cfg.containers}.active`,
+      );
+      if (!activeContainer) return;
+      setItemsHiddenInstantly(activeContainer);
+      void activeContainer.offsetHeight;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => revealItemsSequentially(activeContainer));
+      });
     } else if (!shouldShow && viewportImagesShown) {
       viewportImagesShown = false;
       hideActiveItemsBelowVisibility();
@@ -167,36 +157,46 @@ const initServicesImagesForSection = (cfg) => {
   const visibilityObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.target !== servicesImagesWrapper) return;
-        applyVisibilityFromRatio(entry.intersectionRatio);
+        if (entry.target === servicesImagesWrapper) {
+          applyVisibilityFromRatio(entry.intersectionRatio);
+        }
       });
     },
     { threshold: INTERSECTION_THRESHOLDS, rootMargin: "0px" },
   );
   visibilityObserver.observe(servicesImagesWrapper);
 
-  requestAnimationFrame(() => {
-    visibilityObserver.takeRecords().forEach((entry) => {
-      if (entry.target !== servicesImagesWrapper) return;
-      applyVisibilityFromRatio(entry.intersectionRatio);
-    });
-  });
-
+  // Навешивание событий на аккордеоны
   accordionItems.forEach((accordion) => {
     const summary = accordion.querySelector("summary");
     if (!summary) return;
 
-    summary.addEventListener("click", () => {
-      const name = accordion.dataset.name;
-      if (!name || accordion.hasAttribute("open")) return;
-      setActiveContainer(name);
-    });
+    const name = accordion.dataset.name;
+    if (!name || name === "default") return;
 
-    accordion.addEventListener("toggle", () => {
-      if (!hasOpenedAccordions()) {
+    if (isHoverDevice()) {
+      // Desktop: hover на <details>
+      accordion.addEventListener("mouseenter", () => {
+        setActiveContainer(name);
+      });
+
+      accordion.addEventListener("mouseleave", () => {
         setActiveContainer("default");
-      }
-    });
+      });
+    } else {
+      // Mobile: click на <summary> (до открытия <details>)
+      summary.addEventListener("click", () => {
+        if (!accordion.hasAttribute("open")) {
+          setActiveContainer(name);
+        }
+      });
+
+      // Когда все закрыты — вернуть default
+      accordion.addEventListener("toggle", () => {
+        const hasOpen = accordionItems.some((a) => a.hasAttribute("open"));
+        if (!hasOpen) setActiveContainer("default");
+      });
+    }
   });
 };
 

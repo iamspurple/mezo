@@ -55,6 +55,21 @@
   height: clamp(26px, 2vw, 40px);
 }
 
+.services-accordion summary svg path {
+  transition: var(--transition);
+}
+@media (hover: hover) {
+  .services-accordion:hover {
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+  }
+
+  .services-accordion:hover summary svg path {
+    stroke: white;
+  }
+}
+
 .services-accordion[open] summary {
   padding-bottom: clamp(26px, 2vw, 40px);
 }
