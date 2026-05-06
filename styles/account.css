@@ -22,6 +22,16 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(8px, calc(4px + 0.313vw), 12px);
+  align-items: start;
+}
+
+.account-howtouse-title {
+  transition: margin-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.account-howtouse:has(.account-howtouse-video-clip:not(.is-open))
+  .account-howtouse-title {
+  margin-top: 0.15em;
 }
 
 /* 0fr/1fr: открытие и закрытие за одно и то же время (max-height 0↔огромное число
@@ -100,6 +110,7 @@
 }
 
 .account-howtouse-contacts {
+  padding-top: clamp(53.333px, 4.167vw, 80px);
   display: flex;
   flex-direction: column;
   gap: clamp(26.667px, 2.083vw, 40px);
