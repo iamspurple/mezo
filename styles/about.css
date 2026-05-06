@@ -33,20 +33,14 @@
   padding-block: clamp(80px, 6.25vw, 120px) clamp(106.667px, 8.333vw, 160px);
 }
 
-.advantages {
-  background-color: var(--color-lavender);
-  padding-block: clamp(80px, 6.25vw, 120px) clamp(106.667px, 8.333vw, 160px);
-}
-
-.directions-wrapper,
-.advantages-wrapper {
+.directions-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(13.333px, 1.042vw, 20px);
+  column-gap: 10px;
+  row-gap: clamp(80px, 6.25vw, 120px);
 }
 
-.directions-title,
-.advantages-title {
+.directions-title {
   font-size: clamp(53px, 4.15vw, 80px);
   font-weight: 700;
   line-height: 72%;
@@ -54,20 +48,43 @@
   text-transform: uppercase;
 }
 
-.directions-content,
-.advantages-content {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(40px, 3.125vw, 60px);
-}
-
-.directions-wrapper > *,
-.advantages-wrapper > * {
+.directions-text {
   max-width: 66%;
 }
 
-.directions-list,
-.advantages-list {
+.directions-images {
+  max-width: 100%;
+  width: 100%;
+  grid-column: -1/1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.directions-image {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.directions-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+  transition: var(--transition);
+}
+
+@media (any-hover: hover) {
+  .directions-image:hover img {
+    transform: scale(1);
+  }
+}
+
+.directions-list {
+  grid-column: 2;
+
   display: flex;
   flex-direction: column;
   gap: clamp(26.667px, 2.083vw, 40px);
@@ -77,20 +94,117 @@
   text-transform: uppercase;
 }
 
-.directions-item,
-.advantages-item {
+.directions-item {
   display: flex;
   flex-direction: column;
   gap: clamp(16px, 1.25vw, 24px);
+  max-width: 66%;
 }
 
-.directions-item span,
-.advantages-item span {
+.directions-item span {
   padding: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 16px)
     clamp(5.333px, 0.417vw, 8px) clamp(5.333px, 0.417vw, 8px);
   width: fit-content;
   cursor: default;
   border-radius: 2px;
+}
+
+.chronology {
+  padding-block: clamp(26px, 2vw, 40px);
+}
+
+.chronology-wrapper {
+  display: grid;
+  grid-template-columns: 25% 25% 1fr;
+  column-gap: 3.3px;
+}
+
+.chronology-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: clamp(10px, 0.833vw, 16px);
+  grid-auto-flow: column;
+  align-items: start;
+  grid-auto-rows: min-content;
+}
+
+.chronology-list > .chronology-item {
+  grid-column: 1;
+  width: fit-content;
+  height: auto;
+  /* line-height: 1; */
+  align-self: start;
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 16px)
+    clamp(5.333px, 0.417vw, 8px) clamp(5.333px, 0.417vw, 8px);
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.chronology-list > .chronology-item:nth-of-type(n + 9) {
+  grid-column: 2;
+}
+
+.chronology-content {
+  width: 100%;
+  display: grid;
+}
+
+.chronology-content p {
+  grid-area: 1 / 1;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  /* transform: translateY(12px); */
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    visibility 0.5s ease;
+}
+
+.chronology-content p.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.chronology-images {
+  width: 100%;
+  display: grid;
+  overflow: hidden;
+}
+
+.chronology-image {
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  grid-area: 1 / 1;
+  width: 100%;
+  aspect-ratio: 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.03);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    visibility 0.5s ease;
+  pointer-events: none;
+}
+
+.chronology-image.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.chronology-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chronology-item.active {
+  background-color: black;
+  color: white;
 }
 
 .photo {
@@ -149,8 +263,7 @@
     font-size: 24px;
   }
 
-  .directions,
-  .advantages {
+  .directions {
     /* 393px -> 60px, 768px -> 120px */
     padding-block: clamp(60px, calc(-2.88px + 16vw), 120px);
   }
@@ -163,6 +276,19 @@
   .photo img {
     transform: none;
   }
+
+  .chronology-wrapper {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .chronology-list {
+    padding-bottom: 30px;
+  }
+
+  .chronology-list > .chronology-item:nth-of-type(n + 7) {
+    grid-column: 2;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -170,8 +296,7 @@
     grid-template-columns: 1fr;
   }
 
-  .directions-wrapper,
-  .advantages-wrapper {
+  .directions-wrapper {
     grid-template-columns: 1fr;
   }
 }
