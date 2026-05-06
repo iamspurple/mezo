@@ -1,5 +1,24 @@
 .team {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(80px, 6.25vw, 120px);
   padding-block: clamp(53.333px, 4.167vw, 80px);
+}
+
+.team-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(26.667px, 2.083vw, 40px);
+}
+
+.team-contacts-item {
+  display: flex;
+  flex-direction: column;
+  line-height: 80%;
+}
+
+.team-contacts-item dt {
+  color: var(--color-lightgrey);
 }
 
 .team-content {
@@ -320,45 +339,27 @@
   transform: translate3d(0, 0, 0);
 }
 
-.js-contacts-scroll-reveal
-  main
-  .team-list.is-visible
-  .team-item:nth-child(1) {
+.js-contacts-scroll-reveal main .team-list.is-visible .team-item:nth-child(1) {
   transition-delay: 0ms;
 }
 
-.js-contacts-scroll-reveal
-  main
-  .team-list.is-visible
-  .team-item:nth-child(2) {
+.js-contacts-scroll-reveal main .team-list.is-visible .team-item:nth-child(2) {
   transition-delay: 165ms;
 }
 
-.js-contacts-scroll-reveal
-  main
-  .team-list.is-visible
-  .team-item:nth-child(3) {
+.js-contacts-scroll-reveal main .team-list.is-visible .team-item:nth-child(3) {
   transition-delay: 330ms;
 }
 
-.js-contacts-scroll-reveal
-  main
-  .team-list.is-visible
-  .team-item:nth-child(4) {
+.js-contacts-scroll-reveal main .team-list.is-visible .team-item:nth-child(4) {
   transition-delay: 495ms;
 }
 
-.js-contacts-scroll-reveal
-  main
-  .team-list.is-visible
-  .team-item:nth-child(5) {
+.js-contacts-scroll-reveal main .team-list.is-visible .team-item:nth-child(5) {
   transition-delay: 660ms;
 }
 
-.js-contacts-scroll-reveal
-  main
-  .team-list.is-visible
-  .team-item:nth-child(6) {
+.js-contacts-scroll-reveal main .team-list.is-visible .team-item:nth-child(6) {
   transition-delay: 825ms;
 }
 

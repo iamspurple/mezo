@@ -99,6 +99,23 @@
   display: none;
 }
 
+.account-howtouse-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(26.667px, 2.083vw, 40px);
+  font-weight: 700;
+}
+
+.account-howtouse-contacts-item {
+  display: flex;
+  flex-direction: column;
+  line-height: 80%;
+}
+
+.account-howtouse-contacts-item dt {
+  color: var(--color-lightgrey);
+}
+
 .account-info,
 .account-company {
   display: grid;
