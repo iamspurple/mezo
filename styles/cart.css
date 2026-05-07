@@ -250,7 +250,7 @@
   background: none;
   cursor: pointer;
   font-family: var(--font-secondary);
-  font-size: clamp(8.667px, calc(4.334px + 0.417vw), 13px);
+  font-size: clamp(10px, 0.833vw, 16px);
   font-weight: 500;
   color: #00000066;
   padding: 0;

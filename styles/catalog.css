@@ -58,6 +58,9 @@
 }
 
 .catalog-search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: clamp(16px, calc(8px + 0.833vw), 24px);
   height: clamp(16px, calc(8px + 0.833vw), 24px);
   background-color: transparent;
@@ -70,8 +73,8 @@
 }
 
 .catalog-search-btn svg {
-  width: clamp(10.667px, calc(5.334px + 0.521vw), 16px);
-  height: clamp(10.667px, calc(5.334px + 0.521vw), 16px);
+  width: clamp(10.667px, 0.83vw, 16px);
+  height: clamp(10.667px, 0.83vw, 16px);
 }
 
 .catalog-search-clear-btn {
@@ -86,7 +89,7 @@
   background: none;
   cursor: pointer;
   font-family: var(--font-secondary);
-  font-size: clamp(8.667px, calc(4.334px + 0.261vw), 13px);
+  font-size: clamp(10px, 0.833vw, 16px);
   font-weight: 500;
   color: #00000066;
   padding: 0;
@@ -279,7 +282,7 @@
   background: none;
   cursor: pointer;
   font-family: var(--font-secondary);
-  font-size: clamp(8.667px, calc(4.334px + 0.261vw), 13px);
+  font-size: clamp(10px, 0.833vw, 16px);
   font-weight: 500;
   color: #00000066;
   padding: 0;
