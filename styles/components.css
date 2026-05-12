@@ -89,6 +89,16 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   transition: var(--transition);
 }
 
+.header-nav-item > a {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
 .header-nav-item .header-nav-cart-btn,
 .header-nav-item .header-nav-trigger {
   background-color: inherit;
@@ -104,6 +114,12 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   cursor: pointer;
   white-space: nowrap;
   transition: var(--transition);
+}
+
+.header-nav.menu .header-nav-item:not(.active) .header-nav-trigger svg path,
+.header-nav.menu .header-nav-item:not(.active) > a svg path,
+.header-nav.menu .header-nav-item:not(.active) .header-nav-cart-btn svg path {
+  stroke: white;
 }
 
 .header-nav-item .header-nav-cart-btn .cart-quantity {
