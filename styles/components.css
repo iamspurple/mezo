@@ -358,7 +358,9 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
 .header-menu-collections-slider-wrapper {
   display: flex;
   align-items: center;
-  overflow-x: hidden;
+  /* hidden на одной оси делает вторую ось auto → лишний вертикальный скролл на этой обёртке */
+  overflow-x: clip;
+  overflow-y: visible;
   width: 100%;
 }
 
