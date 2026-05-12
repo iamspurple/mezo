@@ -478,7 +478,10 @@ const initMenu = () => {
       }
 
       // Исключение: пункт «Избранное» (id стоит на самом li, не на вложенной ссылке)
-      if (item.querySelector("#favorites-link")) {
+      if (
+        item.querySelector("#favorites-link") ||
+        item.querySelector("#contacts-link")
+      ) {
         return;
       }
 
