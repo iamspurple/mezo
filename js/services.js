@@ -166,6 +166,30 @@ const initServicesImagesForSection = (cfg) => {
   );
   visibilityObserver.observe(servicesImagesWrapper);
 
+  // На мобилке общий блок с картинками переносится внутрь раскрытого
+  // аккордеона и показывается там; на десктопе он остаётся в своей колонке.
+  const mobileQuery = window.matchMedia("(max-width: 768px)");
+  const imagesWrapper = servicesSection.querySelector(cfg.imagesWrapper);
+  const imagesWrapperHome = imagesWrapper ? imagesWrapper.parentElement : null;
+
+  const moveWrapperInto = (accordion) => {
+    if (!imagesWrapper) return;
+    const content = accordion.querySelector(".accordion-content");
+    if (content && imagesWrapper.parentElement !== content) {
+      content.appendChild(imagesWrapper);
+    }
+  };
+
+  const restoreWrapperHome = () => {
+    if (
+      imagesWrapper &&
+      imagesWrapperHome &&
+      imagesWrapper.parentElement !== imagesWrapperHome
+    ) {
+      imagesWrapperHome.appendChild(imagesWrapper);
+    }
+  };
+
   // Навешивание событий на аккордеоны
   accordionItems.forEach((accordion) => {
     const summary = accordion.querySelector("summary");
@@ -179,6 +203,7 @@ const initServicesImagesForSection = (cfg) => {
       // и переключает картинки. При уходе — закрывает и возвращает default.
       accordion.addEventListener("mouseenter", () => {
         setActiveContainer(name);
+        if (mobileQuery.matches) moveWrapperInto(accordion);
         accordion.dispatchEvent(
           new CustomEvent("accordion:open", { bubbles: false }),
         );
@@ -186,6 +211,7 @@ const initServicesImagesForSection = (cfg) => {
 
       accordion.addEventListener("mouseleave", () => {
         setActiveContainer("default");
+        if (mobileQuery.matches) restoreWrapperHome();
         accordion.dispatchEvent(
           new CustomEvent("accordion:close", { bubbles: false }),
         );
@@ -195,13 +221,19 @@ const initServicesImagesForSection = (cfg) => {
       summary.addEventListener("click", () => {
         if (!accordion.hasAttribute("open")) {
           setActiveContainer(name);
+          // Перенести картинки внутрь этого пункта до того, как accordion.js
+          // замерит высоту для анимации раскрытия.
+          if (mobileQuery.matches) moveWrapperInto(accordion);
         }
       });
 
       // Когда все закрыты — вернуть default
       accordion.addEventListener("toggle", () => {
         const hasOpen = accordionItems.some((a) => a.hasAttribute("open"));
-        if (!hasOpen) setActiveContainer("default");
+        if (!hasOpen) {
+          setActiveContainer("default");
+          restoreWrapperHome();
+        }
       });
     }
   });

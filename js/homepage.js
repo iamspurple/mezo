@@ -84,9 +84,113 @@ const initAboutStatisticsReveal = () => {
   observer.observe(list);
 };
 
+const initCategoriesSticky = () => {
+  const section = document.querySelector("main .categories");
+  if (!section) return;
+
+  const items = Array.from(section.querySelectorAll(".categories-item"));
+  if (!items.length) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  section.classList.add("categories--pinned");
+
+  const list = section.querySelector(".categories-list");
+  const header = document.querySelector("header, .header");
+
+  let ticking = false;
+  let activeIndex = -1;
+  let offsetInitialized = false;
+  // Top offset (relative to the list) of each item while collapsed. Measured
+  // from the fully-collapsed layout so it stays stable during expand/collapse
+  // transitions.
+  let collapsedTops = [];
+
+  const isColumn = () => getComputedStyle(list).flexDirection === "column";
+
+  const measure = () => {
+    const active = section.querySelector(".categories-item.is-active");
+    // Freeze transitions so the active item collapses instantly; otherwise its
+    // 0.8s expand/collapse animation inflates the offsetTop of the items below
+    // it and the measured tops come out too large, which makes later categories
+    // over-translate and drift upward.
+    items.forEach((item) => (item.style.transition = "none"));
+    if (active) active.classList.remove("is-active");
+    void list.offsetHeight;
+    collapsedTops = items.map((item) => item.offsetTop);
+    if (active) active.classList.add("is-active");
+    void list.offsetHeight;
+    items.forEach((item) => (item.style.transition = ""));
+  };
+
+  // On mobile the pinned block is taller than the viewport, so translate the
+  // list to keep the active (expanded) category in view at the top.
+  const applyOffset = () => {
+    if (!isColumn()) {
+      list.style.transform = "";
+      return;
+    }
+    const gap = (header ? header.offsetHeight : 0) + 16;
+    const y = Math.round(gap - (collapsedTops[activeIndex] || 0));
+    if (!offsetInitialized) {
+      // Position instantly the first time so the list doesn't slide in when the
+      // page loads already scrolled into the section.
+      list.style.transition = "none";
+      list.style.transform = `translateY(${y}px)`;
+      void list.offsetHeight;
+      list.style.transition = "";
+      offsetInitialized = true;
+    } else {
+      list.style.transform = `translateY(${y}px)`;
+    }
+  };
+
+  const update = () => {
+    ticking = false;
+    const rect = section.getBoundingClientRect();
+    const track = section.offsetHeight - window.innerHeight;
+    const scrolled = Math.min(Math.max(-rect.top, 0), Math.max(track, 0));
+    const progress = track > 0 ? scrolled / track : 0;
+    const index = Math.min(
+      items.length - 1,
+      Math.floor(progress * items.length),
+    );
+    if (index !== activeIndex) {
+      activeIndex = index;
+      items.forEach((item, i) => item.classList.toggle("is-active", i === index));
+    }
+    applyOffset();
+  };
+
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  };
+
+  // Collapsed heights only change with viewport width (title wrapping). Skip
+  // re-measuring on height-only resizes — on mobile those fire constantly as the
+  // address bar shows/hides, and re-measuring mid-scroll (with a category
+  // expanded) would corrupt the offsets.
+  let lastWidth = window.innerWidth;
+  const onResize = () => {
+    if (window.innerWidth !== lastWidth) {
+      lastWidth = window.innerWidth;
+      measure();
+    }
+    onScroll();
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onResize);
+  measure();
+  update();
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.classList.add("js-scroll-reveal");
   initScrollRevealHeadings();
   initNewsImagesReveal();
   initAboutStatisticsReveal();
+  initCategoriesSticky();
 });

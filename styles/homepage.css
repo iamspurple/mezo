@@ -188,19 +188,74 @@
 }
 
 @media (hover: hover) {
-  .categories-item:hover .categories-item-image {
+  .categories:not(.categories--pinned)
+    .categories-item:hover
+    .categories-item-image {
     opacity: 1;
     transform: scale(1.05);
   }
 
-  .categories-item:hover .categories-item-number {
+  .categories:not(.categories--pinned)
+    .categories-item:hover
+    .categories-item-number {
     color: white;
   }
 
-  .categories-item:hover .categories-item-content {
+  .categories:not(.categories--pinned)
+    .categories-item:hover
+    .categories-item-content {
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
   }
+}
+
+/* Sticky scroll-driven reveal (enabled by JS on desktop + mobile) */
+.categories--pinned {
+  position: relative;
+  height: calc(100vh + var(--categories-track, 440vh));
+}
+
+.categories--pinned .categories-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.categories--pinned .categories-list {
+  display: flex;
+  height: 100%;
+  margin-left: 0;
+}
+
+.categories--pinned .categories-item {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  aspect-ratio: auto;
+  transition:
+    flex-grow 0.5s ease,
+    background-color 0.5s ease;
+}
+
+.categories--pinned .categories-item-image {
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.categories--pinned .categories-item.is-active .categories-item-image {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.categories--pinned .categories-item.is-active .categories-item-number {
+  color: white;
+}
+
+.categories--pinned .categories-item.is-active .categories-item-content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .description-content {
@@ -247,7 +302,8 @@
 .collections-slider-wrapper {
   display: flex;
   align-items: center;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   width: 100%;
 }
 
@@ -703,12 +759,6 @@
   }
 } */
 
-@media screen and (max-width: 1440px) {
-  .services {
-    max-height: 800px;
-  }
-}
-
 @media screen and (max-width: 1280px) {
   .hero-title,
   .about-statistic-number {
@@ -719,9 +769,26 @@
     font-size: clamp(28px, 2.188vw, 42px);
   }
 
-  .categories-list {
-    margin-left: 4%;
+  .categories--pinned {
+    height: 300vh;
   }
+
+  .categories--pinned .categories-sticky {
+    height: auto;
+  }
+
+  .categories-list {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 2/1;
+  }
+
+  .categories--pinned .categories-list {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 2/1;
+  }
+
   .categories-item-content {
     padding: clamp(12px, 0.938vw, 18px);
   }
@@ -747,6 +814,10 @@
     height: 380px;
   }
 
+  .services-title {
+    font-size: clamp(36px, calc(28px + 0.781vw), 38px);
+  }
+
   .news-item-name {
     margin-bottom: 3px;
   }
@@ -759,10 +830,6 @@
 
 @media screen and (max-width: 1024px) {
   .hero {
-    max-height: 650px;
-  }
-
-  .services {
     max-height: 650px;
   }
 
@@ -779,6 +846,10 @@
     height: 100%;
   }
 
+  .categories--pinned {
+    height: 200vh;
+  }
+
   .categories-content {
     flex-direction: column;
     padding-block: clamp(33.333px, 2.604vw, 50px);
@@ -787,93 +858,6 @@
 
   .categories-image-list {
     display: none;
-  }
-
-  .categories-list {
-    flex-direction: row;
-    overflow-x: auto;
-    margin: 0;
-    gap: clamp(10px, 0.781vw, 15px);
-    width: 100%;
-    max-width: 100%;
-    background-color: transparent;
-    padding-bottom: clamp(23.333px, 1.875vw, 35px);
-  }
-
-  .categories-item {
-    padding: 0;
-    width: 320px;
-    height: 370px;
-  }
-
-  .categories-item-content {
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  .categories-item-content svg {
-    width: 0;
-    height: clamp(23.333px, 1.875vw, 35px);
-    opacity: 0;
-    overflow: hidden;
-    flex-shrink: 0;
-    transition: var(--transition);
-  }
-
-  .categories-item-content svg path {
-    stroke: white;
-  }
-
-  .categories-item-content:active svg {
-    width: clamp(23.333px, 1.875vw, 35px);
-    opacity: 1;
-  }
-
-  .categories-item-name {
-    padding: clamp(4.667px, 0.365vw, 7px) clamp(6.667px, 0.521vw, 10px);
-    background-color: var(--color-bright);
-    transition: all 0.1s;
-  }
-
-  .categories-item-image {
-    display: block;
-    position: relative;
-    max-width: 100%;
-    width: 100%;
-    opacity: 1;
-    aspect-ratio: 1/1;
-    transform: none;
-    overflow: visible;
-    height: auto;
-    box-shadow: none;
-    height: 75%;
-    transition: all 0.1s;
-  }
-
-  .categories-item-content:active .categories-item-name {
-    background-color: black;
-    color: white;
-  }
-
-  .categories-item-content:active .categories-item-image {
-    height: 100%;
-  }
-
-  .categories-item-content:active .categories-item-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #d7cee6;
-    mix-blend-mode: color;
-    pointer-events: none;
-    z-index: 2;
   }
 
   .services-item-content {
@@ -892,6 +876,73 @@
   .hero-title,
   .about-statistic-number {
     font-size: clamp(42.667px, 3.333vw, 64px);
+  }
+
+  .categories--pinned {
+    height: 440vh;
+  }
+
+  .categories-item-number {
+    font-size: 64px;
+    transition: color 1.5s ease;
+  }
+
+  .categories-item-content {
+    font-size: 48px;
+    padding: 24px;
+  }
+
+  .categories-item-title {
+    font-size: 48px;
+    transition: color 1.5s ease;
+  }
+
+  .categories--pinned .categories-sticky {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .categories--pinned .categories-list {
+    position: relative;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    transition: transform 1.5s ease;
+    will-change: transform;
+  }
+
+  .categories--pinned .categories-item {
+    flex: 0 0 auto;
+    height: auto;
+    min-height: 0;
+    border-left: none;
+    border-bottom: 2px solid black;
+    transition:
+      min-height 1.5s ease,
+      height 1.5s ease,
+      color 10s ease,
+      background-color 1.5s ease;
+  }
+
+  .categories--pinned .categories-item .categories-item-content {
+    height: auto;
+    justify-content: flex-start;
+    gap: clamp(10px, 3vw, 16px);
+  }
+
+  .categories--pinned .categories-item.is-active {
+    min-height: 58vh;
+  }
+
+  .categories--pinned .categories-item.is-active .categories-item-content {
+    height: auto;
+    min-height: 58vh;
+    justify-content: space-between;
+  }
+
+  .categories--pinned .categories-item-image {
+    transition-delay: 2s;
+    transition: opacity 0.5s ease;
   }
 
   .about-statistic-list {
@@ -915,8 +966,28 @@
   }
 
   .services-content {
-    flex-direction: column;
-    gap: clamp(50px, 3.906vw, 75px);
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* The shared images wrapper is hidden in its default spot; JS moves it into
+     the opened accordion, where it becomes visible again. */
+  .services-content > .services-images-wrapper {
+    display: none;
+  }
+
+  .services-accordion-content {
+    width: 100%;
+    padding-left: clamp(40px, 10vw, 48px);
+  }
+
+  .services-accordion-content .services-images-wrapper {
+    width: 100%;
+    /* The wrapper's children are absolutely positioned, so it has no
+       min-content height. Without this it collapses to 0 while the accordion
+       is measured collapsed, then snaps to full height when opened. */
+    flex-shrink: 0;
+    margin-top: clamp(8px, 2vw, 16px);
   }
 
   .services-text {
@@ -983,5 +1054,11 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .hero {
+    max-height: 100vh;
   }
 }

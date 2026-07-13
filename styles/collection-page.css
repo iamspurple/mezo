@@ -472,7 +472,8 @@
 .collections-slider-wrapper {
   display: flex;
   align-items: center;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   width: 100%;
 }
 
