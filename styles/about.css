@@ -1,6 +1,6 @@
 .page-title {
-  padding-block: clamp(66.667px, 5.208vw, 100px);
-  font-size: clamp(70px, 5.4vw, 104px);
+  padding-block: clamp(52px, 5.2vw, 100px);
+  font-size: clamp(56px, 5.4vw, 104px);
   text-transform: uppercase;
   font-weight: 700;
   line-height: 72%;
@@ -9,8 +9,8 @@
 .main-message {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(13.333px, 1.042vw, 20px);
-  padding-block: clamp(20px, 1.563vw, 30px) clamp(80px, 6.25vw, 120px);
+  gap: 10px;
+  padding-block: clamp(20px, 2vw, 40px) clamp(60px, 6.25vw, 120px);
 }
 
 .main-message-title {
@@ -21,7 +21,7 @@
   max-width: 65%;
   display: flex;
   flex-direction: column;
-  gap: clamp(26.667px, 2.083vw, 40px);
+  gap: clamp(20px, 2vw, 40px);
   font-weight: 500;
   font-size: clamp(32px, 2.5vw, 48px);
   line-height: 90%;
@@ -30,18 +30,18 @@
 
 .directions {
   background-color: var(--color-bright);
-  padding-block: clamp(80px, 6.25vw, 120px) clamp(106.667px, 8.333vw, 160px);
+  padding-block: clamp(60px, 6.25vw, 120px) clamp(80px, 8vw, 160px);
 }
 
 .directions-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
-  row-gap: clamp(80px, 6.25vw, 120px);
+  row-gap: clamp(60px, 6.25vw, 120px);
 }
 
 .directions-title {
-  font-size: clamp(53px, 4.15vw, 80px);
+  font-size: clamp(54px, 4.15vw, 80px);
   font-weight: 700;
   line-height: 72%;
   max-width: 66%;
@@ -84,10 +84,9 @@
 
 .directions-list {
   grid-column: 2;
-
   display: flex;
   flex-direction: column;
-  gap: clamp(26.667px, 2.083vw, 40px);
+  gap: clamp(20px, 2vw, 40px);
   font-weight: 700;
   font-size: clamp(32px, 2.5vw, 48px);
   line-height: 80%;
@@ -102,15 +101,14 @@
 }
 
 .directions-item span {
-  padding: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 16px)
-    clamp(5.333px, 0.417vw, 8px) clamp(5.333px, 0.417vw, 8px);
+  padding: 8px 16px 8px 8px;
   width: fit-content;
   cursor: default;
   border-radius: 2px;
 }
 
 .chronology {
-  padding-block: clamp(26px, 2vw, 40px);
+  padding-block: clamp(20px, 2vw, 40px);
 }
 
 .chronology-wrapper {
@@ -140,8 +138,7 @@
   display: inline-block;
   width: fit-content;
   height: min-content;
-  padding: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 16px)
-    clamp(5.333px, 0.417vw, 8px) clamp(5.333px, 0.417vw, 8px);
+  padding: 8px 16px 8px 8px;
   cursor: pointer;
   border-radius: 2px;
 }
@@ -157,7 +154,6 @@
   margin: 0;
   opacity: 0;
   visibility: hidden;
-  /* transform: translateY(12px); */
   transition:
     opacity 0.5s ease,
     transform 0.5s ease,
@@ -216,7 +212,7 @@
 .photo {
   width: 100%;
   height: 100svh;
-  max-height: clamp(613.333px, 47.917vw, 920px);
+  max-height: clamp(615px, 48vw, 920px);
 }
 
 .photo figure {
@@ -240,42 +236,43 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
+/* @media screen and (max-width: 1280px) {
   .main-message-content {
-    /* 768px -> 24px, 1280px -> 28px */
     font-size: clamp(24px, calc(18px + 0.781vw), 28px);
   }
 
   .photo {
-    /* 768px -> 640px, 1280px -> 720px */
     max-height: clamp(640px, calc(520px + 15.625vw), 720px);
   }
-}
+} */
 
 @media screen and (max-width: 768px) {
   .page-title {
-    /* 393px -> 35/50, 768px -> 100/100 */
-    padding-block: clamp(35px, calc(-33.12px + 17.333vw), 100px)
-      clamp(50px, calc(-2.4px + 13.333vw), 100px);
+    font-size: 40px;
+    padding-block: 80px;
   }
 
   .main-message {
-    /* 393px -> 60px, 768px -> 120px */
-    padding-bottom: clamp(60px, calc(-2.88px + 16vw), 120px);
+    padding-block: 26px 64px;
   }
 
   .main-message-content {
-    /* 393px -> 24px, 768px -> 24px */
     font-size: 24px;
   }
 
   .directions {
-    /* 393px -> 60px, 768px -> 120px */
-    padding-block: clamp(60px, calc(-2.88px + 16vw), 120px);
+    padding-block: 64px 26px;
+  }
+
+  .directions-title {
+    font-size: 48px;
+  }
+
+  .directions-text {
+    max-width: 100%;
   }
 
   .photo {
-    /* На 768 уже 640px в предыдущем диапазоне */
     max-height: 640px;
   }
 
@@ -297,13 +294,11 @@
     grid-column: 2;
   }
 
-  /* год - 48px */
   .chronology-item span {
     font-size: 48px;
     padding: 6px 12px 6px 6px;
   }
 
-  /* стрелка у активного года по тапу */
   .chronology-item span::before {
     content: "";
     display: inline-block;
@@ -345,8 +340,16 @@
     grid-template-columns: 1fr;
   }
 
+  .main-message-content {
+    max-width: 100%;
+  }
+
   .directions-wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .directions-wrapper > * {
+    grid-column: auto;
   }
 }
 
