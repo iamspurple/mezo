@@ -4,6 +4,7 @@
   max-height: 980px;
   min-height: 640px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 5%;
@@ -22,7 +23,7 @@
 }
 
 .hero-title {
-  font-size: clamp(120px, 9.375vw, 184px);
+  font-size: clamp(98.1px, 9.6vw, 184px);
   line-height: 80%;
   font-weight: 700;
   text-align: center;
@@ -30,11 +31,11 @@
 }
 
 .about-content {
-  padding-block: clamp(80px, 6.25vw, 120px);
+  padding-block: clamp(64px, 6.3vw, 120px);
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: clamp(53.333px, 4.167vw, 80px);
+  gap: clamp(42.7px, 4.2vw, 80px);
   justify-content: space-between;
   text-transform: uppercase;
 }
@@ -49,17 +50,17 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   font-weight: 400;
-  font-size: clamp(40px, 3.125vw, 64px);
+  font-size: clamp(34.1px, 3.4vw, 64px);
   line-height: 80%;
-  gap: clamp(53.333px, 4.167vw, 80px);
+  gap: clamp(64px, 6.3vw, 120px) clamp(32px, 3.2vw, 60px);
 }
 
 .about-statistic-item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 450px;
-  gap: clamp(20px, 1.563vw, 30px);
+  max-width: clamp(240px, 23.5vw, 450px);
+  gap: clamp(21.3px, 2.1vw, 40px);
   cursor: default;
 }
 
@@ -84,7 +85,6 @@
   filter: none;
 }
 
-/* По очереди: следующий пункт после завершения анимации предыдущего (~0.5s) */
 .js-scroll-reveal
   .scroll-reveal-statistics.is-visible
   .about-statistic-item:nth-child(1) {
@@ -120,12 +120,12 @@
 }
 
 .about-statistic-number {
-  font-size: clamp(120px, 9.375vw, 184px);
+  font-size: clamp(98.1px, 9.6vw, 184px);
   font-weight: 600;
   line-height: 80%;
   width: fit-content;
   transition: var(--transition);
-  padding-inline: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 16px);
+  padding-inline: 8px 16px 8px;
   border-radius: 2px;
 }
 
@@ -138,7 +138,7 @@
 .categories-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  padding-block: clamp(31px, 2vw, 40px);
+  padding-block: clamp(21.3px, 2.1vw, 40px);
 }
 
 .categories-item {
@@ -157,8 +157,8 @@
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(62.5px, 4.167vw, 80px) clamp(31px, 2vw, 40px);
-  font-size: clamp(26.667px, 2.083vw, 48px);
+  padding: clamp(42.7px, 4.2vw, 80px) clamp(21.3px, 2.1vw, 40px);
+  font-size: clamp(25.6px, 2.5vw, 48px);
   font-weight: 700;
   line-height: 80%;
   transition: var(--transition);
@@ -177,13 +177,11 @@
 }
 
 .categories-item-number {
-  font-size: clamp(122px, 9.58vw, 184px);
+  font-size: clamp(98.1px, 9.6vw, 184px);
   font-weight: 600;
   line-height: 80%;
   width: fit-content;
   transition: var(--transition);
-  padding: clamp(5.333px, 0.417vw, 8px) clamp(10.667px, 0.833vw, 16px);
-  border-radius: 2px;
   color: black;
 }
 
@@ -219,6 +217,7 @@
   position: sticky;
   top: 0;
   height: 100vh;
+  max-height: 70vw;
   overflow: hidden;
 }
 
@@ -259,19 +258,19 @@
 }
 
 .description-content {
-  padding-block: clamp(120px, 12.5vw, 240px);
+  padding-block: clamp(128px, 12.5vw, 240px);
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: clamp(42.7px, 4.2vw, 80px);
   text-transform: uppercase;
 }
 
 .description-text {
   text-align: left;
   cursor: default;
-  font-size: clamp(59px, 4.68vw, 90px);
+  font-size: clamp(51.2px, 5vw, 96px);
   text-transform: uppercase;
   font-weight: 700;
   line-height: 72%;
@@ -291,8 +290,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: clamp(40px, 3.125vw, 60px);
-  padding-block: clamp(80px, 6.25vw, 120px);
+  gap: clamp(42.7px, 4.2vw, 80px);
+  padding-block: clamp(64px, 6.3vw, 120px);
 }
 
 .collections-title {
@@ -313,8 +312,8 @@
 }
 
 .collections-item {
-  width: 490px;
-  margin-right: 15px;
+  width: clamp(261.3px, 25.6vw, 490px);
+  margin-right: clamp(8px, 0.8vw, 15px);
 }
 
 .collections-item-content {
@@ -325,7 +324,7 @@
 
 .collections-item-image {
   width: 100%;
-  height: 600px;
+  height: clamp(320px, 31.3vw, 600px);
   overflow: hidden;
   border-radius: var(--radius-sm);
 }
@@ -335,13 +334,9 @@
 }
 
 .collections-item-name {
-  padding-inline: 10px;
+  padding-inline: 8px;
+  font-size: clamp(25.6px, 2.5vw, 48px);
 }
-
-/* .collections-item-name svg {
-  width: clamp(10.667px, 0.833vw, 16px);
-  height: clamp(10.667px, 0.833vw, 16px);
-} */
 
 .collections-slider-controls {
   display: flex;
@@ -363,14 +358,14 @@
 .collections-slider-controls-btn {
   box-sizing: border-box;
   flex-shrink: 0;
-  width: clamp(37.333px, 2.917vw, 56px);
-  height: clamp(37.333px, 2.917vw, 56px);
+  width: clamp(40px, 2.9vw, 56px);
+  height: clamp(40px, 2.9vw, 56px);
   padding: 0;
 }
 
 .collections-slider-controls-btn svg {
-  width: clamp(14px, 1.042vw, 22px);
-  height: clamp(14px, 1.042vw, 22px);
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
   display: block;
 }
@@ -383,13 +378,13 @@
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  padding-block: clamp(80px, 6.25vw, 120px);
-  gap: clamp(53.333px, 4.167vw, 80px);
+  padding-block: clamp(64px, 6.3vw, 120px);
+  gap: clamp(42.7px, 4.2vw, 80px);
 }
 
 .services-title {
   text-transform: uppercase;
-  font-size: clamp(122px, 9.58vw, 184px);
+  font-size: clamp(98.1px, 9.6vw, 184px);
   font-weight: 700;
   line-height: 72%;
 }
@@ -397,18 +392,18 @@
 .services-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(26px, 2vw, 40px);
+  gap: clamp(25.6px, 2.5vw, 48px);
 }
 
 .services .accordion-group-single {
-  padding-block: clamp(43.3px, 3.38vw, 65px);
+  padding-block: clamp(34.7px, 3.4vw, 65px);
 }
 
 .services-accordion {
   border-top: 2px solid black;
   display: flex;
   flex-direction: column;
-  font-size: clamp(32px, 2.5vw, 48px);
+  font-size: clamp(25.6px, 2.5vw, 48px);
   font-weight: 500;
   line-height: 80%;
   width: 100%;
@@ -417,18 +412,18 @@
 }
 
 .services-accordion[open] {
-  padding-bottom: clamp(26px, 2vw, 40px);
+  padding-bottom: clamp(21.3px, 2.1vw, 40px);
   color: white;
   background-color: black;
   border-radius: 2px;
 }
 
 .services-accordion summary {
-  padding-block: clamp(26px, 2vw, 40px) clamp(53px, 4vw, 80px);
+  padding-block: clamp(21.3px, 2.1vw, 40px) clamp(42.7px, 4.2vw, 80px);
   transition: var(--transition);
   cursor: pointer;
   display: flex;
-  gap: clamp(16px, 1.25vw, 24px);
+  gap: clamp(12.8px, 1.3vw, 24px);
 }
 
 .services-accordion summary svg {
@@ -441,7 +436,7 @@
 }
 
 .services-accordion[open] summary {
-  padding-bottom: clamp(26px, 2vw, 40px);
+  padding-bottom: clamp(21.3px, 2.1vw, 40px);
 }
 
 .services-accordion[open] summary svg path {
@@ -466,11 +461,11 @@
   transition:
     height 0.35s ease,
     margin-top 0.35s;
-  margin-top: 20px;
+  margin-top: clamp(10.7px, 1.1vw, 20px);
   display: flex;
   flex-direction: column;
-  gap: clamp(42.667px, 3.333vw, 64px);
-  padding-left: clamp(42.667px, 3.333vw, 64px);
+  gap: clamp(34.1px, 3.4vw, 64px);
+  padding-left: clamp(34.1px, 3.4vw, 64px);
   align-items: flex-start;
 }
 
@@ -542,13 +537,13 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-block: clamp(80px, 6.25vw, 120px);
-  gap: clamp(53.333px, 4.167vw, 80px);
+  padding-block: clamp(64px, 6.3vw, 120px);
+  gap: clamp(42.7px, 4.2vw, 80px);
 }
 
 .news-list {
   display: flex;
-  gap: 15px;
+  gap: clamp(8px, 0.8vw, 15px);
 }
 
 .news-item {
@@ -563,7 +558,7 @@
   width: 100%;
   height: 100%;
   gap: 10px;
-  font-size: clamp(13.333px, 1.1vw, 20px);
+  font-size: clamp(16px, 1.1vw, 20px);
   font-weight: 400;
   line-height: 120%;
 }
@@ -636,7 +631,7 @@
 .news-item-description {
   max-width: 66%;
   text-wrap: wrap;
-  font-size: clamp(16px, 1.25vw, 24px);
+  font-size: clamp(18px, 1.3vw, 24px);
   font-weight: 500;
 }
 
@@ -649,22 +644,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-block: clamp(80px, 6.25vw, 120px);
+  padding-block: clamp(64px, 6.3vw, 120px);
   position: relative;
   overflow: hidden;
-  margin-bottom: clamp(33.333px, 2.604vw, 50px);
 }
 
 .feedback-form-wrapper {
-  width: 600px;
+  width: clamp(320px, 31.3vw, 600px);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: clamp(16px, 1.6vw, 30px);
   background-color: #ffffff29;
   backdrop-filter: blur(8px);
-  padding: 40px 30px 20px 30px;
+  padding: clamp(21.3px, 2.1vw, 40px) clamp(16px, 1.6vw, 30px)
+    clamp(10.7px, 1.1vw, 20px) clamp(16px, 1.6vw, 30px);
   border: 2px solid white;
-  border-radius: 40px;
+  border-radius: clamp(21.3px, 2.1vw, 40px);
   text-transform: uppercase;
 }
 
@@ -673,12 +668,12 @@
   flex-direction: column;
   gap: 10px;
   background-color: transparent;
-  max-width: 400px;
+  max-width: clamp(213.3px, 20.9vw, 400px);
 }
 
 .feedback-form input {
   width: 100%;
-  padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 12px);
+  padding: 8px 12px;
   background-color: transparent;
   color: black;
   border: 2px solid black;
@@ -699,7 +694,7 @@
 
 .feedback-text {
   color: white;
-  font-size: clamp(32px, 2.5vw, 48px);
+  font-size: clamp(25.6px, 2.5vw, 48px);
   font-weight: 500;
   line-height: 72%;
   align-self: flex-end;
@@ -709,8 +704,8 @@
 .feedback-cursor {
   background-image: radial-gradient(circle, #a698d5, var(--color-lavender));
   filter: blur(50px);
-  width: 650px;
-  height: 650px;
+  width: clamp(346.7px, 33.9vw, 650px);
+  height: clamp(346.7px, 33.9vw, 650px);
   border-radius: 50%;
   position: absolute;
   pointer-events: none;
@@ -720,166 +715,20 @@
   top: 80%;
 }
 
-/* @media screen and (max-width: 1700px) {
-  .hero-title,
-  .about-statistic-number {
-    font-size: 130px;
-  }
-
-  .about-statistic-list {
-    font-size: 52px;
-  }
-
-  .categories-item-content {
-    padding: 30px;
-  }
-
-  .categories-image-item {
-    width: 270px;
-  }
-
-  .categories-image-list {
-    height: 520px;
-  }
-
-  .categories-image-item.active {
-    width: 520px;
-  }
-
-  .collections-item {
-    width: 380px;
-  }
-
-  .collections-item-image {
-    height: 450px;
-  }
-
-  .news-item-content {
-    font-size: 13px;
-  }
-} */
-
-@media screen and (max-width: 1280px) {
-  .hero-title,
-  .about-statistic-number {
-    font-size: clamp(66.667px, 5.208vw, 100px);
-  }
-
-  .about-statistic-list {
-    font-size: clamp(28px, 2.188vw, 42px);
-  }
-
-  .categories--pinned {
-    height: 300vh;
-  }
-
-  .categories--pinned .categories-sticky {
-    height: auto;
-  }
-
-  .categories-list {
-    height: auto;
-    width: 100%;
-    aspect-ratio: 2/1;
-  }
-
-  .categories--pinned .categories-list {
-    height: auto;
-    width: 100%;
-    aspect-ratio: 2/1;
-  }
-
-  .categories-item-content {
-    padding: clamp(12px, 0.938vw, 18px);
-  }
-
-  .categories-image-item {
-    width: 230px;
-    margin-right: 5px;
-  }
-
-  .categories-image-list {
-    height: 450px;
-  }
-
-  .categories-image-item.active {
-    width: 450px;
-  }
-
-  .collections-item {
-    width: 300px;
-  }
-
-  .collections-item-image {
-    height: 380px;
-  }
-
-  .services-title {
-    font-size: clamp(36px, calc(28px + 0.781vw), 38px);
-  }
-
-  .news-item-name {
-    margin-bottom: 3px;
-  }
-
-  .feedback {
-    padding-block: clamp(60px, 4.688vw, 90px);
-    margin-bottom: clamp(20px, 1.563vw, 30px);
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .hero {
-    max-height: 650px;
-  }
-
-  .hero-title,
-  .about-statistic-number {
-    font-size: clamp(53.333px, 4.167vw, 80px);
-  }
-
-  .about-content {
-    flex-direction: column;
-    justify-content: space-between;
-    gap: clamp(20px, 1.563vw, 30px);
-    padding-block: clamp(33.333px, 2.604vw, 50px);
-    height: 100%;
-  }
-
-  .categories--pinned {
-    height: 200vh;
-  }
-
-  .categories-content {
-    flex-direction: column;
-    padding-block: clamp(33.333px, 2.604vw, 50px);
-    height: 100%;
-  }
-
-  .categories-image-list {
-    display: none;
-  }
-
-  .services-item-content {
-    font-size: clamp(21.333px, 1.641vw, 32px);
-  }
-
-  .news-content {
-    flex-direction: column;
-    height: 100%;
-    padding-block: clamp(10px, 0.781vw, 15px);
-    justify-content: space-around;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .hero-title,
-  .about-statistic-number {
-    font-size: clamp(42.667px, 3.333vw, 64px);
+  .about-statistic-number,
+  .services-title {
+    font-size: 64px;
   }
 
   .categories--pinned {
     height: 440vh;
+    max-height: 440vh;
+  }
+
+  .categories--pinned .categories-sticky {
+    max-height: 440vh;
   }
 
   .categories-item-number {
@@ -909,6 +758,7 @@
     width: 100%;
     transition: transform 1.5s ease;
     will-change: transform;
+    gap: 10px;
   }
 
   .categories--pinned .categories-item {
@@ -946,8 +796,10 @@
   }
 
   .about-statistic-list {
+    align-self: flex-start;
+    margin: 0;
     grid-template-columns: 1fr;
-    gap: clamp(13.333px, 1.042vw, 20px);
+    gap: 40px;
     font-size: 40px;
   }
 
@@ -955,9 +807,17 @@
     gap: 10px;
   }
 
+  .description-content {
+    padding-top: 0;
+  }
+
+  .description-text {
+    font-size: 48px;
+  }
+
   .collections-slider-controls {
     flex-direction: column;
-    margin-top: -40px;
+    margin-top: -30px;
     gap: 40px;
   }
 
@@ -970,22 +830,17 @@
     gap: 0;
   }
 
-  /* The shared images wrapper is hidden in its default spot; JS moves it into
-     the opened accordion, where it becomes visible again. */
   .services-content > .services-images-wrapper {
     display: none;
   }
 
   .services-accordion-content {
     width: 100%;
-    padding-left: clamp(40px, 10vw, 48px);
+    padding-left: 16px;
   }
 
   .services-accordion-content .services-images-wrapper {
     width: 100%;
-    /* The wrapper's children are absolutely positioned, so it has no
-       min-content height. Without this it collapses to 0 while the accordion
-       is measured collapsed, then snaps to full height when opened. */
     flex-shrink: 0;
     margin-top: clamp(8px, 2vw, 16px);
   }
@@ -996,16 +851,6 @@
 
   .services-list {
     width: 100%;
-  }
-
-  .services-item-content {
-    font-size: clamp(16px, 1.25vw, 24px);
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: clamp(13.333px, 1.042vw, 20px);
-    padding: clamp(6.667px, 0.521vw, 10px) 0 clamp(14.667px, 1.157vw, 22px)
-      clamp(4px, 0.313vw, 6px);
   }
 
   .news-list {
@@ -1019,6 +864,10 @@
     flex-shrink: 0;
   }
 
+  .news-item-description {
+    max-width: 100%;
+  }
+
   .feedback-form {
     max-width: 340px;
   }
@@ -1027,13 +876,8 @@
     font-size: clamp(21.333px, 1.641vw, 32px);
     font-weight: 400;
   }
-
-  .feedback {
-    margin-bottom: clamp(53.333px, 4.167vw, 80px);
-  }
 }
 
-/* Заголовки: появление по словам при скролле (js/homepage.js) */
 .js-scroll-reveal .scroll-reveal-heading .scroll-reveal-word {
   display: inline-block;
   opacity: 0;
@@ -1059,6 +903,8 @@
 
 @media screen and (max-width: 580px) {
   .hero {
-    max-height: 100vh;
+    height: 100svh;
+    min-height: 200px;
+    max-height: 700px;
   }
 }

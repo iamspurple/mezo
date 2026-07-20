@@ -212,6 +212,7 @@ button {
 }
 
 .item-name svg {
+  flex-shrink: 0;
   transform: translateY(30%);
   transition: var(--transition);
   width: clamp(16px, 1.5vw, 24px);
@@ -376,11 +377,6 @@ button {
   .text-medium.btn svg {
     width: 20px;
     height: 20px;
-  }
-
-  .item-name {
-    /* 1024px -> 13.333px, 1280px -> 15px */
-    font-size: clamp(13.333px, calc(6.667px + 0.651vw), 15px);
   }
 
   .menu-link {
