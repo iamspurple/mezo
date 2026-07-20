@@ -696,31 +696,6 @@
   display: none;
 }
 
-/* @media screen and (max-width: 1700px) {
-  .product-similar-card-actions button {
-    width: 42px;
-    height: 42px;
-  }
-
-  .product-similar-card-actions button::before {
-    width: 36px;
-    height: 36px;
-  }
-
-  .product-similar-card-volume {
-    font-size: 15px;
-  }
-
-  .product-similar-card-price,
-  .product-similar-card-oldprice {
-    font-size: 18px;
-  }
-
-  .favorites-lists-content,
-  .step2 {
-    padding: 0 20px 20px 20px;
-  }
-} */
 @media screen and (max-width: 1280px) {
   .product-similar-card-actions button {
     width: clamp(25.333px, 1.953vw, 38px);
@@ -753,6 +728,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .product-description {
+    max-width: 80%;
+  }
+
   .product-slider-wrapper {
     aspect-ratio: 0.75;
   }
@@ -800,6 +779,7 @@
     grid-template-columns: 1fr;
     justify-items: stretch;
     row-gap: clamp(26.667px, 2.083vw, 40px);
+    padding-bottom: 64px;
   }
 
   .product-actions button {
@@ -881,5 +861,11 @@
     top: 10px;
     left: 10px;
     bottom: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-description {
+    max-width: 100%;
   }
 }
