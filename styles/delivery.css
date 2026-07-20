@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: clamp(26.667px, calc(13.334px + 0.625vw), 40px);
-  padding-block: clamp(29.333px, 1.8vw, 45px) clamp(80px, 6.25vw, 120px);
+  gap: 27px;
+  padding-block: clamp(29px, 1.8vw, 45px) clamp(80px, 6.25vw, 120px);
   font-weight: 500;
   font-size: clamp(32px, 2.5vw, 48px);
   line-height: 80%;
@@ -11,7 +11,7 @@
 }
 
 .hero-subtitle {
-  margin-bottom: clamp(16.667px, calc(8.334px + 0.313vw), 25px);
+  margin-bottom: 17px;
 }
 
 .hero-image {
@@ -64,28 +64,25 @@
 
 .companies {
   background-color: var(--color-bright);
-  padding-block: clamp(53.3px, 4.16vw, 80px)
-    clamp(80px, calc(40px + 20vw), 120px);
+  padding-block: clamp(53px, 4.16vw, 80px) clamp(80px, 6.25vw, 120px);
 }
 
 .exclusion {
   background-color: var(--color-lavender);
-  padding-block: clamp(53.3px, 4.16vw, 80px)
-    clamp(80px, calc(40px + 20vw), 120px);
-  margin-bottom: 30px;
+  padding-block: clamp(53px, 4.16vw, 80px) clamp(80px, 6.25vw, 120px);
 }
 
 .companies-wrapper,
 .exclusion-wrapper {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  column-gap: clamp(13.333px, calc(6.667px + 0.313vw), 20px);
-  row-gap: clamp(80px, calc(40px + 20vw), 120px);
+  column-gap: 13px;
+  row-gap: clamp(80px, 6.25vw, 120px);
 }
 
 .companies-title,
 .exclusion-title {
-  font-size: clamp(22px, 1.6vw, 32px);
+  font-size: 32px;
   font-weight: 500;
   line-height: 80%;
   text-transform: uppercase;
@@ -95,12 +92,9 @@
   height: fit-content;
 }
 
-.companies-title span,
-.exclusion-title span {
-  padding: clamp(5.333px, calc(2.667px + 0.417vw), 8px)
-    clamp(10.667px, calc(5.334px + 0.521vw), 16px)
-    clamp(5.333px, calc(2.667px + 0.417vw), 8px)
-    clamp(5.333px, calc(2.667px + 0.417vw), 8px);
+.companies-title > span:first-child,
+.exclusion-title > span:first-child {
+  padding-inline: 8px 16px;
   width: fit-content;
   cursor: default;
   border-radius: 2px;
@@ -117,9 +111,8 @@
 }
 
 .exclusion-content p {
-  overflow-wrap: break-word; /* Переносит длинные слова */
-  word-break: break-word; /* Для совместимости со старыми браузерами */
-  /* или более агрессивный вариант: */
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .companies-wrapper .text-small-secondary,
@@ -133,7 +126,7 @@
   display: flex;
   justify-content: space-around;
   font-weight: 500;
-  font-size: clamp(21.333px, calc(10.667px + 0.521vw), 32px);
+  font-size: 21px;
   line-height: 80%;
   text-transform: uppercase;
 }
@@ -142,19 +135,27 @@
 .exclusion-item {
   display: flex;
   flex-direction: column;
-  gap: clamp(16px, calc(8px + 0.833vw), 24px);
+  gap: 24px;
 }
 
-@media screen and (max-width: 1700px) {
-  .companies .title-large,
-  .exclusion .title-large {
-    font-size: clamp(42.667px, calc(21.334px + 1.042vw), 64px);
+@media screen and (max-width: 1280px) {
+  .companies-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 3%;
+    row-gap: clamp(24px, 3vw, 40px);
+  }
+
+  .companies-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero {
-    font-size: clamp(16px, calc(8px + 0.833vw), 24px);
+    font-size: 24px;
   }
 
   .hero-text {
@@ -162,21 +163,43 @@
   }
 
   .companies {
-    padding-block: clamp(40px, calc(20px + 10vw), 60px)
-      clamp(13.333px, calc(6.667px + 0.313vw), 20px);
+    padding-block: 64px 26px;
   }
 
-  .companies-wrapper .text-small-secondary {
+  .companies-wrapper .text-small-secondary,
+  .exclusion-content p {
     max-width: 100%;
   }
 
-  .exclusion {
-    padding-block: clamp(13.333px, calc(6.667px + 0.313vw), 20px)
-      clamp(40px, calc(20px + 10vw), 60px);
+  .companies-list {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15%;
+    row-gap: clamp(24px, 5vw, 40px);
   }
 
-  .exclusion-wrapper {
-    gap: 0;
+  .companies-item img {
+    margin: 0 auto;
+    width: 72%;
+  }
+
+  .exclusion {
+    padding-block: 26px 64px;
+  }
+
+  .exclusion-wrapper,
+  .companies-wrapper {
+    gap: 40px;
+  }
+
+  .exclusion-list,
+  .companies-list {
+    margin-top: 40px;
+  }
+
+  .companies-title,
+  .exclusion-title {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -186,8 +209,14 @@
     grid-template-columns: 1fr;
   }
 
+  .companies-list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20%;
+    row-gap: 24px;
+  }
+
   .hero-image {
-    height: clamp(213.333px, calc(106.667px + 10.417vw), 320px);
+    height: 213px;
   }
 }
 
