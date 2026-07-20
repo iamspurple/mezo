@@ -420,6 +420,7 @@
 
 .services-accordion summary {
   padding-block: clamp(21.3px, 2.1vw, 40px) clamp(42.7px, 4.2vw, 80px);
+  padding-left: clamp(34.1px, 3.4vw, 64px);
   transition: var(--transition);
   cursor: pointer;
   display: flex;
@@ -836,6 +837,10 @@
 
   .services-content > .services-images-wrapper {
     display: none;
+  }
+
+  .services-accordion summary {
+    padding-left: 16px;
   }
 
   .services-accordion-content {

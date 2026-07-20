@@ -199,6 +199,7 @@
 
 .other-services-accordion summary {
   padding-block: clamp(26px, 2vw, 40px) clamp(53px, 4vw, 80px);
+  padding-left: clamp(34.1px, 3.4vw, 64px);
   transition: var(--transition);
   cursor: pointer;
   display: flex;
@@ -362,6 +363,10 @@
 
   .other-services-content > .other-services-images-wrapper {
     display: none;
+  }
+
+  .other-services-accordion summary {
+    padding-left: 16px;
   }
 
   .other-services-accordion-content {
