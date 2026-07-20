@@ -1441,12 +1441,10 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   }
 
   .header-logo {
-    /* 1024px -> 10px, 1280px -> 12px */
     padding-inline: clamp(10px, calc(2px + 0.781vw), 12px);
   }
 
   .header-logo img {
-    /* 1024px -> 90px, 1280px -> 110px */
     width: clamp(90px, calc(10px + 7.813vw), 110px);
     height: auto;
   }
@@ -1482,7 +1480,6 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
     max-height: 48px;
   }
   .header-menu-info-news-item {
-    /* 1024px -> 280px, 1280px -> 320px */
     width: clamp(280px, calc(120px + 15.625vw), 320px);
   }
 
@@ -1495,12 +1492,10 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   }
 
   .header-menu-account-mode-list {
-    /* 1024px -> 14px, 1280px -> 15px */
     font-size: clamp(14px, calc(10px + 0.391vw), 15px);
   }
 
   .header-menu-account-form.active {
-    /* 1024px -> 320px, 1280px -> 400px */
     width: clamp(320px, calc(0px + 31.25vw), 400px);
   }
 
