@@ -107,7 +107,7 @@ button {
 }
 
 .container {
-  padding-inline: clamp(30px, 2.344vw, 45px);
+  padding-inline: clamp(20px, 2vw, 40px);
 }
 
 .bw {
@@ -350,10 +350,6 @@ button {
 }
 
 @media screen and (max-width: 1280px) {
-  .container {
-    padding-inline: 15px;
-  }
-
   .title-large {
     /* 1024px -> 44px, 1280px -> 50px */
     font-size: clamp(44px, calc(20px + 2.344vw), 50px);
@@ -417,37 +413,27 @@ button {
 
 @media screen and (max-width: 768px) {
   .container {
-    /* 393px -> 10px, 768px -> 15px */
-    padding-inline: clamp(10px, calc(4.76px + 1.333vw), 15px);
+    padding-inline: clamp(10px, 2vw, 15px);
   }
 
   .title-large {
-    /* 393px -> 40px, 768px -> 44px */
-    font-size: clamp(40px, calc(35.81px + 1.067vw), 44px);
+    font-size: 40px;
   }
 
   .title-large-to-medium {
-    /* 393px -> 32px, 768px -> 44px */
-    font-size: clamp(32px, calc(19.42px + 3.2vw), 44px);
+    font-size: 32px;
   }
 
   .title-medium {
-    /* 393px -> 32px, 768px -> 36px */
-    font-size: clamp(32px, calc(27.81px + 1.067vw), 36px);
+    font-size: 32px;
   }
 
   .text-small-secondary {
-    /* 393px -> 14px, 768px -> 16px */
-    font-size: clamp(14px, calc(11.9px + 0.533vw), 16px);
+    font-size: clamp(14px, 3.5vw, 16px);
   }
 
   .btn {
-    /* 393px -> gap 8px, 768px -> 10.667px */
-    gap: clamp(8px, calc(5.206px + 0.711vw), 10.667px);
-    /* 393px -> 8/8/8/12, 768px -> 10/10/10/16 */
-    padding: clamp(8px, calc(5.904px + 0.533vw), 10px)
-      clamp(8px, calc(5.904px + 0.533vw), 10px)
-      clamp(8px, calc(5.904px + 0.533vw), 10px)
-      clamp(12px, calc(7.808px + 1.067vw), 16px);
+    gap: 8px;
+    padding: 8px 8px 8px 12px;
   }
 }
