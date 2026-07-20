@@ -178,26 +178,30 @@
 
 @media screen and (max-width: 768px) {
   .services-content {
-    flex-direction: column;
-    gap: 40px;
-    padding-block: 30px 120px;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .services-content > .services-images-wrapper {
+    display: none;
+  }
+
+  .services-accordion-content {
+    width: 100%;
+    padding-left: 16px;
+  }
+
+  .services-accordion-content .services-images-wrapper {
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: clamp(8px, 2vw, 16px);
   }
 
   .services-text {
     width: 100%;
-    font-size: 24px;
   }
 
   .services-list {
     width: 100%;
-  }
-
-  .services-item-content {
-    font-size: 24px;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 20px;
-    padding: 10px 0 22px 6px;
   }
 }
