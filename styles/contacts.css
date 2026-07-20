@@ -61,7 +61,7 @@
 .team-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: clamp(20px, calc(10px + 1.563vw), 30px);
+  gap: clamp(15px, 1.5vw, 30px);
   row-gap: 60px;
   padding-block: clamp(53.333px, 4.167vw, 80px) clamp(26.667px, 2.083vw, 40px);
 }
@@ -110,7 +110,7 @@
 
 .howtofind-accordion summary {
   position: relative;
-  padding-top: clamp(16px, calc(8px + 0.833vw), 24px);
+  padding-top: clamp(16px, 1.25vw, 24px);
   padding-bottom: clamp(26.667px, 2.083vw, 40px);
   cursor: pointer;
   transition: var(--transition);
@@ -137,8 +137,8 @@
 .howtofind-accordion summary::after {
   content: "";
   display: inline-block;
-  width: clamp(16px, calc(8px + 0.833vw), 24px);
-  height: clamp(16px, calc(8px + 0.833vw), 24px);
+  width: clamp(16px, 1.25vw, 24px);
+  height: clamp(16px, 1.25vw, 24px);
   background: url("../assets/images/plus.svg") center/contain no-repeat;
   transition: all 0.25s;
 }
@@ -183,12 +183,11 @@
   width: clamp(400px, calc(200px + 20vw), 600px);
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, calc(10px + 1.563vw), 30px);
+  gap: clamp(15px, 1.5vw, 30px);
   background-color: #ffffff29;
   backdrop-filter: blur(8px);
-  padding: clamp(26.667px, 2.083vw, 40px)
-    clamp(20px, calc(10px + 1.563vw), 30px) clamp(13.333px, 1.042vw, 20px)
-    clamp(20px, calc(10px + 1.563vw), 30px);
+  padding: clamp(26.667px, 2.083vw, 40px) clamp(15px, 1.5vw, 30px)
+    clamp(13.333px, 1.042vw, 20px) clamp(15px, 1.5vw, 30px);
   border: 2px solid white;
   border-radius: 40px;
   text-transform: uppercase;
@@ -241,9 +240,13 @@
   position: absolute;
   pointer-events: none;
   z-index: -1;
-  transform: translate(-50%, -50%);
-  left: 65%;
-  top: 80%;
+  left: 0;
+  top: 0;
+  /* Стартовая (декоративная) позиция и центрирование — через transform.
+     Движение курсором тоже идёт transform'ом (см. followCursor.js),
+     чтобы Safari не оставлял «шлейф» от blur при перерисовке. */
+  transform: translate3d(65vw, 80vh, 0) translate(-50%, -50%);
+  will-change: transform;
 }
 
 @media screen and (max-width: 1280px) {
@@ -253,7 +256,7 @@
 
   .feedback {
     padding-block: clamp(60px, calc(40px + 2.083vw), 90px);
-    margin-bottom: clamp(20px, calc(10px + 1.563vw), 30px);
+    margin-bottom: clamp(15px, 1.5vw, 30px);
   }
 }
 

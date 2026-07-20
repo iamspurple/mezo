@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  top: clamp(18px, calc(-6px + 1.875vw), 30px);
+  top: clamp(15px, 1.5vw, 30px);
   left: 0;
   right: var(--scrollbar-compensation, 0px);
   text-transform: uppercase;
@@ -13,13 +13,13 @@
 
 .header-logo {
   backdrop-filter: blur(20px);
-  padding-inline: clamp(10px, calc(-2px + 0.938vw), 16px);
+  padding-inline: clamp(10px, 0.83vw, 16px);
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: clamp(110px, 8.6vw, 165px);
-  height: clamp(50px, calc(30px + 1.563vw), 60px);
+  height: clamp(50px, 3vw, 60px);
   transition: 0.3s ease;
 }
 
@@ -59,9 +59,7 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
 
 .header-nav-list {
   display: flex;
-  gap: clamp(24px, calc(-8px + 2.5vw), 40px);
-  /* color: white;
-  background-color: black; */
+  gap: clamp(24px, 2vw, 40px);
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   border: 2px solid black;
@@ -75,7 +73,6 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   flex-direction: column;
   align-items: flex-end;
   height: 100%;
-  /* new */
   color: white;
   background-color: black;
 }
@@ -127,8 +124,8 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(30px, calc(20px + 0.781vw), 35px);
-  height: clamp(30px, calc(20px + 0.781vw), 35px);
+  width: clamp(30px, 1.6vw, 35px);
+  height: clamp(30px, 1.6vw, 35px);
   border-radius: 2px;
 }
 
@@ -140,7 +137,7 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   display: none;
   background-color: white;
   border-radius: var(--radius-sm);
-  padding: clamp(10px, calc(-2px + 0.938vw), 16px);
+  padding: clamp(10px, 0.83vw, 16px);
   position: absolute;
   top: 0;
   left: 0;
@@ -234,30 +231,15 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
 .header-menu-products-wrapper {
   display: flex;
   flex-direction: column;
-  gap: clamp(30px, calc(-30px + 4.688vw), 60px);
+  gap: clamp(30px, 3vw, 60px);
   font-family: var(--font-secondary);
   text-transform: none;
   color: black;
-  font-size: clamp(15px, calc(5px + 0.781vw), 20px);
+  font-size: clamp(15px, 1vw, 20px);
   font-weight: 500;
   line-height: 120%;
 }
 
-/* .header-menu-products-list-title .svg-icon {
-  width: 16px;
-  height: 16px;
-  transition: var(--transition);
-}
-
-@media (hover: hover) {
-  .header-menu-products-list-title:hover .svg-icon {
-    width: 24px;
-    height: 24px;
-    filter: invert();
-  }
-} */
-
-/* new */
 .header-menu-products-list-title {
   font-family: var(--font-primary);
   text-transform: uppercase;
@@ -265,12 +247,6 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   max-height: clamp(56px, calc(40px + 1.25vw), 64px);
   font-size: clamp(16px, calc(8px + 0.833vw), 24px);
 }
-
-/* .header-menu-products-list-title a:active .svg-icon {
-  width: 24px;
-  height: 24px;
-  filter: invert();
-} */
 
 .header-menu-products-list {
   display: flex;
@@ -295,15 +271,15 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   color: black;
   font-family: var(--font-primary);
   text-transform: uppercase;
-  padding: clamp(10px, calc(-2px + 0.938vw), 16px);
-  font-size: clamp(18px, calc(6px + 0.938vw), 24px);
+  padding: clamp(10px, 0.83vw, 16px);
+  font-size: clamp(18px, 1.12vw, 24px);
   font-weight: 400;
   line-height: 80%;
 }
 
 .header-menu-products-search-btn {
-  width: clamp(20px, calc(12px + 0.625vw), 24px);
-  height: clamp(20px, calc(12px + 0.625vw), 24px);
+  width: clamp(20px, 1.12vw, 24px);
+  height: clamp(20px, 1.12vw, 24px);
   background-color: transparent;
   border: none;
   position: absolute;
@@ -314,8 +290,8 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
 }
 
 .header-menu-products-search-btn svg {
-  width: clamp(12px, calc(4px + 0.625vw), 16px);
-  height: clamp(12px, calc(4px + 0.625vw), 16px);
+  width: clamp(12px, 0.83vw, 16px);
+  height: clamp(12px, 0.83vw, 16px);
 }
 
 .header-menu-products-search::placeholder {
@@ -327,7 +303,7 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   width: 100%;
   aspect-ratio: 1/1;
   overflow: hidden;
-  border-radius: clamp(10px, calc(-2px + 0.938vw), 16px);
+  border-radius: 16px;
 }
 
 .header-menu-products-search-image img {
@@ -358,7 +334,6 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
 .header-menu-collections-slider-wrapper {
   display: flex;
   align-items: center;
-  /* hidden на одной оси делает вторую ось auto → лишний вертикальный скролл на этой обёртке */
   overflow-x: clip;
   overflow-y: visible;
   width: 100%;
@@ -1492,17 +1467,14 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   }
 
   .header-menu-collections-item {
-    /* 1024px -> 260px, 1280px -> 300px */
     width: clamp(260px, calc(100px + 15.625vw), 300px);
   }
 
   .header-menu-collections-item-image {
-    /* 1024px -> 320px, 1280px -> 380px */
     height: clamp(320px, calc(80px + 23.438vw), 380px);
   }
 
   .header-menu-collections-slider-controls-btn {
-    /* 1024px -> 10px, 1280px -> 12px */
     padding: clamp(10px, calc(2px + 0.781vw), 12px);
   }
 
@@ -1581,13 +1553,12 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
 
 @media screen and (max-width: 1024px) {
   .header-logo {
-    height: clamp(44px, calc(26px + 2.344vw), 50px);
+    height: clamp(44px, 5vw, 50px);
 
-    padding-inline: clamp(8px, calc(2px + 0.781vw), 10px);
+    padding-inline: clamp(8px, 1vw, 10px);
   }
 
   .header-logo img {
-    /* 768px -> 80px, 1024px -> 90px */
     width: clamp(80px, calc(50px + 3.906vw), 90px);
   }
 
@@ -1597,11 +1568,10 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
     justify-content: center;
     background-color: black;
     color: white;
-    /* 768px -> 5/10, 1024px -> 10/20 */
-    padding: clamp(5px, calc(-10px + 1.953vw), 10px)
-      clamp(10px, calc(-20px + 3.906vw), 20px);
+
+    padding: clamp(5px, 1vw, 10px) clamp(10px, 2vw, 20px);
     border-radius: var(--radius-sm);
-    gap: clamp(20px, calc(-10px + 3.906vw), 30px);
+    gap: clamp(20px, 3vw, 30px);
   }
 
   .close {
@@ -1609,8 +1579,8 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   }
 
   .header-burger-btn svg {
-    width: clamp(24px, calc(6px + 2.344vw), 30px);
-    height: clamp(24px, calc(6px + 2.344vw), 30px);
+    width: clamp(24px, 3vw, 30px);
+    height: clamp(24px, 3vw, 30px);
   }
 
   .header-burger-btn .cart-quantity {
@@ -1618,8 +1588,8 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: clamp(24px, calc(6px + 2.344vw), 30px);
-    height: clamp(24px, calc(6px + 2.344vw), 30px);
+    width: clamp(24px, 3vw, 30px);
+    height: clamp(24px, 3vw, 30px);
     border-radius: 2px;
   }
 

@@ -67,7 +67,7 @@
 
 .fresh-news,
 .news {
-  padding-block: clamp(26.667px, 2.083vw, 40px);
+  padding-block: clamp(20px, 2vw, 40px);
 }
 
 .news {
@@ -176,7 +176,7 @@
 
 @media screen and (max-width: 768px) {
   .fresh-news-list {
-    padding-block: clamp(26.667px, 2.083vw, 40px) 0;
+    padding-block: clamp(20px, 2vw, 40px) 0;
   }
 
   .news-list {

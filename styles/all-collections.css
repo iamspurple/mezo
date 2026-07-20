@@ -72,11 +72,6 @@
   padding-inline: clamp(6.667px, 0.521vw, 10px);
 }
 
-/* .all-collections-item-name svg {
-  width: clamp(10.667px, 0.833vw, 16px);
-  height: clamp(10.667px, 0.833vw, 16px);
-} */
-
 .all-collections-item-description {
   opacity: 0;
   max-width: 66%;
@@ -116,8 +111,7 @@
 @media screen and (max-width: 480px) {
   .all-collections-list {
     grid-template-columns: 1fr;
-    /* 393px -> 40/80, 480px -> 60/100 */
-    row-gap: clamp(40px, calc(-50.34px + 22.989vw), 60px);
-    padding-block: clamp(80px, calc(-10.34px + 22.989vw), 100px);
+    row-gap: 40px;
+    padding-block: 64px;
   }
 }

@@ -710,9 +710,13 @@
   position: absolute;
   pointer-events: none;
   z-index: -1;
-  transform: translate(-50%, -50%);
-  left: 65%;
-  top: 80%;
+  left: 0;
+  top: 0;
+  /* Стартовая (декоративная) позиция и центрирование — через transform.
+     Движение курсором тоже идёт transform'ом (см. followCursor.js),
+     чтобы Safari не оставлял «шлейф» от blur при перерисовке. */
+  transform: translate3d(65vw, 80vh, 0) translate(-50%, -50%);
+  will-change: transform;
 }
 
 @media screen and (max-width: 768px) {

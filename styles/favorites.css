@@ -1,12 +1,12 @@
 section.favorites {
-  padding-block: clamp(53.333px, calc(26.667px + 2.604vw), 80px);
+  padding-block: clamp(40px, 4vw, 80px);
   display: flex;
   flex-direction: column;
-  gap: clamp(40px, calc(20px + 10vw), 60px);
+  gap: clamp(30px, 3vw, 60px);
 }
 
 .favorites-accordion {
-  font-size: clamp(21.333px, calc(10.667px + 0.521vw), 32px);
+  font-size: clamp(20px, 1.66vw, 32px);
   font-weight: 400;
   line-height: 80%;
   padding-inline: 8px;
@@ -22,13 +22,13 @@ section.favorites {
 .favorites-accordion-content {
   display: flex;
   flex-direction: column;
-  gap: clamp(13.333px, calc(6.667px + 0.313vw), 20px);
+  gap: clamp(10px, 1vw, 20px);
   width: 100%;
   overflow: hidden;
   transition:
     height 0.35s ease,
     margin-top 0.35s;
-  margin-top: clamp(13.333px, calc(6.667px + 0.313vw), 20px);
+  margin-top: clamp(10px, 1vw, 20px);
 }
 
 .favorites-accordion-content.is-closed {
@@ -238,7 +238,8 @@ section.favorites {
   display: inline-block;
   width: fit-content;
   font-weight: 500;
-  font-size: 16px;
+  font-size: clamp(10px, 0.833vw, 16px);
+
   line-height: 75%;
   color: #00000066;
   text-wrap: nowrap;
@@ -249,14 +250,14 @@ section.favorites {
 .favorites-card-price {
   font-family: var(--font-secondary);
   font-weight: 700;
-  font-size: 20px;
+  font-size: clamp(14px, 1vw, 20px);
   line-height: 120%;
 }
 
 .favorites-card-oldprice {
   font-family: var(--font-secondary);
   font-weight: 500;
-  font-size: 20px;
+  font-size: clamp(14px, 1vw, 20px);
   line-height: 120%;
   text-decoration: line-through;
   color: #00000066;
@@ -357,7 +358,7 @@ section.favorites {
   text-transform: uppercase;
   height: clamp(37.333px, 2.917vw, 56px);
   padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 16px);
-  font-size: clamp(16px, calc(8px + 0.833vw), 24px);
+  font-size: clamp(16px, 1.25vw, 24px);
   line-height: 80%;
   font-weight: 400;
   transition: var(--transition);
