@@ -1,21 +1,14 @@
-/* ===== Секция фильтров ===== */
 .catalog-filters {
-  padding-block: clamp(26.667px, calc(13.334px + 0.625vw), 40px);
+  padding-block: clamp(20px, 2vw, 40px);
 }
 
 .catalog-filters-list {
   margin-top: 8px;
 }
 
-/* .catalog-filters-list:not(:last-of-type) {
-  border-bottom: 2px solid var(--color-lightgrey);
-} */
-
 .catalog-search-form {
   width: 100%;
   position: relative;
-  /* min-width: 370px; */
-  /* max-width: 450px; */
 }
 
 .catalog-search {
@@ -30,7 +23,7 @@
   padding: clamp(5.333px, calc(2.667px + 0.417vw), 8px)
     clamp(8px, calc(4px + 0.625vw), 16px);
   padding-right: 100px;
-  font-size: clamp(16px, calc(8px + 0.833vw), 24px);
+  font-size: clamp(16px, 1.25vw, 24px);
   line-height: 80%;
   font-weight: 700;
   transition: var(--transition);
@@ -61,8 +54,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(16px, calc(8px + 0.833vw), 24px);
-  height: clamp(16px, calc(8px + 0.833vw), 24px);
+  width: clamp(16px, 1.25vw, 24px);
+  height: clamp(16px, 1.25vw, 24px);
   background-color: transparent;
   border: none;
   position: absolute;
@@ -120,8 +113,6 @@
 /* ===== Кастомный select ===== */
 .custom-select {
   position: relative;
-  /* min-width: 370px; */
-  /* max-width: 450px; */
   width: 100%;
 }
 
@@ -500,64 +491,69 @@
   padding-inline: 8px;
   border-top: 2px solid black;
   text-transform: uppercase;
-  transition: var(--transition);
+  transition: padding-bottom 0.35s ease;
 }
 
-.catalog-filters-accordion[open] {
+.catalog-filters-accordion.is-open {
   padding-bottom: clamp(26.667px, 2.083vw, 40px);
 }
 
-.catalog-filters-accordion summary {
+/* Триггер (бывший <summary>, теперь <button> — для устойчивой анимации) */
+.catalog-filters-accordion-summary {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-transform: inherit;
   cursor: pointer;
   position: relative;
-  list-style: none;
   padding-top: clamp(16px, 1.25vw, 24px);
   padding-bottom: clamp(26.667px, 2.083vw, 40px);
-  cursor: pointer;
-  transition: var(--transition);
+  transition: padding-bottom 0.35s ease;
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
 }
 
-.catalog-filters-accordion[open] summary {
+.catalog-filters-accordion.is-open .catalog-filters-accordion-summary {
   padding-bottom: 0;
 }
 
-.catalog-filters-accordion summary::marker,
-.catalog-filters-accordion summary::-webkit-details-marker {
-  display: none;
-  font-size: 0;
-}
-
-.catalog-filters-accordion summary::after {
+.catalog-filters-accordion-summary::after {
   content: "";
   display: inline-block;
+  flex-shrink: 0;
   width: clamp(13.333px, 1.042vw, 20px);
   height: clamp(13.333px, 1.042vw, 20px);
   background: url("../assets/images/plus.svg") center/contain no-repeat;
-  transition: all 0.25s;
 }
 
-.catalog-filters-accordion[open] summary::after {
-  background: url("../assets/images/minus.svg") center/contain no-repeat;
+.catalog-filters-accordion.is-open .catalog-filters-accordion-summary::after {
+  background-image: url("../assets/images/minus.svg");
 }
 
+/* Контент: высоту анимирует JS (height 0 → пиксели → auto).
+   Замеряем реальную высоту .inner, поэтому анимация стабильна и не зависит
+   от scrollHeight схлопнутого контейнера. */
 .catalog-filters-accordion-content {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(13.333px, 1.042vw, 20px);
-  width: 100%;
+  height: 0;
   overflow: hidden;
-  transition:
-    height 0.35s ease,
-    margin-top 0.35s;
-  margin-top: clamp(13.333px, 1.042vw, 20px);
+  transition: height 0.35s ease;
 }
 
-.catalog-filters-accordion-content.is-closed {
-  margin-top: 0;
+/* Когда аккордеон полностью открыт — снимаем обрезку, чтобы выпадающие
+   списки селектов не обрезались. Класс ставит JS по окончании анимации. */
+.catalog-filters-accordion.is-expanded .catalog-filters-accordion-content {
+  overflow: visible;
+}
+
+.catalog-filters-accordion-inner {
+  padding-top: clamp(13.333px, 1.042vw, 20px);
 }
 
 .catalog-products-wrapper {
@@ -736,7 +732,7 @@
   display: inline-block;
   width: fit-content;
   font-weight: 500;
-  font-size: 16px;
+  font-size: clamp(10px, 0.833vw, 16px);
   line-height: 75%;
   color: #00000066;
   text-wrap: nowrap;
@@ -747,14 +743,15 @@
 .catalog-products-card-price {
   font-family: var(--font-secondary);
   font-weight: 700;
-  font-size: 20px;
+  font-size: clamp(14px, 1vw, 20px);
+  text-wrap: nowrap;
   line-height: 120%;
 }
 
 .catalog-products-card-oldprice {
   font-family: var(--font-secondary);
   font-weight: 500;
-  font-size: 20px;
+  font-size: clamp(14px, 1vw, 20px);
   line-height: 120%;
   text-decoration: line-through;
   color: #00000066;
@@ -793,27 +790,6 @@
 .mobile {
   display: none;
 }
-
-/* @media screen and (max-width: 1700px) {
-  .catalog-products-card-actions button {
-    width: 42px;
-    height: 42px;
-  }
-
-  .catalog-products-card-actions button::before {
-    width: 36px;
-    height: 36px;
-  }
-
-  .catalog-products-card-volume {
-    font-size: 15px;
-  }
-
-  .catalog-products-card-price,
-  .catalog-products-card-oldprice {
-    font-size: 18px;
-  }
-} */
 
 @media screen and (max-width: 1440px) {
   .catalog-products-item {
