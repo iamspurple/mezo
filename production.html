@@ -60,7 +60,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -78,10 +78,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title text-medium bw btn"
                     >
+                      Все товары
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -89,15 +89,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все товары</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a href="" class="menu-link">
@@ -264,10 +263,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title bw btn text-medium"
                     >
+                      Все коллекции
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -275,15 +274,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все коллекции</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a
@@ -685,7 +683,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -938,13 +936,13 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                 </svg>
-                Информация
+                О нас
               </button>
               <div
                 id="info-menu"
@@ -1032,26 +1030,6 @@
                           />
                         </svg>
                         Новости
-                      </a>
-                    </li>
-                    <li class="header-menu-info-item">
-                      <a href="/contacts.html" class="menu-link">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21 12L16 7M21 12L16 17M21 12H3"
-                            stroke="black"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        Контакты
                       </a>
                     </li>
                     <li class="header-menu-info-item">
@@ -1318,7 +1296,7 @@
               </div>
             </li>
             <li class="header-nav-item">
-              <a href="/favorites.html">
+              <a id="contacts-link" href="/contacts.html">
                 <svg
                   class="header-nav-icon"
                   width="24"
@@ -1329,7 +1307,29 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Контакты
+              </a>
+            </li>
+            <li class="header-nav-item">
+              <a id="favorites-link" href="/favorites.html">
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1356,7 +1356,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1385,7 +1385,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1603,7 +1603,9 @@
         </ul>
       </nav>
 
-      <h1 class="title-medium production-title container">Производство</h1>
+      <h1 class="title-medium production-title container scroll-reveal-heading">
+        Производство
+      </h1>
       <section class="hero container">
         <div class="hero-video">
           <video
@@ -1614,16 +1616,14 @@
             playsinline
           ></video>
         </div>
-        <p class="title-large hero-text">
+        <p class="title-large hero-text scroll-reveal-heading">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. 
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </section>
       <section class="production-block1">
         <div class="production-block1-wrapper container">
-          <h2 class="production-block1-title title-medium">
+          <h2 class="production-block1-title title-large scroll-reveal-heading">
             Lorem ipsum dolor sit amet
           </h2>
           <div class="production-block1-content">
@@ -1634,21 +1634,21 @@
               nisi ut aliquip ex ea commodo consequat. 
             </p>
             <ul class="production-block1-list">
-              <li class="production-block1-item">
+              <li class="production-block1-item title-medium">
                 <span class="bw-accent title-large">1</span>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat. 
               </li>
-              <li class="production-block1-item">
+              <li class="production-block1-item title-medium">
                 <span class="bw-accent title-large">2</span>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat. 
               </li>
-              <li class="production-block1-item">
+              <li class="production-block1-item title-medium">
                 <span class="bw-accent title-large">3</span>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -1661,17 +1661,13 @@
       </section>
       <section class="production-block2">
         <div class="production-block2-wrapper container">
-          <h2 class="production-block2-title title-medium">
+          <h2 class="production-block2-title title-large scroll-reveal-heading">
             Lorem ipsum dolor sit amet
           </h2>
           <div class="production-block2-content">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <p class="text-small-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -1687,7 +1683,7 @@
           <div class="production-example-image">
             <img src="/assets/images/collection1.jpg" alt="" />
           </div>
-          <span class="production-example-caption text-small-secondary"
+          <span class="production-example-caption"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </span>
         </div>
@@ -1695,12 +1691,12 @@
           <div class="production-example-image">
             <img src="/assets/images/collection2.jpg" alt="" />
           </div>
-          <span class="production-example-caption text-small-secondary"
+          <span class="production-example-caption"
             >Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </span>
         </div>
       </section>
-      <section class="production-details">
+      <section class="production-details container">
         <div class="accordion-group-single">
           <details class="production-accordion accordion" open>
             <summary>Lorem ipsum dolor sit amet</summary>
@@ -1776,7 +1772,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -1798,7 +1793,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -1820,7 +1814,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -1842,7 +1835,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -1868,7 +1860,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -1890,7 +1881,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -1904,6 +1894,7 @@
           </nav>
         </div>
       </div>
+      <img class="footer-logo" src="/assets/images/logo.svg" alt="Mezo" />
     </footer>
     <div id="header-overlay" class="header-overlay is-hidden"></div>
     <div id="overlay" class="modal-overlay is-hidden"></div>
@@ -1979,7 +1970,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2002,7 +1992,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2025,7 +2014,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2073,7 +2062,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2096,7 +2084,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2119,7 +2106,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2162,7 +2149,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2185,7 +2171,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2208,7 +2193,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2251,7 +2236,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2274,7 +2258,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2297,7 +2280,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2345,7 +2328,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2368,7 +2350,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2391,7 +2372,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2434,7 +2415,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2457,7 +2437,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2480,7 +2459,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2570,5 +2549,6 @@
     </div>
     <script src="/js/main.js"></script>
     <script src="/js/accordion.js"></script>
+    <script src="/js/production.js"></script>
   </body>
 </html>

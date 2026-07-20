@@ -60,7 +60,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -78,10 +78,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title text-medium bw btn"
                     >
+                      Все товары
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -89,15 +89,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все товары</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a href="" class="menu-link">
@@ -264,10 +263,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title bw btn text-medium"
                     >
+                      Все коллекции
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -275,15 +274,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все коллекции</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a
@@ -685,7 +683,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -938,13 +936,13 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                 </svg>
-                Информация
+                О нас
               </button>
               <div
                 id="info-menu"
@@ -1032,26 +1030,6 @@
                           />
                         </svg>
                         Новости
-                      </a>
-                    </li>
-                    <li class="header-menu-info-item">
-                      <a href="/contacts.html" class="menu-link">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21 12L16 7M21 12L16 17M21 12H3"
-                            stroke="black"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        Контакты
                       </a>
                     </li>
                     <li class="header-menu-info-item">
@@ -1318,7 +1296,7 @@
               </div>
             </li>
             <li class="header-nav-item">
-              <a href="/favorites.html">
+              <a id="contacts-link" href="/contacts.html">
                 <svg
                   class="header-nav-icon"
                   width="24"
@@ -1329,7 +1307,29 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Контакты
+              </a>
+            </li>
+            <li class="header-nav-item">
+              <a id="favorites-link" href="/favorites.html">
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1356,7 +1356,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1385,7 +1385,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1632,162 +1632,55 @@
         <h2 id="catalog-filters-title" class="visually-hidden">
           Фильтры каталога
         </h2>
-        <div class="catalog-filters-list">
-          <form
-            autocomplete="off"
-            class="catalog-search-form"
-            action=""
-            method="get"
-            role="search"
-          >
-            <label for="catalog-search-input" class="visually-hidden"
-              >Поиск по каталогу</label
-            >
+        <!-- <div class=""> -->
+        <!-- Теги-фильтры -->
+        <fieldset class="catalog-tag-filters">
+          <legend class="visually-hidden">Тип товара</legend>
+          <label class="catalog-tag-filter">
             <input
-              class="catalog-search"
-              type="text"
-              name="q"
-              id="catalog-search-input"
-              placeholder="поиск"
-              value="Soap rumah"
+              type="checkbox"
+              name="tag-filter"
+              value="all"
+              data-tag-all
+              checked
             />
-            <button
-              type="submit"
-              class="catalog-search-btn"
-              aria-label="Искать"
-            >
-              <svg
-                aria-hidden="true"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 12L16 7M21 12L16 17M21 12H3"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <button
-              type="button"
-              class="catalog-search-clear-btn"
-              aria-label="Очистить"
-              tabindex="-1"
-            >
-              Очистить
-            </button>
-          </form>
-          <!-- Категория -->
-          <div class="custom-select" data-name="category">
-            <select aria-label="Категория" tabindex="-1" multiple>
-              <option value="shampoo">Шампуни</option>
-              <option value="gel">Гели</option>
-              <option value="lotion">Лосьоны</option>
-              <option value="conditioner">Кондиционеры</option>
-              <option value="soap">Мыло</option>
-              <option value="slippers">Тапочки</option>
-              <option value="blankets">Пледы</option>
-              <option value="accessories">Аксессуары</option>
-            </select>
-            <div
-              class="custom-select-trigger"
-              role="button"
-              tabindex="0"
-              aria-haspopup="listbox"
-              aria-expanded="false"
-            >
-              <span class="custom-select-label">Категория</span>
-              <p class="custom-select-tags"></p>
-              <div class="custom-select-controls">
-                <button
-                  type="button"
-                  class="custom-select-clear"
-                  aria-label="Очистить"
-                  tabindex="-1"
-                >
-                  Очистить
-                </button>
-              </div>
-            </div>
-            <ul
-              class="custom-select-dropdown"
-              role="listbox"
-              aria-label="Категория"
-              aria-multiselectable="true"
-            >
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="shampoo"
-              >
-                Шампуни
-              </li>
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="gel"
-              >
-                Гели
-              </li>
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="lotion"
-              >
-                Лосьоны
-              </li>
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="conditioner"
-              >
-                Кондиционеры
-              </li>
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="soap"
-              >
-                Мыло
-              </li>
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="slippers"
-              >
-                Тапочки
-              </li>
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="blankets"
-              >
-                Пледы
-              </li>
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="accessories"
-              >
-                Аксессуары
-              </li>
-            </ul>
-          </div>
+            <span>Все</span>
+          </label>
+          <label class="catalog-tag-filter">
+            <input type="checkbox" name="tag-filter" value="shampoo" />
+            <span>Шампуни</span>
+          </label>
+          <label class="catalog-tag-filter">
+            <input type="checkbox" name="tag-filter" value="gel" />
+            <span>Гели</span>
+          </label>
+          <label class="catalog-tag-filter">
+            <input type="checkbox" name="tag-filter" value="lotion" />
+            <span>Лосьоны</span>
+          </label>
+          <label class="catalog-tag-filter">
+            <input type="checkbox" name="tag-filter" value="conditioner" />
+            <span>Кондиционеры</span>
+          </label>
+          <label class="catalog-tag-filter">
+            <input type="checkbox" name="tag-filter" value="soap" />
+            <span>Мыло</span>
+          </label>
+          <label class="catalog-tag-filter">
+            <input type="checkbox" name="tag-filter" value="slippers" />
+            <span>Тапочки</span>
+          </label>
+          <label class="catalog-tag-filter">
+            <input type="checkbox" name="tag-filter" value="blankets" />
+            <span>Пледы</span>
+          </label>
+          <label class="catalog-tag-filter">
+            <input type="checkbox" name="tag-filter" value="accessories" />
+            <span>Аксессуары</span>
+          </label>
+        </fieldset>
 
-          <!-- Коллекция -->
+        <div class="catalog-filters-list">
           <div class="custom-select" data-name="collection">
             <select aria-label="Коллекция" tabindex="-1" multiple>
               <option value="rumah-tabacco">Rumah Tabacco Vanila</option>
@@ -1873,37 +1766,134 @@
               </li>
             </ul>
           </div>
+          <!-- Сортировка -->
+          <div class="custom-select desktop" data-name="sort">
+            <select aria-label="Сортировка" tabindex="-1">
+              <option value="recommended" selected>Мы рекомендуем</option>
+              <option value="price-asc">Сначала дешевле</option>
+              <option value="price-desc">Сначала дороже</option>
+              <option value="new">Новинки</option>
+              <option value="hit">Хит</option>
+            </select>
+            <div
+              class="custom-select-trigger"
+              role="button"
+              tabindex="0"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+            >
+              <span class="custom-select-label">Сортировка</span>
+              <p class="custom-select-tags"></p>
+              <div class="custom-select-controls">
+                <button
+                  type="button"
+                  class="custom-select-clear"
+                  aria-label="Очистить"
+                  tabindex="-1"
+                >
+                  Очистить
+                </button>
+              </div>
+            </div>
+            <ul
+              class="custom-select-dropdown"
+              role="listbox"
+              aria-label="Сортировка"
+            >
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="true"
+                data-value="recommended"
+                data-default="true"
+              >
+                Мы рекомендуем
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="price-asc"
+              >
+                Сначала дешевле
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="price-desc"
+              >
+                Сначала дороже
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="new"
+              >
+                Новинки
+              </li>
+              <li
+                class="custom-select-option"
+                role="option"
+                aria-selected="false"
+                data-value="hit"
+              >
+                Хит
+              </li>
+            </ul>
+          </div>
 
-          <!-- Теги-фильтры -->
-          <fieldset class="catalog-tag-filters">
-            <legend class="visually-hidden">Тип товара</legend>
-            <label class="catalog-tag-filter">
-              <input
-                type="checkbox"
-                name="tag-filter"
-                value="all"
-                data-tag-all
-                checked
-              />
-              <span>Все</span>
-            </label>
-            <label class="catalog-tag-filter">
-              <input type="checkbox" name="tag-filter" value="new" />
-              <span>Новинка</span>
-            </label>
-            <label class="catalog-tag-filter">
-              <input type="checkbox" name="tag-filter" value="hit" />
-              <span>Хит</span>
-            </label>
-            <label class="catalog-tag-filter">
-              <input type="checkbox" name="tag-filter" value="recommended" />
-              <span>Мы рекомендуем</span>
-            </label>
-          </fieldset>
-        </div>
-
-        <div class="catalog-filters-list visually-hidden">
-          <div class="custom-select" data-name="volume">
+          <form
+            autocomplete="off"
+            class="catalog-search-form"
+            action=""
+            method="get"
+            role="search"
+          >
+            <label for="catalog-search-input" class="visually-hidden"
+              >Поиск по каталогу</label
+            >
+            <input
+              value="Rumah"
+              class="catalog-search"
+              type="text"
+              name="q"
+              id="catalog-search-input"
+              placeholder="поиск"
+            />
+            <button
+              type="submit"
+              class="catalog-search-btn"
+              aria-label="Искать"
+            >
+              <svg
+                aria-hidden="true"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="catalog-search-clear-btn"
+              aria-label="Очистить"
+              tabindex="-1"
+            >
+              Очистить
+            </button>
+          </form>
+          <div class="custom-select desktop hidden" data-name="volume">
             <select aria-label="Объем/вес" tabindex="-1">
               <option value="200">200мл</option>
             </select>
@@ -1942,7 +1932,7 @@
               </li>
             </ul>
           </div>
-          <div class="custom-select" data-name="package">
+          <div class="custom-select desktop hidden" data-name="package">
             <select aria-label="Упаковка" tabindex="-1">
               <option value="картон">Картон</option>
             </select>
@@ -1981,10 +1971,7 @@
               </li>
             </ul>
           </div>
-        </div>
-
-        <div class="catalog-filters-list visually-hidden">
-          <div class="custom-select" data-name="purpose">
+          <div class="custom-select desktop hidden" data-name="purpose">
             <select aria-label="Назначение" tabindex="-1">
               <option value="значение">значение</option>
             </select>
@@ -2023,126 +2010,210 @@
               </li>
             </ul>
           </div>
-          <div class="custom-select" data-name="package">
-            <select aria-label="Упаковка" tabindex="-1">
-              <option value="картон">Картон</option>
-            </select>
-            <div
-              class="custom-select-trigger"
-              role="button"
-              tabindex="0"
-              aria-haspopup="listbox"
-              aria-expanded="false"
-            >
-              <span class="custom-select-label">Упаковка</span>
-              <p class="custom-select-tags"></p>
-              <div class="custom-select-controls">
-                <button
-                  type="button"
-                  class="custom-select-clear"
-                  aria-label="Очистить"
-                  tabindex="-1"
-                >
-                  Очистить
-                </button>
-              </div>
-            </div>
-            <ul
-              class="custom-select-dropdown"
-              role="listbox"
-              aria-label="Упаковка"
-            >
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="картон"
-              >
-                Картон
-              </li>
-            </ul>
-          </div>
         </div>
 
-        <div class="catalog-filters-list">
-          <!-- Сортировка -->
-          <div class="custom-select" data-name="sort">
-            <select aria-label="Сортировка" tabindex="-1">
-              <option value="relevance" selected>По релевантности</option>
-              <option value="price-asc">Сначала дешевле</option>
-              <option value="price-desc">Сначала дороже</option>
-              <option value="new">Новинки</option>
-              <option value="popular">Популярные</option>
-            </select>
-            <div
-              class="custom-select-trigger"
-              role="button"
-              tabindex="0"
-              aria-haspopup="listbox"
-              aria-expanded="false"
-            >
-              <span class="custom-select-label">Сортировка</span>
-              <p class="custom-select-tags"></p>
-              <div class="custom-select-controls">
-                <button
-                  type="button"
-                  class="custom-select-clear"
-                  aria-label="Очистить"
-                  tabindex="-1"
-                >
-                  Очистить
-                </button>
+        <details class="accordion catalog-filters-accordion mobile">
+          <summary>Фильтры и сортировка</summary>
+          <div
+            class="catalog-filters-list catalog-filters-accordion-content accordion-content"
+          >
+            <!-- Сортировка -->
+            <div class="custom-select" data-name="sort">
+              <select aria-label="Сортировка" tabindex="-1">
+                <option value="recommended" selected>Мы рекомендуем</option>
+                <option value="price-asc">Сначала дешевле</option>
+                <option value="price-desc">Сначала дороже</option>
+                <option value="new">Новинки</option>
+                <option value="hit">Хит</option>
+              </select>
+              <div
+                class="custom-select-trigger"
+                role="button"
+                tabindex="0"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+              >
+                <span class="custom-select-label">Сортировка</span>
+                <p class="custom-select-tags"></p>
+                <div class="custom-select-controls">
+                  <button
+                    type="button"
+                    class="custom-select-clear"
+                    aria-label="Очистить"
+                    tabindex="-1"
+                  >
+                    Очистить
+                  </button>
+                </div>
               </div>
+              <ul
+                class="custom-select-dropdown"
+                role="listbox"
+                aria-label="Сортировка"
+              >
+                <li
+                  class="custom-select-option"
+                  role="option"
+                  aria-selected="true"
+                  data-value="recommended"
+                  data-default="true"
+                >
+                  Мы рекомендуем
+                </li>
+                <li
+                  class="custom-select-option"
+                  role="option"
+                  aria-selected="false"
+                  data-value="price-asc"
+                >
+                  Сначала дешевле
+                </li>
+                <li
+                  class="custom-select-option"
+                  role="option"
+                  aria-selected="false"
+                  data-value="price-desc"
+                >
+                  Сначала дороже
+                </li>
+                <li
+                  class="custom-select-option"
+                  role="option"
+                  aria-selected="false"
+                  data-value="new"
+                >
+                  Новинки
+                </li>
+                <li
+                  class="custom-select-option"
+                  role="option"
+                  aria-selected="false"
+                  data-value="hit"
+                >
+                  Хит
+                </li>
+              </ul>
             </div>
-            <ul
-              class="custom-select-dropdown"
-              role="listbox"
-              aria-label="Сортировка"
-            >
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="true"
-                data-value="relevance"
-                data-default="true"
+
+            <div class="custom-select hidden" data-name="volume">
+              <select aria-label="Объем/вес" tabindex="-1">
+                <option value="200">200мл</option>
+              </select>
+              <div
+                class="custom-select-trigger"
+                role="button"
+                tabindex="0"
+                aria-haspopup="listbox"
+                aria-expanded="false"
               >
-                По релевантности
-              </li>
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="price-asc"
+                <span class="custom-select-label">Объем/вес</span>
+                <p class="custom-select-tags"></p>
+                <div class="custom-select-controls">
+                  <button
+                    type="button"
+                    class="custom-select-clear"
+                    aria-label="Очистить"
+                    tabindex="-1"
+                  >
+                    Очистить
+                  </button>
+                </div>
+              </div>
+              <ul
+                class="custom-select-dropdown"
+                role="listbox"
+                aria-label="Объем/вес"
               >
-                Сначала дешевле
-              </li>
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="price-desc"
+                <li
+                  class="custom-select-option"
+                  role="option"
+                  aria-selected="false"
+                  data-value="200"
+                >
+                  200мл
+                </li>
+              </ul>
+            </div>
+            <div class="custom-select hidden" data-name="package">
+              <select aria-label="Упаковка" tabindex="-1">
+                <option value="картон">Картон</option>
+              </select>
+              <div
+                class="custom-select-trigger"
+                role="button"
+                tabindex="0"
+                aria-haspopup="listbox"
+                aria-expanded="false"
               >
-                Сначала дороже
-              </li>
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="new"
+                <span class="custom-select-label">Упаковка</span>
+                <p class="custom-select-tags"></p>
+                <div class="custom-select-controls">
+                  <button
+                    type="button"
+                    class="custom-select-clear"
+                    aria-label="Очистить"
+                    tabindex="-1"
+                  >
+                    Очистить
+                  </button>
+                </div>
+              </div>
+              <ul
+                class="custom-select-dropdown"
+                role="listbox"
+                aria-label="Упаковка"
               >
-                Новинки
-              </li>
-              <li
-                class="custom-select-option"
-                role="option"
-                aria-selected="false"
-                data-value="popular"
+                <li
+                  class="custom-select-option"
+                  role="option"
+                  aria-selected="false"
+                  data-value="картон"
+                >
+                  Картон
+                </li>
+              </ul>
+            </div>
+            <div class="custom-select hidden" data-name="purpose">
+              <select aria-label="Назначение" tabindex="-1">
+                <option value="значение">значение</option>
+              </select>
+              <div
+                class="custom-select-trigger"
+                role="button"
+                tabindex="0"
+                aria-haspopup="listbox"
+                aria-expanded="false"
               >
-                Популярные
-              </li>
-            </ul>
+                <span class="custom-select-label">Назначение</span>
+                <p class="custom-select-tags"></p>
+                <div class="custom-select-controls">
+                  <button
+                    type="button"
+                    class="custom-select-clear"
+                    aria-label="Очистить"
+                    tabindex="-1"
+                  >
+                    Очистить
+                  </button>
+                </div>
+              </div>
+              <ul
+                class="custom-select-dropdown"
+                role="listbox"
+                aria-label="Назначение"
+              >
+                <li
+                  class="custom-select-option"
+                  role="option"
+                  aria-selected="false"
+                  data-value="значение"
+                >
+                  Значение
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </details>
       </section>
       <section
         class="catalog-products container"
@@ -2256,78 +2327,25 @@
               </article>
             </li>
           </ul>
-          <div class="catalog-products-pagination">
-            <p class="catalog-products-pagination-total">
-              Всего товаров <span><b>18</b> из 300</span>
-            </p>
-            <div class="catalog-products-paginations-pages">
-              <button
-                disabled
-                class="backward"
-                aria-label="Предыдущая страница"
-              >
-                <svg
-                  aria-hidden="true"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <nav aria-label="Пагинация">
-                <ol class="catalog-pagination-list">
-                  <li class="catalog-pagination-item">
-                    <a
-                      href="?page=1"
-                      class="catalog-pagination-btn"
-                      aria-current="page"
-                      >1</a
-                    >
-                  </li>
-                  <li class="catalog-pagination-item">
-                    <a href="?page=2" class="catalog-pagination-btn">2</a>
-                  </li>
-                  <li
-                    class="catalog-pagination-item catalog-pagination-ellipsis"
-                    aria-hidden="true"
-                  >
-                    <span aria-hidden="true">...</span>
-                    <span class="visually-hidden">Страницы с 3 по 16</span>
-                  </li>
-                  <li class="catalog-pagination-item">
-                    <a href="?page=17" class="catalog-pagination-btn">17</a>
-                  </li>
-                </ol>
-              </nav>
-              <button type="button" aria-label="Следующая страница">
-                <svg
-                  aria-hidden="true"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 12L16 7M21 12L16 17M21 12H3"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
+          <button class="bw btn text-medium catalog-products-more">
+            Загрузить ещё
+
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5L16 12L9 19"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </section>
     </main>
@@ -2380,7 +2398,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2402,7 +2419,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2424,7 +2440,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2446,7 +2461,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2472,7 +2486,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2494,7 +2507,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2508,6 +2520,7 @@
           </nav>
         </div>
       </div>
+      <img class="footer-logo" src="/assets/images/logo.svg" alt="Mezo" />
     </footer>
     <div id="header-overlay" class="header-overlay is-hidden"></div>
     <div id="overlay" class="modal-overlay is-hidden"></div>
@@ -2583,7 +2596,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2606,7 +2618,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2629,7 +2640,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2677,7 +2688,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2700,7 +2710,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2723,7 +2732,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2766,7 +2775,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2789,7 +2797,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2812,7 +2819,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2855,7 +2862,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2878,7 +2884,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2901,7 +2906,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2949,7 +2954,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2972,7 +2976,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2995,7 +2998,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -3038,7 +3041,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -3061,7 +3063,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -3084,7 +3085,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>

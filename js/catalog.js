@@ -70,13 +70,7 @@ document.querySelectorAll(".custom-select").forEach((select) => {
     if (isSingle) {
       const item = selected[0];
       let displayLabel = item.label;
-      // if (narrow) {
-      //   if (item.value === "price-asc") {
-      //     displayLabel = `Цена \u2191`;
-      //   } else if (item.value === "price-desc") {
-      //     displayLabel = `Цена \u2193`;
-      //   }
-      // }
+
       const tag = document.createElement("span");
       tag.className = "custom-select-tag";
       tag.textContent = displayLabel;
@@ -139,9 +133,6 @@ document.querySelectorAll(".custom-select").forEach((select) => {
   // ── Обновить классы списка продуктов ──────────────────────────────────
   function updateProductsListClasses() {
     if (!productsList) return;
-    if (select.dataset.name === "category") {
-      productsList.classList.toggle("medium", selected.length > 0);
-    }
     if (select.dataset.name === "collection") {
       productsList.classList.toggle("large", selected.length > 0);
     }
@@ -304,6 +295,44 @@ document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
   ];
 
   if (!allInput || !otherInputs.length) return;
+  const volumeSelect = document.querySelectorAll(
+    '.custom-select[data-name="volume"]',
+  );
+  const packageSelect = document.querySelectorAll(
+    '.custom-select[data-name="package"]',
+  );
+  const purposeSelect = document.querySelectorAll(
+    '.custom-select[data-name="purpose"]',
+  );
+
+  const updateCategoryDependentFiltersVisibility = () => {
+    const checkedValues = new Set(
+      otherInputs.filter((inp) => inp.checked).map((inp) => inp.value),
+    );
+    const showVolume =
+      checkedValues.has("shampoo") ||
+      checkedValues.has("conditioner") ||
+      checkedValues.has("gel") ||
+      checkedValues.has("lotion");
+    const showPackage = checkedValues.has("soap");
+    const showPurpose = checkedValues.has("accessories");
+
+    volumeSelect.forEach((select) => {
+      select.classList.toggle("hidden", !showVolume);
+    });
+    packageSelect.forEach((select) => {
+      select.classList.toggle("hidden", !showPackage);
+    });
+    purposeSelect.forEach((select) => {
+      select.classList.toggle("hidden", !showPurpose);
+    });
+  };
+
+  const updateTagFiltersProductsListClass = () => {
+    if (!productsList) return;
+    const hasCheckedOtherTag = otherInputs.some((inp) => inp.checked);
+    productsList.classList.toggle("medium", hasCheckedOtherTag);
+  };
 
   allInput.addEventListener("change", () => {
     if (allInput.checked) {
@@ -312,6 +341,8 @@ document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
       const anyOtherChecked = otherInputs.some((i) => i.checked);
       if (!anyOtherChecked) allInput.checked = true;
     }
+    updateTagFiltersProductsListClass();
+    updateCategoryDependentFiltersVisibility();
   });
 
   otherInputs.forEach((inp) => {
@@ -322,8 +353,13 @@ document.querySelectorAll(".catalog-tag-filters").forEach((fieldset) => {
         const anyOtherChecked = otherInputs.some((i) => i.checked);
         if (!anyOtherChecked) inp.checked = true;
       }
+      updateTagFiltersProductsListClass();
+      updateCategoryDependentFiltersVisibility();
     });
   });
+
+  updateTagFiltersProductsListClass();
+  updateCategoryDependentFiltersVisibility();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -331,5 +367,62 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.querySelector(".catalog-search");
   searchClearBtn.addEventListener("click", () => {
     searchInput.value = "";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const accordion = document.querySelector(".catalog-filters-accordion");
+  if (!accordion) return;
+
+  const summary = accordion.querySelector(".catalog-filters-accordion-summary");
+  const content = accordion.querySelector(".catalog-filters-accordion-content");
+  const inner = accordion.querySelector(".catalog-filters-accordion-inner");
+  if (!summary || !content || !inner) return;
+
+  let animating = false;
+
+  const clearTransitionEnd = (handler) =>
+    content.removeEventListener("transitionend", handler);
+
+  function open() {
+    accordion.classList.add("is-open");
+    summary.setAttribute("aria-expanded", "true");
+    content.style.height = `${inner.offsetHeight}px`;
+
+    const onEnd = (e) => {
+      if (e.target !== content || e.propertyName !== "height") return;
+      clearTransitionEnd(onEnd);
+
+      content.style.height = "auto";
+      accordion.classList.add("is-expanded");
+      animating = false;
+    };
+    content.addEventListener("transitionend", onEnd);
+  }
+
+  function close() {
+    accordion.classList.remove("is-expanded");
+    summary.setAttribute("aria-expanded", "false");
+    content.style.height = `${inner.offsetHeight}px`;
+    void content.offsetHeight;
+    accordion.classList.remove("is-open");
+    content.style.height = "0px";
+
+    const onEnd = (e) => {
+      if (e.target !== content || e.propertyName !== "height") return;
+      clearTransitionEnd(onEnd);
+      animating = false;
+    };
+    content.addEventListener("transitionend", onEnd);
+  }
+
+  summary.addEventListener("click", () => {
+    if (animating) return;
+    animating = true;
+    if (accordion.classList.contains("is-open")) {
+      close();
+    } else {
+      open();
+    }
   });
 });

@@ -2,6 +2,10 @@
  * Универсальная логика аккордеона.
  * Использует классы: .accordion (контейнер details), .accordion-content (контент внутри).
  * Внутри .accordion-group-single одновременно открыт только один пункт.
+ *
+ * Публичный API через кастомные события на элементе <details>:
+ *   details.dispatchEvent(new CustomEvent("accordion:open"))
+ *   details.dispatchEvent(new CustomEvent("accordion:close"))
  */
 document.addEventListener("DOMContentLoaded", () => {
   function runClose(details, content) {
@@ -62,6 +66,24 @@ document.addEventListener("DOMContentLoaded", () => {
       content.style.height = "0px";
     }
 
+    // Публичный API: внешний код может открывать/закрывать через кастомные события
+    details.addEventListener("accordion:open", () => {
+      const group = details.closest(".accordion-group-single");
+      if (group) {
+        group.querySelectorAll(".accordion").forEach((other) => {
+          if (other === details) return;
+          const otherContent = other.querySelector(".accordion-content");
+          if (!otherContent) return;
+          runClose(other, otherContent);
+        });
+      }
+      runOpen(details, content);
+    });
+
+    details.addEventListener("accordion:close", () => {
+      runClose(details, content);
+    });
+
     summary.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -69,16 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (details.open) {
         runClose(details, content);
       } else {
-        const group = details.closest(".accordion-group-single");
-        if (group) {
-          group.querySelectorAll(".accordion").forEach((other) => {
-            if (other === details) return;
-            const otherContent = other.querySelector(".accordion-content");
-            if (!otherContent) return;
-            runClose(other, otherContent);
-          });
-        }
-        runOpen(details, content);
+        details.dispatchEvent(new CustomEvent("accordion:open"));
       }
     });
   });

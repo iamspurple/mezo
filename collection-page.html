@@ -60,7 +60,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -78,10 +78,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title text-medium bw btn"
                     >
+                      Все товары
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -89,15 +89,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все товары</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a href="" class="menu-link">
@@ -264,10 +263,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title bw btn text-medium"
                     >
+                      Все коллекции
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -275,15 +274,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все коллекции</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a
@@ -685,7 +683,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -938,13 +936,13 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                 </svg>
-                Информация
+                О нас
               </button>
               <div
                 id="info-menu"
@@ -1032,26 +1030,6 @@
                           />
                         </svg>
                         Новости
-                      </a>
-                    </li>
-                    <li class="header-menu-info-item">
-                      <a href="/contacts.html" class="menu-link">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21 12L16 7M21 12L16 17M21 12H3"
-                            stroke="black"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        Контакты
                       </a>
                     </li>
                     <li class="header-menu-info-item">
@@ -1318,7 +1296,7 @@
               </div>
             </li>
             <li class="header-nav-item">
-              <a href="/favorites.html">
+              <a id="contacts-link" href="/contacts.html">
                 <svg
                   class="header-nav-icon"
                   width="24"
@@ -1329,7 +1307,29 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Контакты
+              </a>
+            </li>
+            <li class="header-nav-item">
+              <a id="favorites-link" href="/favorites.html">
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1356,7 +1356,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1385,7 +1385,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1648,7 +1648,9 @@
       </nav>
       <div class="container">
         <section class="hero">
-          <h1 class="hero-title title-medium">Косметика Rumah</h1>
+          <h1 class="hero-title title-large scroll-reveal-heading">
+            Косметика Rumah
+          </h1>
 
           <div class="hero-image">
             <img
@@ -1656,25 +1658,45 @@
               alt="Коллекция косметики Rumah"
             />
           </div>
+          <div class="hero-text-wrapper">
+            <div class="hero-text scroll-reveal-text">
+              <p>
+                Rumah — наша новая коллекция косметики для отелей. Разработка
+                и создание которой длились почти год, а уже сегодня она доступна
+                к заказу для вас.
+              </p>
+              <p class="text-small-secondary">
+                Эта коллекция продолжает линейку премиальных по качеству
+                продуктов нашего производства. Здесь на уровень выше всё:
+                от состава и новой лаконичной формы до благородного
+                притягательного аромата.
+              </p>
+            </div>
+          </div>
         </section>
         <section class="presentation">
-          <p>
-            Rumah — наша новая коллекция косметики для отелей. Разработка
-            и создание которой длились почти год, а уже сегодня она доступна
-            к заказу для вас.
+          <div class="presentation-image">
+            <img
+              src="/assets/images/collection1.jpg"
+              alt="Продукция коллекции Rumah"
+            />
+          </div>
+          <p class="presentation-description scroll-reveal-heading">
+            Табак и ваниль — главные аккорды этой коллекции. Аромат глубокий,
+            бархатистый, дерзкий и в это же время мягкий и чарующий.
           </p>
-          <p class="text-small-secondary">
-            Эта коллекция продолжает линейку премиальных по качеству продуктов
-            нашего производства. Здесь на уровень выше всё: от состава и новой
-            лаконичной формы до благородного притягательного аромата.
-          </p>
-          <div class="presentation-images">
-            <div>
-              <img
-                src="/assets/images/rumah2.jpg"
-                alt="Продукция коллекции Rumah"
-              />
+          <div class="presentation-text-wrapper">
+            <div class="presentation-text scroll-reveal-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p class="text-small-secondary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat, accusamus. Ex harum minima asperiores ipsa dolore
+                incidunt beatae dolores alias similique aut adipisci quibusdam
+                nulla repudiandae, quo nostrum laudantium hic?
+              </p>
             </div>
+          </div>
+          <div class="presentation-images">
             <div>
               <img src="/assets/images/rumah3.jpg" alt="Косметика Rumah" />
             </div>
@@ -1682,13 +1704,6 @@
               <img src="/assets/images/rumah4.jpg" alt="Коллекция Rumah" />
             </div>
           </div>
-          <p>Аромат и детали</p>
-          <p class="text-big">
-            Табак и ваниль — главные аккорды этой коллекции. Аромат глубокий,
-            бархатистый, дерзкий и в это же время мягкий и чарующий. Кроме того,
-            очень актуальный на данный момент. Ваши гости не останутся
-            равнодушными!
-          </p>
         </section>
         <section
           class="collection-products"
@@ -1697,7 +1712,7 @@
           <h2 id="collection-products-title" class="visually-hidden">
             Товары коллекции
           </h2>
-          <div>
+          <div class="collection-products-wrapper">
             <ul class="collection-products-list">
               <li class="collection-products-item">
                 <article>
@@ -1743,7 +1758,7 @@
                         Soap Rumah</span
                       >
                       <span class="collection-products-card-volume">20 G</span>
-                      <span class="collection-products-card-price">254</span>
+                      <span class="collection-products-card-price">254 ₽</span>
                       <span class="collection-products-card-oldprice">315</span>
                     </div>
                   </a>
@@ -1793,7 +1808,7 @@
                         Hair Conditioner Rumah Wood Sea salt</span
                       >
                       <span class="collection-products-card-volume">40 ml</span>
-                      <span class="collection-products-card-price">254</span>
+                      <span class="collection-products-card-price">254 ₽</span>
                     </div>
                   </a>
                 </article>
@@ -1843,7 +1858,7 @@
                         Shampoo Rumah Wood Sea salt</span
                       >
                       <span class="collection-products-card-volume">40 ml</span>
-                      <span class="collection-products-card-price">254</span>
+                      <span class="collection-products-card-price">254 ₽</span>
                     </div>
                   </a>
                 </article>
@@ -1892,7 +1907,7 @@
                         Shower Gel Rumah Wood Sea salt</span
                       >
                       <span class="collection-products-card-volume">40 ml</span>
-                      <span class="collection-products-card-price">254</span>
+                      <span class="collection-products-card-price">254 ₽</span>
                     </div>
                   </a>
                 </article>
@@ -1939,22 +1954,6 @@
                     />
                   </div>
                   <span class="collections-item-name item-name">
-                    <svg
-                      aria-hidden="true"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
                     Rumah Tabacco Vanila
                   </span>
                 </a>
@@ -1968,22 +1967,6 @@
                     />
                   </div>
                   <span class="collections-item-name item-name">
-                    <svg
-                      aria-hidden="true"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
                     Rumah Wood Sea Salt
                   </span>
                 </a>
@@ -1996,25 +1979,7 @@
                       alt="Коллекция Bocco"
                     />
                   </div>
-                  <span class="collections-item-name item-name">
-                    <svg
-                      aria-hidden="true"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    Bocco
-                  </span>
+                  <span class="collections-item-name item-name"> Bocco </span>
                 </a>
               </li>
               <li class="collections-item">
@@ -2026,22 +1991,6 @@
                     />
                   </div>
                   <span class="collections-item-name item-name">
-                    <svg
-                      aria-hidden="true"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 12L16 7M21 12L16 17M21 12H3"
-                        stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
                     Lucio Noir
                   </span>
                 </a>
@@ -2110,7 +2059,6 @@
             >
               <path
                 d="M9 5L16 12L9 19"
-                class="bw-svg"
                 stroke="black"
                 stroke-width="2"
                 stroke-linecap="round"
@@ -2170,7 +2118,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2192,7 +2139,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2214,7 +2160,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2236,7 +2181,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2262,7 +2206,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2284,7 +2227,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2298,6 +2240,7 @@
           </nav>
         </div>
       </div>
+      <img class="footer-logo" src="/assets/images/logo.svg" alt="Mezo" />
     </footer>
     <div id="header-overlay" class="header-overlay is-hidden"></div>
     <div id="overlay" class="modal-overlay is-hidden"></div>
@@ -2367,13 +2310,12 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2396,7 +2338,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2419,7 +2360,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2461,13 +2402,12 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2490,7 +2430,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2513,7 +2452,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2550,13 +2489,12 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2579,7 +2517,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2602,7 +2539,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2639,13 +2576,12 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2668,7 +2604,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2691,7 +2626,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2733,13 +2668,12 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2762,7 +2696,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2785,7 +2718,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2822,13 +2755,12 @@
                     </a>
                     <div class="cart-item-details">
                       <span class="cart-item-volume">40 ml</span>
-                      <span class="cart-item-price">254</span>
+                      <span class="cart-item-price">254 ₽</span>
                     </div>
                   </div>
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2851,7 +2783,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2874,7 +2805,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2965,5 +2896,6 @@
     <script src="/js/product-card.js" defer></script>
     <script src="/js/main.js"></script>
     <script src="/js/collections-slider.js"></script>
+    <script src="/js/collection-page.js"></script>
   </body>
 </html>

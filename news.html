@@ -60,7 +60,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -78,10 +78,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title text-medium bw btn"
                     >
+                      Все товары
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -89,15 +89,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все товары</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a href="" class="menu-link">
@@ -264,10 +263,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title bw btn text-medium"
                     >
+                      Все коллекции
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -275,15 +274,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все коллекции</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a
@@ -685,7 +683,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -938,13 +936,13 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                 </svg>
-                Информация
+                О нас
               </button>
               <div
                 id="info-menu"
@@ -1032,26 +1030,6 @@
                           />
                         </svg>
                         Новости
-                      </a>
-                    </li>
-                    <li class="header-menu-info-item">
-                      <a href="/contacts.html" class="menu-link">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21 12L16 7M21 12L16 17M21 12H3"
-                            stroke="black"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        Контакты
                       </a>
                     </li>
                     <li class="header-menu-info-item">
@@ -1318,7 +1296,7 @@
               </div>
             </li>
             <li class="header-nav-item">
-              <a href="/favorites.html">
+              <a id="contacts-link" href="/contacts.html">
                 <svg
                   class="header-nav-icon"
                   width="24"
@@ -1329,7 +1307,29 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Контакты
+              </a>
+            </li>
+            <li class="header-nav-item">
+              <a id="favorites-link" href="/favorites.html">
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1356,7 +1356,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1385,7 +1385,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1575,7 +1575,6 @@
         </nav>
       </div>
     </header>
-
     <main>
       <nav aria-label="Breadcrumb">
         <ul class="breadcrumbs container">
@@ -1603,7 +1602,10 @@
         </ul>
       </nav>
       <section class="fresh-news container" aria-labelledby="fresh-news-title">
-        <h1 id="fresh-news-title" class="fresh-news-title title-medium">
+        <h1
+          id="fresh-news-title"
+          class="fresh-news-title title-medium scroll-reveal-heading"
+        >
           Новости
         </h1>
         <ul class="fresh-news-list">
@@ -1618,22 +1620,6 @@
                 </div>
 
                 <span class="fresh-news-item-name item-name">
-                  <svg
-                    aria-hidden="true"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
                   Аксессуары из натурального дерева
                 </span>
                 <span class="fresh-news-item-description">
@@ -1657,22 +1643,6 @@
                 </div>
 
                 <span class="fresh-news-item-name item-name">
-                  <svg
-                    aria-hidden="true"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
                   Редизайн коллекции Argana
                 </span>
                 <span class="fresh-news-item-description">
@@ -1701,22 +1671,6 @@
                 </div>
 
                 <span class="news-item-name item-name">
-                  <svg
-                    aria-hidden="true"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
                   Аксессуары из натурального дерева
                 </span>
                 <span class="news-item-description">
@@ -1737,21 +1691,6 @@
                 </div>
 
                 <span class="news-item-name item-name">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
                   Редизайн коллекции Argana
                 </span>
                 <span class="news-item-description">
@@ -1772,21 +1711,6 @@
                 </div>
 
                 <span class="news-item-name item-name">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
                   Аксессуары из натурального дерева
                 </span>
                 <span class="news-item-description">
@@ -1807,21 +1731,6 @@
                 </div>
 
                 <span class="news-item-name item-name">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
                   Редизайн коллекции Argana
                 </span>
                 <span class="news-item-description">
@@ -1842,21 +1751,6 @@
                 </div>
 
                 <span class="news-item-name item-name">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
                   Аксессуары из натурального дерева
                 </span>
                 <span class="news-item-description">
@@ -1877,21 +1771,6 @@
                 </div>
 
                 <span class="news-item-name item-name">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
                   Редизайн коллекции Argana
                 </span>
                 <span class="news-item-description">
@@ -1912,21 +1791,6 @@
                 </div>
 
                 <span class="news-item-name item-name">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
                   Аксессуары из натурального дерева
                 </span>
                 <span class="news-item-description">
@@ -1947,21 +1811,26 @@
                 </div>
 
                 <span class="news-item-name item-name">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12L16 7M21 12L16 17M21 12H3"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                  Редизайн коллекции Argana
+                </span>
+                <span class="news-item-description">
+                  Одна из первых созданных нами коллекций — Argana — теперь
+                  в новом дизайне. 
+                </span>
+              </a>
+            </article>
+          </li>
+          <li class="news-item">
+            <article>
+              <a href="/" class="news-item-content item-content">
+                <time class="news-item-date" datetime="2026-01-10"
+                  >Январь 10</time
+                >
+                <div class="news-item-image item-image">
+                  <img src="/assets/images/argana.jpg" alt="название новости" />
+                </div>
+
+                <span class="news-item-name item-name">
                   Редизайн коллекции Argana
                 </span>
                 <span class="news-item-description">
@@ -1972,74 +1841,24 @@
             </article>
           </li>
         </ul>
-        <div class="news-pagination">
-          <p class="news-pagination-total">
-            Всего <span><b>18</b> из 300</span>
-          </p>
-          <div class="news-paginations-pages">
-            <button disabled class="backward" aria-label="Предыдущая страница">
-              <svg
-                aria-hidden="true"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 12L16 7M21 12L16 17M21 12H3"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <nav aria-label="Пагинация">
-              <ol class="news-pagination-list">
-                <li class="news-pagination-item">
-                  <a
-                    href="?page=1"
-                    class="news-pagination-btn"
-                    aria-current="page"
-                    >1</a
-                  >
-                </li>
-                <li class="news-pagination-item">
-                  <a href="?page=2" class="news-pagination-btn">2</a>
-                </li>
-                <li
-                  class="news-pagination-item news-pagination-ellipsis"
-                  aria-hidden="true"
-                >
-                  <span aria-hidden="true">...</span>
-                  <span class="visually-hidden">Страницы с 3 по 16</span>
-                </li>
-                <li class="news-pagination-item">
-                  <a href="?page=17" class="news-pagination-btn">17</a>
-                </li>
-              </ol>
-            </nav>
-            <button aria-label="Следующая страница">
-              <svg
-                aria-hidden="true"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 12L16 7M21 12L16 17M21 12H3"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
+        <button class="btn bw text-medium news-more">
+          Загрузить ещё
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 5L16 12L9 19"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </section>
     </main>
     <footer class="footer container" aria-labelledby="footer-title">
@@ -2091,7 +1910,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2113,7 +1931,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2135,7 +1952,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2157,7 +1973,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2183,7 +1998,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2205,7 +2019,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2219,6 +2032,7 @@
           </nav>
         </div>
       </div>
+      <img class="footer-logo" src="/assets/images/logo.svg" alt="Mezo" />
     </footer>
     <div id="header-overlay" class="header-overlay is-hidden"></div>
     <div id="overlay" class="modal-overlay is-hidden"></div>
@@ -2294,7 +2108,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2317,7 +2130,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2340,7 +2152,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2388,7 +2200,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2411,7 +2222,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2434,7 +2244,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2477,7 +2287,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2500,7 +2309,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2523,7 +2331,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2566,7 +2374,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2589,7 +2396,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2612,7 +2418,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2660,7 +2466,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2683,7 +2488,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2706,7 +2510,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2749,7 +2553,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -2772,7 +2575,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -2795,7 +2597,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -2884,5 +2686,6 @@
       </div>
     </div>
     <script src="/js/main.js"></script>
+    <script src="/js/news.js"></script>
   </body>
 </html>

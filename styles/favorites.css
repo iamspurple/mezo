@@ -1,12 +1,12 @@
-.favorites {
-  padding-block: 80px;
+section.favorites {
+  padding-block: clamp(40px, 4vw, 80px);
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: clamp(30px, 3vw, 60px);
 }
 
 .favorites-accordion {
-  font-size: 32px;
+  font-size: clamp(20px, 1.66vw, 32px);
   font-weight: 400;
   line-height: 80%;
   padding-inline: 8px;
@@ -22,13 +22,13 @@
 .favorites-accordion-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(10px, 1vw, 20px);
   width: 100%;
   overflow: hidden;
   transition:
     height 0.35s ease,
     margin-top 0.35s;
-  margin-top: 20px;
+  margin-top: clamp(10px, 1vw, 20px);
 }
 
 .favorites-accordion-content.is-closed {
@@ -133,6 +133,63 @@
   left: 10px;
   display: flex;
   gap: 4px;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+@media (hover: hover) {
+  .favorites-card:hover .favorites-card-actions {
+    opacity: 1;
+  }
+}
+
+.favorites-card-actions button {
+  width: clamp(32px, 2.5vw, 48px);
+  height: clamp(32px, 2.5vw, 48px);
+  background-color: #00000029;
+  border-radius: 4px;
+  position: relative;
+  backdrop-filter: blur(5px);
+  z-index: 3;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+@media (hover: hover) {
+  .favorites-card-actions button:hover {
+    opacity: 0.7;
+  }
+}
+
+.favorites-card-actions .addtocart.active {
+  background-color: black;
+}
+
+.favorites-card-actions .favorites.active {
+  background-color: var(--color-vodka);
+}
+
+.favorites-card-actions button::before {
+  content: "";
+  width: clamp(26px, 2vw, 40px);
+  height: clamp(26px, 2vw, 40px);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.favorites-card-actions .addtocart::before {
+  background: url("../assets/images/plus-white.svg") center/contain no-repeat;
+}
+
+.favorites-card-actions .addtocart.active::before {
+  background: url("../assets/images/minus-white.svg") center/contain no-repeat;
+}
+
+.favorites-card-actions .favorites::before {
+  background: url("../assets/images/heart.svg") center/contain no-repeat;
 }
 
 .favorites-card-image .new {
@@ -181,7 +238,8 @@
   display: inline-block;
   width: fit-content;
   font-weight: 500;
-  font-size: 16px;
+  font-size: clamp(10px, 0.833vw, 16px);
+
   line-height: 75%;
   color: #00000066;
   text-wrap: nowrap;
@@ -192,14 +250,14 @@
 .favorites-card-price {
   font-family: var(--font-secondary);
   font-weight: 700;
-  font-size: 20px;
+  font-size: clamp(14px, 1vw, 20px);
   line-height: 120%;
 }
 
 .favorites-card-oldprice {
   font-family: var(--font-secondary);
   font-weight: 500;
-  font-size: 20px;
+  font-size: clamp(14px, 1vw, 20px);
   line-height: 120%;
   text-decoration: line-through;
   color: #00000066;
@@ -298,12 +356,20 @@
   background-color: white;
   font-family: var(--font-primary);
   text-transform: uppercase;
-  height: 56px;
-  padding: 8px 16px;
-  font-size: 24px;
+  height: clamp(37.333px, 2.917vw, 56px);
+  padding: clamp(5.333px, 0.417vw, 8px) clamp(8px, 0.625vw, 16px);
+  font-size: clamp(16px, 1.25vw, 24px);
   line-height: 80%;
   font-weight: 400;
   transition: var(--transition);
+}
+
+.favorites-menu-form input:disabled {
+  background-color: var(--color-bright);
+  cursor: not-allowed;
+  color: #00000066;
+  -webkit-text-fill-color: #00000066;
+  opacity: 1;
 }
 
 .favorites-menu-form input::placeholder {
@@ -320,6 +386,10 @@
   .favorites-menu-form input:hover {
     outline: none;
     border-color: black;
+  }
+
+  .favorites-menu-form input:disabled:hover {
+    border-color: var(--color-lightgrey);
   }
 }
 
@@ -404,6 +474,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+
+  .favorites-card-actions {
+    top: 10px;
+    left: 10px;
+    bottom: auto;
   }
 }
 

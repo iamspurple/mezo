@@ -60,7 +60,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -78,10 +78,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title text-medium bw btn"
                     >
+                      Все товары
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -89,15 +89,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все товары</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a href="" class="menu-link">
@@ -264,10 +263,10 @@
                   <div class="header-menu-products-wrapper">
                     <a
                       href="/"
-                      class="header-menu-products-list-title menu-link bw"
+                      class="header-menu-products-list-title bw btn text-medium"
                     >
+                      Все коллекции
                       <svg
-                        class="svg-icon"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -275,15 +274,14 @@
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M21 12L16 7M21 12L16 17M21 12H3"
+                          d="M9 5L16 12L9 19"
                           stroke="black"
                           stroke-width="2"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
                       </svg>
-                      Все коллекции</a
-                    >
+                    </a>
                     <ul class="header-menu-products-list">
                       <li class="header-menu-products-item">
                         <a
@@ -685,7 +683,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -938,13 +936,13 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                 </svg>
-                Информация
+                О нас
               </button>
               <div
                 id="info-menu"
@@ -1032,26 +1030,6 @@
                           />
                         </svg>
                         Новости
-                      </a>
-                    </li>
-                    <li class="header-menu-info-item">
-                      <a href="/contacts.html" class="menu-link">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21 12L16 7M21 12L16 17M21 12H3"
-                            stroke="black"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                        Контакты
                       </a>
                     </li>
                     <li class="header-menu-info-item">
@@ -1318,7 +1296,7 @@
               </div>
             </li>
             <li class="header-nav-item">
-              <a href="/favorites.html">
+              <a id="contacts-link" href="/contacts.html">
                 <svg
                   class="header-nav-icon"
                   width="24"
@@ -1329,7 +1307,29 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Контакты
+              </a>
+            </li>
+            <li class="header-nav-item">
+              <a id="favorites-link" href="/favorites.html">
+                <svg
+                  class="header-nav-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5L16 12L9 19"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1356,7 +1356,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1385,7 +1385,7 @@
                 >
                   <path
                     d="M9 5L16 12L9 19"
-                    stroke="#D8DBDE"
+                    stroke="#000000"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1635,6 +1635,20 @@
                           src="/assets/images/product1.jpg"
                           alt="Мыло Soap Rumah, 20 G"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -1671,6 +1685,20 @@
                           src="/assets/images/product2.png"
                           alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -1706,6 +1734,20 @@
                           src="/assets/images/product3.jpg"
                           alt="Шампунь Shampoo Rumah Wood Sea Salt, 40 ml"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -1741,6 +1783,20 @@
                           src="/assets/images/product4.jpg"
                           alt="Гель для душа Shower Gel Rumah Wood Sea Salt, 40 ml"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -1776,6 +1832,20 @@
                           src="/assets/images/product5.jpg"
                           alt="Лосьон для тела Body Lotion Rumah Wood Sea Salt, 40 ml"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -1811,6 +1881,20 @@
                           src="/assets/images/product6.jpg"
                           alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -1847,6 +1931,20 @@
                           src="/assets/images/product1.jpg"
                           alt="Мыло Soap Rumah, 20 G"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -1883,6 +1981,20 @@
                           src="/assets/images/product2.png"
                           alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -1918,6 +2030,20 @@
                           src="/assets/images/product3.jpg"
                           alt="Шампунь Shampoo Rumah Wood Sea Salt, 40 ml"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -1953,6 +2079,20 @@
                           src="/assets/images/product4.jpg"
                           alt="Гель для душа Shower Gel Rumah Wood Sea Salt, 40 ml"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -1988,6 +2128,20 @@
                           src="/assets/images/product5.jpg"
                           alt="Лосьон для тела Body Lotion Rumah Wood Sea Salt, 40 ml"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -2023,6 +2177,20 @@
                           src="/assets/images/product6.jpg"
                           alt="Кондиционер для волос Hair Conditioner Rumah Wood Sea Salt, 40 ml"
                         />
+                        <div class="favorites-card-actions">
+                          <button
+                            class="addtocart"
+                            type="button"
+                            aria-label="добавить в заказ"
+                            title="Добавить в заказ"
+                          ></button>
+                          <button
+                            class="favorites active"
+                            type="button"
+                            aria-label="сохранить в список"
+                            title="Сохранить в список"
+                          ></button>
+                        </div>
                       </div>
                       <div class="favorites-card-info">
                         <span class="favorites-card-name menu-link">
@@ -2811,7 +2979,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2833,7 +3000,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2855,7 +3021,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2877,7 +3042,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2903,7 +3067,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2925,7 +3088,6 @@
                   >
                     <path
                       d="M21 12L16 7M21 12L16 17M21 12H3"
-                      class="bw-svg"
                       stroke="black"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -2939,6 +3101,7 @@
           </nav>
         </div>
       </div>
+      <img class="footer-logo" src="/assets/images/logo.svg" alt="Mezo" />
     </footer>
     <div id="header-overlay" class="header-overlay is-hidden"></div>
     <div id="overlay" class="modal-overlay is-hidden"></div>
@@ -3014,7 +3177,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -3037,7 +3199,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -3060,7 +3221,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -3108,7 +3269,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -3131,7 +3291,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -3154,7 +3313,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -3197,7 +3356,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -3220,7 +3378,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -3243,7 +3400,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -3286,7 +3443,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -3309,7 +3465,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -3332,7 +3487,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -3380,7 +3535,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -3403,7 +3557,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -3426,7 +3579,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>
@@ -3469,7 +3622,6 @@
                   <div>
                     <div class="cart-item-actions">
                       <button
-                        id="decrease"
                         type="button"
                         aria-label="уменьшить количество"
                         title="уменьшить количество"
@@ -3492,7 +3644,6 @@
                       </button>
                       <span class="cart-item-quantity">10</span>
                       <button
-                        id="increase"
                         type="button"
                         aria-label="увеличить количество"
                         title="увеличить количество"
@@ -3515,7 +3666,7 @@
                       </button>
                       <span class="cart-item-multiplicity">Кратность: 100</span>
                     </div>
-                    <button class="cart-item-delete" type="button" id="delete">
+                    <button class="cart-item-delete" type="button">
                       Удалить
                     </button>
                   </div>

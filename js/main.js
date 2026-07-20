@@ -477,11 +477,11 @@ const initMenu = () => {
         return;
       }
 
-      // Исключение: ссылка «Избранное» — закрываем меню при клике
-      if (item.querySelector("#favorites-link")) {
-        if (headerNav.classList.contains("menu")) {
-          closeHeaderMenu();
-        }
+      // Исключение: пункт «Избранное» (id стоит на самом li, не на вложенной ссылке)
+      if (
+        item.querySelector("#favorites-link") ||
+        item.querySelector("#contacts-link")
+      ) {
         return;
       }
 
