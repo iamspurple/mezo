@@ -692,6 +692,7 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
 
 .footer {
   width: 100%;
+  padding-top: 40px;
 }
 
 .footer-wrapper {
@@ -1580,9 +1581,8 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
 
 @media screen and (max-width: 1024px) {
   .header-logo {
-    /* 768px -> 44px, 1024px -> 50px */
     height: clamp(44px, calc(26px + 2.344vw), 50px);
-    /* 768px -> 8px, 1024px -> 10px */
+
     padding-inline: clamp(8px, calc(2px + 0.781vw), 10px);
   }
 
@@ -1903,6 +1903,10 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   .header-menu-account-form {
     margin: 0 auto;
     max-width: 100%;
+  }
+
+  .footer {
+    padding-top: 120px;
   }
 
   .footer-wrapper {
