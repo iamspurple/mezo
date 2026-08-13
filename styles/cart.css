@@ -776,6 +776,15 @@
   .cart-item-info {
     padding-bottom: clamp(16px, 1.25vw, 24px);
   }
+
+  .cart-success-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .cart-success-info {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {

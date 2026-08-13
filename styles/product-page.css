@@ -789,18 +789,18 @@
 
   .product-quantity p,
   .product-copy button {
-    font-size: clamp(9.333px, 0.729vw, 14px);
+    font-size: 12px;
     padding: 5px 10px;
   }
 
   .product-quantity p span,
   .product-copy button span {
-    font-size: clamp(12px, 0.938vw, 18px);
+    font-size: 18px;
   }
 
   .product-copy button svg {
-    width: clamp(10.667px, 0.833vw, 16px);
-    height: clamp(10.667px, 0.833vw, 16px);
+    width: 16px;
+    height: 16px;
   }
 
   .product-title {

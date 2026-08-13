@@ -100,6 +100,9 @@
   .all-collections-item-image {
     aspect-ratio: 1.2;
   }
+  .all-collections-item-description {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 768px) {
