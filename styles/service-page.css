@@ -401,6 +401,14 @@
   .other-services {
     padding-bottom: 0;
   }
+
+  .service-example-caption {
+    max-width: 100%;
+  }
+
+  .service-description-text {
+    max-width: 100%;
+  }
 }
 
 /* ---------- Скролл-анимации как на странице коллекции (js/service-page.js, класс js-scroll-reveal) ---------- */

@@ -298,6 +298,24 @@
     grid-template-columns: 1fr;
   }
 
+  .production-block1-title,
+  .production-block2-title {
+    max-width: 100%;
+  }
+
+  .production-block2-content p {
+    max-width: 100%;
+  }
+
+  .production-block1-wrapper .text-small-secondary,
+  .production-block2-wrapper .text-small-secondary {
+    max-width: 100%;
+  }
+
+  .production-block1-item {
+    max-width: 100%;
+  }
+
   .production-example-image {
     aspect-ratio: 1.2;
   }
@@ -308,5 +326,9 @@
 
   .production-details > div {
     width: 100%;
+  }
+
+  .production-accordion-content {
+    max-width: 90%;
   }
 }
