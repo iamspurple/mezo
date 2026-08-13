@@ -93,10 +93,11 @@ const initCategoriesSticky = () => {
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  section.classList.add("categories--pinned");
-
   const list = section.querySelector(".categories-list");
   const header = document.querySelector("header, .header");
+  // On mobile the categories block is a plain static list with every item
+  // already revealed — no sticky/scroll-driven behavior.
+  const mobileQuery = window.matchMedia("(max-width: 768px)");
 
   let ticking = false;
   let activeIndex = -1;
@@ -181,10 +182,48 @@ const initCategoriesSticky = () => {
     onScroll();
   };
 
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onResize);
-  measure();
-  update();
+  let stickyActive = false;
+
+  const enableSticky = () => {
+    if (stickyActive) return;
+    stickyActive = true;
+    section.classList.add("categories--pinned");
+    activeIndex = -1;
+    offsetInitialized = false;
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize);
+    measure();
+    update();
+  };
+
+  const disableSticky = () => {
+    if (!stickyActive) return;
+    stickyActive = false;
+    window.removeEventListener("scroll", onScroll);
+    window.removeEventListener("resize", onResize);
+    section.classList.remove("categories--pinned");
+    // Clear inline styles left over from the scroll-driven layout so the static
+    // mobile block renders cleanly.
+    list.style.transform = "";
+    list.style.transition = "";
+    items.forEach((item) => {
+      item.style.transition = "";
+      item.classList.remove("is-active");
+    });
+  };
+
+  // Enable sticky only above the mobile breakpoint, and switch modes whenever
+  // the viewport crosses it.
+  const syncMode = () => {
+    if (mobileQuery.matches) {
+      disableSticky();
+    } else {
+      enableSticky();
+    }
+  };
+
+  window.addEventListener("resize", syncMode);
+  syncMode();
 };
 
 document.addEventListener("DOMContentLoaded", () => {

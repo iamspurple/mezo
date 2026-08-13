@@ -69,13 +69,14 @@
 }
 
 .all-collections-item-name {
-  padding-inline: clamp(6.667px, 0.521vw, 10px);
+  padding-inline: 10px;
 }
 
 .all-collections-item-description {
   opacity: 0;
   max-width: 66%;
   transition: var(--transition);
+  padding-left: 10px;
 }
 
 @media (hover: hover) {
@@ -108,6 +109,10 @@
 @media screen and (max-width: 768px) {
   .all-collections-item-image {
     aspect-ratio: 1/1;
+  }
+
+  .all-collections-item-description {
+    max-width: 100%;
   }
 }
 

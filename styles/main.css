@@ -390,22 +390,18 @@ button {
 
 @media screen and (max-width: 1024px) {
   .title-large {
-    /* 768px -> 40px, 1024px -> 44px */
     font-size: clamp(40px, calc(28px + 1.563vw), 44px);
   }
 
   .title-large-to-medium {
-    /* 768px -> 32px, 1024px -> 44px */
     font-size: clamp(32px, calc(-4px + 4.688vw), 44px);
   }
 
   .title-medium {
-    /* 768px -> 32px, 1024px -> 36px */
     font-size: clamp(32px, calc(20px + 1.563vw), 36px);
   }
 
   .btn {
-    /* 768px -> 10.667px, 1024px -> 12px */
     gap: clamp(10.667px, calc(5.334px + 0.521vw), 12px);
     padding: 10px 10px 10px 16px;
   }

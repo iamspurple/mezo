@@ -105,6 +105,7 @@
 .news-item-content {
   width: 100%;
   height: 100%;
+  font-size: clamp(16px, 1.1vw, 20px);
 }
 
 .fresh-news-item-date,
@@ -150,6 +151,11 @@
   font-size: clamp(14px, 1.1vw, 20px);
   line-height: 140%;
   font-weight: 400;
+  padding-left: 10px;
+}
+
+.news-item-description {
+  max-width: 90%;
 }
 
 .news-more {
@@ -183,9 +189,29 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .fresh-news-item-content,
+  .news-item-content {
+    font-size: 14px;
+  }
+
   .fresh-news-item-name,
   .news-item-name {
     height: auto;
+  }
+
+  .news-item-name {
+    padding-left: 5px;
+    font-size: 24px;
+  }
+
+  .fresh-news-item-description {
+    padding-left: 10px;
+    max-width: 100%;
+  }
+
+  .news-item-description {
+    padding-left: 5px;
+    max-width: 100%;
   }
 }
 

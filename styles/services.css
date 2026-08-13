@@ -13,6 +13,20 @@
   line-height: 72%;
 }
 
+.services-text {
+  max-width: 66%;
+  font-size: clamp(32px, 2.5vw, 48px);
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 2.5vw, 48px);
+  margin-bottom: clamp(32px, 2.5vw, 48px);
+}
+
+.services-text .text-small-secondary {
+  max-width: 50%;
+}
+
 .services-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -178,9 +192,24 @@
 }
 
 @media screen and (max-width: 768px) {
+  .services {
+    padding-bottom: 0;
+  }
+
+  .services-text {
+    font-size: 24px;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .services-text .text-small-secondary {
+    max-width: 75%;
+  }
+
   .services-content {
     grid-template-columns: 1fr;
     gap: 0;
+    padding-block: 0;
   }
 
   .services-content > .services-images-wrapper {
@@ -189,6 +218,7 @@
 
   .services-accordion summary {
     padding-left: 16px;
+    font-size: 24px;
   }
 
   .services-accordion-content {
