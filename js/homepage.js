@@ -66,6 +66,27 @@ const initNewsImagesReveal = () => {
   });
 };
 
+const initCategoriesImagesReveal = () => {
+  const wrappers = document.querySelectorAll(
+    "main .categories .categories-item-image",
+  );
+  if (!wrappers.length) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    wrappers.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = createRevealObserver(
+    { minRatio: 0.12, rootMargin: "0px 0px -6% 0px" },
+    (el) => el.classList.add("is-visible"),
+  );
+  wrappers.forEach((el, index) => {
+    el.style.setProperty("--news-item-index", String(index));
+    observer.observe(el);
+  });
+};
+
 const initAboutStatisticsReveal = () => {
   const list = document.querySelector(
     "main .about-statistic-list.scroll-reveal-statistics",
@@ -158,7 +179,9 @@ const initCategoriesSticky = () => {
     );
     if (index !== activeIndex) {
       activeIndex = index;
-      items.forEach((item, i) => item.classList.toggle("is-active", i === index));
+      items.forEach((item, i) =>
+        item.classList.toggle("is-active", i === index),
+      );
     }
     applyOffset();
   };
@@ -232,4 +255,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initNewsImagesReveal();
   initAboutStatisticsReveal();
   initCategoriesSticky();
+  initCategoriesImagesReveal();
 });
