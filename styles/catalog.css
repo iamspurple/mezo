@@ -511,7 +511,7 @@
   cursor: pointer;
   position: relative;
   padding-top: clamp(16px, 1.25vw, 24px);
-  padding-bottom: clamp(26.667px, 2.083vw, 40px);
+  padding-bottom: clamp(16px, 1.25vw, 24px);
   transition: padding-bottom 0.35s ease;
   display: flex;
   width: 100%;
@@ -557,7 +557,7 @@
 }
 
 .catalog-products-wrapper {
-  padding-block: clamp(80px, 6.25vw, 120px);
+  padding-block: clamp(64px, 6.25vw, 120px);
   border-top: 2px solid black;
   display: flex;
   flex-direction: column;
@@ -893,6 +893,7 @@
     display: flex;
     flex-direction: column;
     gap: clamp(18px, 24px, 30px);
+    padding-bottom: 0;
   }
 
   .catalog-filters-list {

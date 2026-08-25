@@ -86,8 +86,8 @@
 
 .cart-form textarea {
   width: 100%;
-  min-height: clamp(40px, 4vw, 80px);
-  padding: 16px;
+  min-height: clamp(60px, 4vw, 80px);
+  padding: clamp(8px, 0.625vw, 16px);
   resize: vertical;
   border: 2px solid var(--color-lightgrey);
   border-radius: var(--radius-sm);
