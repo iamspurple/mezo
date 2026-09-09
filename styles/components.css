@@ -1217,6 +1217,9 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
 
 .cart-preview .cart-item-quantity {
   font-size: clamp(15px, 1.042vw, 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cart-preview .cart-item-multiplicity,
