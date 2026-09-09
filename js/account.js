@@ -416,7 +416,32 @@ const initAccountModals = () => {
   overlay.addEventListener("click", closeModal);
 };
 
+const initCopyTrackNumbers = () => {
+  const trackBtns = document.querySelectorAll(".history-order-track");
+
+  function handleCopy(btn, text) {
+    navigator.clipboard.writeText(text).then(() => {
+      btn.classList.add("clicked");
+      setTimeout(() => {
+        btn.classList.remove("clicked");
+      }, 3000);
+    });
+  }
+
+  if (trackBtns) {
+    trackBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const span = btn.querySelector("span");
+        if (span) {
+          handleCopy(btn, span.textContent.trim());
+        }
+      });
+    });
+  }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   initAccountModals();
   initHowToUseToggle();
+  initCopyTrackNumbers();
 });

@@ -1372,6 +1372,10 @@ body:has(.header-overlay:not(.is-hidden)) .header-logo {
   align-self: flex-end;
 }
 
+.cart-check-price .text-small-secondary {
+  font-size: calc(clamp(20px, 1.25vw, 24px) * 0.75);
+}
+
 .cart-check-download {
   width: 100%;
   text-transform: uppercase;

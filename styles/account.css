@@ -894,6 +894,10 @@
   text-transform: lowercase;
 }
 
+.history-order-price .text-small-secondary {
+  font-size: calc(clamp(16px, 1.25vw, 24px) * 0.75);
+}
+
 .history-outer-accordion-content.active .history-order-price {
   align-items: flex-end;
 }
@@ -901,6 +905,13 @@
 .history-status {
   display: flex;
   gap: clamp(6.667px, 0.5vw, 10px);
+  flex-wrap: wrap;
+}
+
+.history-status-btns {
+  display: flex;
+  gap: clamp(6.667px, 0.5vw, 10px);
+  flex-wrap: wrap;
 }
 
 .history-status .check-btn {
@@ -956,6 +967,49 @@
 .history-order-status.error p {
   background-color: #ff00003d;
   color: black;
+}
+
+.history-order-track {
+  position: relative;
+  width: fit-content;
+}
+
+.history-order-track .active {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: var(--color-bright);
+  border-radius: 8px;
+  zoom: 0.8;
+}
+
+.history-order-track svg {
+  width: clamp(16px, 1.25vw, 24px);
+  height: clamp(16px, 1.25vw, 24px);
+  flex-shrink: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.history-order-track.clicked .active {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in 0.2s;
+  padding: clamp(5.333px, 0.417vw, 8px);
 }
 
 .history-products-list {
@@ -1391,6 +1445,7 @@
   display: flex;
   gap: clamp(8px, 0.6vw, 12px);
   width: 100%;
+  align-items: flex-end;
   justify-content: flex-end;
 }
 
@@ -1401,7 +1456,7 @@
 }
 
 .account-modal-content.is-success .account-modal-order-info {
-  width: 0;
+  display: none;
 }
 
 .account-modal-content.is-success .account-modal-actions .ok-account-modal {
@@ -1455,6 +1510,10 @@
   align-self: flex-end;
 }
 
+.account-modal-order-price .text-small-secondary {
+  font-size: calc(clamp(16px, 1.25vw, 24px) * 0.75);
+}
+
 .account-modal-order-download {
   width: 100%;
   text-transform: uppercase;
@@ -1473,74 +1532,6 @@
     width: auto;
   }
 }
-
-/* @media screen and (max-width: 1280px) {
-  .account-howtouse-video {
-    aspect-ratio: 3/2;
-  }
-
-  .account-info-form-row,
-  .account-company-form-row,
-  .account-modal-company-form-row,
-  .account-modal-info-form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .account-company-form-row.small-gap {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .history-order-info {
-    gap: clamp(15px, 1.5vw, 30px);
-  }
-
-  .history-order-info-item dd {
-    font-size: clamp(25.333px, calc(12.667px + 1.333vw), 38px);
-  }
-
-  .history-order-date,
-  .history-order-info-item,
-  .history-order-price {
-    gap: clamp(5.333px, calc(2.667px + 0.26vw), 8px);
-    font-size: clamp(10px, 1vw, 20px);
-  }
-
-  .history-order-status {
-    width: auto;
-  }
-
-  .history-products-item-image {
-    width: clamp(76.667px, calc(38.334px + 2.667vw), 115px);
-  }
-
-  .history-products-item-info {
-    font-size: clamp(10.667px, 0.833vw, 15px);
-  }
-
-  .history-products-item-quantity,
-  .history-products-item-multiplicity {
-    font-size: clamp(8px, 0.6vw, 12px);
-  }
-
-  .offer-products-card-actions button {
-    width: clamp(25.333px, calc(12.667px + 1.333vw), 38px);
-    height: clamp(25.333px, calc(12.667px + 1.333vw), 38px);
-  }
-
-  .offer-products-card-actions button::before {
-    width: clamp(21.333px, calc(10.667px + 1.042vw), 32px);
-    height: clamp(21.333px, calc(10.667px + 1.042vw), 32px);
-  }
-
-  .offer-products-card-volume {
-    font-size: clamp(9.333px, calc(4.667px + 0.417vw), 14px);
-  }
-
-  .offer-products-card-price,
-  .offer-products-card-oldprice {
-    font-size: clamp(10.667px, 0.85vw, 16px);
-  }
-} */
 
 @media screen and (max-width: 1024px) {
   .history-order {
@@ -1660,8 +1651,6 @@
   }
 
   .history-status {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     row-gap: clamp(8px, 0.6vw, 12px);
   }
 
@@ -1708,10 +1697,6 @@
 }
 
 @media screen and (max-width: 590px) {
-  .history-status {
-    grid-template-columns: 1fr;
-  }
-
   .history-status .check-btn {
     width: fit-content;
   }
@@ -1732,6 +1717,7 @@
 
   .history-order-date,
   .history-order-price {
+    width: 100%;
     align-items: flex-end;
   }
 
